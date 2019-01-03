@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['schedulepilotjobs',['schedulePilotJobs',['../classwrench_1_1_pilot_job_scheduler.html#a3a68595072e07326d480cd3531bcf563',1,'wrench::PilotJobScheduler']]],
-  ['scheduletasks',['scheduleTasks',['../classwrench_1_1_standard_job_scheduler.html#ae836d613a7d529cb01ef82c83da79576',1,'wrench::StandardJobScheduler']]],
+  ['schedulepilotjobs',['schedulePilotJobs',['../classwrench_1_1_pilot_job_scheduler.html#a903c44145dfce2964f90cc856146adbb',1,'wrench::PilotJobScheduler']]],
+  ['scheduletasks',['scheduleTasks',['../classwrench_1_1_standard_job_scheduler.html#a1ef07acfece4706f7f172c740a8015c3',1,'wrench::StandardJobScheduler']]],
   ['setclusterid',['setClusterID',['../classwrench_1_1_workflow_task.html#ab8d621c9cf50b489fd6b092bea59872a',1,'wrench::WorkflowTask']]],
   ['setendpoints',['setEndpoints',['../classwrench_1_1_simulation_timestamp_task.html#a8d509ab4bfc8c1ae1ad9bf44dd085969',1,'wrench::SimulationTimestampTask']]],
   ['setnetworktimeoutvalue',['setNetworkTimeoutValue',['../classwrench_1_1_service.html#a2bdf99201280d83b44a03c0b78ebdf90',1,'wrench::Service']]],
@@ -15,7 +15,7 @@ var searchData=
   ['simulationtimestamp',['SimulationTimestamp',['../classwrench_1_1_simulation_timestamp.html#ad09714038c918230df20966d78b0201e',1,'wrench::SimulationTimestamp']]],
   ['sleep',['sleep',['../classwrench_1_1_simulation.html#a04ced81e9eb97587a2affee4e7e210ef',1,'wrench::Simulation']]],
   ['stagefile',['stageFile',['../classwrench_1_1_simulation.html#a493865392966728db4a2692d7aae9243',1,'wrench::Simulation::stageFile(WorkflowFile *file, StorageService *storage_service)'],['../classwrench_1_1_simulation.html#a4eb393e642f9d712a84c252564b14e3f',1,'wrench::Simulation::stageFile(WorkflowFile *file, StorageService *storage_service, std::string partition)']]],
-  ['stagefiles',['stageFiles',['../classwrench_1_1_simulation.html#acf363a0d7dc26c8e91754f7b86a9c324',1,'wrench::Simulation::stageFiles(std::map&lt; std::string, WorkflowFile * &gt; files, StorageService *storage_service)'],['../classwrench_1_1_simulation.html#a5f8cb4bcdb959f30cbba2b9df5daca67',1,'wrench::Simulation::stageFiles(std::map&lt; std::string, WorkflowFile * &gt; files, StorageService *storage_service, std::string partition)']]],
+  ['stagefiles',['stageFiles',['../classwrench_1_1_simulation.html#a8b7e54f1444aa33d3b9a0ab101eca0b1',1,'wrench::Simulation::stageFiles(std::map&lt; std::string, WorkflowFile *&gt; files, StorageService *storage_service)'],['../classwrench_1_1_simulation.html#a9f2ef12def38561c2fcd9f96d2d019aa',1,'wrench::Simulation::stageFiles(std::map&lt; std::string, WorkflowFile *&gt; files, StorageService *storage_service, std::string partition)']]],
   ['standardjobscheduler',['StandardJobScheduler',['../classwrench_1_1_standard_job_scheduler.html#ac71c8f05963604731837d324061bde0b',1,'wrench::StandardJobScheduler']]],
   ['start',['start',['../classwrench_1_1_service.html#a7fc995b01e5b0e3863a47778d85a3314',1,'wrench::Service']]],
   ['startnewservice',['startNewService',['../classwrench_1_1_simulation.html#ae2d8cb3f49d7c7cd7f8ee1c6f02d8069',1,'wrench::Simulation::startNewService(ComputeService *service)'],['../classwrench_1_1_simulation.html#a9e862e02395fec3e153c85e58332f3d4',1,'wrench::Simulation::startNewService(StorageService *service)'],['../classwrench_1_1_simulation.html#a7691eeb05b21e77d4a667b5931851001',1,'wrench::Simulation::startNewService(NetworkProximityService *service)'],['../classwrench_1_1_simulation.html#afd3ad9da56ccbb5d06b12ffa653b3ad8',1,'wrench::Simulation::startNewService(FileRegistryService *service)']]],
