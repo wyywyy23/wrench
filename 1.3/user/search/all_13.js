@@ -1,8 +1,7 @@
 var searchData=
 [
   ['virtualized_20cluster',['Virtualized Cluster',['../guide-virtualizedcluster.html',1,'']]],
-  ['virtualizedclusterservice',['VirtualizedClusterService',['../classwrench_1_1_virtualized_cluster_service.html#a7be5224d65410f4570ce9f9e9c835bd5',1,'wrench::VirtualizedClusterService']]],
-  ['virtualizedclusterservice',['VirtualizedClusterService',['../classwrench_1_1_virtualized_cluster_service.html',1,'wrench']]],
+  ['virtualizedclusterservice',['VirtualizedClusterService',['../classwrench_1_1_virtualized_cluster_service.html',1,'wrench::VirtualizedClusterService'],['../classwrench_1_1_virtualized_cluster_service.html#a7be5224d65410f4570ce9f9e9c835bd5',1,'wrench::VirtualizedClusterService::VirtualizedClusterService()']]],
   ['virtualizedclusterservicemessagepayload',['VirtualizedClusterServiceMessagePayload',['../classwrench_1_1_virtualized_cluster_service_message_payload.html',1,'wrench']]],
   ['virtualizedclusterserviceproperty',['VirtualizedClusterServiceProperty',['../classwrench_1_1_virtualized_cluster_service_property.html',1,'wrench']]],
   ['vm_5fboot_5foverhead_5fin_5fseconds',['VM_BOOT_OVERHEAD_IN_SECONDS',['../classwrench_1_1_cloud_service_property.html#a7e2fddc7f539dedff89fb41635a5b200',1,'wrench::CloudServiceProperty']]],
