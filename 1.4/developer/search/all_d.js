@@ -1,8 +1,7 @@
 var searchData=
 [
   ['network_20proximity',['Network Proximity',['../guide-networkproximity.html',1,'']]],
-  ['negotiatorcompletionmessage',['NegotiatorCompletionMessage',['../classwrench_1_1_negotiator_completion_message.html',1,'wrench']]],
-  ['negotiatorcompletionmessage',['NegotiatorCompletionMessage',['../classwrench_1_1_negotiator_completion_message.html#a49c536b57df68b77e84f698f9c836b33',1,'wrench::NegotiatorCompletionMessage']]],
+  ['negotiatorcompletionmessage',['NegotiatorCompletionMessage',['../classwrench_1_1_negotiator_completion_message.html',1,'wrench::NegotiatorCompletionMessage'],['../classwrench_1_1_negotiator_completion_message.html#aece506a0df6a8a5bf7484467f05c9b19',1,'wrench::NegotiatorCompletionMessage::NegotiatorCompletionMessage()']]],
   ['network_5fdaemon_5fcommunication_5fcoverage',['NETWORK_DAEMON_COMMUNICATION_COVERAGE',['../classwrench_1_1_network_proximity_service_property.html#a19af22a3ba877db9832cd764de95d3d8',1,'wrench::NetworkProximityServiceProperty']]],
   ['network_5fdaemon_5fcontact_5fanswer_5fpayload',['NETWORK_DAEMON_CONTACT_ANSWER_PAYLOAD',['../classwrench_1_1_network_proximity_service_message_payload.html#ad265658bc0467be580921500ba87e4ae',1,'wrench::NetworkProximityServiceMessagePayload']]],
   ['network_5fdaemon_5fcontact_5frequest_5fpayload',['NETWORK_DAEMON_CONTACT_REQUEST_PAYLOAD',['../classwrench_1_1_network_proximity_service_message_payload.html#aea4a6c68427d8867a296712dd932de76',1,'wrench::NetworkProximityServiceMessagePayload']]],
@@ -17,8 +16,7 @@ var searchData=
   ['network_5fproximity_5fservice_5ftype',['NETWORK_PROXIMITY_SERVICE_TYPE',['../classwrench_1_1_network_proximity_service_property.html#a4cb766dcd609012ab68000cfd9dc11b1',1,'wrench::NetworkProximityServiceProperty']]],
   ['network_5ftimeout',['NETWORK_TIMEOUT',['../classwrench_1_1_failure_cause.html#a6d06d6845ca5499c5cbbd9e1a08c9c77a74db928f7b05128dbaf2462588c7208f',1,'wrench::FailureCause']]],
   ['networkerror',['NetworkError',['../classwrench_1_1_network_error.html',1,'wrench']]],
-  ['networkproximityservice',['NetworkProximityService',['../classwrench_1_1_network_proximity_service.html#a8f7021f0fd9a5a6393fc447652c2371b',1,'wrench::NetworkProximityService']]],
-  ['networkproximityservice',['NetworkProximityService',['../classwrench_1_1_network_proximity_service.html',1,'wrench']]],
+  ['networkproximityservice',['NetworkProximityService',['../classwrench_1_1_network_proximity_service.html',1,'wrench::NetworkProximityService'],['../classwrench_1_1_network_proximity_service.html#a8f7021f0fd9a5a6393fc447652c2371b',1,'wrench::NetworkProximityService::NetworkProximityService()']]],
   ['networkproximityservicemessagepayload',['NetworkProximityServiceMessagePayload',['../classwrench_1_1_network_proximity_service_message_payload.html',1,'wrench']]],
   ['networkproximityserviceproperty',['NetworkProximityServiceProperty',['../classwrench_1_1_network_proximity_service_property.html',1,'wrench']]],
   ['no_5fscratch_5fspace',['NO_SCRATCH_SPACE',['../classwrench_1_1_failure_cause.html#a6d06d6845ca5499c5cbbd9e1a08c9c77a2e0288e55c8d2cf951acf20d4640b469',1,'wrench::FailureCause']]],

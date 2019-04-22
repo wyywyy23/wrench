@@ -2,7 +2,7 @@ var searchData=
 [
   ['ram_5fmemory',['ram_memory',['../classwrench_1_1_cloud_service_create_v_m_request_message.html#a40ea0674867b318fef39a8ad7f298302',1,'wrench::CloudServiceCreateVMRequestMessage']]],
   ['readfile',['readFile',['../classwrench_1_1_storage_service.html#a3a727ec680b1035a1e46fbddbbfe08bd',1,'wrench::StorageService::readFile(WorkflowFile *file, std::string src_dir)'],['../classwrench_1_1_storage_service.html#a42b42928c2d7c1a878453013ea1fb8c3',1,'wrench::StorageService::readFile(WorkflowFile *file)'],['../classwrench_1_1_storage_service.html#aa5cc9e820500ba55628a2e603fa7e3a8',1,'wrench::StorageService::readFile(WorkflowFile *file, WorkflowJob *job)']]],
-  ['readfiles',['readFiles',['../classwrench_1_1_storage_service.html#ad57140aa3b0bfb40eb52c4222a070b79',1,'wrench::StorageService']]],
+  ['readfiles',['readFiles',['../classwrench_1_1_storage_service.html#a8623c6fdc91a7e698fa5019b0b329de4',1,'wrench::StorageService']]],
   ['ready',['READY',['../classwrench_1_1_workflow_task.html#a1184f3d7aea21e1c87a9b17e84f1f92aae983a946ee97e094f18524d6b392d2f9',1,'wrench::WorkflowTask']]],
   ['reference_5fhost',['reference_host',['../classwrench_1_1_file_registry_file_lookup_by_proximity_request_message.html#add8ecc8a1fb81d2a6047ee4b57b415b7',1,'wrench::FileRegistryFileLookupByProximityRequestMessage::reference_host()'],['../classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message.html#a91a458a389b51fc43095d72305223b1a',1,'wrench::FileRegistryFileLookupByProximityAnswerMessage::reference_host()']]],
   ['releasedaemonlock',['releaseDaemonLock',['../classwrench_1_1_s4_u___daemon.html#a872a3739833bc4034fe729877c258dcd',1,'wrench::S4U_Daemon']]],

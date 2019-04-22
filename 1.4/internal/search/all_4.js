@@ -1,8 +1,7 @@
 var searchData=
 [
   ['endthisprocesscolor',['endThisProcessColor',['../classwrench_1_1_terminal_output.html#ad679829c47cacece6c79de8bba45add8',1,'wrench::TerminalOutput']]],
-  ['energymeter',['EnergyMeter',['../classwrench_1_1_energy_meter.html',1,'wrench']]],
-  ['energymeter',['EnergyMeter',['../classwrench_1_1_energy_meter.html#a8533895c6eb032027069d3cd04b9f8f1',1,'wrench::EnergyMeter::EnergyMeter(WMS *wms, const std::map&lt; std::string, double &gt; &amp;measurement_periods)'],['../classwrench_1_1_energy_meter.html#a31196bca18a3db3804c4bafd32770c64',1,'wrench::EnergyMeter::EnergyMeter(WMS *wms, const std::vector&lt; std::string &gt; &amp;hostnames, double period)']]],
+  ['energymeter',['EnergyMeter',['../classwrench_1_1_energy_meter.html',1,'wrench::EnergyMeter'],['../classwrench_1_1_energy_meter.html#a8533895c6eb032027069d3cd04b9f8f1',1,'wrench::EnergyMeter::EnergyMeter(WMS *wms, const std::map&lt; std::string, double &gt; &amp;measurement_periods)'],['../classwrench_1_1_energy_meter.html#a31196bca18a3db3804c4bafd32770c64',1,'wrench::EnergyMeter::EnergyMeter(WMS *wms, const std::vector&lt; std::string &gt; &amp;hostnames, double period)']]],
   ['errortype',['ErrorType',['../classwrench_1_1_network_error.html#a17ec7046bb91ea4e909c3bf59d46f09b',1,'wrench::NetworkError']]],
   ['estimated_5fstart_5ftime',['estimated_start_time',['../classwrench_1_1_batch_query_answer_message.html#aca0da5540e9f1d5fdef6b16af7315d41',1,'wrench::BatchQueryAnswerMessage']]],
   ['eventtype',['EventType',['../classwrench_1_1_workflow_execution_event.html#a5611165191fbc4d121d1b141c748a448',1,'wrench::WorkflowExecutionEvent']]],
