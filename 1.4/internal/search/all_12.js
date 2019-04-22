@@ -90,7 +90,7 @@ var searchData=
   ['simplestorageserviceproperty',['SimpleStorageServiceProperty',['../classwrench_1_1_simple_storage_service_property.html',1,'wrench']]],
   ['simulate_5fcomputation_5fas_5fsleep',['SIMULATE_COMPUTATION_AS_SLEEP',['../classwrench_1_1_batch_service_property.html#a0bde5c75f5f093ae15e68d67ae453ac3',1,'wrench::BatchServiceProperty::SIMULATE_COMPUTATION_AS_SLEEP()'],['../classwrench_1_1_standard_job_executor_property.html#a52911ff1a2857c2b375aac08ad8019a1',1,'wrench::StandardJobExecutorProperty::SIMULATE_COMPUTATION_AS_SLEEP()']]],
   ['simulated_5fworkload_5ftrace_5ffile',['SIMULATED_WORKLOAD_TRACE_FILE',['../classwrench_1_1_batch_service_property.html#a6a7fb4d9f505cc29f7236ea3e5713f34',1,'wrench::BatchServiceProperty']]],
-  ['simulation',['Simulation',['../classwrench_1_1_simulation.html#a538e0284c98086b506489e8b0e383371',1,'wrench::Simulation::Simulation()'],['../classwrench_1_1_s4_u___daemon.html#a305beca7ad2fb650ad1492b7c95e93c4',1,'wrench::S4U_Daemon::simulation()']]],
+  ['simulation',['simulation',['../classwrench_1_1_s4_u___daemon.html#a305beca7ad2fb650ad1492b7c95e93c4',1,'wrench::S4U_Daemon::simulation()'],['../classwrench_1_1_simulation.html#a538e0284c98086b506489e8b0e383371',1,'wrench::Simulation::Simulation()']]],
   ['simulation',['Simulation',['../classwrench_1_1_simulation.html',1,'wrench']]],
   ['simulation_5fmessage',['simulation_message',['../classwrench_1_1_s4_u___pending_communication.html#ae72d7e9697f88bef7e84625fbda8a417',1,'wrench::S4U_PendingCommunication']]],
   ['simulationmessage',['SimulationMessage',['../classwrench_1_1_simulation_message.html#af5fbc8bd2864ceb9cdb2dc70c6e916c6',1,'wrench::SimulationMessage']]],
