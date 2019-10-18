@@ -59,12 +59,12 @@ namespace wrench {
 
         // If the file is alreadxy an input file of the task, complain
         if (this->input_files.find(file->getID()) != this->input_files.end()) {
-            throw std::invalid_argument(" WorkflowTask::addInputFile(): File ID '" + file->getID() + "' is already an input file of task '" + this->getID() + "'");
+            //throw std::invalid_argument(" WorkflowTask::addInputFile(): File ID '" + file->getID() + "' is already an input file of task '" + this->getID() + "'");
         }
 
         // If file is already an output file of the task, complain
         if (this->output_files.find(file->getID()) != this->output_files.end()) {
-            throw std::invalid_argument(" WorkflowTask::addInputFile(): File ID '" + file->getID() + "' is already an output file of task '" + this->getID() + "'");
+            //throw std::invalid_argument(" WorkflowTask::addInputFile(): File ID '" + file->getID() + "' is already an output file of task '" + this->getID() + "'");
         }
 
 
@@ -94,8 +94,7 @@ namespace wrench {
 
         // If the file is already output of another task, complain
         if (file->getOutputOf() != nullptr) {
-            throw std::invalid_argument("WorkflowTask::addOutputFile(): File ID '" + file->getID() + "' is already an output file of another task (task '" +
-            file->getOutputOf()->getID() + "')");
+//            throw std::invalid_argument("WorkflowTask::addOutputFile(): File ID '" + file->getID() + "' is already an output file of another task (task '" + file->getOutputOf()->getID() + "')");
         }
 
         // Otherwise proceeed
