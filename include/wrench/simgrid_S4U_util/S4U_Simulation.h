@@ -11,6 +11,7 @@
 #ifndef WRENCH_S4U_SIMULATION_H
 #define WRENCH_S4U_SIMULATION_H
 
+#include <set>
 #include <simgrid/s4u.hpp>
 #include <simgrid/kernel/routing/ClusterZone.hpp>
 
@@ -51,8 +52,11 @@ namespace wrench {
         static void compute(double);
         static void sleep(double);
         static void computeZeroFlop();
-        static void writeToDisk(double num_bytes, std::string partition_name);
-        static void readFromDisk(double num_bytes, std::string partition_name);
+        static void writeToDisk(double num_bytes, std::string hostname, std::string mount_point);
+        static void readFromDisk(double num_bytes, std::string hostname, std::string mount_point);
+        static double getDiskCapacity(std::string hostname, std::string mount_point);
+        static std::vector<std::string> getDisks(std::string hostname);
+        static bool hostHasMountPoint(std::string hostname, std::string mount_point);
 
         static void yield();
         static std::string getHostProperty(std::string hostname, std::string property_name);

@@ -25,10 +25,6 @@ namespace wrench {
     constexpr unsigned long ComputeService::ALL_CORES;
     constexpr double ComputeService::ALL_RAM;
 
-    // Create SCRATCH as share_ptr to a boogus ptr, with a noop destructor!
-    std::shared_ptr<StorageService> ComputeService::SCRATCH =
-            std::shared_ptr<StorageService>((StorageService *) 666, [](void *ptr) {});
-
     /**
      * @brief Stop the compute service - must be called by the stop()
      *        method of derived classes
@@ -36,7 +32,6 @@ namespace wrench {
     void ComputeService::stop() {
         Service::stop();
     }
-
 
     /**
      * @brief Submit a job to the compute service
@@ -87,7 +82,7 @@ namespace wrench {
      * @brief Terminate a previously-submitted job (which may or may not be running yet)
      *
      * @param job: the job to terminate
-     * 
+     *
      * @throw std::invalid_argument
      * @throw WorkflowExecutionException
      * @throw std::runtime_error
@@ -124,20 +119,22 @@ namespace wrench {
      * @param hostname: the name of the host on which the compute service runs
      * @param service_name: the name of the compute service
      * @param mailbox_name_prefix: the mailbox name prefix
-     * @param scratch_space_size: the size for the scratch storage space of the compute service (0 if none)
+     * @param scratch_space_mount_point: the service's scratch space's mount point ("" if none)
      */
     ComputeService::ComputeService(const std::string &hostname,
                                    const std::string service_name,
                                    const std::string mailbox_name_prefix,
-                                   double scratch_space_size) :
+                                   std::string scratch_space_mount_point) :
             Service(hostname, service_name, mailbox_name_prefix) {
 
         this->state = ComputeService::UP;
 
-        if (scratch_space_size > 0) {
+        if (not scratch_space_mount_point.empty()) {
+
             try {
                 this->scratch_space_storage_service =
-                        std::shared_ptr<StorageService>(new SimpleStorageService(hostname, scratch_space_size));
+                        std::shared_ptr<StorageService>(new SimpleStorageService(hostname, {scratch_space_mount_point}));
+                this->scratch_space_storage_service->setScratch();
                 this->scratch_space_storage_service_shared_ptr = std::shared_ptr<StorageService>(
                         this->scratch_space_storage_service);
             } catch (std::runtime_error &e) {
@@ -297,6 +294,35 @@ namespace wrench {
     }
 
     /**
+     * @brief Get ram availability for each of the compute service's host
+     * @return the ram availability map (could be empty)
+     *
+     * @throw WorkflowExecutionException
+     * @throw std::runtime_error
+     */
+    std::map<std::string, double> ComputeService::getPerHostAvailableMemoryCapacity() {
+
+        std::map<std::string, std::map<std::string, double>> dict;
+        try {
+            dict = this->getServiceResourceInformation();
+        } catch (WorkflowExecutionException &e) {
+            throw;
+        } catch (std::runtime_error &e) {
+            throw;
+        }
+
+        std::map<std::string, double> to_return;
+
+        if (dict.find("ram_availabilities") != dict.end()) {
+            for (auto x : dict["ram_availabilities"]) {
+                to_return.insert(std::make_pair(x.first, (double) x.second));
+            }
+        }
+
+        return to_return;
+    }
+
+    /**
      * @brief Get the total idle core count for all hosts of the compute service
      * @return total idle core count
      *
@@ -444,7 +470,8 @@ namespace wrench {
      * @return a size (in bytes)
      */
     double ComputeService::getTotalScratchSpaceSize() {
-        return this->scratch_space_storage_service ? this->scratch_space_storage_service->getTotalSpace() : 0.0;
+        // A scratch space SS is always created with a single mount point
+        return this->scratch_space_storage_service ? this->scratch_space_storage_service->getTotalSpace().begin()->second : 0.0;
     }
 
     /**
@@ -452,7 +479,8 @@ namespace wrench {
      * @return a size (in bytes)
      */
     double ComputeService::getFreeScratchSpaceSize() {
-        return this->scratch_space_storage_service ? this->scratch_space_storage_service->getFreeSpace() : 0.0;
+        // A scratch space SS is always created with a single mount point
+        return this->scratch_space_storage_service ? this->scratch_space_storage_service->getFreeSpace().begin()->second : 0.0;
     }
 
     /**

@@ -39,12 +39,12 @@ namespace wrench {
         /***********************/
 
         friend class StandardJobExecutorTest;
+        friend class Simulation;
 
         /***********************/
         /** \endcond          **/
         /***********************/
 
-        friend class Simulation;
 
     public:
 
@@ -61,10 +61,6 @@ namespace wrench {
         /***********************/
         /** \cond DEVELOPER   **/
         /***********************/
-
-        /** @brief A convenient constant to mean "the scratch storage space" of a ComputeService. This is used
-         *   to move data to a ComputeService's scratch storage space. **/
-        static std::shared_ptr<StorageService> SCRATCH;
 
         virtual ~ComputeService() {}
 
@@ -92,6 +88,8 @@ namespace wrench {
 
         std::map<std::string, double> getMemoryCapacity();
 
+        std::map<std::string, double> getPerHostAvailableMemoryCapacity();
+
         std::map<std::string, double> getCoreFlopRate();
 
         double getTTL();
@@ -99,6 +97,7 @@ namespace wrench {
         double getTotalScratchSpaceSize();
 
         double getFreeScratchSpaceSize();
+
 
         /***********************/
         /** \endcond          **/
@@ -109,18 +108,18 @@ namespace wrench {
         /***********************/
 
 
-        /** 
+        /**
          * @brief Method to submit a standard job to the service
-         * 
+         *
          * @param job: The job being submitted
          * @param service_specific_arguments: the set of service-specific arguments
          */
         virtual void
         submitStandardJob(StandardJob *job, std::map<std::string, std::string> &service_specific_arguments) = 0;
 
-        /** 
+        /**
          * @brief Method to submit a pilot job to the service
-         * 
+         *
          * @param job: The job being submitted
          * @param service_specific_arguments: the set of service-specific arguments
          */
@@ -141,10 +140,12 @@ namespace wrench {
         ComputeService(const std::string &hostname,
                        std::string service_name,
                        std::string mailbox_name_prefix,
-                       double scratch_space_size);
+                       std::string scratch_space_mount_point);
 
 
     protected:
+
+        std::shared_ptr<StorageService> getScratch();
 
         ComputeService(const std::string &hostname,
                        std::string service_name,
@@ -161,8 +162,6 @@ namespace wrench {
         /***********************/
         /** \cond DEVELOPER   **/
         /***********************/
-
-        std::shared_ptr<StorageService> getScratch();
 
         std::shared_ptr<StorageService> getScratchSharedPtr();
 

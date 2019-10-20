@@ -54,7 +54,7 @@ namespace wrench {
         std::map<std::string, std::string> default_property_values = {
                 {BatchComputeServiceProperty::SUPPORTS_PILOT_JOBS,                         "true"},
                 {BatchComputeServiceProperty::SUPPORTS_STANDARD_JOBS,                      "true"},
-                {BatchComputeServiceProperty::THREAD_STARTUP_OVERHEAD,                     "0"},
+                {BatchComputeServiceProperty::TASK_STARTUP_OVERHEAD,                     "0"},
                 {BatchComputeServiceProperty::HOST_SELECTION_ALGORITHM,                    "FIRSTFIT"},
                 {BatchComputeServiceProperty::TASK_SELECTION_ALGORITHM,                    "maximum_flops"},
         #ifdef ENABLE_BATSCHED
@@ -97,7 +97,7 @@ namespace wrench {
     public:
         BatchComputeService(std::string &hostname,
                      std::vector<std::string> compute_hosts,
-                     double scratch_space_size,
+                     std::string scratch_space_mount_point,
                      std::map<std::string, std::string> property_list = {},
                      std::map<std::string, double> messagepayload_list = {}
         );
@@ -129,7 +129,7 @@ namespace wrench {
                      std::vector<std::string> compute_hosts,
                      unsigned long cores_per_host,
                      double ram_per_host,
-                     double scratch_space_size,
+                     std::string scratch_space_mount_point,
                      std::map<std::string, std::string> property_list,
                      std::map<std::string, double> messagepayload_list,
                      std::string suffix
