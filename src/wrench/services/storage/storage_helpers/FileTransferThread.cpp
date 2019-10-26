@@ -367,7 +367,6 @@ namespace wrench {
         double remaining = file->getSize();
         double to_send = std::min<double>(this->buffer_size, remaining);
 
-        // if (src_location == dst_location) {  TODO: Why is the operator not working?
         if ((src_location->getStorageService() == dst_location->getStorageService()) and
                 (src_location->getFullAbsolutePath() == dst_location->getFullAbsolutePath())) {
             WRENCH_INFO("FileTransferThread::copyFileLocally(): Copying file %s onto itself at location %s... ignoring",
@@ -387,11 +386,16 @@ namespace wrench {
                                          src_location->getMountPoint());
             // start the pipeline
             while (remaining > this->buffer_size) {
-                // Write to disk. TODO: Make this asynchronous!
-                S4U_Simulation::writeToDisk(this->buffer_size, dst_location->getStorageService()->hostname,
-                                            dst_location->getMountPoint());
-                S4U_Simulation::readFromDisk(this->buffer_size, src_location->getStorageService()->hostname,
-                                             src_location->getMountPoint());
+
+                S4U_Simulation::readFromDiskAndWriteToDiskConcurrently(
+                        this->buffer_size, this->buffer_size, src_location->getStorageService()->hostname,
+                        src_location->getMountPoint(), dst_location->getMountPoint());
+
+//
+//                S4U_Simulation::writeToDisk(this->buffer_size, dst_location->getStorageService()->hostname,
+//                                            dst_location->getMountPoint());
+//                S4U_Simulation::readFromDisk(this->buffer_size, src_location->getStorageService()->hostname,
+//                                             src_location->getMountPoint());
 
                 remaining -= this->buffer_size;
             }
