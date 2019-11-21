@@ -73,8 +73,6 @@ namespace wrench {
             }
         } catch (WorkflowExecutionException &e) {
             throw;
-        } catch (std::runtime_error &e) {
-            throw;
         }
     }
 
@@ -107,8 +105,6 @@ namespace wrench {
                 }
             }
         } catch (WorkflowExecutionException &e) {
-            throw;
-        } catch (std::runtime_error &e) {
             throw;
         }
     }
@@ -193,15 +189,13 @@ namespace wrench {
             dict = this->getServiceResourceInformation();
         } catch (WorkflowExecutionException &e) {
             throw;
-        } catch (std::runtime_error &e) {
-            throw;
         }
 
+        unsigned long count = 0;
         if (dict.find("num_hosts") != dict.end()) {
-            return (unsigned long) (*(dict["num_hosts"].begin())).second;
-        } else {
-            return 0;
+            count += (unsigned long) (*(dict["num_hosts"].begin())).second;
         }
+        return count;
     }
 
 
@@ -218,8 +212,6 @@ namespace wrench {
         try {
             dict = this->getServiceResourceInformation();
         } catch (WorkflowExecutionException &e) {
-            throw;
-        } catch (std::runtime_error &e) {
             throw;
         }
 
@@ -248,19 +240,15 @@ namespace wrench {
             dict = this->getServiceResourceInformation();
         } catch (WorkflowExecutionException &e) {
             throw;
-        } catch (std::runtime_error &e) {
-            throw;
         }
 
+        unsigned long count = 0;
         if (dict.find("num_cores") != dict.end()) {
-            unsigned long count = 0;
             for (auto x : dict["num_cores"]) {
                 count += (unsigned long) x.second;
             }
-            return count;
-        } else {
-            return 0;
         }
+        return count;
     }
 
 
@@ -277,8 +265,6 @@ namespace wrench {
         try {
             dict = this->getServiceResourceInformation();
         } catch (WorkflowExecutionException &e) {
-            throw;
-        } catch (std::runtime_error &e) {
             throw;
         }
 
@@ -307,8 +293,6 @@ namespace wrench {
             dict = this->getServiceResourceInformation();
         } catch (WorkflowExecutionException &e) {
             throw;
-        } catch (std::runtime_error &e) {
-            throw;
         }
 
         std::map<std::string, double> to_return;
@@ -336,27 +320,23 @@ namespace wrench {
             dict = this->getServiceResourceInformation();
         } catch (WorkflowExecutionException &e) {
             throw;
-        } catch (std::runtime_error &e) {
-            throw;
         }
 
 
+        unsigned long count = 0;
         if (dict.find("num_cores") != dict.end()) {
-            unsigned long count = 0;
             for (auto x : dict["num_idle_cores"]) {
                 count += (unsigned long) x.second;
             }
-            return count;
-        } else {
-            return 0;
         }
+        return count;
     }
 
     /**
     * @brief Get the per-core flop rate of the compute service's hosts
     * @return a list of flop rates in flop/sec
     *
-    * @throw std::runtime_error
+    * @throw WorkflowExecutionException
     */
     std::map<std::string, double> ComputeService::getCoreFlopRate() {
 
@@ -364,8 +344,6 @@ namespace wrench {
         try {
             dict = this->getServiceResourceInformation();
         } catch (WorkflowExecutionException &e) {
-            throw;
-        } catch (std::runtime_error &e) {
             throw;
         }
 
@@ -383,7 +361,7 @@ namespace wrench {
     * @brief Get the RAM capacities for each of the compute service's hosts
     * @return a map of RAM capacities, indexed by hostname
     *
-    * @throw std::runtime_error
+    * @throw WorkflowExecutionException
     */
     std::map<std::string, double> ComputeService::getMemoryCapacity() {
 
@@ -391,8 +369,6 @@ namespace wrench {
         try {
             dict = this->getServiceResourceInformation();
         } catch (WorkflowExecutionException &e) {
-            throw;
-        } catch (std::runtime_error &e) {
             throw;
         }
 
@@ -411,7 +387,7 @@ namespace wrench {
      * @brief Get the time-to-live of the compute service
      * @return the ttl in seconds
      *
-     * @throw std::runtime_error
+     * @throw WorkflowExecutionException
      */
     double ComputeService::getTTL() {
 
@@ -419,8 +395,6 @@ namespace wrench {
         try {
             dict = this->getServiceResourceInformation();
         } catch (WorkflowExecutionException &e) {
-            throw;
-        } catch (std::runtime_error &e) {
             throw;
         }
 
@@ -430,6 +404,9 @@ namespace wrench {
     /**
      * @brief Get information about the compute service as a dictionary of vectors
      * @return service information
+     *
+     * @throw WorkflowExecutionException
+     * @throw std::runtime_error
      */
     std::map<std::string, std::map<std::string, double>> ComputeService::getServiceResourceInformation() {
 

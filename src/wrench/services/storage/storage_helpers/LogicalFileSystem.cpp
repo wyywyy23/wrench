@@ -33,24 +33,6 @@ namespace wrench {
                                         hostname + " does not have a disk mounted at " + mount_point);
         }
 
-        if (mount_point != "/") { // "/" is obviously a prefix, but it's ok
-
-            // Check non-proper-prefixness
-            for (auto const &mp : LogicalFileSystem::mount_points) {
-                if (mp.first == hostname+":"+"/") {
-                    continue;  // "/" is obviously a prefix, but it's ok
-                }
-//                WRENCH_INFO("COMPARING %s TO %s", (hostname + ":" + mount_point).c_str(), mp.c_str());
-                if ((mp.first.find(hostname + ":" + mount_point) == 0) or ((hostname + ":" + mount_point).find(mp.first) == 0)) {
-                    throw std::invalid_argument(
-                            "LogicalFileSystem::LogicalFileSystem(): An existing mount point that has as prefix or is a prefix of '" +
-                            mount_point + "' already exists at host " + hostname);
-                }
-            }
-        }
-
-
-
         this->hostname = hostname;
         this->ss_name = ss_name;
         this->mount_point = mount_point;
@@ -275,14 +257,12 @@ namespace wrench {
 
         if (this->reserved_space.find(key) == this->reserved_space.end()) {
             return; // oh well, the transfer was cancelled/terminated/whatever
-//            throw std::runtime_error("LogicalFileSystem::unreserveSpace(): Space was not being reserved for storing file " +
-//                                     file->getID() + "at path " + absolute_path);
         }
 
-        if (this->occupied_space <  file->getSize()) {
-            throw std::invalid_argument("LogicalFileSystem::unreserveSpace(): Occupied space is less than the file size... should not happen");
-        }
-
+//         This will never happen
+//        if (this->occupied_space <  file->getSize()) {
+//            throw std::invalid_argument("LogicalFileSystem::unreserveSpace(): Occupied space is less than the file size... should not happen");
+//        }
 
         this->reserved_space.erase(key);
         this->occupied_space -= file->getSize();

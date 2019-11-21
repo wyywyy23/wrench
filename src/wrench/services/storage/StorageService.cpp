@@ -154,7 +154,7 @@ namespace wrench {
         if (auto msg = std::dynamic_pointer_cast<StorageServiceFreeSpaceAnswerMessage>(message)) {
             return msg->free_space;
         } else {
-            throw std::runtime_error("StorageService::howMuchFreeSpace(): Unexpected [" + msg->getName() + "] message");
+            throw std::runtime_error("StorageService::getFreeSpace(): Unexpected [" + msg->getName() + "] message");
         }
     }
 
@@ -263,7 +263,7 @@ namespace wrench {
 
             if (storage_service->buffer_size == 0) {
 
-                throw std::runtime_error("StorageService::writeFile(): Zero buffer size not implemented yet");
+                throw std::runtime_error("StorageService::readFile(): Zero buffer size not implemented yet");
 
             } else {
 
@@ -294,7 +294,7 @@ namespace wrench {
                     throw WorkflowExecutionException(cause);
                 }
                 if (not std::dynamic_pointer_cast<StorageServiceAckMessage>(message)) {
-                    throw std::runtime_error("StorageService::writeFile(): Received an unexpected [" +
+                    throw std::runtime_error("StorageService::readFile(): Received an unexpected [" +
                                              message->getName() + "] message!");
                 }
 
@@ -323,7 +323,6 @@ namespace wrench {
         auto storage_service = location->getStorageService();
 
         assertServiceIsUp(storage_service);
-
 
         // Send a  message to the daemon
         std::string answer_mailbox = S4U_Mailbox::generateUniqueMailboxName("write_file");
@@ -544,11 +543,6 @@ namespace wrench {
             throw std::invalid_argument("StorageService::copyFile(): Invalid arguments");
         }
 
-        if (src_location == dst_location) {
-            throw std::invalid_argument(
-                    "StorageService::copyFile(): Cannot redundantly copy a file onto itself");
-        }
-
         assertServiceIsUp(src_location->getStorageService());
         assertServiceIsUp(dst_location->getStorageService());
 
@@ -611,10 +605,6 @@ namespace wrench {
             throw std::invalid_argument("StorageService::initiateFileCopy(): Invalid arguments");
         }
 
-        if (src_location == dst_location) {
-            throw std::invalid_argument(
-                    "StorageService::initiateFileCopy(): Cannot redundantly copy a file onto itself");
-        }
 
         assertServiceIsUp(src_location->getStorageService());
         assertServiceIsUp(dst_location->getStorageService());
@@ -658,7 +648,7 @@ namespace wrench {
      */
     std::string StorageService::getMountPoint() {
         if (this->hasMultipleMountPoints()) {
-            throw std::invalid_argument("StorageService::getAbsolutePath(): The storage service has more than one mount point");
+            throw std::invalid_argument("StorageService::getMountPoint(): The storage service has more than one mount point");
         }
         return wrench::FileLocation::sanitizePath(this->file_systems.begin()->first);
     }

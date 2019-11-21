@@ -15,15 +15,14 @@
 #include "../include/TestWithFork.h"
 #include "../include/UniqueTmpPathPrefix.h"
 
-class S4U_DaemonTest : public ::testing::Test {
+class S4U_VirtualMachineTest : public ::testing::Test {
 
 public:
 
     void do_basic_Test();
-    void do_noCleanup_Test();
 
 protected:
-    S4U_DaemonTest() {
+    S4U_VirtualMachineTest() {
 
         // Create the simplest workflow
         workflow = new wrench::Workflow();
@@ -87,10 +86,10 @@ public:
 /**********************************************************************/
 
 
-class S4U_DaemonTestWMS : public wrench::WMS {
+class S4U_VirtualMachineTestWMS : public wrench::WMS {
 
 public:
-    S4U_DaemonTestWMS(S4U_DaemonTest *test,
+    S4U_VirtualMachineTestWMS(S4U_VirtualMachineTest *test,
                       std::string hostname) :
             wrench::WMS(nullptr, nullptr,  {}, {}, {}, nullptr, hostname, "test") {
         this->test = test;
@@ -98,73 +97,70 @@ public:
 
 private:
 
-    S4U_DaemonTest *test;
+    S4U_VirtualMachineTest *test;
 
     int main() {
 
-        std::shared_ptr<Sleep100Daemon> daemon =
-                std::shared_ptr<Sleep100Daemon>(new Sleep100Daemon("Host1"));
+        auto vm = new wrench::S4U_VirtualMachine("vm", 1, 1, {}, {});
 
-        // Start the daemon without a life saver
+        vm->getState();
+        vm->getStateAsString();
+
+        // Start the VM on a bogus host, which fails
         try {
-            daemon->startDaemon(false, false);
-            throw std::runtime_error("Should not be able to start a lifesaver-less daemon");
-        } catch (std::runtime_error &e) {
-        }
+            std::string bogus = "bogus";
+            vm->start(bogus);
+            throw std::runtime_error("Should not be able to start a VM on a bogus host");
+        } catch (std::invalid_argument &e) {}
 
-        // Create the life saver
-        daemon->createLifeSaver(std::shared_ptr<Sleep100Daemon>(daemon));
+        std::string host = "Host1";
 
-        // Create the life saver again (which is bogus)
+        // Suspend the VM, which fails
         try {
-            daemon->createLifeSaver(std::shared_ptr<Sleep100Daemon>(daemon));
-            throw std::runtime_error("Should not be able to create a second life saver");
-        } catch (std::runtime_error &e) {
-        }
+            vm->suspend();
+            throw std::runtime_error("Should not be able to suspend a VM that's not running");
+        } catch (std::runtime_error &e) {}
 
-        // Start a daemon without a simulation pointer
+        // shutdown the VM, which fails
         try {
-            daemon->startDaemon(false, false);
-            throw std::runtime_error("Should not be able to start a simulation-less daemon");
-        } catch (std::runtime_error &e) {
-        }
+            vm->shutdown();
+            throw std::runtime_error("Should not be able to shutdown a VM that's not running");
+        } catch (std::runtime_error &e) {}
 
+        // Start the VM for real
+        vm->start(host);
+        vm->getStateAsString();
 
-        // Start the daemon for real
-        daemon->simulation = this->simulation;
-        daemon->startDaemon(false, false);
+        // Start the VM again, which fails
+        try {
+            vm->start(host);
+            throw std::runtime_error("Should not be able to start a VM that's already running");
+        } catch (std::runtime_error &e) {}
 
-        daemon->isDaemonized(); // coverage
+        // Resume the VM, which fails
+        try {
+            vm->resume();
+            throw std::runtime_error("Should not be able to resume a VM that's not running");
+        } catch (std::runtime_error &e) {}
 
-        // sleep 10 seconds
-        wrench::Simulation::sleep(10);
+        // Suspend the VM
+        vm->suspend();
+        vm->getStateAsString();
 
-        // suspend the daemon
-        daemon->suspendActor();
+        // Resume the VM
+        vm->resume();
+        vm->getStateAsString();
 
-        // sleep another 10 seconds
-        wrench::Simulation::sleep(20);
-
-        // resume the daemon
-        daemon->resumeActor();
-
-        // Join and check that we get to the right time
-        daemon->join();
-
-        double now = wrench::Simulation::getCurrentSimulatedDate();
-        if (std::abs(now - 120) > 1) {
-            throw std::runtime_error("Joining at time " + std::to_string(now) + " instead of expected 120");
-        }
 
         return 0;
     }
 };
 
-TEST_F(S4U_DaemonTest, Basic) {
+TEST_F(S4U_VirtualMachineTest, Basic) {
     DO_TEST_WITH_FORK(do_basic_Test);
 }
 
-void S4U_DaemonTest::do_basic_Test() {
+void S4U_VirtualMachineTest::do_basic_Test() {
 
     // Create and initialize a simulation
     auto simulation = new wrench::Simulation();
@@ -184,83 +180,8 @@ void S4U_DaemonTest::do_basic_Test() {
     // Create a WMS
     std::shared_ptr<wrench::WMS> wms = nullptr;;
     ASSERT_NO_THROW(wms = simulation->add(
-            new S4U_DaemonTestWMS(
+            new S4U_VirtualMachineTestWMS(
                     this, hostname)));
-
-    ASSERT_NO_THROW(wms->addWorkflow(workflow));
-
-    // Running a "run a single task" simulation
-    ASSERT_NO_THROW(simulation->launch());
-
-    delete simulation;
-
-    free(argv[0]);
-    free(argv);
-}
-
-
-/**********************************************************************/
-/**  NO CLEANUP TEST                                                 **/
-/**********************************************************************/
-
-
-
-class S4U_DaemonNoCleanupTestWMS : public wrench::WMS {
-
-public:
-    S4U_DaemonNoCleanupTestWMS(S4U_DaemonTest *test,
-                      std::string hostname) :
-            wrench::WMS(nullptr, nullptr,  {}, {}, {}, nullptr, hostname, "test") {
-        this->test = test;
-    }
-
-private:
-
-    S4U_DaemonTest *test;
-
-    int main() {
-
-        std::shared_ptr<Sleep100Daemon> daemon =
-                std::shared_ptr<Sleep100Daemon>(new Sleep100Daemon("Host2"));
-
-        daemon->createLifeSaver(std::shared_ptr<Sleep100Daemon>(daemon));
-        daemon->simulation = this->simulation;
-        daemon->startDaemon(false, false);
-
-        // sleep 10 seconds
-        wrench::Simulation::sleep(10);
-
-        // Turn off Host2
-        wrench::Simulation::turnOffHost("Host2");
-
-        return 0;
-    }
-};
-
-TEST_F(S4U_DaemonTest, NoCleanup) {
-    DO_TEST_WITH_FORK_EXPECT_FATAL_FAILURE(do_noCleanup_Test, true);
-}
-
-void S4U_DaemonTest::do_noCleanup_Test() {
-
-    // Create and initialize a simulation
-    auto simulation = new wrench::Simulation();
-    int argc = 1;
-    char **argv = (char **) calloc(1, sizeof(char *));
-    argv[0] = strdup("unit_test");
-
-    simulation->init(&argc, argv);
-
-    // Setting up the platform
-    ASSERT_NO_THROW(simulation->instantiatePlatform(platform_file_path));
-
-    // Get a hostname
-    std::string hostname = "Host1";
-
-    // Create a WMS
-    std::shared_ptr<wrench::WMS> wms = nullptr;;
-    ASSERT_NO_THROW(wms = simulation->add(
-            new S4U_DaemonNoCleanupTestWMS(this, hostname)));
 
     ASSERT_NO_THROW(wms->addWorkflow(workflow));
 

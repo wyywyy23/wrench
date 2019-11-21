@@ -31,7 +31,7 @@ protected:
                           "             <prop id=\"size\" value=\"100MB\"/>"
                           "             <prop id=\"mount\" value=\"/tmp\"/>"
                           "          </disk>"
-                          "          <disk id=\"large_disk2\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"large_disk4\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
                           "             <prop id=\"size\" value=\"100MB\"/>"
                           "             <prop id=\"mount\" value=\"/home/users\"/>"
                           "          </disk>"
@@ -54,6 +54,7 @@ TEST_F(LogicalFileSystemTest, BasicTests) {
 void LogicalFileSystemTest::do_BasicTests() {
     // Create and initialize the simulation
     auto simulation = new wrench::Simulation();
+    auto workflow = new wrench::Workflow();
 
     int argc = 1;
     char **argv = (char **) calloc(1, sizeof(char *));
@@ -68,15 +69,21 @@ void LogicalFileSystemTest::do_BasicTests() {
     auto fs1 = new wrench::LogicalFileSystem("Host", "ss1", "/");
     fs1->init();
 
+
     auto fs2 = new wrench::LogicalFileSystem("Host", "ss2", "/");
     ASSERT_THROW(fs2->init(), std::invalid_argument);
+
+    auto fs3 = new wrench::LogicalFileSystem("Host", "ss1", "/tmp"); // coverage
+    fs3->init();
 
     fs1->createDirectory(("/foo"));
     fs1->removeAllFilesInDirectory("/foo");
     fs1->listFilesInDirectory("/foo");
     fs1->removeEmptyDirectory("/foo");
 
-
+    auto file = workflow->addFile("file", 10000000000);
+    auto file1 = workflow->addFile("file1", 10000);
+    ASSERT_THROW(fs1->reserveSpace(file, "/files/"), std::invalid_argument);
 
     delete simulation;
     free(argv[0]);

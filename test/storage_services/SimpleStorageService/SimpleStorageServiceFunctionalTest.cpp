@@ -602,6 +602,8 @@ void SimpleStorageServiceFunctionalTest::do_BasicFunctionality_test() {
     ASSERT_NO_THROW(simulation->stageFile(file_100, storage_service_1000));
     ASSERT_NO_THROW(simulation->stageFile(file_500, storage_service_1000));
 
+
+
     // Running a "run a single task" simulation
     ASSERT_NO_THROW(simulation->launch());
 
@@ -659,6 +661,25 @@ private:
                                                          nullptr);
             throw std::runtime_error("Shouldn't be able to do a synchronous file copy with a nullptr src");
         } catch (std::invalid_argument &e) {
+        }
+
+        // Do the file copy with a bogus path
+        try {
+            data_movement_manager->doSynchronousFileCopy(this->test->file_500,
+                                                         wrench::FileLocation::LOCATION(this->test->storage_service_1000, "/disk1000/whatever/"),
+                                                         wrench::FileLocation::LOCATION(this->test->storage_service_510));
+            throw std::runtime_error("Should not be able to do a file copy with a bogus path");
+        } catch (wrench::WorkflowExecutionException &e) {
+            auto cause = e.getCause();
+            if (auto real_cause = std::dynamic_pointer_cast<wrench::InvalidDirectoryPath>(e.getCause())) {
+                real_cause->toString();         // Coverage
+                real_cause->getInvalidPath();   // Coverage
+                real_cause->getStorageService();// Coverage
+            } else {
+                throw std::runtime_error("Got the expected execption, but the failure cause is not InvalidDirectoryPath (it's " + cause->toString() + ")");
+            }
+
+
         }
 
         // Do the file copy
@@ -810,6 +831,7 @@ private:
             if (cause->getDestinationLocation()->getAbsolutePathAtMountPoint() != "/") {
                 throw std::runtime_error("Got expected failure cause, but failure cause does not point to the right path");
             }
+            cause->getSourceLocation(); // for coverage
             cause->toString(); // for coverage
         }
 
@@ -879,6 +901,8 @@ void SimpleStorageServiceFunctionalTest::do_AsynchronousFileCopy_test() {
 
     // Staging file_500 on the 1000-byte storage service
     ASSERT_NO_THROW(simulation->stageFile(file_500, storage_service_1000));
+    ASSERT_NO_THROW(simulation->stageFile(file_1, storage_service_1000, "/disk1000/some_files/")); // coverage
+
 
     // Running a "run a single task" simulation
     ASSERT_NO_THROW(simulation->launch());
@@ -1425,7 +1449,7 @@ private:
         // Copy storage_service_510:foo:file_10 to storage_service_510:bar
         try {
             data_movement_manager->initiateAsynchronousFileCopy(this->test->file_10,
-                                                                wrench::FileLocation::LOCATION(this->test->storage_service_510, "/disk510/foo"),
+                                                                wrench::FileLocation::LOCATION(this->test->storage_service_510, "/disk510/foo/../foo"),
                                                                 wrench::FileLocation::LOCATION(this->test->storage_service_510, "/disk510/bar"));
         } catch (wrench::WorkflowExecutionException &e) {
             throw std::runtime_error("Got an unexpected exception");
@@ -1638,6 +1662,8 @@ void SimpleStorageServiceFunctionalTest::do_FileWrite_test() {
     // Create 1 Storage Services
     ASSERT_NO_THROW(storage_service_100 = simulation->add(
             new wrench::SimpleStorageService(hostname, {"/disk100", "/disk1000"})));
+
+    ASSERT_THROW(storage_service_100->getMountPoint(), std::invalid_argument);
 
     // FileLocation Testing
     ASSERT_THROW(wrench::FileLocation::LOCATION(nullptr), std::invalid_argument);
