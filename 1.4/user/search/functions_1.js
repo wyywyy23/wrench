@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['baremetalcomputeservice',['BareMetalComputeService',['../classwrench_1_1_bare_metal_compute_service.html#ad1f0b74b15538742ec16da2f805df662',1,'wrench::BareMetalComputeService::BareMetalComputeService(const std::string &amp;hostname, const std::map&lt; std::string, std::tuple&lt; unsigned long, double &gt;&gt; compute_resources, double scratch_space_size, std::map&lt; std::string, std::string &gt; property_list={}, std::map&lt; std::string, std::string &gt; messagepayload_list={})'],['../classwrench_1_1_bare_metal_compute_service.html#a67f03e4100d64ad6921dd65bfd1c8293',1,'wrench::BareMetalComputeService::BareMetalComputeService(const std::string &amp;hostname, const std::set&lt; std::string &gt; compute_hosts, double scratch_space_size, std::map&lt; std::string, std::string &gt; property_list={}, std::map&lt; std::string, std::string &gt; messagepayload_list={})']]],
-  ['batchservice',['BatchService',['../classwrench_1_1_batch_service.html#a2f91405c977001fa52acda0fe849f143',1,'wrench::BatchService']]]
-];
