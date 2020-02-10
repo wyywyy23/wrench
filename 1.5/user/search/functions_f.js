@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['scheduletasks',['scheduleTasks',['../classwrench_1_1_standard_job_scheduler.html#a97e8e3bef6e4eae41ff2996bc09ed2d9',1,'wrench::StandardJobScheduler']]],
+  ['scheduletasks',['scheduleTasks',['../classwrench_1_1_standard_job_scheduler.html#a8bb084b41ecc569a35af538d0ebd64a8',1,'wrench::StandardJobScheduler']]],
   ['setendpoints',['setEndpoints',['../classwrench_1_1_simulation_timestamp_task.html#a8d509ab4bfc8c1ae1ad9bf44dd085969',1,'wrench::SimulationTimestampTask']]],
   ['simplestorageservice',['SimpleStorageService',['../classwrench_1_1_simple_storage_service.html#a1d883b2ef968e9c8e77dd7e9b928b4b7',1,'wrench::SimpleStorageService']]],
   ['simulation',['Simulation',['../classwrench_1_1_simulation.html#a538e0284c98086b506489e8b0e383371',1,'wrench::Simulation']]],

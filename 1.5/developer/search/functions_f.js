@@ -2,7 +2,7 @@ var searchData=
 [
   ['sanitizepath',['sanitizePath',['../classwrench_1_1_file_location.html#ae39ad55190a9cca32a128cf4404294ba',1,'wrench::FileLocation']]],
   ['schedulepilotjobs',['schedulePilotJobs',['../classwrench_1_1_pilot_job_scheduler.html#a1ffeab878db93abe7c0fd72305ffe084',1,'wrench::PilotJobScheduler']]],
-  ['scheduletasks',['scheduleTasks',['../classwrench_1_1_standard_job_scheduler.html#a97e8e3bef6e4eae41ff2996bc09ed2d9',1,'wrench::StandardJobScheduler']]],
+  ['scheduletasks',['scheduleTasks',['../classwrench_1_1_standard_job_scheduler.html#a8bb084b41ecc569a35af538d0ebd64a8',1,'wrench::StandardJobScheduler']]],
   ['setaveragecpu',['setAverageCPU',['../classwrench_1_1_workflow_task.html#a8f4207c4fc2eea8f6370701a747a5238',1,'wrench::WorkflowTask']]],
   ['setbytesread',['setBytesRead',['../classwrench_1_1_workflow_task.html#ab438ab4409f1ddcb423c90577a611fe6',1,'wrench::WorkflowTask']]],
   ['setbyteswritten',['setBytesWritten',['../classwrench_1_1_workflow_task.html#a8291e3248b7246eab498fc0378199b76',1,'wrench::WorkflowTask']]],

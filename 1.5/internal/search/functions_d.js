@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['negotiatorcompletionmessage',['NegotiatorCompletionMessage',['../classwrench_1_1_negotiator_completion_message.html#a817353dde97439e20db2821565c3df49',1,'wrench::NegotiatorCompletionMessage']]],
+  ['negotiatorcompletionmessage',['NegotiatorCompletionMessage',['../classwrench_1_1_negotiator_completion_message.html#a23d6a68f7ff679286b90a3c114945b54',1,'wrench::NegotiatorCompletionMessage']]],
   ['networkerror',['NetworkError',['../classwrench_1_1_network_error.html#ac7718f7a5172d75aeee99b320ddc5487',1,'wrench::NetworkError']]],
   ['networkproximitycomputeanswermessage',['NetworkProximityComputeAnswerMessage',['../classwrench_1_1_network_proximity_compute_answer_message.html#ad5385a77c649e38f59f6a063abedb2c8',1,'wrench::NetworkProximityComputeAnswerMessage']]],
   ['networkproximitydaemon',['NetworkProximityDaemon',['../classwrench_1_1_network_proximity_daemon.html#acb75a9f9f3e58e4fc52952dc6e6ae5b6',1,'wrench::NetworkProximityDaemon']]],

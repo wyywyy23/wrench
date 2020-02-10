@@ -6,7 +6,7 @@ var searchData=
   ['s4u_5fvirtualmachine',['S4U_VirtualMachine',['../classwrench_1_1_s4_u___virtual_machine.html#a86599f52da0f352248ed88e75f866f37',1,'wrench::S4U_VirtualMachine']]],
   ['sanitizepath',['sanitizePath',['../classwrench_1_1_file_location.html#ae39ad55190a9cca32a128cf4404294ba',1,'wrench::FileLocation']]],
   ['schedulepilotjobs',['schedulePilotJobs',['../classwrench_1_1_pilot_job_scheduler.html#a1ffeab878db93abe7c0fd72305ffe084',1,'wrench::PilotJobScheduler']]],
-  ['scheduletasks',['scheduleTasks',['../classwrench_1_1_standard_job_scheduler.html#a97e8e3bef6e4eae41ff2996bc09ed2d9',1,'wrench::StandardJobScheduler']]],
+  ['scheduletasks',['scheduleTasks',['../classwrench_1_1_standard_job_scheduler.html#a8bb084b41ecc569a35af538d0ebd64a8',1,'wrench::StandardJobScheduler']]],
   ['sendrequest',['sendRequest',['../classwrench_1_1_cloud_compute_service.html#a52e7a8962204962360fe51e96da6e398',1,'wrench::CloudComputeService']]],
   ['service',['Service',['../classwrench_1_1_service.html#a405ee888a74f503d9d99ef87964dc814',1,'wrench::Service']]],
   ['servicedaemonstoppedmessage',['ServiceDaemonStoppedMessage',['../classwrench_1_1_service_daemon_stopped_message.html#a253785d9c7d9599c22ae6370ca234435',1,'wrench::ServiceDaemonStoppedMessage']]],
