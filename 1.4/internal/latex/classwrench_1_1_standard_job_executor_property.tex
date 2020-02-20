@@ -1,0 +1,82 @@
+\hypertarget{classwrench_1_1_standard_job_executor_property}{}\section{wrench\+:\+:Standard\+Job\+Executor\+Property Class Reference}
+\label{classwrench_1_1_standard_job_executor_property}\index{wrench\+::\+Standard\+Job\+Executor\+Property@{wrench\+::\+Standard\+Job\+Executor\+Property}}
+
+
+Configurable properties for a \hyperlink{classwrench_1_1_standard_job_executor}{Standard\+Job\+Executor}.  
+
+
+
+
+{\ttfamily \#include $<$Standard\+Job\+Executor\+Property.\+h$>$}
+
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \hyperlink{classwrench_1_1_standard_job_executor_property_ae5ce6920c874824ce3bc02748a80204f}{C\+O\+R\+E\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}
+\begin{DoxyCompactList}\small\item\em The algorithm that decides how many cores are given to a computational task. Possible values are\+: \end{DoxyCompactList}\item 
+static const std\+::string \hyperlink{classwrench_1_1_standard_job_executor_property_a15a713f4b9f9ba6ebb4ba4498c1d2959}{H\+O\+S\+T\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}
+\begin{DoxyCompactList}\small\item\em The algorithm that decides on which host a task should be placed. Possible values are\+: \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_standard_job_executor_property_a52911ff1a2857c2b375aac08ad8019a1}\label{classwrench_1_1_standard_job_executor_property_a52911ff1a2857c2b375aac08ad8019a1}} 
+static const std\+::string \hyperlink{classwrench_1_1_standard_job_executor_property_a52911ff1a2857c2b375aac08ad8019a1}{S\+I\+M\+U\+L\+A\+T\+E\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+O\+N\+\_\+\+A\+S\+\_\+\+S\+L\+E\+EP}
+\begin{DoxyCompactList}\small\item\em Simulate computation as just a sleep instead of with an actual compute thread. This is for scalability reason, and only simulation-\/valid if one is sure that cores are space shared (i.\+e., only a single compute thread can ever run on a core at once). Possible values are \char`\"{}true\char`\"{} or \char`\"{}false\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_standard_job_executor_property_afe3bbcf355a149223aa8b484e78b9681}\label{classwrench_1_1_standard_job_executor_property_afe3bbcf355a149223aa8b484e78b9681}} 
+static const std\+::string \hyperlink{classwrench_1_1_standard_job_executor_property_afe3bbcf355a149223aa8b484e78b9681}{S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+J\+O\+B\+\_\+\+F\+I\+L\+E\+S\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+I\+N\+\_\+\+S\+C\+R\+A\+T\+CH}
+\begin{DoxyCompactList}\small\item\em The number of bytes in the control message sent by the executor to provide the set of files stored in the scratch. \end{DoxyCompactList}\item 
+static const std\+::string \hyperlink{classwrench_1_1_standard_job_executor_property_a6dec558a4ba61c4858e29c93cc33c6d6}{T\+A\+S\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}
+\begin{DoxyCompactList}\small\item\em The algorithm that decides which ready computational task, in case multiple tasks are ready, should run first. Possible values are\+: \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_standard_job_executor_property_a3150e71e6f2107b16fc2c483c127b26f}\label{classwrench_1_1_standard_job_executor_property_a3150e71e6f2107b16fc2c483c127b26f}} 
+static const std\+::string \hyperlink{classwrench_1_1_standard_job_executor_property_a3150e71e6f2107b16fc2c483c127b26f}{T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+\+O\+V\+E\+R\+H\+E\+AD}
+\begin{DoxyCompactList}\small\item\em The number of seconds to start a thread (default = 0) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Configurable properties for a \hyperlink{classwrench_1_1_standard_job_executor}{Standard\+Job\+Executor}. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classwrench_1_1_standard_job_executor_property_ae5ce6920c874824ce3bc02748a80204f}\label{classwrench_1_1_standard_job_executor_property_ae5ce6920c874824ce3bc02748a80204f}} 
+\index{wrench\+::\+Standard\+Job\+Executor\+Property@{wrench\+::\+Standard\+Job\+Executor\+Property}!C\+O\+R\+E\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{C\+O\+R\+E\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}}
+\index{C\+O\+R\+E\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{C\+O\+R\+E\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}!wrench\+::\+Standard\+Job\+Executor\+Property@{wrench\+::\+Standard\+Job\+Executor\+Property}}
+\subsubsection{\texorpdfstring{C\+O\+R\+E\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}{CORE\_ALLOCATION\_ALGORITHM}}
+{\footnotesize\ttfamily const std\+::string wrench\+::\+Standard\+Job\+Executor\+Property\+::\+C\+O\+R\+E\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The algorithm that decides how many cores are given to a computational task. Possible values are\+: 
+
+
+\begin{DoxyItemize}
+\item maximum (default)
+\item minimum 
+\end{DoxyItemize}\mbox{\Hypertarget{classwrench_1_1_standard_job_executor_property_a15a713f4b9f9ba6ebb4ba4498c1d2959}\label{classwrench_1_1_standard_job_executor_property_a15a713f4b9f9ba6ebb4ba4498c1d2959}} 
+\index{wrench\+::\+Standard\+Job\+Executor\+Property@{wrench\+::\+Standard\+Job\+Executor\+Property}!H\+O\+S\+T\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{H\+O\+S\+T\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}}
+\index{H\+O\+S\+T\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{H\+O\+S\+T\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}!wrench\+::\+Standard\+Job\+Executor\+Property@{wrench\+::\+Standard\+Job\+Executor\+Property}}
+\subsubsection{\texorpdfstring{H\+O\+S\+T\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}{HOST\_SELECTION\_ALGORITHM}}
+{\footnotesize\ttfamily const std\+::string wrench\+::\+Standard\+Job\+Executor\+Property\+::\+H\+O\+S\+T\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The algorithm that decides on which host a task should be placed. Possible values are\+: 
+
+
+\begin{DoxyItemize}
+\item best\+\_\+fit (default) 
+\end{DoxyItemize}\mbox{\Hypertarget{classwrench_1_1_standard_job_executor_property_a6dec558a4ba61c4858e29c93cc33c6d6}\label{classwrench_1_1_standard_job_executor_property_a6dec558a4ba61c4858e29c93cc33c6d6}} 
+\index{wrench\+::\+Standard\+Job\+Executor\+Property@{wrench\+::\+Standard\+Job\+Executor\+Property}!T\+A\+S\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{T\+A\+S\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}}
+\index{T\+A\+S\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{T\+A\+S\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}!wrench\+::\+Standard\+Job\+Executor\+Property@{wrench\+::\+Standard\+Job\+Executor\+Property}}
+\subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}{TASK\_SELECTION\_ALGORITHM}}
+{\footnotesize\ttfamily const std\+::string wrench\+::\+Standard\+Job\+Executor\+Property\+::\+T\+A\+S\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The algorithm that decides which ready computational task, in case multiple tasks are ready, should run first. Possible values are\+: 
+
+
+\begin{DoxyItemize}
+\item maximum\+\_\+flops (default)
+\item maximum\+\_\+minimum\+\_\+cores
+\item minimum\+\_\+top\+\_\+level 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/standard\+\_\+job\+\_\+executor/Standard\+Job\+Executor\+Property.\+h\end{DoxyCompactItemize}

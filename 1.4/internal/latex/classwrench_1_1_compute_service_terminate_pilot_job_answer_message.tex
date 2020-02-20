@@ -1,0 +1,78 @@
+\hypertarget{classwrench_1_1_compute_service_terminate_pilot_job_answer_message}{}\section{wrench\+:\+:Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message Class Reference}
+\label{classwrench_1_1_compute_service_terminate_pilot_job_answer_message}\index{wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message@{wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message}}
+
+
+A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} in answer to a \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} termination request.  
+
+
+
+
+{\ttfamily \#include $<$Compute\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_compute_service_terminate_pilot_job_answer_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_a6aea586c71a440ed3eede569ea31cec6}{Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message} (\hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} $\ast$, \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$, bool \hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_afa2b6acd7eb6b7ad23470402ef2badf0}{success}, std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$ \hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_afeeb546d25637b2ff8eb39b70b51e121}{failure\+\_\+cause}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_a7975aff8b6494bad7ee424d3afae8d1b}\label{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_a7975aff8b6494bad7ee424d3afae8d1b}} 
+\hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$ \hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_a7975aff8b6494bad7ee424d3afae8d1b}{compute\+\_\+service}
+\begin{DoxyCompactList}\small\item\em The compute service to which the job had been submitted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_afeeb546d25637b2ff8eb39b70b51e121}\label{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_afeeb546d25637b2ff8eb39b70b51e121}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$ \hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_afeeb546d25637b2ff8eb39b70b51e121}{failure\+\_\+cause}
+\begin{DoxyCompactList}\small\item\em The cause of the failure, or nullptr on success. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_acc822617ab272e1f5a200af96c10090e}\label{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_acc822617ab272e1f5a200af96c10090e}} 
+\hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} $\ast$ \hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_acc822617ab272e1f5a200af96c10090e}{job}
+\begin{DoxyCompactList}\small\item\em The job to terminate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_afa2b6acd7eb6b7ad23470402ef2badf0}\label{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_afa2b6acd7eb6b7ad23470402ef2badf0}} 
+bool \hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_afa2b6acd7eb6b7ad23470402ef2badf0}{success}
+\begin{DoxyCompactList}\small\item\em Whether to job termination was successful. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} in answer to a \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} termination request. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_a6aea586c71a440ed3eede569ea31cec6}\label{classwrench_1_1_compute_service_terminate_pilot_job_answer_message_a6aea586c71a440ed3eede569ea31cec6}} 
+\index{wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message@{wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message}!Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message@{Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message}}
+\index{Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message@{Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message}!wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message@{wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message}}
+\subsubsection{\texorpdfstring{Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message()}{ComputeServiceTerminatePilotJobAnswerMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} $\ast$}]{job,  }\item[{\hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$}]{compute\+\_\+service,  }\item[{bool}]{success,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$}]{failure\+\_\+cause,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & a pilot job whose termination had been requested \\
+\hline
+{\em compute\+\_\+service} & the compute service \\
+\hline
+{\em success} & true on success, false otherwise \\
+\hline
+{\em failure\+\_\+cause} & cause of the failure (nullptr if success == true) \\
+\hline
+{\em payload} & message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+arguments} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/Compute\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/Compute\+Service\+Message.\+cpp\end{DoxyCompactItemize}

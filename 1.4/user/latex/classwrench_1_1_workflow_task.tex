@@ -1,0 +1,195 @@
+\hypertarget{classwrench_1_1_workflow_task}{}\section{wrench\+:\+:Workflow\+Task Class Reference}
+\label{classwrench_1_1_workflow_task}\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+
+
+A computational task in a \hyperlink{classwrench_1_1_workflow}{Workflow}.  
+
+
+
+
+{\ttfamily \#include $<$Workflow\+Task.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classwrench_1_1_workflow_task_a3498047afb74ea6ce2132d44f8c678e8}{add\+Input\+File} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$file)
+\begin{DoxyCompactList}\small\item\em Add an input file to the task. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_workflow_task_ac774b4fddc07753f5fc7daa31ae28fd3}{add\+Output\+File} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$file)
+\begin{DoxyCompactList}\small\item\em Add an output file to the task. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classwrench_1_1_workflow_task_a6103d36486855fb8caabb008bcfaacd4}{get\+Failure\+Count} ()
+\begin{DoxyCompactList}\small\item\em Get the number of times a task has failed. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_workflow_task_aec0aab3ed552960729a60d1d3c4a3de2}{get\+Flops} () const
+\begin{DoxyCompactList}\small\item\em Get the number of flops of the task. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classwrench_1_1_workflow_task_a18ce8967b4b59d2d231a1218a8d3b813}{get\+ID} () const
+\begin{DoxyCompactList}\small\item\em Get the id of the task. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classwrench_1_1_workflow_task_aa470fe4c0a34211165989afabcba795f}{get\+Max\+Num\+Cores} () const
+\begin{DoxyCompactList}\small\item\em Get the maximum number of cores that the task can use. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_workflow_task_aeafc6e6f0bce5853a3fd1e4818638908}{get\+Memory\+Requirement} () const
+\begin{DoxyCompactList}\small\item\em Get the memory requirement of the task. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classwrench_1_1_workflow_task_a05d06d1988745735016dcf19d38e2398}{get\+Min\+Num\+Cores} () const
+\begin{DoxyCompactList}\small\item\em Get the minimum number of cores required for running the task. \end{DoxyCompactList}\item 
+int \hyperlink{classwrench_1_1_workflow_task_a6d69d3c969a5cb32a3a53ec20fb6f6cb}{get\+Number\+Of\+Children} () const
+\begin{DoxyCompactList}\small\item\em Get the number of children of a task. \end{DoxyCompactList}\item 
+int \hyperlink{classwrench_1_1_workflow_task_ab0c0bc84347585a8ea8ca45251931304}{get\+Number\+Of\+Parents} () const
+\begin{DoxyCompactList}\small\item\em Get the number of parents of a task. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_workflow_task_ab7e3113ba73aebc6e2776a6e56984662}{get\+Parallel\+Efficiency} () const
+\begin{DoxyCompactList}\small\item\em Get the parallel efficiency of the task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A computational task in a \hyperlink{classwrench_1_1_workflow}{Workflow}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_workflow_task_a3498047afb74ea6ce2132d44f8c678e8}\label{classwrench_1_1_workflow_task_a3498047afb74ea6ce2132d44f8c678e8}} 
+\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}!add\+Input\+File@{add\+Input\+File}}
+\index{add\+Input\+File@{add\+Input\+File}!wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+\subsubsection{\texorpdfstring{add\+Input\+File()}{addInputFile()}}
+{\footnotesize\ttfamily void wrench\+::\+Workflow\+Task\+::add\+Input\+File (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Add an input file to the task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_workflow_task_ac774b4fddc07753f5fc7daa31ae28fd3}\label{classwrench_1_1_workflow_task_ac774b4fddc07753f5fc7daa31ae28fd3}} 
+\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}!add\+Output\+File@{add\+Output\+File}}
+\index{add\+Output\+File@{add\+Output\+File}!wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+\subsubsection{\texorpdfstring{add\+Output\+File()}{addOutputFile()}}
+{\footnotesize\ttfamily void wrench\+::\+Workflow\+Task\+::add\+Output\+File (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Add an output file to the task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_workflow_task_a6103d36486855fb8caabb008bcfaacd4}\label{classwrench_1_1_workflow_task_a6103d36486855fb8caabb008bcfaacd4}} 
+\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}!get\+Failure\+Count@{get\+Failure\+Count}}
+\index{get\+Failure\+Count@{get\+Failure\+Count}!wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+\subsubsection{\texorpdfstring{get\+Failure\+Count()}{getFailureCount()}}
+{\footnotesize\ttfamily unsigned int wrench\+::\+Workflow\+Task\+::get\+Failure\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of times a task has failed. 
+
+\begin{DoxyReturn}{Returns}
+a failure count 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_task_aec0aab3ed552960729a60d1d3c4a3de2}\label{classwrench_1_1_workflow_task_aec0aab3ed552960729a60d1d3c4a3de2}} 
+\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}!get\+Flops@{get\+Flops}}
+\index{get\+Flops@{get\+Flops}!wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+\subsubsection{\texorpdfstring{get\+Flops()}{getFlops()}}
+{\footnotesize\ttfamily double wrench\+::\+Workflow\+Task\+::get\+Flops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of flops of the task. 
+
+\begin{DoxyReturn}{Returns}
+a number of flops 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_task_a18ce8967b4b59d2d231a1218a8d3b813}\label{classwrench_1_1_workflow_task_a18ce8967b4b59d2d231a1218a8d3b813}} 
+\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}!get\+ID@{get\+ID}}
+\index{get\+ID@{get\+ID}!wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+\subsubsection{\texorpdfstring{get\+I\+D()}{getID()}}
+{\footnotesize\ttfamily std\+::string wrench\+::\+Workflow\+Task\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the id of the task. 
+
+\begin{DoxyReturn}{Returns}
+an id as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_task_aa470fe4c0a34211165989afabcba795f}\label{classwrench_1_1_workflow_task_aa470fe4c0a34211165989afabcba795f}} 
+\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}!get\+Max\+Num\+Cores@{get\+Max\+Num\+Cores}}
+\index{get\+Max\+Num\+Cores@{get\+Max\+Num\+Cores}!wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+\subsubsection{\texorpdfstring{get\+Max\+Num\+Cores()}{getMaxNumCores()}}
+{\footnotesize\ttfamily unsigned long wrench\+::\+Workflow\+Task\+::get\+Max\+Num\+Cores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the maximum number of cores that the task can use. 
+
+\begin{DoxyReturn}{Returns}
+a number of cores 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_task_aeafc6e6f0bce5853a3fd1e4818638908}\label{classwrench_1_1_workflow_task_aeafc6e6f0bce5853a3fd1e4818638908}} 
+\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}!get\+Memory\+Requirement@{get\+Memory\+Requirement}}
+\index{get\+Memory\+Requirement@{get\+Memory\+Requirement}!wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+\subsubsection{\texorpdfstring{get\+Memory\+Requirement()}{getMemoryRequirement()}}
+{\footnotesize\ttfamily double wrench\+::\+Workflow\+Task\+::get\+Memory\+Requirement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the memory requirement of the task. 
+
+\begin{DoxyReturn}{Returns}
+a memory requirement (in bytes) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_task_a05d06d1988745735016dcf19d38e2398}\label{classwrench_1_1_workflow_task_a05d06d1988745735016dcf19d38e2398}} 
+\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}!get\+Min\+Num\+Cores@{get\+Min\+Num\+Cores}}
+\index{get\+Min\+Num\+Cores@{get\+Min\+Num\+Cores}!wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+\subsubsection{\texorpdfstring{get\+Min\+Num\+Cores()}{getMinNumCores()}}
+{\footnotesize\ttfamily unsigned long wrench\+::\+Workflow\+Task\+::get\+Min\+Num\+Cores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the minimum number of cores required for running the task. 
+
+\begin{DoxyReturn}{Returns}
+a number of cores 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_task_a6d69d3c969a5cb32a3a53ec20fb6f6cb}\label{classwrench_1_1_workflow_task_a6d69d3c969a5cb32a3a53ec20fb6f6cb}} 
+\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}!get\+Number\+Of\+Children@{get\+Number\+Of\+Children}}
+\index{get\+Number\+Of\+Children@{get\+Number\+Of\+Children}!wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+\subsubsection{\texorpdfstring{get\+Number\+Of\+Children()}{getNumberOfChildren()}}
+{\footnotesize\ttfamily int wrench\+::\+Workflow\+Task\+::get\+Number\+Of\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of children of a task. 
+
+\begin{DoxyReturn}{Returns}
+a number of children 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_task_ab0c0bc84347585a8ea8ca45251931304}\label{classwrench_1_1_workflow_task_ab0c0bc84347585a8ea8ca45251931304}} 
+\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}!get\+Number\+Of\+Parents@{get\+Number\+Of\+Parents}}
+\index{get\+Number\+Of\+Parents@{get\+Number\+Of\+Parents}!wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+\subsubsection{\texorpdfstring{get\+Number\+Of\+Parents()}{getNumberOfParents()}}
+{\footnotesize\ttfamily int wrench\+::\+Workflow\+Task\+::get\+Number\+Of\+Parents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of parents of a task. 
+
+\begin{DoxyReturn}{Returns}
+a number of parents 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_task_ab7e3113ba73aebc6e2776a6e56984662}\label{classwrench_1_1_workflow_task_ab7e3113ba73aebc6e2776a6e56984662}} 
+\index{wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}!get\+Parallel\+Efficiency@{get\+Parallel\+Efficiency}}
+\index{get\+Parallel\+Efficiency@{get\+Parallel\+Efficiency}!wrench\+::\+Workflow\+Task@{wrench\+::\+Workflow\+Task}}
+\subsubsection{\texorpdfstring{get\+Parallel\+Efficiency()}{getParallelEfficiency()}}
+{\footnotesize\ttfamily double wrench\+::\+Workflow\+Task\+::get\+Parallel\+Efficiency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the parallel efficiency of the task. 
+
+\begin{DoxyReturn}{Returns}
+a parallel efficiency (number between 0.\+0 and 1.\+0) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/workflow/Workflow\+Task.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/workflow/Workflow\+Task.\+cpp\end{DoxyCompactItemize}

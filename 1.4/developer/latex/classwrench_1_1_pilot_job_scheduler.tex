@@ -1,0 +1,75 @@
+\hypertarget{classwrench_1_1_pilot_job_scheduler}{}\section{wrench\+:\+:Pilot\+Job\+Scheduler Class Reference}
+\label{classwrench_1_1_pilot_job_scheduler}\index{wrench\+::\+Pilot\+Job\+Scheduler@{wrench\+::\+Pilot\+Job\+Scheduler}}
+
+
+A (mostly virtual) base class for implementing \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} scheduling algorithms to be used by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}.  
+
+
+
+
+{\ttfamily \#include $<$Pilot\+Job\+Scheduler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_pilot_job_scheduler_ab230034aa98439169dc78bcf82bfced8}\label{classwrench_1_1_pilot_job_scheduler_ab230034aa98439169dc78bcf82bfced8}} 
+\hyperlink{classwrench_1_1_pilot_job_scheduler_ab230034aa98439169dc78bcf82bfced8}{Pilot\+Job\+Scheduler} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_data_movement_manager}{Data\+Movement\+Manager} $\ast$ \hyperlink{classwrench_1_1_pilot_job_scheduler_ab161a17fd3c1a7f5af171f813e32f3a1}{get\+Data\+Movement\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Get the data movement manager to be used by this scheduler (nullptr\+: none is used) \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_job_manager}{Job\+Manager} $\ast$ \hyperlink{classwrench_1_1_pilot_job_scheduler_acd33b44c3481d911489626dc3f0ea957}{get\+Job\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Get the job manager to be used by this scheduler (nullptr\+: none is used) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classwrench_1_1_pilot_job_scheduler_a903c44145dfce2964f90cc856146adbb}{schedule\+Pilot\+Jobs} (const std\+::set$<$ \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$$>$ \&compute\+\_\+services)=0
+\begin{DoxyCompactList}\small\item\em A method that schedules pilot jobs, according to whatever decision algorithm it implements, over a set of compute services. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A (mostly virtual) base class for implementing \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} scheduling algorithms to be used by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_pilot_job_scheduler_ab161a17fd3c1a7f5af171f813e32f3a1}\label{classwrench_1_1_pilot_job_scheduler_ab161a17fd3c1a7f5af171f813e32f3a1}} 
+\index{wrench\+::\+Pilot\+Job\+Scheduler@{wrench\+::\+Pilot\+Job\+Scheduler}!get\+Data\+Movement\+Manager@{get\+Data\+Movement\+Manager}}
+\index{get\+Data\+Movement\+Manager@{get\+Data\+Movement\+Manager}!wrench\+::\+Pilot\+Job\+Scheduler@{wrench\+::\+Pilot\+Job\+Scheduler}}
+\subsubsection{\texorpdfstring{get\+Data\+Movement\+Manager()}{getDataMovementManager()}}
+{\footnotesize\ttfamily \hyperlink{classwrench_1_1_data_movement_manager}{Data\+Movement\+Manager}$\ast$ wrench\+::\+Pilot\+Job\+Scheduler\+::get\+Data\+Movement\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the data movement manager to be used by this scheduler (nullptr\+: none is used) 
+
+\begin{DoxyReturn}{Returns}
+a data movement manager 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_pilot_job_scheduler_acd33b44c3481d911489626dc3f0ea957}\label{classwrench_1_1_pilot_job_scheduler_acd33b44c3481d911489626dc3f0ea957}} 
+\index{wrench\+::\+Pilot\+Job\+Scheduler@{wrench\+::\+Pilot\+Job\+Scheduler}!get\+Job\+Manager@{get\+Job\+Manager}}
+\index{get\+Job\+Manager@{get\+Job\+Manager}!wrench\+::\+Pilot\+Job\+Scheduler@{wrench\+::\+Pilot\+Job\+Scheduler}}
+\subsubsection{\texorpdfstring{get\+Job\+Manager()}{getJobManager()}}
+{\footnotesize\ttfamily \hyperlink{classwrench_1_1_job_manager}{Job\+Manager}$\ast$ wrench\+::\+Pilot\+Job\+Scheduler\+::get\+Job\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the job manager to be used by this scheduler (nullptr\+: none is used) 
+
+\begin{DoxyReturn}{Returns}
+a job manager 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_pilot_job_scheduler_a903c44145dfce2964f90cc856146adbb}\label{classwrench_1_1_pilot_job_scheduler_a903c44145dfce2964f90cc856146adbb}} 
+\index{wrench\+::\+Pilot\+Job\+Scheduler@{wrench\+::\+Pilot\+Job\+Scheduler}!schedule\+Pilot\+Jobs@{schedule\+Pilot\+Jobs}}
+\index{schedule\+Pilot\+Jobs@{schedule\+Pilot\+Jobs}!wrench\+::\+Pilot\+Job\+Scheduler@{wrench\+::\+Pilot\+Job\+Scheduler}}
+\subsubsection{\texorpdfstring{schedule\+Pilot\+Jobs()}{schedulePilotJobs()}}
+{\footnotesize\ttfamily virtual void wrench\+::\+Pilot\+Job\+Scheduler\+::schedule\+Pilot\+Jobs (\begin{DoxyParamCaption}\item[{const std\+::set$<$ \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$$>$ \&}]{compute\+\_\+services }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+A method that schedules pilot jobs, according to whatever decision algorithm it implements, over a set of compute services. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em compute\+\_\+services} & the set of compute services \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/wms/scheduler/Pilot\+Job\+Scheduler.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,392 @@
+\hypertarget{classwrench_1_1_compute_service}{}\section{wrench\+:\+:Compute\+Service Class Reference}
+\label{classwrench_1_1_compute_service}\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+
+
+The compute service base class.  
+
+
+
+
+{\ttfamily \#include $<$Compute\+Service.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Compute\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.137404cm]{classwrench_1_1_compute_service}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, double $>$ \hyperlink{classwrench_1_1_compute_service_a72c2608b82692ad73888d9b9f7c6bd0c}{get\+Core\+Flop\+Rate} ()
+\begin{DoxyCompactList}\small\item\em Get the per-\/core flop rate of the compute service\textquotesingle{}s hosts. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_compute_service_ac3662628f589ffe44e17921e60971fd6}{get\+Free\+Scratch\+Space\+Size} ()
+\begin{DoxyCompactList}\small\item\em Get the free space on the compute service\textquotesingle{}s scratch storage space. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, double $>$ \hyperlink{classwrench_1_1_compute_service_a113d9698fc83cefd78121e279b99b51e}{get\+Memory\+Capacity} ()
+\begin{DoxyCompactList}\small\item\em Get the R\+AM capacities for each of the compute service\textquotesingle{}s hosts. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, unsigned long $>$ \hyperlink{classwrench_1_1_compute_service_a0d88426f33110e811771f73f39c6458a}{get\+Num\+Cores} ()
+\begin{DoxyCompactList}\small\item\em Get core counts for each of the compute service\textquotesingle{}s host. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classwrench_1_1_compute_service_a1b576a22529bd638e6998f0513a44b36}{get\+Num\+Hosts} ()
+\begin{DoxyCompactList}\small\item\em Get the number of hosts that the compute service manages. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, unsigned long $>$ \hyperlink{classwrench_1_1_compute_service_a7d717171627835491772e589c4e6101f}{get\+Num\+Idle\+Cores} ()
+\begin{DoxyCompactList}\small\item\em Get idle core counts for each of the compute service\textquotesingle{}s host. \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$ \hyperlink{classwrench_1_1_compute_service_a751da474fe424957a614116cef6a5e13}{get\+Scratch} ()
+\begin{DoxyCompactList}\small\item\em Get the compute service\textquotesingle{}s scratch storage space. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $>$ \hyperlink{classwrench_1_1_compute_service_a6532846cd02094b6095341d37d5b2bf7}{get\+Scratch\+Shared\+Ptr} ()
+\begin{DoxyCompactList}\small\item\em Get a shared pointer to the compute service\textquotesingle{}s scratch storage space. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classwrench_1_1_compute_service_a5d2e4bca8b531521561f167769186f56}{get\+Total\+Num\+Cores} ()
+\begin{DoxyCompactList}\small\item\em Get the total core counts for all hosts of the compute service. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classwrench_1_1_compute_service_a225719efa4cb6c3b910c20e8828cb789}{get\+Total\+Num\+Idle\+Cores} ()
+\begin{DoxyCompactList}\small\item\em Get the total idle core counts for all hosts of the compute service. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_compute_service_ae0a8acd4a82063250799e313f1d520d1}{get\+Total\+Scratch\+Space\+Size} ()
+\begin{DoxyCompactList}\small\item\em Get the total capacity of the compute service\textquotesingle{}s scratch storage space. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_compute_service_a244e08a35ea94061acc1396f9447bb0c}{get\+T\+TL} ()
+\begin{DoxyCompactList}\small\item\em Get the time-\/to-\/live of the compute service. \end{DoxyCompactList}\item 
+bool \hyperlink{classwrench_1_1_compute_service_a07b64249656b26fef280c1f9db823acf}{has\+Scratch} ()
+\begin{DoxyCompactList}\small\item\em Checks if the compute service has a scratch space. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a289d4a0c5254772575340095b73cf7d4}\label{classwrench_1_1_compute_service_a289d4a0c5254772575340095b73cf7d4}} 
+void \hyperlink{classwrench_1_1_compute_service_a289d4a0c5254772575340095b73cf7d4}{stop} () override
+\begin{DoxyCompactList}\small\item\em Stop the compute service -\/ must be called by the \hyperlink{classwrench_1_1_compute_service_a289d4a0c5254772575340095b73cf7d4}{stop()} method of derived classes. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_compute_service_abc9e51234c29965341727f07b446ff0c}{submit\+Job} (\hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job} $\ast$job, std\+::map$<$ std\+::string, std\+::string $>$=\{\})
+\begin{DoxyCompactList}\small\item\em Submit a job to the compute service. \end{DoxyCompactList}\item 
+bool \hyperlink{classwrench_1_1_compute_service_acd8cd30b0c6a7f23be2a16e9c8910822}{supports\+Pilot\+Jobs} ()
+\begin{DoxyCompactList}\small\item\em Get whether the compute service supports pilot jobs or not. \end{DoxyCompactList}\item 
+bool \hyperlink{classwrench_1_1_compute_service_a0f15f4038c447b0f580b9d2a7bf0cd22}{supports\+Standard\+Jobs} ()
+\begin{DoxyCompactList}\small\item\em Get whether the compute service supports standard jobs or not. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_compute_service_aba97c346fb8f171f17ec09681be37d7f}{terminate\+Job} (\hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job} $\ast$job)
+\begin{DoxyCompactList}\small\item\em Terminate a previously-\/submitted job (which may or may not be running yet) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a1160f521623440ad4e0e0823e08a7d22}\label{classwrench_1_1_compute_service_a1160f521623440ad4e0e0823e08a7d22}} 
+static constexpr unsigned long \hyperlink{classwrench_1_1_compute_service_a1160f521623440ad4e0e0823e08a7d22}{A\+L\+L\+\_\+\+C\+O\+R\+ES} = U\+L\+O\+N\+G\+\_\+\+M\+AX
+\begin{DoxyCompactList}\small\item\em A convenient constant to mean \char`\"{}use all cores of a physical host\char`\"{} whenever a number of cores is needed when instantiating compute services. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_abc4fe0bad59f544b4b34d0e7d4012d44}\label{classwrench_1_1_compute_service_abc4fe0bad59f544b4b34d0e7d4012d44}} 
+static constexpr double \hyperlink{classwrench_1_1_compute_service_abc4fe0bad59f544b4b34d0e7d4012d44}{A\+L\+L\+\_\+\+R\+AM} = D\+B\+L\+\_\+\+M\+AX
+\begin{DoxyCompactList}\small\item\em A convenient constant to mean \char`\"{}use all ram of a physical host\char`\"{} whenever a ram capacity is needed when instantiating compute services. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a022e9408f53191b4102e2ce00487799c}\label{classwrench_1_1_compute_service_a022e9408f53191b4102e2ce00487799c}} 
+static \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$ \hyperlink{classwrench_1_1_compute_service_a022e9408f53191b4102e2ce00487799c}{S\+C\+R\+A\+T\+CH} = (\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$) U\+L\+O\+N\+G\+\_\+\+M\+AX
+\begin{DoxyCompactList}\small\item\em A convenient constant to mean \char`\"{}the scratch storage space\char`\"{} of a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service}. This is used to move data to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service}\textquotesingle{}s scratch storage space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The compute service base class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a72c2608b82692ad73888d9b9f7c6bd0c}\label{classwrench_1_1_compute_service_a72c2608b82692ad73888d9b9f7c6bd0c}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+Core\+Flop\+Rate@{get\+Core\+Flop\+Rate}}
+\index{get\+Core\+Flop\+Rate@{get\+Core\+Flop\+Rate}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+Core\+Flop\+Rate()}{getCoreFlopRate()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, double $>$ wrench\+::\+Compute\+Service\+::get\+Core\+Flop\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the per-\/core flop rate of the compute service\textquotesingle{}s hosts. 
+
+\begin{DoxyReturn}{Returns}
+a list of flop rates in flop/sec
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_ac3662628f589ffe44e17921e60971fd6}\label{classwrench_1_1_compute_service_ac3662628f589ffe44e17921e60971fd6}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+Free\+Scratch\+Space\+Size@{get\+Free\+Scratch\+Space\+Size}}
+\index{get\+Free\+Scratch\+Space\+Size@{get\+Free\+Scratch\+Space\+Size}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+Free\+Scratch\+Space\+Size()}{getFreeScratchSpaceSize()}}
+{\footnotesize\ttfamily double wrench\+::\+Compute\+Service\+::get\+Free\+Scratch\+Space\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the free space on the compute service\textquotesingle{}s scratch storage space. 
+
+\begin{DoxyReturn}{Returns}
+a size (in bytes) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a113d9698fc83cefd78121e279b99b51e}\label{classwrench_1_1_compute_service_a113d9698fc83cefd78121e279b99b51e}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+Memory\+Capacity@{get\+Memory\+Capacity}}
+\index{get\+Memory\+Capacity@{get\+Memory\+Capacity}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+Memory\+Capacity()}{getMemoryCapacity()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, double $>$ wrench\+::\+Compute\+Service\+::get\+Memory\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the R\+AM capacities for each of the compute service\textquotesingle{}s hosts. 
+
+\begin{DoxyReturn}{Returns}
+a map of R\+AM capacities, indexed by hostname
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a0d88426f33110e811771f73f39c6458a}\label{classwrench_1_1_compute_service_a0d88426f33110e811771f73f39c6458a}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+Num\+Cores@{get\+Num\+Cores}}
+\index{get\+Num\+Cores@{get\+Num\+Cores}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+Num\+Cores()}{getNumCores()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, unsigned long $>$ wrench\+::\+Compute\+Service\+::get\+Num\+Cores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get core counts for each of the compute service\textquotesingle{}s host. 
+
+\begin{DoxyReturn}{Returns}
+a map of core counts, indexed by hostnames
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a1b576a22529bd638e6998f0513a44b36}\label{classwrench_1_1_compute_service_a1b576a22529bd638e6998f0513a44b36}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+Num\+Hosts@{get\+Num\+Hosts}}
+\index{get\+Num\+Hosts@{get\+Num\+Hosts}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+Num\+Hosts()}{getNumHosts()}}
+{\footnotesize\ttfamily unsigned long wrench\+::\+Compute\+Service\+::get\+Num\+Hosts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of hosts that the compute service manages. 
+
+\begin{DoxyReturn}{Returns}
+the host count
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a7d717171627835491772e589c4e6101f}\label{classwrench_1_1_compute_service_a7d717171627835491772e589c4e6101f}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+Num\+Idle\+Cores@{get\+Num\+Idle\+Cores}}
+\index{get\+Num\+Idle\+Cores@{get\+Num\+Idle\+Cores}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+Num\+Idle\+Cores()}{getNumIdleCores()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, unsigned long $>$ wrench\+::\+Compute\+Service\+::get\+Num\+Idle\+Cores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get idle core counts for each of the compute service\textquotesingle{}s host. 
+
+\begin{DoxyReturn}{Returns}
+the idle core counts (could be empty)
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a751da474fe424957a614116cef6a5e13}\label{classwrench_1_1_compute_service_a751da474fe424957a614116cef6a5e13}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+Scratch@{get\+Scratch}}
+\index{get\+Scratch@{get\+Scratch}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+Scratch()}{getScratch()}}
+{\footnotesize\ttfamily \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$ wrench\+::\+Compute\+Service\+::get\+Scratch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the compute service\textquotesingle{}s scratch storage space. 
+
+\begin{DoxyReturn}{Returns}
+a pointer to the shared scratch space 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a6532846cd02094b6095341d37d5b2bf7}\label{classwrench_1_1_compute_service_a6532846cd02094b6095341d37d5b2bf7}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+Scratch\+Shared\+Ptr@{get\+Scratch\+Shared\+Ptr}}
+\index{get\+Scratch\+Shared\+Ptr@{get\+Scratch\+Shared\+Ptr}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+Scratch\+Shared\+Ptr()}{getScratchSharedPtr()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $>$ wrench\+::\+Compute\+Service\+::get\+Scratch\+Shared\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a shared pointer to the compute service\textquotesingle{}s scratch storage space. 
+
+\begin{DoxyReturn}{Returns}
+a shared pointer to the shared scratch space 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a5d2e4bca8b531521561f167769186f56}\label{classwrench_1_1_compute_service_a5d2e4bca8b531521561f167769186f56}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+Total\+Num\+Cores@{get\+Total\+Num\+Cores}}
+\index{get\+Total\+Num\+Cores@{get\+Total\+Num\+Cores}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+Total\+Num\+Cores()}{getTotalNumCores()}}
+{\footnotesize\ttfamily unsigned long wrench\+::\+Compute\+Service\+::get\+Total\+Num\+Cores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the total core counts for all hosts of the compute service. 
+
+\begin{DoxyReturn}{Returns}
+total core counts
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a225719efa4cb6c3b910c20e8828cb789}\label{classwrench_1_1_compute_service_a225719efa4cb6c3b910c20e8828cb789}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+Total\+Num\+Idle\+Cores@{get\+Total\+Num\+Idle\+Cores}}
+\index{get\+Total\+Num\+Idle\+Cores@{get\+Total\+Num\+Idle\+Cores}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+Total\+Num\+Idle\+Cores()}{getTotalNumIdleCores()}}
+{\footnotesize\ttfamily unsigned long wrench\+::\+Compute\+Service\+::get\+Total\+Num\+Idle\+Cores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the total idle core counts for all hosts of the compute service. 
+
+\begin{DoxyReturn}{Returns}
+total idle core counts
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_ae0a8acd4a82063250799e313f1d520d1}\label{classwrench_1_1_compute_service_ae0a8acd4a82063250799e313f1d520d1}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+Total\+Scratch\+Space\+Size@{get\+Total\+Scratch\+Space\+Size}}
+\index{get\+Total\+Scratch\+Space\+Size@{get\+Total\+Scratch\+Space\+Size}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+Total\+Scratch\+Space\+Size()}{getTotalScratchSpaceSize()}}
+{\footnotesize\ttfamily double wrench\+::\+Compute\+Service\+::get\+Total\+Scratch\+Space\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the total capacity of the compute service\textquotesingle{}s scratch storage space. 
+
+\begin{DoxyReturn}{Returns}
+a size (in bytes) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a244e08a35ea94061acc1396f9447bb0c}\label{classwrench_1_1_compute_service_a244e08a35ea94061acc1396f9447bb0c}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!get\+T\+TL@{get\+T\+TL}}
+\index{get\+T\+TL@{get\+T\+TL}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{get\+T\+T\+L()}{getTTL()}}
+{\footnotesize\ttfamily double wrench\+::\+Compute\+Service\+::get\+T\+TL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the time-\/to-\/live of the compute service. 
+
+\begin{DoxyReturn}{Returns}
+the ttl in seconds
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a07b64249656b26fef280c1f9db823acf}\label{classwrench_1_1_compute_service_a07b64249656b26fef280c1f9db823acf}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!has\+Scratch@{has\+Scratch}}
+\index{has\+Scratch@{has\+Scratch}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{has\+Scratch()}{hasScratch()}}
+{\footnotesize\ttfamily bool wrench\+::\+Compute\+Service\+::has\+Scratch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the compute service has a scratch space. 
+
+\begin{DoxyReturn}{Returns}
+true if the compute service has some scratch storage space, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_abc9e51234c29965341727f07b446ff0c}\label{classwrench_1_1_compute_service_abc9e51234c29965341727f07b446ff0c}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!submit\+Job@{submit\+Job}}
+\index{submit\+Job@{submit\+Job}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{submit\+Job()}{submitJob()}}
+{\footnotesize\ttfamily void wrench\+::\+Compute\+Service\+::submit\+Job (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job} $\ast$}]{job,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{service\+\_\+specific\+\_\+args = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Submit a job to the compute service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & the job \\
+\hline
+{\em service\+\_\+specific\+\_\+args} & arguments specific to compute services when needed\+:
+\begin{DoxyItemize}
+\item to a \hyperlink{classwrench_1_1_bare_metal_compute_service}{Bare\+Metal\+Compute\+Service}\+: \{\}
+\begin{DoxyItemize}
+\item If no entry is provided for a task\+ID, the service will pick on which host and with how many cores to run the task
+\item If a number of cores is provided (e.\+g., \{\char`\"{}task1\char`\"{}, \char`\"{}12\char`\"{}\}), the service will pick the host on which to run the task
+\item If a hostname and a number of cores is provided (e.\+g., \{\char`\"{}task1\char`\"{}, \char`\"{}host1\+:12\char`\"{}\}, the service will run the task on that host with the specified number of cores
+\end{DoxyItemize}
+\item to a \hyperlink{classwrench_1_1_batch_service}{Batch\+Service}\+: \{\char`\"{}-\/t\char`\"{}\+:\char`\"{}$<$int$>$\char`\"{},\char`\"{}-\/\+N\char`\"{}\+:\char`\"{}$<$int$>$\char`\"{},\char`\"{}-\/c\char`\"{}\+:\char`\"{}$<$int$>$\char`\"{}\} (S\+L\+U\+R\+M-\/like)
+\begin{DoxyItemize}
+\item \char`\"{}-\/t\char`\"{}\+: number of requested job duration in minutes
+\item \char`\"{}-\/\+N\char`\"{}\+: number of requested compute hosts
+\item \char`\"{}-\/c\char`\"{}\+: number of requested cores per compute host
+\end{DoxyItemize}
+\item to a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service}\+: \{\}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_acd8cd30b0c6a7f23be2a16e9c8910822}\label{classwrench_1_1_compute_service_acd8cd30b0c6a7f23be2a16e9c8910822}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!supports\+Pilot\+Jobs@{supports\+Pilot\+Jobs}}
+\index{supports\+Pilot\+Jobs@{supports\+Pilot\+Jobs}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{supports\+Pilot\+Jobs()}{supportsPilotJobs()}}
+{\footnotesize\ttfamily bool wrench\+::\+Compute\+Service\+::supports\+Pilot\+Jobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get whether the compute service supports pilot jobs or not. 
+
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_a0f15f4038c447b0f580b9d2a7bf0cd22}\label{classwrench_1_1_compute_service_a0f15f4038c447b0f580b9d2a7bf0cd22}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!supports\+Standard\+Jobs@{supports\+Standard\+Jobs}}
+\index{supports\+Standard\+Jobs@{supports\+Standard\+Jobs}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{supports\+Standard\+Jobs()}{supportsStandardJobs()}}
+{\footnotesize\ttfamily bool wrench\+::\+Compute\+Service\+::supports\+Standard\+Jobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get whether the compute service supports standard jobs or not. 
+
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_aba97c346fb8f171f17ec09681be37d7f}\label{classwrench_1_1_compute_service_aba97c346fb8f171f17ec09681be37d7f}} 
+\index{wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}!terminate\+Job@{terminate\+Job}}
+\index{terminate\+Job@{terminate\+Job}!wrench\+::\+Compute\+Service@{wrench\+::\+Compute\+Service}}
+\subsubsection{\texorpdfstring{terminate\+Job()}{terminateJob()}}
+{\footnotesize\ttfamily void wrench\+::\+Compute\+Service\+::terminate\+Job (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job} $\ast$}]{job }\end{DoxyParamCaption})}
+
+
+
+Terminate a previously-\/submitted job (which may or may not be running yet) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & the job to terminate\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/Compute\+Service.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/Compute\+Service.\+cpp\end{DoxyCompactItemize}

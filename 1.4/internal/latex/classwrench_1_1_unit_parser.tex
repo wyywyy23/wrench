@@ -1,0 +1,76 @@
+\hypertarget{classwrench_1_1_unit_parser}{}\section{wrench\+:\+:Unit\+Parser Class Reference}
+\label{classwrench_1_1_unit_parser}\index{wrench\+::\+Unit\+Parser@{wrench\+::\+Unit\+Parser}}
+
+
+A class used to part string specification of values with units into a single value (e.\+g., \char`\"{}2\+K\+B\char`\"{} -\/$>$ 2048 bytes, \char`\"{}2\+Kb\char`\"{} -\/$>$ 256 bytes)  
+
+
+
+
+{\ttfamily \#include $<$Unit\+Parser.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{classwrench_1_1_unit_parser_acecafdaf98911db93c720caf954207d1}{parse\+\_\+compute\+\_\+speed} (std\+::string string)
+\begin{DoxyCompactList}\small\item\em Given a string compute speed specification with units (e.\+g., \char`\"{}3f\char`\"{}, \char`\"{}10\+Gf\char`\"{}) return the size in bytes. \end{DoxyCompactList}\item 
+static double \hyperlink{classwrench_1_1_unit_parser_ad57b7f7b520c57fa1faf6c97cf66973b}{parse\+\_\+size} (std\+::string string)
+\begin{DoxyCompactList}\small\item\em Given a string size specification with units (e.\+g., \char`\"{}13\+Mb\char`\"{}) return the size in bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class used to part string specification of values with units into a single value (e.\+g., \char`\"{}2\+K\+B\char`\"{} -\/$>$ 2048 bytes, \char`\"{}2\+Kb\char`\"{} -\/$>$ 256 bytes) 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_unit_parser_acecafdaf98911db93c720caf954207d1}\label{classwrench_1_1_unit_parser_acecafdaf98911db93c720caf954207d1}} 
+\index{wrench\+::\+Unit\+Parser@{wrench\+::\+Unit\+Parser}!parse\+\_\+compute\+\_\+speed@{parse\+\_\+compute\+\_\+speed}}
+\index{parse\+\_\+compute\+\_\+speed@{parse\+\_\+compute\+\_\+speed}!wrench\+::\+Unit\+Parser@{wrench\+::\+Unit\+Parser}}
+\subsubsection{\texorpdfstring{parse\+\_\+compute\+\_\+speed()}{parse\_compute\_speed()}}
+{\footnotesize\ttfamily double wrench\+::\+Unit\+Parser\+::parse\+\_\+compute\+\_\+speed (\begin{DoxyParamCaption}\item[{std\+::string}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Given a string compute speed specification with units (e.\+g., \char`\"{}3f\char`\"{}, \char`\"{}10\+Gf\char`\"{}) return the size in bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the size specification \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size in bytes
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_unit_parser_ad57b7f7b520c57fa1faf6c97cf66973b}\label{classwrench_1_1_unit_parser_ad57b7f7b520c57fa1faf6c97cf66973b}} 
+\index{wrench\+::\+Unit\+Parser@{wrench\+::\+Unit\+Parser}!parse\+\_\+size@{parse\+\_\+size}}
+\index{parse\+\_\+size@{parse\+\_\+size}!wrench\+::\+Unit\+Parser@{wrench\+::\+Unit\+Parser}}
+\subsubsection{\texorpdfstring{parse\+\_\+size()}{parse\_size()}}
+{\footnotesize\ttfamily double wrench\+::\+Unit\+Parser\+::parse\+\_\+size (\begin{DoxyParamCaption}\item[{std\+::string}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Given a string size specification with units (e.\+g., \char`\"{}13\+Mb\char`\"{}) return the size in bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the size specification \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size in bytes
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/util/Unit\+Parser.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/util/Unit\+Parser.\+cpp\end{DoxyCompactItemize}

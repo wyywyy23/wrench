@@ -1,0 +1,77 @@
+Developer DocumentationOther\+: \href{../user/guide-batch.html}{\tt User} -\/ \href{../internal/guide-batch.html}{\tt Internal}\hypertarget{guide-batch_guide-batch-overview}{}\section{Overview}\label{guide-batch_guide-batch-overview}
+A batch service is a service that makes it possible to run workflow jobs on a homogeneous cluster managed by a batch scheduler. The batch scheduler receives requests that ask for a number of compute nodes, with a number of cores per compute node, and a duration. Requests wait in a queue and, using a range of possible batch scheduling algorithms, are dispatched to the requested compute resources in a space-\/sharing manner. Therefore, a job submitted to the service experiences a \char`\"{}queue waiting time\char`\"{} period (the length of which depends on the load on the service) followed by an \char`\"{}execution time\char`\"{} period. In typical batch-\/scheduler fashion, a running job is cleanly\+\_\+terminated when it reaches its requested duration, which may cause the job to fail. If, instead, the job completes before the requested duration the job succeeds. In both cases, the job\textquotesingle{}s allocated compute resources are reclaimed by the batch scheduler.
+
+A batch service also supports so-\/called \char`\"{}pilot jobs\char`\"{}, i.\+e., jobs that are submitted to the service, with requested resources and duration, but without specifying at submission time which workflow tasks/operations should be performed by the job. Instead, once the job starts it exposes to its submitter a \hyperlink{guide-baremetal}{Bare-\/metal} service. This service is available only for the requested duration, and can be used in any manner by the submitter. This allows late binding of workflow tasks to compute resources.\hypertarget{guide-batch_guide-batch-creating}{}\section{Creating a batch compute service}\label{guide-batch_guide-batch-creating}
+In W\+R\+E\+N\+CH, a batch service represents a compute service ({\ttfamily \hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}}), which is defined by the {\ttfamily \hyperlink{classwrench_1_1_batch_service}{wrench\+::\+Batch\+Service}} class. An instantiation of a batch service requires the following parameters\+:
+
+
+\begin{DoxyItemize}
+\item A hostname on which to start the service (this is the entry point to the service)
+\item A list ({\ttfamily std\+::vector}) of hostnames (all cores and all R\+AM of each host is available to the batch service)
+\item A scratch space size, i.\+e., the size in bytes of storage local to the batch service (used to store workflow files, as needed, during job executions)
+\item Maps ({\ttfamily std\+::map}) of configurable properties ({\ttfamily \hyperlink{classwrench_1_1_batch_service_property}{wrench\+::\+Batch\+Service\+Property}}) and configurable message payloads ({\ttfamily \hyperlink{classwrench_1_1_batch_service_message_payload}{wrench\+::\+Batch\+Service\+Message\+Payload}})
+\end{DoxyItemize}
+
+The example below shows how to create an instance of a batch service that runs on host \char`\"{}\+Gateway\char`\"{} and provides access to 4 hosts (using all their cores and R\+AM), with 1 TiB scratch space. Furthermore, the batch scheduling algorithm is configured to the F\+C\+FS (First-\/\+Come-\/\+First-\/\+Serve)\+:
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{auto} batch\_cs = simulation->add(
+          \textcolor{keyword}{new} \hyperlink{classwrench_1_1_batch_service}{wrench::BatchService}(\textcolor{stringliteral}{"Gateway"}, 
+                                   \{\textcolor{stringliteral}{"Node1"}, \textcolor{stringliteral}{"Node2"}, \textcolor{stringliteral}{"Node3"}, \textcolor{stringliteral}{"Node4"}\},
+                                   pow(2,40),
+                                   \{\{
+      \hyperlink{classwrench_1_1_batch_service_property_aceb0af1c33f5ff2da347f54a484ce32e}{wrench::BatchServiceProperty::BATCH\_SCHEDULING\_ALGORITHM}
+      , \textcolor{stringliteral}{"FCFS"}\}\},
+                                   \{\});
+\end{DoxyCode}
+\hypertarget{guide-batch_guide-baremetal-creating-properties}{}\subsection{Bare-\/metal service properties}\label{guide-batch_guide-baremetal-creating-properties}
+In addition to properties inherited from {\ttfamily \hyperlink{classwrench_1_1_compute_service_property}{wrench\+::\+Compute\+Service\+Property}}, a batch compute service supports the following properties\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \hyperlink{classwrench_1_1_batch_service_property_ad60a71526e251e20cbd871e5d30e5023}{wrench\+::\+Batch\+Service\+Property\+::\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+\+O\+V\+E\+R\+H\+E\+AD}}
+\item {\ttfamily \hyperlink{classwrench_1_1_batch_service_property_af75bbbe70a733d3a65cddc5c57b0b441}{wrench\+::\+Batch\+Service\+Property\+::\+H\+O\+S\+T\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}}
+\item {\ttfamily \hyperlink{classwrench_1_1_batch_service_property_aceb0af1c33f5ff2da347f54a484ce32e}{wrench\+::\+Batch\+Service\+Property\+::\+B\+A\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+I\+N\+G\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}}
+\item {\ttfamily \hyperlink{classwrench_1_1_batch_service_property_a51cc79b2c963a67dac5685fbba4e5a9f}{wrench\+::\+Batch\+Service\+Property\+::\+B\+A\+T\+C\+H\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+R\+D\+E\+R\+I\+N\+G\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}}
+\item {\ttfamily \hyperlink{classwrench_1_1_batch_service_property_a685c9784445ed28adbe43f69ccb98249}{wrench\+::\+Batch\+Service\+Property\+::\+B\+A\+T\+C\+H\+\_\+\+R\+J\+M\+S\+\_\+\+D\+E\+L\+AY}}
+\item {\ttfamily \hyperlink{classwrench_1_1_batch_service_property_a6a7fb4d9f505cc29f7236ea3e5713f34}{wrench\+::\+Batch\+Service\+Property\+::\+S\+I\+M\+U\+L\+A\+T\+E\+D\+\_\+\+W\+O\+R\+K\+L\+O\+A\+D\+\_\+\+T\+R\+A\+C\+E\+\_\+\+F\+I\+LE}}
+\item {\ttfamily \hyperlink{classwrench_1_1_batch_service_property_a0757979b1512be80fda90cbab946b51f}{wrench\+::\+Batch\+Service\+Property\+::\+O\+U\+T\+P\+U\+T\+\_\+\+C\+S\+V\+\_\+\+J\+O\+B\+\_\+\+L\+OG}}
+\item {\ttfamily \hyperlink{classwrench_1_1_batch_service_property_a0bde5c75f5f093ae15e68d67ae453ac3}{wrench\+::\+Batch\+Service\+Property\+::\+S\+I\+M\+U\+L\+A\+T\+E\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+O\+N\+\_\+\+A\+S\+\_\+\+S\+L\+E\+EP}}
+\item {\ttfamily \hyperlink{classwrench_1_1_batch_service_property_aaab42384419440aacdbaac79e3346bf1}{wrench\+::\+Batch\+Service\+Property\+::\+B\+A\+T\+S\+C\+H\+E\+D\+\_\+\+L\+O\+G\+G\+I\+N\+G\+\_\+\+M\+U\+T\+ED}}
+\item {\ttfamily \hyperlink{classwrench_1_1_batch_service_property_ac21c68a5a297ba00fc919cec0d90c18d}{wrench\+::\+Batch\+Service\+Property\+::\+B\+A\+T\+S\+C\+H\+E\+D\+\_\+\+C\+O\+N\+T\+I\+G\+U\+O\+U\+S\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON}}
+\end{DoxyItemize}\hypertarget{guide-batch_guide-batch-using}{}\section{Submitting jobs to a batch compute service}\label{guide-batch_guide-batch-using}
+As expected, a batch service provides implementations of the methods in the {\ttfamily \hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}} base class. The {\ttfamily \hyperlink{classwrench_1_1_compute_service_abc9e51234c29965341727f07b446ff0c}{wrench\+::\+Compute\+Service\+::submit\+Job()}} method takes as argument service-\/specific arguments as a {\ttfamily std\+::map$<$std\+::string, std\+::string$>$} of key-\/value pairs. These {\bfseries required} arguments are to be specified as follows\+:
+
+
+\begin{DoxyItemize}
+\item key\+: {\ttfamily -\/t}; value\+: a requested runtime in minutes (if the job execution exceeds this limit, then the job is cleanly\+\_\+terminated)
+\item key\+: {\ttfamily -\/N}; value\+: a requested number of compute nodes
+\item key\+: {\ttfamily -\/c}; value\+: a requested number of cores per compute nodes
+\end{DoxyItemize}
+
+(You may note the the above corresponds to the arguments that must be provided to \href{https://slurm.schedmd.com/}{\tt S\+L\+U\+RM}.)
+
+Here is an example job submission to the batch service\+:
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Create a job manager}
+\textcolor{keyword}{auto} job\_manager = this->createJobManager();
+
+\textcolor{comment}{// Create a job}
+\textcolor{keyword}{auto} job = job\_manager->createStandardJob(tasks, \{\});
+
+\textcolor{comment}{// Create service-specific arguments so that:}
+\textcolor{comment}{//   The job will run no longer than 1 hour}
+\textcolor{comment}{//   The job will run on 2 compute nodes}
+\textcolor{comment}{//   The job will use 4 cores on each compute nodes}
+std::map<std::string, std::string> service\_specific\_args;
+service\_specific\_args[\textcolor{stringliteral}{"-t"}] = \textcolor{stringliteral}{"60"};
+service\_specific\_args[\textcolor{stringliteral}{"-N"}] = \textcolor{stringliteral}{"2"};
+service\_specific\_args[\textcolor{stringliteral}{"-c"}] = \textcolor{stringliteral}{"4"};
+
+\textcolor{comment}{// Submit the job}
+job\_manager->submitJob(job, batch\_cs, service\_specific\_args);
+\end{DoxyCode}
+ 

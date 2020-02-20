@@ -1,0 +1,73 @@
+\hypertarget{classwrench_1_1_compute_service_submit_standard_job_request_message}{}\section{wrench\+:\+:Compute\+Service\+Submit\+Standard\+Job\+Request\+Message Class Reference}
+\label{classwrench_1_1_compute_service_submit_standard_job_request_message}\index{wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Request\+Message@{wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Request\+Message}}
+
+
+A message sent to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} to submit a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} for execution.  
+
+
+
+
+{\ttfamily \#include $<$Compute\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Compute\+Service\+Submit\+Standard\+Job\+Request\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_compute_service_submit_standard_job_request_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_compute_service_submit_standard_job_request_message_a4c1e0a38b7f99e33b388cec0c0dbc4ee}{Compute\+Service\+Submit\+Standard\+Job\+Request\+Message} (std\+::string \hyperlink{classwrench_1_1_compute_service_submit_standard_job_request_message_a685047fc639e623f1cdb06c4c418ec6d}{answer\+\_\+mailbox}, \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$, std\+::map$<$ std\+::string, std\+::string $>$ \&\hyperlink{classwrench_1_1_compute_service_submit_standard_job_request_message_a35f19a63653c0028c0a2da3cb94f8f17}{service\+\_\+specific\+\_\+args}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_submit_standard_job_request_message_a685047fc639e623f1cdb06c4c418ec6d}\label{classwrench_1_1_compute_service_submit_standard_job_request_message_a685047fc639e623f1cdb06c4c418ec6d}} 
+std\+::string \hyperlink{classwrench_1_1_compute_service_submit_standard_job_request_message_a685047fc639e623f1cdb06c4c418ec6d}{answer\+\_\+mailbox}
+\begin{DoxyCompactList}\small\item\em The mailbox to which the answer message should be sent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_submit_standard_job_request_message_aa66af2c1535f9bf737551505e4b81e30}\label{classwrench_1_1_compute_service_submit_standard_job_request_message_aa66af2c1535f9bf737551505e4b81e30}} 
+\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$ \hyperlink{classwrench_1_1_compute_service_submit_standard_job_request_message_aa66af2c1535f9bf737551505e4b81e30}{job}
+\begin{DoxyCompactList}\small\item\em The submitted job. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_submit_standard_job_request_message_a35f19a63653c0028c0a2da3cb94f8f17}\label{classwrench_1_1_compute_service_submit_standard_job_request_message_a35f19a63653c0028c0a2da3cb94f8f17}} 
+std\+::map$<$ std\+::string, std\+::string $>$ \hyperlink{classwrench_1_1_compute_service_submit_standard_job_request_message_a35f19a63653c0028c0a2da3cb94f8f17}{service\+\_\+specific\+\_\+args}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classwrench_1_1_service}{Service} specific arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} to submit a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} for execution. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_submit_standard_job_request_message_a4c1e0a38b7f99e33b388cec0c0dbc4ee}\label{classwrench_1_1_compute_service_submit_standard_job_request_message_a4c1e0a38b7f99e33b388cec0c0dbc4ee}} 
+\index{wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Request\+Message@{wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Request\+Message}!Compute\+Service\+Submit\+Standard\+Job\+Request\+Message@{Compute\+Service\+Submit\+Standard\+Job\+Request\+Message}}
+\index{Compute\+Service\+Submit\+Standard\+Job\+Request\+Message@{Compute\+Service\+Submit\+Standard\+Job\+Request\+Message}!wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Request\+Message@{wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Request\+Message}}
+\subsubsection{\texorpdfstring{Compute\+Service\+Submit\+Standard\+Job\+Request\+Message()}{ComputeServiceSubmitStandardJobRequestMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Request\+Message\+::\+Compute\+Service\+Submit\+Standard\+Job\+Request\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{answer\+\_\+mailbox,  }\item[{\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$}]{job,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$ \&}]{service\+\_\+specific\+\_\+args,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em answer\+\_\+mailbox} & mailbox to which the answer message should be sent \\
+\hline
+{\em job} & a standard job submitted for execution \\
+\hline
+{\em service\+\_\+specific\+\_\+args} & a map of extra arguments (each specified by a name and value, both strings) required by some services \\
+\hline
+{\em payload} & message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+arguments} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/Compute\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/Compute\+Service\+Message.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,206 @@
+\hypertarget{classwrench_1_1_failure_cause}{}\section{wrench\+:\+:Failure\+Cause Class Reference}
+\label{classwrench_1_1_failure_cause}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}
+
+
+A top-\/level class to describe all simulation-\/valid failures that can occur during workflow execution (and should/could be handled by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS})  
+
+
+
+
+{\ttfamily \#include $<$Failure\+Cause.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Failure\+Cause\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classwrench_1_1_failure_cause}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77}{Cause\+Type} \{ \newline
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77accf0a8513eb8a8742d7b7f4cf055e05a}{F\+A\+T\+A\+L\+\_\+\+F\+A\+I\+L\+U\+RE}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a864646934bad10175377329098b912a6}{N\+O\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+F\+O\+R\+\_\+\+F\+I\+LE}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a2e0288e55c8d2cf951acf20d4640b469}{N\+O\+\_\+\+S\+C\+R\+A\+T\+C\+H\+\_\+\+S\+P\+A\+CE}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ab5690623631a20fbb24bcabfb7806bf2}{F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}, 
+\newline
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77abdc62ab4e21f2909db76e1f503e9c44c}{F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+T\+H\+E\+RE}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a7f78628f013c41cc1ff269614d2e9f5c}{F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+B\+E\+I\+N\+G\+\_\+\+C\+O\+P\+I\+ED}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ab25836e82d005c2f3eb72cdfe247feec}{S\+T\+O\+R\+A\+G\+E\+\_\+\+N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+S\+P\+A\+CE}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a89fb949be686938482b82a78297cf90c}{S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+O\+WN}, 
+\newline
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77aff608d63d9d05fc76c44ba7cd39053e6}{J\+O\+B\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a0b39d227bbca2c1585f2a322fa92d614}{N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+E\+S\+O\+U\+R\+C\+ES}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a02d62b0456ff50fd6ad1ebf2f749327d}{N\+E\+T\+W\+O\+R\+K\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a74db928f7b05128dbaf2462588c7208f}{N\+E\+T\+W\+O\+R\+K\+\_\+\+T\+I\+M\+E\+O\+UT}, 
+\newline
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ae26e9df054dd1df285e7d0ab8f350869}{J\+O\+B\+\_\+\+K\+I\+L\+L\+ED}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77af3188a3cd262d0ef0e0b985c0f3bc93d}{J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+ED}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ae4e51f06537ecc8ab4f7a5b3a890b2a5}{J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+F\+O\+R\+G\+O\+T\+T\+EN}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a709b0b9c94851003622d5ec900f186f6}{C\+O\+M\+P\+U\+T\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+H\+A\+S\+\_\+\+D\+I\+ED}, 
+\newline
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a362e54af1fdb80512e4708504105d8c0}{F\+U\+N\+C\+T\+I\+O\+N\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a60d4bf28e7842c657ebe0c429b32f423}{J\+O\+B\+\_\+\+T\+I\+M\+E\+O\+UT}, 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ac063809cfa1d103f49dd7d25939a54d4}{H\+O\+S\+T\+\_\+\+E\+R\+R\+OR}
+ \}\begin{DoxyCompactList}\small\item\em Types of failure causes. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_failure_cause_ac18f4c292fbdc1878da7ae2431c7d3e4}{Failure\+Cause} (\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77}{Cause\+Type} cause)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77}{Cause\+Type} \hyperlink{classwrench_1_1_failure_cause_a24fa4deecfa2e5e187f8d88187b8dddb}{get\+Cause\+Type} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the type of the failure cause. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classwrench_1_1_failure_cause_afbad248ebe902409f2cd4f1d6f2b867d}{to\+String} ()=0
+\begin{DoxyCompactList}\small\item\em Return an error message that describes the failure cause (to be overridden) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A top-\/level class to describe all simulation-\/valid failures that can occur during workflow execution (and should/could be handled by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}) 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77}} 
+\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!Cause\+Type@{Cause\+Type}}
+\index{Cause\+Type@{Cause\+Type}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}
+\subsubsection{\texorpdfstring{Cause\+Type}{CauseType}}
+{\footnotesize\ttfamily enum \hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77}{wrench\+::\+Failure\+Cause\+::\+Cause\+Type}}
+
+
+
+Types of failure causes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+A\+T\+A\+L\+\_\+\+F\+A\+I\+L\+U\+RE@{F\+A\+T\+A\+L\+\_\+\+F\+A\+I\+L\+U\+RE}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!F\+A\+T\+A\+L\+\_\+\+F\+A\+I\+L\+U\+RE@{F\+A\+T\+A\+L\+\_\+\+F\+A\+I\+L\+U\+RE}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77accf0a8513eb8a8742d7b7f4cf055e05a}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77accf0a8513eb8a8742d7b7f4cf055e05a}} 
+F\+A\+T\+A\+L\+\_\+\+F\+A\+I\+L\+U\+RE&Unknown cause. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+F\+O\+R\+\_\+\+F\+I\+LE@{N\+O\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+F\+O\+R\+\_\+\+F\+I\+LE}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!N\+O\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+F\+O\+R\+\_\+\+F\+I\+LE@{N\+O\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+F\+O\+R\+\_\+\+F\+I\+LE}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a864646934bad10175377329098b912a6}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a864646934bad10175377329098b912a6}} 
+N\+O\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+F\+O\+R\+\_\+\+F\+I\+LE&The file cannot be found anywhere. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+\_\+\+S\+C\+R\+A\+T\+C\+H\+\_\+\+S\+P\+A\+CE@{N\+O\+\_\+\+S\+C\+R\+A\+T\+C\+H\+\_\+\+S\+P\+A\+CE}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!N\+O\+\_\+\+S\+C\+R\+A\+T\+C\+H\+\_\+\+S\+P\+A\+CE@{N\+O\+\_\+\+S\+C\+R\+A\+T\+C\+H\+\_\+\+S\+P\+A\+CE}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a2e0288e55c8d2cf951acf20d4640b469}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a2e0288e55c8d2cf951acf20d4640b469}} 
+N\+O\+\_\+\+S\+C\+R\+A\+T\+C\+H\+\_\+\+S\+P\+A\+CE&No Scratch Space is available. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ab5690623631a20fbb24bcabfb7806bf2}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ab5690623631a20fbb24bcabfb7806bf2}} 
+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND&The file was not found where it was supposed to be found. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+T\+H\+E\+RE@{F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+T\+H\+E\+RE}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+T\+H\+E\+RE@{F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+T\+H\+E\+RE}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77abdc62ab4e21f2909db76e1f503e9c44c}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77abdc62ab4e21f2909db76e1f503e9c44c}} 
+F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+T\+H\+E\+RE&The file to be written is already there. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+B\+E\+I\+N\+G\+\_\+\+C\+O\+P\+I\+ED@{F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+B\+E\+I\+N\+G\+\_\+\+C\+O\+P\+I\+ED}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+B\+E\+I\+N\+G\+\_\+\+C\+O\+P\+I\+ED@{F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+B\+E\+I\+N\+G\+\_\+\+C\+O\+P\+I\+ED}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a7f78628f013c41cc1ff269614d2e9f5c}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a7f78628f013c41cc1ff269614d2e9f5c}} 
+F\+I\+L\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+B\+E\+I\+N\+G\+\_\+\+C\+O\+P\+I\+ED&The file is already being copied there. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+O\+R\+A\+G\+E\+\_\+\+N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+S\+P\+A\+CE@{S\+T\+O\+R\+A\+G\+E\+\_\+\+N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+S\+P\+A\+CE}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!S\+T\+O\+R\+A\+G\+E\+\_\+\+N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+S\+P\+A\+CE@{S\+T\+O\+R\+A\+G\+E\+\_\+\+N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+S\+P\+A\+CE}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ab25836e82d005c2f3eb72cdfe247feec}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ab25836e82d005c2f3eb72cdfe247feec}} 
+S\+T\+O\+R\+A\+G\+E\+\_\+\+N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+S\+P\+A\+CE&The storage service does not have enough space to support the requested operation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+O\+WN@{S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+O\+WN}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+O\+WN@{S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+O\+WN}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a89fb949be686938482b82a78297cf90c}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a89fb949be686938482b82a78297cf90c}} 
+S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+O\+WN&The service cannot be used because it is down (likely it was terminated) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{J\+O\+B\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED@{J\+O\+B\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!J\+O\+B\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED@{J\+O\+B\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77aff608d63d9d05fc76c44ba7cd39053e6}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77aff608d63d9d05fc76c44ba7cd39053e6}} 
+J\+O\+B\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED&The compute service does not support this job type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+E\+S\+O\+U\+R\+C\+ES@{N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+E\+S\+O\+U\+R\+C\+ES}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+E\+S\+O\+U\+R\+C\+ES@{N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+E\+S\+O\+U\+R\+C\+ES}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a0b39d227bbca2c1585f2a322fa92d614}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a0b39d227bbca2c1585f2a322fa92d614}} 
+N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+E\+S\+O\+U\+R\+C\+ES&The compute service cannot run the job (ever) due to insufficient resources (cores and/or ram) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+E\+T\+W\+O\+R\+K\+\_\+\+E\+R\+R\+OR@{N\+E\+T\+W\+O\+R\+K\+\_\+\+E\+R\+R\+OR}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!N\+E\+T\+W\+O\+R\+K\+\_\+\+E\+R\+R\+OR@{N\+E\+T\+W\+O\+R\+K\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a02d62b0456ff50fd6ad1ebf2f749327d}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a02d62b0456ff50fd6ad1ebf2f749327d}} 
+N\+E\+T\+W\+O\+R\+K\+\_\+\+E\+R\+R\+OR&There was a network error, or an endpoint was down. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+E\+T\+W\+O\+R\+K\+\_\+\+T\+I\+M\+E\+O\+UT@{N\+E\+T\+W\+O\+R\+K\+\_\+\+T\+I\+M\+E\+O\+UT}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!N\+E\+T\+W\+O\+R\+K\+\_\+\+T\+I\+M\+E\+O\+UT@{N\+E\+T\+W\+O\+R\+K\+\_\+\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a74db928f7b05128dbaf2462588c7208f}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a74db928f7b05128dbaf2462588c7208f}} 
+N\+E\+T\+W\+O\+R\+K\+\_\+\+T\+I\+M\+E\+O\+UT&There was a network timeout (for a \char`\"{}with timeout\char`\"{} network operation) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{J\+O\+B\+\_\+\+K\+I\+L\+L\+ED@{J\+O\+B\+\_\+\+K\+I\+L\+L\+ED}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!J\+O\+B\+\_\+\+K\+I\+L\+L\+ED@{J\+O\+B\+\_\+\+K\+I\+L\+L\+ED}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ae26e9df054dd1df285e7d0ab8f350869}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ae26e9df054dd1df285e7d0ab8f350869}} 
+J\+O\+B\+\_\+\+K\+I\+L\+L\+ED&A Job has been killed (likely because the service performing it was terminated) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+ED@{J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+ED}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+ED@{J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+ED}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77af3188a3cd262d0ef0e0b985c0f3bc93d}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77af3188a3cd262d0ef0e0b985c0f3bc93d}} 
+J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+ED&The job cannot be terminated because it is neither pending nor running. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+F\+O\+R\+G\+O\+T\+T\+EN@{J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+F\+O\+R\+G\+O\+T\+T\+EN}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+F\+O\+R\+G\+O\+T\+T\+EN@{J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+F\+O\+R\+G\+O\+T\+T\+EN}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ae4e51f06537ecc8ab4f7a5b3a890b2a5}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ae4e51f06537ecc8ab4f7a5b3a890b2a5}} 
+J\+O\+B\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+E\+\_\+\+F\+O\+R\+G\+O\+T\+T\+EN&The job cannot be forgotten because it is not completed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+O\+M\+P\+U\+T\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+H\+A\+S\+\_\+\+D\+I\+ED@{C\+O\+M\+P\+U\+T\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+H\+A\+S\+\_\+\+D\+I\+ED}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!C\+O\+M\+P\+U\+T\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+H\+A\+S\+\_\+\+D\+I\+ED@{C\+O\+M\+P\+U\+T\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+H\+A\+S\+\_\+\+D\+I\+ED}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a709b0b9c94851003622d5ec900f186f6}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a709b0b9c94851003622d5ec900f186f6}} 
+C\+O\+M\+P\+U\+T\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+H\+A\+S\+\_\+\+D\+I\+ED&A compute thread has died. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+U\+N\+C\+T\+I\+O\+N\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE@{F\+U\+N\+C\+T\+I\+O\+N\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!F\+U\+N\+C\+T\+I\+O\+N\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE@{F\+U\+N\+C\+T\+I\+O\+N\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a362e54af1fdb80512e4708504105d8c0}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a362e54af1fdb80512e4708504105d8c0}} 
+F\+U\+N\+C\+T\+I\+O\+N\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE&A functionality is not available. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{J\+O\+B\+\_\+\+T\+I\+M\+E\+O\+UT@{J\+O\+B\+\_\+\+T\+I\+M\+E\+O\+UT}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!J\+O\+B\+\_\+\+T\+I\+M\+E\+O\+UT@{J\+O\+B\+\_\+\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a60d4bf28e7842c657ebe0c429b32f423}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77a60d4bf28e7842c657ebe0c429b32f423}} 
+J\+O\+B\+\_\+\+T\+I\+M\+E\+O\+UT&A job was terminated due to a timeout. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+O\+S\+T\+\_\+\+E\+R\+R\+OR@{H\+O\+S\+T\+\_\+\+E\+R\+R\+OR}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!H\+O\+S\+T\+\_\+\+E\+R\+R\+OR@{H\+O\+S\+T\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ac063809cfa1d103f49dd7d25939a54d4}\label{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77ac063809cfa1d103f49dd7d25939a54d4}} 
+H\+O\+S\+T\+\_\+\+E\+R\+R\+OR&The host went down (while computing, while sleeping) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_failure_cause_ac18f4c292fbdc1878da7ae2431c7d3e4}\label{classwrench_1_1_failure_cause_ac18f4c292fbdc1878da7ae2431c7d3e4}} 
+\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!Failure\+Cause@{Failure\+Cause}}
+\index{Failure\+Cause@{Failure\+Cause}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}
+\subsubsection{\texorpdfstring{Failure\+Cause()}{FailureCause()}}
+{\footnotesize\ttfamily wrench\+::\+Failure\+Cause\+::\+Failure\+Cause (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77}{Cause\+Type}}]{cause }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cause} & the type of the failure cause \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_failure_cause_a24fa4deecfa2e5e187f8d88187b8dddb}\label{classwrench_1_1_failure_cause_a24fa4deecfa2e5e187f8d88187b8dddb}} 
+\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!get\+Cause\+Type@{get\+Cause\+Type}}
+\index{get\+Cause\+Type@{get\+Cause\+Type}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}
+\subsubsection{\texorpdfstring{get\+Cause\+Type()}{getCauseType()}}
+{\footnotesize\ttfamily \hyperlink{classwrench_1_1_failure_cause_a6d06d6845ca5499c5cbbd9e1a08c9c77}{Failure\+Cause\+::\+Cause\+Type} wrench\+::\+Failure\+Cause\+::get\+Cause\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieve the type of the failure cause. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_failure_cause_afbad248ebe902409f2cd4f1d6f2b867d}\label{classwrench_1_1_failure_cause_afbad248ebe902409f2cd4f1d6f2b867d}} 
+\index{wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!wrench\+::\+Failure\+Cause@{wrench\+::\+Failure\+Cause}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily virtual std\+::string wrench\+::\+Failure\+Cause\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return an error message that describes the failure cause (to be overridden) 
+
+\begin{DoxyReturn}{Returns}
+an error message 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classwrench_1_1_job_timeout_a91515ca59f71777de74a4b0b169d12e7}{wrench\+::\+Job\+Timeout}, \hyperlink{classwrench_1_1_fatal_failure_a4b547da3bac56b7b23aeba34c2dbbd39}{wrench\+::\+Fatal\+Failure}, \hyperlink{classwrench_1_1_compute_thread_has_died_a4725416d9ff31b39ec9d48d23d1c1c0b}{wrench\+::\+Compute\+Thread\+Has\+Died}, \hyperlink{classwrench_1_1_job_cannot_be_forgotten_abbfbece144c738c9948bf8f01d6bbd53}{wrench\+::\+Job\+Cannot\+Be\+Forgotten}, \hyperlink{classwrench_1_1_job_cannot_be_terminated_acfa2b83db93bb68e0e773cc8b4a45505}{wrench\+::\+Job\+Cannot\+Be\+Terminated}, \hyperlink{classwrench_1_1_host_error_adacb96198ee8477b67fcac9ff8638266}{wrench\+::\+Host\+Error}, \hyperlink{classwrench_1_1_network_error_a114346c3faa84b3925600e9a22314a37}{wrench\+::\+Network\+Error}, \hyperlink{classwrench_1_1_job_killed_aa9c6b749d16db4a313ffdd83629f1c76}{wrench\+::\+Job\+Killed}, \hyperlink{classwrench_1_1_not_enough_resources_aeccad36aeccb259ac4c2d17752963269}{wrench\+::\+Not\+Enough\+Resources}, \hyperlink{classwrench_1_1_functionality_not_available_af19ea11f7e3d50d0bea7c8a66b7b1221}{wrench\+::\+Functionality\+Not\+Available}, \hyperlink{classwrench_1_1_job_type_not_supported_ab6a302367f2db332484da0c256e3ae5c}{wrench\+::\+Job\+Type\+Not\+Supported}, \hyperlink{classwrench_1_1_service_is_down_a29dbb2d3dd1b5d6a47536bab974b7151}{wrench\+::\+Service\+Is\+Down}, \hyperlink{classwrench_1_1_file_already_being_copied_a44fa6078be3bd9e0b06cd536b691666c}{wrench\+::\+File\+Already\+Being\+Copied}, \hyperlink{classwrench_1_1_storage_service_not_enough_space_a42680e32c21db44888e173d6a0358326}{wrench\+::\+Storage\+Service\+Not\+Enough\+Space}, \hyperlink{classwrench_1_1_file_not_found_ac9c3bdcc58b4626a0f3de0b4288bf4b4}{wrench\+::\+File\+Not\+Found}, \hyperlink{classwrench_1_1_no_scratch_space_add628f91104786a99a410ec07abac54c}{wrench\+::\+No\+Scratch\+Space}, and \hyperlink{classwrench_1_1_no_storage_service_for_file_ab3941ca284f35abd00e9292e22d7d553}{wrench\+::\+No\+Storage\+Service\+For\+File}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/workflow/execution\+\_\+events/Failure\+Cause.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/workflow/execution\+\_\+events/Failure\+Cause.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{classwrench_1_1_compute_service_standard_job_failed_message}{}\section{wrench\+:\+:Compute\+Service\+Standard\+Job\+Failed\+Message Class Reference}
+\label{classwrench_1_1_compute_service_standard_job_failed_message}\index{wrench\+::\+Compute\+Service\+Standard\+Job\+Failed\+Message@{wrench\+::\+Compute\+Service\+Standard\+Job\+Failed\+Message}}
+
+
+A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} when a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} has failed to execute.  
+
+
+
+
+{\ttfamily \#include $<$Compute\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Compute\+Service\+Standard\+Job\+Failed\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_compute_service_standard_job_failed_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_compute_service_standard_job_failed_message_ab4b54a70c603d2fea31163415cdc35c2}{Compute\+Service\+Standard\+Job\+Failed\+Message} (\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$, \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$, std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$ \hyperlink{classwrench_1_1_compute_service_standard_job_failed_message_a84e1ec62e44d09f11f74ee4421517836}{cause}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_standard_job_failed_message_a84e1ec62e44d09f11f74ee4421517836}\label{classwrench_1_1_compute_service_standard_job_failed_message_a84e1ec62e44d09f11f74ee4421517836}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$ \hyperlink{classwrench_1_1_compute_service_standard_job_failed_message_a84e1ec62e44d09f11f74ee4421517836}{cause}
+\begin{DoxyCompactList}\small\item\em The cause of the failure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_standard_job_failed_message_a3ea340bb53b79cee24b0fe8d4cd9444d}\label{classwrench_1_1_compute_service_standard_job_failed_message_a3ea340bb53b79cee24b0fe8d4cd9444d}} 
+\hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$ \hyperlink{classwrench_1_1_compute_service_standard_job_failed_message_a3ea340bb53b79cee24b0fe8d4cd9444d}{compute\+\_\+service}
+\begin{DoxyCompactList}\small\item\em The compute service on which the job has failed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_standard_job_failed_message_a0af077da7ddb9ba6b5916e7f9d009278}\label{classwrench_1_1_compute_service_standard_job_failed_message_a0af077da7ddb9ba6b5916e7f9d009278}} 
+\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$ \hyperlink{classwrench_1_1_compute_service_standard_job_failed_message_a0af077da7ddb9ba6b5916e7f9d009278}{job}
+\begin{DoxyCompactList}\small\item\em The job that has failed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} when a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} has failed to execute. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_standard_job_failed_message_ab4b54a70c603d2fea31163415cdc35c2}\label{classwrench_1_1_compute_service_standard_job_failed_message_ab4b54a70c603d2fea31163415cdc35c2}} 
+\index{wrench\+::\+Compute\+Service\+Standard\+Job\+Failed\+Message@{wrench\+::\+Compute\+Service\+Standard\+Job\+Failed\+Message}!Compute\+Service\+Standard\+Job\+Failed\+Message@{Compute\+Service\+Standard\+Job\+Failed\+Message}}
+\index{Compute\+Service\+Standard\+Job\+Failed\+Message@{Compute\+Service\+Standard\+Job\+Failed\+Message}!wrench\+::\+Compute\+Service\+Standard\+Job\+Failed\+Message@{wrench\+::\+Compute\+Service\+Standard\+Job\+Failed\+Message}}
+\subsubsection{\texorpdfstring{Compute\+Service\+Standard\+Job\+Failed\+Message()}{ComputeServiceStandardJobFailedMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Compute\+Service\+Standard\+Job\+Failed\+Message\+::\+Compute\+Service\+Standard\+Job\+Failed\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$}]{job,  }\item[{\hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$}]{cs,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$}]{cause,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & a standard job that has failed \\
+\hline
+{\em cs} & the compute service on which the job has failed \\
+\hline
+{\em cause} & the cause of the failure \\
+\hline
+{\em payload} & message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/Compute\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/Compute\+Service\+Message.\+cpp\end{DoxyCompactItemize}

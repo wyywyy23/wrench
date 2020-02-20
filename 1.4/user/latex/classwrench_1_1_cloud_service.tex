@@ -1,0 +1,78 @@
+\hypertarget{classwrench_1_1_cloud_service}{}\section{wrench\+:\+:Cloud\+Service Class Reference}
+\label{classwrench_1_1_cloud_service}\index{wrench\+::\+Cloud\+Service@{wrench\+::\+Cloud\+Service}}
+
+
+A cloud-\/based compute service that manages a set of physical hosts and controls access to their resources by (transparently) executing jobs in VM instances.  
+
+
+
+
+{\ttfamily \#include $<$Cloud\+Service.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Cloud\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classwrench_1_1_cloud_service}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_cloud_service_a9f7f2d8bbbcaf2cd1c2cc881d11afec3}{Cloud\+Service} (const std\+::string \&hostname, std\+::vector$<$ std\+::string $>$ \&\hyperlink{classwrench_1_1_cloud_service_a8225cae457e491f3f3aad32653910ea0}{execution\+\_\+hosts}, double scratch\+\_\+space\+\_\+size, std\+::map$<$ std\+::string, std\+::string $>$ property\+\_\+list=\{\}, std\+::map$<$ std\+::string, std\+::string $>$ messagepayload\+\_\+list=\{\})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_cloud_service_a56d772651ad005c9de543ca24327b9c6}\label{classwrench_1_1_cloud_service_a56d772651ad005c9de543ca24327b9c6}} 
+std\+::map$<$ std\+::string, double $>$ \hyperlink{classwrench_1_1_cloud_service_a56d772651ad005c9de543ca24327b9c6}{cs\+\_\+available\+\_\+ram}
+\begin{DoxyCompactList}\small\item\em Map of available R\+AM at hosts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_cloud_service_a8225cae457e491f3f3aad32653910ea0}\label{classwrench_1_1_cloud_service_a8225cae457e491f3f3aad32653910ea0}} 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classwrench_1_1_cloud_service_a8225cae457e491f3f3aad32653910ea0}{execution\+\_\+hosts}
+\begin{DoxyCompactList}\small\item\em List of execution host names. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_cloud_service_afda7fb1800d2d418e2a586925ffd4013}\label{classwrench_1_1_cloud_service_afda7fb1800d2d418e2a586925ffd4013}} 
+std\+::map$<$ std\+::string, unsigned long $>$ \hyperlink{classwrench_1_1_cloud_service_afda7fb1800d2d418e2a586925ffd4013}{used\+\_\+cores\+\_\+per\+\_\+execution\+\_\+host}
+\begin{DoxyCompactList}\small\item\em A map of the number of used cores (per VM) per execution host. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_cloud_service_a41782dd4332c11a992997562132f35e1}\label{classwrench_1_1_cloud_service_a41782dd4332c11a992997562132f35e1}} 
+std\+::map$<$ std\+::string, std\+::tuple$<$ std\+::shared\+\_\+ptr$<$ S4\+U\+\_\+\+Virtual\+Machine $>$, std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $>$, unsigned long, unsigned long $>$ $>$ \hyperlink{classwrench_1_1_cloud_service_a41782dd4332c11a992997562132f35e1}{vm\+\_\+list}
+\begin{DoxyCompactList}\small\item\em A map of V\+Ms described by the VM actor, the actual compute service, the total number of cores, and R\+AM size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A cloud-\/based compute service that manages a set of physical hosts and controls access to their resources by (transparently) executing jobs in VM instances. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_cloud_service_a9f7f2d8bbbcaf2cd1c2cc881d11afec3}\label{classwrench_1_1_cloud_service_a9f7f2d8bbbcaf2cd1c2cc881d11afec3}} 
+\index{wrench\+::\+Cloud\+Service@{wrench\+::\+Cloud\+Service}!Cloud\+Service@{Cloud\+Service}}
+\index{Cloud\+Service@{Cloud\+Service}!wrench\+::\+Cloud\+Service@{wrench\+::\+Cloud\+Service}}
+\subsubsection{\texorpdfstring{Cloud\+Service()}{CloudService()}}
+{\footnotesize\ttfamily wrench\+::\+Cloud\+Service\+::\+Cloud\+Service (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{execution\+\_\+hosts,  }\item[{double}]{scratch\+\_\+space\+\_\+size,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{property\+\_\+list = {\ttfamily \{\}},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{messagepayload\+\_\+list = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the hostname on which to start the service \\
+\hline
+{\em execution\+\_\+hosts} & the list of the names of the hosts available for running virtual machines \\
+\hline
+{\em scratch\+\_\+space\+\_\+size} & the size for the scratch storage pace of the cloud service \\
+\hline
+{\em property\+\_\+list} & a property list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+{\em messagepayload\+\_\+list} & a message payload list (\{\} means \char`\"{}use all defaults\char`\"{})\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/cloud/Cloud\+Service.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/cloud/Cloud\+Service.\+cpp\end{DoxyCompactItemize}

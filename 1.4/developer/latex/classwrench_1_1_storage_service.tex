@@ -1,0 +1,189 @@
+\hypertarget{classwrench_1_1_storage_service}{}\section{wrench\+:\+:Storage\+Service Class Reference}
+\label{classwrench_1_1_storage_service}\index{wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}}
+
+
+The storage service base class.  
+
+
+
+
+{\ttfamily \#include $<$Storage\+Service.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Storage\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_storage_service}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classwrench_1_1_storage_service_a49becac571e80a1a89f2466cad3fc084}{delete\+File} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$file, \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$file\+\_\+registry\+\_\+service=nullptr)
+\begin{DoxyCompactList}\small\item\em Synchronously asks the storage service to delete a file copy. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classwrench_1_1_storage_service_abc410d2a2155aaa78bea3c38209dcc37}{delete\+File} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$file, std\+::string dst\+\_\+dir, \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$file\+\_\+registry\+\_\+service=nullptr)
+\begin{DoxyCompactList}\small\item\em Synchronously ask the storage service to delete a file copy. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classwrench_1_1_storage_service_a600a2fc0da8e1c5f1159509f09c2f2f6}{get\+Free\+Space} ()
+\begin{DoxyCompactList}\small\item\em Synchronously asks the storage service for its capacity. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_storage_service_a0ea24bcd9b320bde776b64dd8e4cd494}{get\+Total\+Space} ()
+\begin{DoxyCompactList}\small\item\em Get the total static capacity of the storage service (in zero simulation time) \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classwrench_1_1_storage_service_aa0880c02e803fad5f2b467c91b520519}{lookup\+File} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$file)
+\begin{DoxyCompactList}\small\item\em Synchronously asks the storage service whether it holds a file. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classwrench_1_1_storage_service_a348189474e741dab4893213b5bcca1d1}{lookup\+File} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$file, std\+::string dst\+\_\+dir)
+\begin{DoxyCompactList}\small\item\em Synchronously asks the storage service whether it holds a file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_a1267ad1722291f56532c283658f31acc}\label{classwrench_1_1_storage_service_a1267ad1722291f56532c283658f31acc}} 
+void \hyperlink{classwrench_1_1_storage_service_a1267ad1722291f56532c283658f31acc}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop the service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The storage service base class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_storage_service_a49becac571e80a1a89f2466cad3fc084}\label{classwrench_1_1_storage_service_a49becac571e80a1a89f2466cad3fc084}} 
+\index{wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}!delete\+File@{delete\+File}}
+\index{delete\+File@{delete\+File}!wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}}
+\subsubsection{\texorpdfstring{delete\+File()}{deleteFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void wrench\+::\+Storage\+Service\+::delete\+File (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{\hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$}]{file\+\_\+registry\+\_\+service = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronously asks the storage service to delete a file copy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file \\
+\hline
+{\em file\+\_\+registry\+\_\+service} & a file registry service that should be updated once the file deletion has (successfully) completed (none if nullptr)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_storage_service_abc410d2a2155aaa78bea3c38209dcc37}\label{classwrench_1_1_storage_service_abc410d2a2155aaa78bea3c38209dcc37}} 
+\index{wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}!delete\+File@{delete\+File}}
+\index{delete\+File@{delete\+File}!wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}}
+\subsubsection{\texorpdfstring{delete\+File()}{deleteFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void wrench\+::\+Storage\+Service\+::delete\+File (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{std\+::string}]{dst\+\_\+partition,  }\item[{\hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$}]{file\+\_\+registry\+\_\+service = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronously ask the storage service to delete a file copy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file \\
+\hline
+{\em dst\+\_\+partition} & the partition in which to delete the file \\
+\hline
+{\em file\+\_\+registry\+\_\+service} & a file registry service that should be updated once the file deletion has (successfully) completed (none if nullptr)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_storage_service_a600a2fc0da8e1c5f1159509f09c2f2f6}\label{classwrench_1_1_storage_service_a600a2fc0da8e1c5f1159509f09c2f2f6}} 
+\index{wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}!get\+Free\+Space@{get\+Free\+Space}}
+\index{get\+Free\+Space@{get\+Free\+Space}!wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}}
+\subsubsection{\texorpdfstring{get\+Free\+Space()}{getFreeSpace()}}
+{\footnotesize\ttfamily double wrench\+::\+Storage\+Service\+::get\+Free\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronously asks the storage service for its capacity. 
+
+\begin{DoxyReturn}{Returns}
+The free space in bytes
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_storage_service_a0ea24bcd9b320bde776b64dd8e4cd494}\label{classwrench_1_1_storage_service_a0ea24bcd9b320bde776b64dd8e4cd494}} 
+\index{wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}!get\+Total\+Space@{get\+Total\+Space}}
+\index{get\+Total\+Space@{get\+Total\+Space}!wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}}
+\subsubsection{\texorpdfstring{get\+Total\+Space()}{getTotalSpace()}}
+{\footnotesize\ttfamily double wrench\+::\+Storage\+Service\+::get\+Total\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the total static capacity of the storage service (in zero simulation time) 
+
+\begin{DoxyReturn}{Returns}
+capacity of the storage service (double) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_storage_service_aa0880c02e803fad5f2b467c91b520519}\label{classwrench_1_1_storage_service_aa0880c02e803fad5f2b467c91b520519}} 
+\index{wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}!lookup\+File@{lookup\+File}}
+\index{lookup\+File@{lookup\+File}!wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}}
+\subsubsection{\texorpdfstring{lookup\+File()}{lookupFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool wrench\+::\+Storage\+Service\+::lookup\+File (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronously asks the storage service whether it holds a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::invalid\+\_\+arguments} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_storage_service_a348189474e741dab4893213b5bcca1d1}\label{classwrench_1_1_storage_service_a348189474e741dab4893213b5bcca1d1}} 
+\index{wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}!lookup\+File@{lookup\+File}}
+\index{lookup\+File@{lookup\+File}!wrench\+::\+Storage\+Service@{wrench\+::\+Storage\+Service}}
+\subsubsection{\texorpdfstring{lookup\+File()}{lookupFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool wrench\+::\+Storage\+Service\+::lookup\+File (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{std\+::string}]{dst\+\_\+partition }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronously asks the storage service whether it holds a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file \\
+\hline
+{\em dst\+\_\+partition} & the partition in which to perform the lookup\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+{\em std\+::invalid\+\_\+arguments} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/storage/Storage\+Service.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/Storage\+Service.\+cpp\end{DoxyCompactItemize}

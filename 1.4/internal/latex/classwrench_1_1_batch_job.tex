@@ -1,0 +1,285 @@
+\hypertarget{classwrench_1_1_batch_job}{}\section{wrench\+:\+:Batch\+Job Class Reference}
+\label{classwrench_1_1_batch_job}\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+
+
+A batch job, which encapsulates a \hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job} and additional information used by a \hyperlink{classwrench_1_1_batch_service}{Batch\+Service}.  
+
+
+
+
+{\ttfamily \#include $<$Batch\+Job.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_batch_job_ae95376b89b37aa8e1c6c91fecb6082c8}{Batch\+Job} (\hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job} $\ast$job, unsigned long jobid, unsigned long time\+\_\+in\+\_\+minutes, unsigned long number\+\_\+nodes, unsigned long cores\+\_\+per\+\_\+node, double ending\+\_\+time\+\_\+stamp, double arrival\+\_\+time\+\_\+stamp)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classwrench_1_1_batch_job_a1c6f9da692d32e1ecc8e0e4beda76066}{get\+Allocated\+Cores\+Per\+Node} ()
+\begin{DoxyCompactList}\small\item\em Get the number of cores per node. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_batch_job_a62b2b87b1f2b494d2598b30c3193d6d1}{get\+Allocated\+Time} ()
+\begin{DoxyCompactList}\small\item\em Get the allocated time. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_batch_job_a287fb8f69b4fecd1608cce0845f70951}{get\+Arrival\+Time\+Stamp} ()
+\begin{DoxyCompactList}\small\item\em Get the arrival time stamp. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_batch_job_ab0c6c2e27d347dadb07e57096470076c}{get\+Begin\+Time\+Stamp} ()
+\begin{DoxyCompactList}\small\item\em Get the batch job\textquotesingle{}s begin timestamp. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_batch_job_a654473de57c5827afa7ded5a0b3f2226}{get\+Ending\+Time\+Stamp} ()
+\begin{DoxyCompactList}\small\item\em Get the batch job\textquotesingle{}s end timestamp. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classwrench_1_1_batch_job_add51419332d7cd0bec2f6ed3db77a563}{get\+Job\+ID} ()
+\begin{DoxyCompactList}\small\item\em Get the id of this batch job. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_batch_job_abb349b19cdc9975d98227dffbe146bfc}{get\+Memory\+Requirement} ()
+\begin{DoxyCompactList}\small\item\em Get the memory requirement. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classwrench_1_1_batch_job_abf624dffc6a004f015bd5b6fbdf17c94}{get\+Num\+Nodes} ()
+\begin{DoxyCompactList}\small\item\em Get the number of allocated compute nodes (or hosts) \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::tuple$<$ unsigned long, double $>$ $>$ \hyperlink{classwrench_1_1_batch_job_a22557f2dea0008e1f985b4a373868490}{get\+Resources\+Allocated} ()
+\begin{DoxyCompactList}\small\item\em Get the resources allocated to this batch job. \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job} $\ast$ \hyperlink{classwrench_1_1_batch_job_a5ee5804010f310bf636f7569c3ed80c0}{get\+Workflow\+Job} ()
+\begin{DoxyCompactList}\small\item\em Get the workflow job corresponding to this batch job. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_batch_job_adeb38beecfec84bb2e9022d20624ecd0}{set\+Allocated\+Resources} (std\+::map$<$ std\+::string, std\+::tuple$<$ unsigned long, double $>$$>$)
+\begin{DoxyCompactList}\small\item\em Set the resources allocated to this batch job. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_batch_job_a759f6aa97bfa5fdcfe8a3201a698c885}{set\+Allocated\+Time} (double)
+\begin{DoxyCompactList}\small\item\em Set the allocated time. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_batch_job_a9ce2b80c81f2f63da8555884a8fd5614}{set\+Begin\+Time\+Stamp} (double)
+\begin{DoxyCompactList}\small\item\em Set the batch job\textquotesingle{}s begin timestamp. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_batch_job_a66ad3c01839582a91cdd636f989d2c80}{set\+Ending\+Time\+Stamp} (double)
+\begin{DoxyCompactList}\small\item\em Set the batch job\textquotesingle{}s end timestamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_batch_job_ad585cfa131dd16dae43509c0afad4db6}\label{classwrench_1_1_batch_job_ad585cfa131dd16dae43509c0afad4db6}} 
+std\+::string {\bfseries csv\+\_\+allocated\+\_\+processors}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_batch_job_a3b1994a6233be477d05d23115cdfd580}\label{classwrench_1_1_batch_job_a3b1994a6233be477d05d23115cdfd580}} 
+std\+::string {\bfseries csv\+\_\+metadata}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A batch job, which encapsulates a \hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job} and additional information used by a \hyperlink{classwrench_1_1_batch_service}{Batch\+Service}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_ae95376b89b37aa8e1c6c91fecb6082c8}\label{classwrench_1_1_batch_job_ae95376b89b37aa8e1c6c91fecb6082c8}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!Batch\+Job@{Batch\+Job}}
+\index{Batch\+Job@{Batch\+Job}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{Batch\+Job()}{BatchJob()}}
+{\footnotesize\ttfamily wrench\+::\+Batch\+Job\+::\+Batch\+Job (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job} $\ast$}]{job,  }\item[{unsigned long}]{jobid,  }\item[{unsigned long}]{time\+\_\+in\+\_\+minutes,  }\item[{unsigned long}]{num\+\_\+nodes,  }\item[{unsigned long}]{cores\+\_\+per\+\_\+node,  }\item[{double}]{ending\+\_\+time\+\_\+stamp,  }\item[{double}]{arrival\+\_\+time\+\_\+stamp }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & the workflow job corresponding to the batch job \\
+\hline
+{\em jobid} & the batch job id \\
+\hline
+{\em time\+\_\+in\+\_\+minutes} & the requested execution time in minutes \\
+\hline
+{\em num\+\_\+nodes} & the requested number of compute nodes (hosts) \\
+\hline
+{\em cores\+\_\+per\+\_\+node} & the requested number of cores per node \\
+\hline
+{\em ending\+\_\+time\+\_\+stamp} & the job\textquotesingle{}s end date \\
+\hline
+{\em arrival\+\_\+time\+\_\+stamp} & the job\textquotesingle{}s arrival date \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_a1c6f9da692d32e1ecc8e0e4beda76066}\label{classwrench_1_1_batch_job_a1c6f9da692d32e1ecc8e0e4beda76066}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!get\+Allocated\+Cores\+Per\+Node@{get\+Allocated\+Cores\+Per\+Node}}
+\index{get\+Allocated\+Cores\+Per\+Node@{get\+Allocated\+Cores\+Per\+Node}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{get\+Allocated\+Cores\+Per\+Node()}{getAllocatedCoresPerNode()}}
+{\footnotesize\ttfamily unsigned long wrench\+::\+Batch\+Job\+::get\+Allocated\+Cores\+Per\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of cores per node. 
+
+\begin{DoxyReturn}{Returns}
+a number of cores 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_a62b2b87b1f2b494d2598b30c3193d6d1}\label{classwrench_1_1_batch_job_a62b2b87b1f2b494d2598b30c3193d6d1}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!get\+Allocated\+Time@{get\+Allocated\+Time}}
+\index{get\+Allocated\+Time@{get\+Allocated\+Time}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{get\+Allocated\+Time()}{getAllocatedTime()}}
+{\footnotesize\ttfamily double wrench\+::\+Batch\+Job\+::get\+Allocated\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the allocated time. 
+
+\begin{DoxyReturn}{Returns}
+a time in seconds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_a287fb8f69b4fecd1608cce0845f70951}\label{classwrench_1_1_batch_job_a287fb8f69b4fecd1608cce0845f70951}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!get\+Arrival\+Time\+Stamp@{get\+Arrival\+Time\+Stamp}}
+\index{get\+Arrival\+Time\+Stamp@{get\+Arrival\+Time\+Stamp}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{get\+Arrival\+Time\+Stamp()}{getArrivalTimeStamp()}}
+{\footnotesize\ttfamily double wrench\+::\+Batch\+Job\+::get\+Arrival\+Time\+Stamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the arrival time stamp. 
+
+\begin{DoxyReturn}{Returns}
+a date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_ab0c6c2e27d347dadb07e57096470076c}\label{classwrench_1_1_batch_job_ab0c6c2e27d347dadb07e57096470076c}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!get\+Begin\+Time\+Stamp@{get\+Begin\+Time\+Stamp}}
+\index{get\+Begin\+Time\+Stamp@{get\+Begin\+Time\+Stamp}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{get\+Begin\+Time\+Stamp()}{getBeginTimeStamp()}}
+{\footnotesize\ttfamily double wrench\+::\+Batch\+Job\+::get\+Begin\+Time\+Stamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the batch job\textquotesingle{}s begin timestamp. 
+
+\begin{DoxyReturn}{Returns}
+a date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_a654473de57c5827afa7ded5a0b3f2226}\label{classwrench_1_1_batch_job_a654473de57c5827afa7ded5a0b3f2226}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!get\+Ending\+Time\+Stamp@{get\+Ending\+Time\+Stamp}}
+\index{get\+Ending\+Time\+Stamp@{get\+Ending\+Time\+Stamp}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{get\+Ending\+Time\+Stamp()}{getEndingTimeStamp()}}
+{\footnotesize\ttfamily double wrench\+::\+Batch\+Job\+::get\+Ending\+Time\+Stamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the batch job\textquotesingle{}s end timestamp. 
+
+\begin{DoxyReturn}{Returns}
+a date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_add51419332d7cd0bec2f6ed3db77a563}\label{classwrench_1_1_batch_job_add51419332d7cd0bec2f6ed3db77a563}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!get\+Job\+ID@{get\+Job\+ID}}
+\index{get\+Job\+ID@{get\+Job\+ID}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{get\+Job\+I\+D()}{getJobID()}}
+{\footnotesize\ttfamily unsigned long wrench\+::\+Batch\+Job\+::get\+Job\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the id of this batch job. 
+
+\begin{DoxyReturn}{Returns}
+a string id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_abb349b19cdc9975d98227dffbe146bfc}\label{classwrench_1_1_batch_job_abb349b19cdc9975d98227dffbe146bfc}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!get\+Memory\+Requirement@{get\+Memory\+Requirement}}
+\index{get\+Memory\+Requirement@{get\+Memory\+Requirement}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{get\+Memory\+Requirement()}{getMemoryRequirement()}}
+{\footnotesize\ttfamily double wrench\+::\+Batch\+Job\+::get\+Memory\+Requirement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the memory requirement. 
+
+\begin{DoxyReturn}{Returns}
+a size in bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_abf624dffc6a004f015bd5b6fbdf17c94}\label{classwrench_1_1_batch_job_abf624dffc6a004f015bd5b6fbdf17c94}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!get\+Num\+Nodes@{get\+Num\+Nodes}}
+\index{get\+Num\+Nodes@{get\+Num\+Nodes}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{get\+Num\+Nodes()}{getNumNodes()}}
+{\footnotesize\ttfamily unsigned long wrench\+::\+Batch\+Job\+::get\+Num\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of allocated compute nodes (or hosts) 
+
+\begin{DoxyReturn}{Returns}
+a number of nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_a22557f2dea0008e1f985b4a373868490}\label{classwrench_1_1_batch_job_a22557f2dea0008e1f985b4a373868490}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!get\+Resources\+Allocated@{get\+Resources\+Allocated}}
+\index{get\+Resources\+Allocated@{get\+Resources\+Allocated}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{get\+Resources\+Allocated()}{getResourcesAllocated()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::tuple$<$ unsigned long, double $>$ $>$ wrench\+::\+Batch\+Job\+::get\+Resources\+Allocated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the resources allocated to this batch job. 
+
+\begin{DoxyReturn}{Returns}
+a list of resource, each as a $<$hostname, number of cores, bytes of R\+AM$>$ tuple 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_a5ee5804010f310bf636f7569c3ed80c0}\label{classwrench_1_1_batch_job_a5ee5804010f310bf636f7569c3ed80c0}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!get\+Workflow\+Job@{get\+Workflow\+Job}}
+\index{get\+Workflow\+Job@{get\+Workflow\+Job}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{get\+Workflow\+Job()}{getWorkflowJob()}}
+{\footnotesize\ttfamily \hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job} $\ast$ wrench\+::\+Batch\+Job\+::get\+Workflow\+Job (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the workflow job corresponding to this batch job. 
+
+\begin{DoxyReturn}{Returns}
+a workflow job 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_adeb38beecfec84bb2e9022d20624ecd0}\label{classwrench_1_1_batch_job_adeb38beecfec84bb2e9022d20624ecd0}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!set\+Allocated\+Resources@{set\+Allocated\+Resources}}
+\index{set\+Allocated\+Resources@{set\+Allocated\+Resources}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{set\+Allocated\+Resources()}{setAllocatedResources()}}
+{\footnotesize\ttfamily void wrench\+::\+Batch\+Job\+::set\+Allocated\+Resources (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::tuple$<$ unsigned long, double $>$$>$}]{resources }\end{DoxyParamCaption})}
+
+
+
+Set the resources allocated to this batch job. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resources} & a list of resource, each as a $<$hostname, number of cores, bytes of R\+AM$>$ tuple \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_a759f6aa97bfa5fdcfe8a3201a698c885}\label{classwrench_1_1_batch_job_a759f6aa97bfa5fdcfe8a3201a698c885}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!set\+Allocated\+Time@{set\+Allocated\+Time}}
+\index{set\+Allocated\+Time@{set\+Allocated\+Time}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{set\+Allocated\+Time()}{setAllocatedTime()}}
+{\footnotesize\ttfamily void wrench\+::\+Batch\+Job\+::set\+Allocated\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})}
+
+
+
+Set the allocated time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & a time in seconds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_a9ce2b80c81f2f63da8555884a8fd5614}\label{classwrench_1_1_batch_job_a9ce2b80c81f2f63da8555884a8fd5614}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!set\+Begin\+Time\+Stamp@{set\+Begin\+Time\+Stamp}}
+\index{set\+Begin\+Time\+Stamp@{set\+Begin\+Time\+Stamp}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{set\+Begin\+Time\+Stamp()}{setBeginTimeStamp()}}
+{\footnotesize\ttfamily void wrench\+::\+Batch\+Job\+::set\+Begin\+Time\+Stamp (\begin{DoxyParamCaption}\item[{double}]{time\+\_\+stamp }\end{DoxyParamCaption})}
+
+
+
+Set the batch job\textquotesingle{}s begin timestamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+\_\+stamp} & a date \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_batch_job_a66ad3c01839582a91cdd636f989d2c80}\label{classwrench_1_1_batch_job_a66ad3c01839582a91cdd636f989d2c80}} 
+\index{wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}!set\+Ending\+Time\+Stamp@{set\+Ending\+Time\+Stamp}}
+\index{set\+Ending\+Time\+Stamp@{set\+Ending\+Time\+Stamp}!wrench\+::\+Batch\+Job@{wrench\+::\+Batch\+Job}}
+\subsubsection{\texorpdfstring{set\+Ending\+Time\+Stamp()}{setEndingTimeStamp()}}
+{\footnotesize\ttfamily void wrench\+::\+Batch\+Job\+::set\+Ending\+Time\+Stamp (\begin{DoxyParamCaption}\item[{double}]{time\+\_\+stamp }\end{DoxyParamCaption})}
+
+
+
+Set the batch job\textquotesingle{}s end timestamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+\_\+stamp} & a date \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/batch/Batch\+Job.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/batch/Batch\+Job.\+cpp\end{DoxyCompactItemize}

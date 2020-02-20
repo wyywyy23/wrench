@@ -1,0 +1,101 @@
+\hypertarget{classwrench_1_1_workflow_file}{}\section{wrench\+:\+:Workflow\+File Class Reference}
+\label{classwrench_1_1_workflow_file}\index{wrench\+::\+Workflow\+File@{wrench\+::\+Workflow\+File}}
+
+
+A data file used/produced by a \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} in a \hyperlink{classwrench_1_1_workflow}{Workflow}.  
+
+
+
+
+{\ttfamily \#include $<$Workflow\+File.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classwrench_1_1_workflow_file_acafb99b2fc9a9482849c02af882d373f}{get\+ID} ()
+\begin{DoxyCompactList}\small\item\em Get the file id. \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} $\ast$ \hyperlink{classwrench_1_1_workflow_file_a37f8fb29dac0d933bc0ae7d138baad31}{get\+Output\+Of} ()
+\begin{DoxyCompactList}\small\item\em Get the task that outputs this file. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_workflow_file_a97d236163b9a70b95a30f6949f38e81e}{get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Get the file size. \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_workflow}{Workflow} $\ast$ \hyperlink{classwrench_1_1_workflow_file_ac8c018abfade90cb0594c812ec5e5eaf}{get\+Workflow} ()
+\begin{DoxyCompactList}\small\item\em Get the workflow that this file is a part of. \end{DoxyCompactList}\item 
+bool \hyperlink{classwrench_1_1_workflow_file_a192a7a39bef01be6fc5ab31b11bc86fa}{is\+Output} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the file is the output of some task, false otherwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A data file used/produced by a \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} in a \hyperlink{classwrench_1_1_workflow}{Workflow}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_workflow_file_acafb99b2fc9a9482849c02af882d373f}\label{classwrench_1_1_workflow_file_acafb99b2fc9a9482849c02af882d373f}} 
+\index{wrench\+::\+Workflow\+File@{wrench\+::\+Workflow\+File}!get\+ID@{get\+ID}}
+\index{get\+ID@{get\+ID}!wrench\+::\+Workflow\+File@{wrench\+::\+Workflow\+File}}
+\subsubsection{\texorpdfstring{get\+I\+D()}{getID()}}
+{\footnotesize\ttfamily std\+::string wrench\+::\+Workflow\+File\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the file id. 
+
+\begin{DoxyReturn}{Returns}
+the id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_file_a37f8fb29dac0d933bc0ae7d138baad31}\label{classwrench_1_1_workflow_file_a37f8fb29dac0d933bc0ae7d138baad31}} 
+\index{wrench\+::\+Workflow\+File@{wrench\+::\+Workflow\+File}!get\+Output\+Of@{get\+Output\+Of}}
+\index{get\+Output\+Of@{get\+Output\+Of}!wrench\+::\+Workflow\+File@{wrench\+::\+Workflow\+File}}
+\subsubsection{\texorpdfstring{get\+Output\+Of()}{getOutputOf()}}
+{\footnotesize\ttfamily \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} $\ast$ wrench\+::\+Workflow\+File\+::get\+Output\+Of (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the task that outputs this file. 
+
+\begin{DoxyReturn}{Returns}
+a task 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_file_a97d236163b9a70b95a30f6949f38e81e}\label{classwrench_1_1_workflow_file_a97d236163b9a70b95a30f6949f38e81e}} 
+\index{wrench\+::\+Workflow\+File@{wrench\+::\+Workflow\+File}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!wrench\+::\+Workflow\+File@{wrench\+::\+Workflow\+File}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily double wrench\+::\+Workflow\+File\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the file size. 
+
+\begin{DoxyReturn}{Returns}
+a size in bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_file_ac8c018abfade90cb0594c812ec5e5eaf}\label{classwrench_1_1_workflow_file_ac8c018abfade90cb0594c812ec5e5eaf}} 
+\index{wrench\+::\+Workflow\+File@{wrench\+::\+Workflow\+File}!get\+Workflow@{get\+Workflow}}
+\index{get\+Workflow@{get\+Workflow}!wrench\+::\+Workflow\+File@{wrench\+::\+Workflow\+File}}
+\subsubsection{\texorpdfstring{get\+Workflow()}{getWorkflow()}}
+{\footnotesize\ttfamily \hyperlink{classwrench_1_1_workflow}{Workflow} $\ast$ wrench\+::\+Workflow\+File\+::get\+Workflow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the workflow that this file is a part of. 
+
+\begin{DoxyReturn}{Returns}
+a workflow 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_file_a192a7a39bef01be6fc5ab31b11bc86fa}\label{classwrench_1_1_workflow_file_a192a7a39bef01be6fc5ab31b11bc86fa}} 
+\index{wrench\+::\+Workflow\+File@{wrench\+::\+Workflow\+File}!is\+Output@{is\+Output}}
+\index{is\+Output@{is\+Output}!wrench\+::\+Workflow\+File@{wrench\+::\+Workflow\+File}}
+\subsubsection{\texorpdfstring{is\+Output()}{isOutput()}}
+{\footnotesize\ttfamily bool wrench\+::\+Workflow\+File\+::is\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns true if the file is the output of some task, false otherwise. 
+
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/workflow/Workflow\+File.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/workflow/Workflow\+File.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{classwrench_1_1_storage_service_file_delete_request_message}{}\section{wrench\+:\+:Storage\+Service\+File\+Delete\+Request\+Message Class Reference}
+\label{classwrench_1_1_storage_service_file_delete_request_message}\index{wrench\+::\+Storage\+Service\+File\+Delete\+Request\+Message@{wrench\+::\+Storage\+Service\+File\+Delete\+Request\+Message}}
+
+
+A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to delete a file.  
+
+
+
+
+{\ttfamily \#include $<$Storage\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Storage\+Service\+File\+Delete\+Request\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_storage_service_file_delete_request_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_storage_service_file_delete_request_message_aeb2a3dbe04ee5e659c2c77018a4d144d}{Storage\+Service\+File\+Delete\+Request\+Message} (std\+::string \hyperlink{classwrench_1_1_storage_service_file_delete_request_message_a177fd6bf8eb030201630fd55d81eef9d}{answer\+\_\+mailbox}, \hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$\hyperlink{classwrench_1_1_storage_service_file_delete_request_message_ac971507bc489c43d33b52ae6006bbe39}{file}, std\+::string \&\hyperlink{classwrench_1_1_storage_service_file_delete_request_message_ac0af21407ec5e7414fb16e78c12a8000}{dst\+\_\+partition}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_delete_request_message_a177fd6bf8eb030201630fd55d81eef9d}\label{classwrench_1_1_storage_service_file_delete_request_message_a177fd6bf8eb030201630fd55d81eef9d}} 
+std\+::string \hyperlink{classwrench_1_1_storage_service_file_delete_request_message_a177fd6bf8eb030201630fd55d81eef9d}{answer\+\_\+mailbox}
+\begin{DoxyCompactList}\small\item\em Mailbox to which the answer message should be sent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_delete_request_message_ac0af21407ec5e7414fb16e78c12a8000}\label{classwrench_1_1_storage_service_file_delete_request_message_ac0af21407ec5e7414fb16e78c12a8000}} 
+std\+::string \hyperlink{classwrench_1_1_storage_service_file_delete_request_message_ac0af21407ec5e7414fb16e78c12a8000}{dst\+\_\+partition}
+\begin{DoxyCompactList}\small\item\em The file partition from where the file will be deleted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_delete_request_message_ac971507bc489c43d33b52ae6006bbe39}\label{classwrench_1_1_storage_service_file_delete_request_message_ac971507bc489c43d33b52ae6006bbe39}} 
+\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$ \hyperlink{classwrench_1_1_storage_service_file_delete_request_message_ac971507bc489c43d33b52ae6006bbe39}{file}
+\begin{DoxyCompactList}\small\item\em The file to delete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to delete a file. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_delete_request_message_aeb2a3dbe04ee5e659c2c77018a4d144d}\label{classwrench_1_1_storage_service_file_delete_request_message_aeb2a3dbe04ee5e659c2c77018a4d144d}} 
+\index{wrench\+::\+Storage\+Service\+File\+Delete\+Request\+Message@{wrench\+::\+Storage\+Service\+File\+Delete\+Request\+Message}!Storage\+Service\+File\+Delete\+Request\+Message@{Storage\+Service\+File\+Delete\+Request\+Message}}
+\index{Storage\+Service\+File\+Delete\+Request\+Message@{Storage\+Service\+File\+Delete\+Request\+Message}!wrench\+::\+Storage\+Service\+File\+Delete\+Request\+Message@{wrench\+::\+Storage\+Service\+File\+Delete\+Request\+Message}}
+\subsubsection{\texorpdfstring{Storage\+Service\+File\+Delete\+Request\+Message()}{StorageServiceFileDeleteRequestMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Storage\+Service\+File\+Delete\+Request\+Message\+::\+Storage\+Service\+File\+Delete\+Request\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{answer\+\_\+mailbox,  }\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{std\+::string \&}]{dst\+\_\+partition,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em answer\+\_\+mailbox} & the mailbox to which to send the answer \\
+\hline
+{\em file} & the file \\
+\hline
+{\em dst\+\_\+partition} & the file partition from where the file will be deleted \\
+\hline
+{\em payload} & the message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/Storage\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/Storage\+Service\+Message.\+cpp\end{DoxyCompactItemize}

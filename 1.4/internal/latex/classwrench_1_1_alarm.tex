@@ -1,0 +1,74 @@
+\hypertarget{classwrench_1_1_alarm}{}\section{wrench\+:\+:Alarm Class Reference}
+\label{classwrench_1_1_alarm}\index{wrench\+::\+Alarm@{wrench\+::\+Alarm}}
+
+
+A one-\/shot service that sends a message to a mailbox after some specified amount of time and terminates.  
+
+
+
+
+{\ttfamily \#include $<$Alarm.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Alarm\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classwrench_1_1_alarm}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_alarm_a6d0595e6d53d39704c2b04522b791b9d}\label{classwrench_1_1_alarm_a6d0595e6d53d39704c2b04522b791b9d}} 
+void \hyperlink{classwrench_1_1_alarm_a6d0595e6d53d39704c2b04522b791b9d}{kill} ()
+\begin{DoxyCompactList}\small\item\em Immediately (i.\+e., brutally) terminate the alarm service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_alarm}{Alarm} $>$ \hyperlink{classwrench_1_1_alarm_aa786b7b67c563e7eea3d02ed4838fb9e}{create\+And\+Start\+Alarm} (\hyperlink{classwrench_1_1_simulation}{Simulation} $\ast$\hyperlink{classwrench_1_1_s4_u___daemon_a305beca7ad2fb650ad1492b7c95e93c4}{simulation}, double date, std\+::string \hyperlink{classwrench_1_1_s4_u___daemon_a52bc0b9a6cd248310749dac086819f00}{hostname}, std\+::string \&reply\+\_\+mailbox\+\_\+name, \hyperlink{classwrench_1_1_simulation_message}{Simulation\+Message} $\ast$msg, std\+::string suffix)
+\begin{DoxyCompactList}\small\item\em Create and start an alarm service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A one-\/shot service that sends a message to a mailbox after some specified amount of time and terminates. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_alarm_aa786b7b67c563e7eea3d02ed4838fb9e}\label{classwrench_1_1_alarm_aa786b7b67c563e7eea3d02ed4838fb9e}} 
+\index{wrench\+::\+Alarm@{wrench\+::\+Alarm}!create\+And\+Start\+Alarm@{create\+And\+Start\+Alarm}}
+\index{create\+And\+Start\+Alarm@{create\+And\+Start\+Alarm}!wrench\+::\+Alarm@{wrench\+::\+Alarm}}
+\subsubsection{\texorpdfstring{create\+And\+Start\+Alarm()}{createAndStartAlarm()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_alarm}{Alarm} $>$ wrench\+::\+Alarm\+::create\+And\+Start\+Alarm (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_simulation}{Simulation} $\ast$}]{simulation,  }\item[{double}]{date,  }\item[{std\+::string}]{hostname,  }\item[{std\+::string \&}]{reply\+\_\+mailbox\+\_\+name,  }\item[{\hyperlink{classwrench_1_1_simulation_message}{Simulation\+Message} $\ast$}]{msg,  }\item[{std\+::string}]{suffix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create and start an alarm service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simulation} & a pointer to the simulation object \\
+\hline
+{\em date} & the date at which the message should be sent (if date is in the past then the message will be sent immediately) \\
+\hline
+{\em hostname} & the name of the host on which to start the alarm service \\
+\hline
+{\em reply\+\_\+mailbox\+\_\+name} & the mailbox to which the alarm service will send a message \\
+\hline
+{\em msg} & the message to send \\
+\hline
+{\em suffix} & a (possibly empty) suffix to append to the daemon name (useful in debug output) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a shared\+\_\+ptr reference to the alarm service
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/helpers/Alarm.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/helpers/Alarm.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{classwrench_1_1_workunit_executor_done_message}{}\section{wrench\+:\+:Workunit\+Executor\+Done\+Message Class Reference}
+\label{classwrench_1_1_workunit_executor_done_message}\index{wrench\+::\+Workunit\+Executor\+Done\+Message@{wrench\+::\+Workunit\+Executor\+Done\+Message}}
+
+
+A message sent by a \hyperlink{classwrench_1_1_workunit_executor}{Workunit\+Executor} to notify that it has completed a Work\+Unit.  
+
+
+
+
+{\ttfamily \#include $<$Standard\+Job\+Executor\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Workunit\+Executor\+Done\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classwrench_1_1_workunit_executor_done_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_workunit_executor_done_message_a6b9036befd5f8b778cea00346578b9d8}{Workunit\+Executor\+Done\+Message} (\hyperlink{classwrench_1_1_workunit_executor}{Workunit\+Executor} $\ast$\hyperlink{classwrench_1_1_workunit_executor_done_message_a678e7d9f87b7cf1318e28f1895251b2d}{workunit\+\_\+executor}, \hyperlink{classwrench_1_1_workunit}{Workunit} $\ast$\hyperlink{classwrench_1_1_workunit_executor_done_message_aa008db4525787c0269069558180b6a87}{workunit}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_workunit_executor_done_message_aa008db4525787c0269069558180b6a87}\label{classwrench_1_1_workunit_executor_done_message_aa008db4525787c0269069558180b6a87}} 
+\hyperlink{classwrench_1_1_workunit}{Workunit} $\ast$ \hyperlink{classwrench_1_1_workunit_executor_done_message_aa008db4525787c0269069558180b6a87}{workunit}
+\begin{DoxyCompactList}\small\item\em The work unit that has completed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_workunit_executor_done_message_a678e7d9f87b7cf1318e28f1895251b2d}\label{classwrench_1_1_workunit_executor_done_message_a678e7d9f87b7cf1318e28f1895251b2d}} 
+\hyperlink{classwrench_1_1_workunit_executor}{Workunit\+Executor} $\ast$ \hyperlink{classwrench_1_1_workunit_executor_done_message_a678e7d9f87b7cf1318e28f1895251b2d}{workunit\+\_\+executor}
+\begin{DoxyCompactList}\small\item\em The work unit executor that has completed the work unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent by a \hyperlink{classwrench_1_1_workunit_executor}{Workunit\+Executor} to notify that it has completed a Work\+Unit. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_workunit_executor_done_message_a6b9036befd5f8b778cea00346578b9d8}\label{classwrench_1_1_workunit_executor_done_message_a6b9036befd5f8b778cea00346578b9d8}} 
+\index{wrench\+::\+Workunit\+Executor\+Done\+Message@{wrench\+::\+Workunit\+Executor\+Done\+Message}!Workunit\+Executor\+Done\+Message@{Workunit\+Executor\+Done\+Message}}
+\index{Workunit\+Executor\+Done\+Message@{Workunit\+Executor\+Done\+Message}!wrench\+::\+Workunit\+Executor\+Done\+Message@{wrench\+::\+Workunit\+Executor\+Done\+Message}}
+\subsubsection{\texorpdfstring{Workunit\+Executor\+Done\+Message()}{WorkunitExecutorDoneMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Workunit\+Executor\+Done\+Message\+::\+Workunit\+Executor\+Done\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workunit_executor}{Workunit\+Executor} $\ast$}]{workunit\+\_\+executor,  }\item[{\hyperlink{classwrench_1_1_workunit}{Workunit} $\ast$}]{workunit,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em workunit\+\_\+executor} & the work unit executor on which the work unit has completed \\
+\hline
+{\em workunit} & the work unit that has completed \\
+\hline
+{\em payload} & the message size in bytes \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/standard\+\_\+job\+\_\+executor/Standard\+Job\+Executor\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/standard\+\_\+job\+\_\+executor/Standard\+Job\+Executor\+Message.\+cpp\end{DoxyCompactItemize}

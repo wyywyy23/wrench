@@ -1,0 +1,229 @@
+\hypertarget{classwrench_1_1_s4_u___daemon}{}\section{wrench\+:\+:S4\+U\+\_\+\+Daemon Class Reference}
+\label{classwrench_1_1_s4_u___daemon}\index{wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}}
+
+
+A generic \char`\"{}running daemon\char`\"{} abstraction that serves as a basis for all simulated processes.  
+
+
+
+
+{\ttfamily \#include $<$S4\+U\+\_\+\+Daemon.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:S4\+U\+\_\+\+Daemon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classwrench_1_1_s4_u___daemon}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_s4_u___daemon_af63c270457dcf4a48ac9711c1fc2dc2e}{S4\+U\+\_\+\+Daemon} (std\+::string \hyperlink{classwrench_1_1_s4_u___daemon_a52bc0b9a6cd248310749dac086819f00}{hostname}, std\+::string process\+\_\+name\+\_\+prefix, std\+::string mailbox\+\_\+prefix)
+\begin{DoxyCompactList}\small\item\em Constructor (daemon with a mailbox) \end{DoxyCompactList}\item 
+virtual \hyperlink{classwrench_1_1_s4_u___daemon_ad5196a532f21f892ce5681034cf2c2db}{$\sim$\+S4\+U\+\_\+\+Daemon} ()
+\begin{DoxyCompactList}\small\item\em Constructor (daemon without a mailbox) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a5ecf133b38ec2652d0241ed7d7157925}\label{classwrench_1_1_s4_u___daemon_a5ecf133b38ec2652d0241ed7d7157925}} 
+virtual void \hyperlink{classwrench_1_1_s4_u___daemon_a5ecf133b38ec2652d0241ed7d7157925}{cleanup} ()
+\begin{DoxyCompactList}\small\item\em Cleanup function called when the daemon terminates (for whatever reason) \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_s4_u___daemon_a591abd15d6a27371cb04b7839862cc1b}{create\+Life\+Saver} (std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_s4_u___daemon}{S4\+U\+\_\+\+Daemon} $>$ reference)
+\begin{DoxyCompactList}\small\item\em Create a life saver for the daemon. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classwrench_1_1_s4_u___daemon_a29626b03bc3ef2483366d3f032e6585d}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the process name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a08677e6eb04b469dfa98357212b57930}\label{classwrench_1_1_s4_u___daemon_a08677e6eb04b469dfa98357212b57930}} 
+bool \hyperlink{classwrench_1_1_s4_u___daemon_a08677e6eb04b469dfa98357212b57930}{has\+Cleanly\+Terminated} ()
+\begin{DoxyCompactList}\small\item\em Returned the terminated status of the daemon/actor. \end{DoxyCompactList}\item 
+bool \hyperlink{classwrench_1_1_s4_u___daemon_ab500c3fa5bba4bdad7f03def7c6f453a}{is\+Set\+To\+Auto\+Restart} ()
+\begin{DoxyCompactList}\small\item\em Return the auto-\/restart status of the daemon. \end{DoxyCompactList}\item 
+bool \hyperlink{classwrench_1_1_s4_u___daemon_a0c9fe3246728f52e4d5ae8b1fe9c500f}{join} ()
+\begin{DoxyCompactList}\small\item\em Join (i.\+e., wait for) the daemon. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classwrench_1_1_s4_u___daemon_a0073b1104849679756809330533400eb}{main} ()=0
+\begin{DoxyCompactList}\small\item\em The daemon\textquotesingle{}s main method, to be overridden. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_ad070bf88da75e7c87df0e08dbbb2ed72}\label{classwrench_1_1_s4_u___daemon_ad070bf88da75e7c87df0e08dbbb2ed72}} 
+void \hyperlink{classwrench_1_1_s4_u___daemon_ad070bf88da75e7c87df0e08dbbb2ed72}{resume} ()
+\begin{DoxyCompactList}\small\item\em Resume the daemon/actor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_acea78f7f12fe751f5e4cf31654be75e4}\label{classwrench_1_1_s4_u___daemon_acea78f7f12fe751f5e4cf31654be75e4}} 
+void \hyperlink{classwrench_1_1_s4_u___daemon_acea78f7f12fe751f5e4cf31654be75e4}{set\+Cleanly\+Terminated} ()
+\begin{DoxyCompactList}\small\item\em Set the terminated status of the daemon/actor. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_s4_u___daemon_a0c4d09ad3e03735a5de6557c5f995ea2}{start\+Daemon} (bool daemonized, bool auto\+\_\+restart)
+\begin{DoxyCompactList}\small\item\em Start the daemon. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a2da11681f010d1c7a668257a6f0e1104}\label{classwrench_1_1_s4_u___daemon_a2da11681f010d1c7a668257a6f0e1104}} 
+void \hyperlink{classwrench_1_1_s4_u___daemon_a2da11681f010d1c7a668257a6f0e1104}{suspend} ()
+\begin{DoxyCompactList}\small\item\em Suspend the daemon/actor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a52bc0b9a6cd248310749dac086819f00}\label{classwrench_1_1_s4_u___daemon_a52bc0b9a6cd248310749dac086819f00}} 
+std\+::string \hyperlink{classwrench_1_1_s4_u___daemon_a52bc0b9a6cd248310749dac086819f00}{hostname}
+\begin{DoxyCompactList}\small\item\em The name of the host on which the daemon is running. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a225aaf5b49366bbae345266e0046f2e1}\label{classwrench_1_1_s4_u___daemon_a225aaf5b49366bbae345266e0046f2e1}} 
+Life\+Saver $\ast$ \hyperlink{classwrench_1_1_s4_u___daemon_a225aaf5b49366bbae345266e0046f2e1}{life\+\_\+saver} = nullptr
+\begin{DoxyCompactList}\small\item\em The daemon\textquotesingle{}s life saver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_af2fd64dbf0d533fa61eacd20b3fead07}\label{classwrench_1_1_s4_u___daemon_af2fd64dbf0d533fa61eacd20b3fead07}} 
+std\+::string \hyperlink{classwrench_1_1_s4_u___daemon_af2fd64dbf0d533fa61eacd20b3fead07}{mailbox\+\_\+name}
+\begin{DoxyCompactList}\small\item\em The name of the daemon\textquotesingle{}s mailbox. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a1d2ace7c5ba85d790b8db6a54d61aeec}\label{classwrench_1_1_s4_u___daemon_a1d2ace7c5ba85d790b8db6a54d61aeec}} 
+std\+::string \hyperlink{classwrench_1_1_s4_u___daemon_a1d2ace7c5ba85d790b8db6a54d61aeec}{process\+\_\+name}
+\begin{DoxyCompactList}\small\item\em The name of the daemon. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a305beca7ad2fb650ad1492b7c95e93c4}\label{classwrench_1_1_s4_u___daemon_a305beca7ad2fb650ad1492b7c95e93c4}} 
+\hyperlink{classwrench_1_1_simulation}{Simulation} $\ast$ \hyperlink{classwrench_1_1_s4_u___daemon_a305beca7ad2fb650ad1492b7c95e93c4}{simulation}
+\begin{DoxyCompactList}\small\item\em a pointer to the simulation object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a438a44d941326d6df21d56ec1579f688}\label{classwrench_1_1_s4_u___daemon_a438a44d941326d6df21d56ec1579f688}} 
+void \hyperlink{classwrench_1_1_s4_u___daemon_a438a44d941326d6df21d56ec1579f688}{acquire\+Daemon\+Lock} ()
+\begin{DoxyCompactList}\small\item\em Lock the daemon\textquotesingle{}s lock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_afb9bb97186d92374fa8cb16dbc1c6737}\label{classwrench_1_1_s4_u___daemon_afb9bb97186d92374fa8cb16dbc1c6737}} 
+void \hyperlink{classwrench_1_1_s4_u___daemon_afb9bb97186d92374fa8cb16dbc1c6737}{kill\+Actor} ()
+\begin{DoxyCompactList}\small\item\em Kill the daemon/actor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a872a3739833bc4034fe729877c258dcd}\label{classwrench_1_1_s4_u___daemon_a872a3739833bc4034fe729877c258dcd}} 
+void \hyperlink{classwrench_1_1_s4_u___daemon_a872a3739833bc4034fe729877c258dcd}{release\+Daemon\+Lock} ()
+\begin{DoxyCompactList}\small\item\em Unlock the daemon\textquotesingle{}s lock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a2f2a5b056c6f2f19e6b4b8787eab9d9d}\label{classwrench_1_1_s4_u___daemon_a2f2a5b056c6f2f19e6b4b8787eab9d9d}} 
+void \hyperlink{classwrench_1_1_s4_u___daemon_a2f2a5b056c6f2f19e6b4b8787eab9d9d}{run\+Main\+Method} ()
+\begin{DoxyCompactList}\small\item\em Method that run\textquotesingle{}s the user-\/defined main method (that\textquotesingle{}s called by the S4U actor class) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a5e82a7fff4263a9a7615f07b1fe98df1}\label{classwrench_1_1_s4_u___daemon_a5e82a7fff4263a9a7615f07b1fe98df1}} 
+unsigned int {\bfseries num\+\_\+starts} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A generic \char`\"{}running daemon\char`\"{} abstraction that serves as a basis for all simulated processes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_af63c270457dcf4a48ac9711c1fc2dc2e}\label{classwrench_1_1_s4_u___daemon_af63c270457dcf4a48ac9711c1fc2dc2e}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}!S4\+U\+\_\+\+Daemon@{S4\+U\+\_\+\+Daemon}}
+\index{S4\+U\+\_\+\+Daemon@{S4\+U\+\_\+\+Daemon}!wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}}
+\subsubsection{\texorpdfstring{S4\+U\+\_\+\+Daemon()}{S4U\_Daemon()}}
+{\footnotesize\ttfamily wrench\+::\+S4\+U\+\_\+\+Daemon\+::\+S4\+U\+\_\+\+Daemon (\begin{DoxyParamCaption}\item[{std\+::string}]{hostname,  }\item[{std\+::string}]{process\+\_\+name\+\_\+prefix,  }\item[{std\+::string}]{mailbox\+\_\+prefix }\end{DoxyParamCaption})}
+
+
+
+Constructor (daemon with a mailbox) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the name of the host on which the daemon will run \\
+\hline
+{\em process\+\_\+name\+\_\+prefix} & the prefix of the name of the simulated process/actor \\
+\hline
+{\em mailbox\+\_\+prefix} & the prefix of the mailbox (to which a unique integer is appended) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_ad5196a532f21f892ce5681034cf2c2db}\label{classwrench_1_1_s4_u___daemon_ad5196a532f21f892ce5681034cf2c2db}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}!````~S4\+U\+\_\+\+Daemon@{$\sim$\+S4\+U\+\_\+\+Daemon}}
+\index{````~S4\+U\+\_\+\+Daemon@{$\sim$\+S4\+U\+\_\+\+Daemon}!wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}}
+\subsubsection{\texorpdfstring{$\sim$\+S4\+U\+\_\+\+Daemon()}{~S4U\_Daemon()}}
+{\footnotesize\ttfamily wrench\+::\+S4\+U\+\_\+\+Daemon\+::$\sim$\+S4\+U\+\_\+\+Daemon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Constructor (daemon without a mailbox) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the name of the host on which the daemon will run \\
+\hline
+{\em process\+\_\+name\+\_\+prefix} & the prefix of the name of the simulated process/actor \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a591abd15d6a27371cb04b7839862cc1b}\label{classwrench_1_1_s4_u___daemon_a591abd15d6a27371cb04b7839862cc1b}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}!create\+Life\+Saver@{create\+Life\+Saver}}
+\index{create\+Life\+Saver@{create\+Life\+Saver}!wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}}
+\subsubsection{\texorpdfstring{create\+Life\+Saver()}{createLifeSaver()}}
+{\footnotesize\ttfamily void wrench\+::\+S4\+U\+\_\+\+Daemon\+::create\+Life\+Saver (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_s4_u___daemon}{S4\+U\+\_\+\+Daemon} $>$}]{reference }\end{DoxyParamCaption})}
+
+
+
+Create a life saver for the daemon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a29626b03bc3ef2483366d3f032e6585d}\label{classwrench_1_1_s4_u___daemon_a29626b03bc3ef2483366d3f032e6585d}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily std\+::string wrench\+::\+S4\+U\+\_\+\+Daemon\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieve the process name. 
+
+\begin{DoxyReturn}{Returns}
+the name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_ab500c3fa5bba4bdad7f03def7c6f453a}\label{classwrench_1_1_s4_u___daemon_ab500c3fa5bba4bdad7f03def7c6f453a}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}!is\+Set\+To\+Auto\+Restart@{is\+Set\+To\+Auto\+Restart}}
+\index{is\+Set\+To\+Auto\+Restart@{is\+Set\+To\+Auto\+Restart}!wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}}
+\subsubsection{\texorpdfstring{is\+Set\+To\+Auto\+Restart()}{isSetToAutoRestart()}}
+{\footnotesize\ttfamily bool wrench\+::\+S4\+U\+\_\+\+Daemon\+::is\+Set\+To\+Auto\+Restart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the auto-\/restart status of the daemon. 
+
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a0c9fe3246728f52e4d5ae8b1fe9c500f}\label{classwrench_1_1_s4_u___daemon_a0c9fe3246728f52e4d5ae8b1fe9c500f}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}!join@{join}}
+\index{join@{join}!wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}}
+\subsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily bool wrench\+::\+S4\+U\+\_\+\+Daemon\+::join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Join (i.\+e., wait for) the daemon. 
+
+\begin{DoxyReturn}{Returns}
+true if the daemon terminated cleanly (i.\+e., \hyperlink{classwrench_1_1_s4_u___daemon_a0073b1104849679756809330533400eb}{main()} returned), or false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a0073b1104849679756809330533400eb}\label{classwrench_1_1_s4_u___daemon_a0073b1104849679756809330533400eb}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}!main@{main}}
+\index{main@{main}!wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily virtual int wrench\+::\+S4\+U\+\_\+\+Daemon\+::main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The daemon\textquotesingle{}s main method, to be overridden. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/0 on failure! 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classwrench_1_1_cloud_service_a95f0cc4adf4ad0d33cb757f24b78e9ff}{wrench\+::\+Cloud\+Service}, \hyperlink{classwrench_1_1_virtualized_cluster_service_aa900061ac9077df089dfe760c921ec27}{wrench\+::\+Virtualized\+Cluster\+Service}, \hyperlink{classwrench_1_1_workload_trace_file_replayer_event_receiver_af8ddb6f527d5f49a8b67bcc8a184c628}{wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver}, and \hyperlink{classwrench_1_1_compute_thread_aae43a83a656caf607342b248ee5cde2a}{wrench\+::\+Compute\+Thread}.
+
+\mbox{\Hypertarget{classwrench_1_1_s4_u___daemon_a0c4d09ad3e03735a5de6557c5f995ea2}\label{classwrench_1_1_s4_u___daemon_a0c4d09ad3e03735a5de6557c5f995ea2}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}!start\+Daemon@{start\+Daemon}}
+\index{start\+Daemon@{start\+Daemon}!wrench\+::\+S4\+U\+\_\+\+Daemon@{wrench\+::\+S4\+U\+\_\+\+Daemon}}
+\subsubsection{\texorpdfstring{start\+Daemon()}{startDaemon()}}
+{\footnotesize\ttfamily void wrench\+::\+S4\+U\+\_\+\+Daemon\+::start\+Daemon (\begin{DoxyParamCaption}\item[{bool}]{daemonized,  }\item[{bool}]{auto\+\_\+restart }\end{DoxyParamCaption})}
+
+
+
+Start the daemon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em daemonized} & whether the S4U actor should be daemonized \\
+\hline
+{\em auto\+\_\+restart} & whether the S4U actor should automatically restart after a host reboot \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/simgrid\+\_\+\+S4\+U\+\_\+util/S4\+U\+\_\+\+Daemon.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/simgrid\+\_\+\+S4\+U\+\_\+util/S4\+U\+\_\+\+Daemon.\+cpp\end{DoxyCompactItemize}

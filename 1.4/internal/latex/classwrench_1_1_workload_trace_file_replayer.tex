@@ -1,0 +1,60 @@
+\hypertarget{classwrench_1_1_workload_trace_file_replayer}{}\section{wrench\+:\+:Workload\+Trace\+File\+Replayer Class Reference}
+\label{classwrench_1_1_workload_trace_file_replayer}\index{wrench\+::\+Workload\+Trace\+File\+Replayer@{wrench\+::\+Workload\+Trace\+File\+Replayer}}
+
+
+A service that goes through a job submission trace (as loaded by a \hyperlink{classwrench_1_1_trace_file_loader}{Trace\+File\+Loader}), and \char`\"{}replays\char`\"{} it on a given \hyperlink{classwrench_1_1_batch_service}{Batch\+Service}.  
+
+
+
+
+{\ttfamily \#include $<$Workload\+Trace\+File\+Replayer.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Workload\+Trace\+File\+Replayer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_workload_trace_file_replayer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_workload_trace_file_replayer_abddae61ba16d8d18faf1767051d5c628}{Workload\+Trace\+File\+Replayer} (\hyperlink{classwrench_1_1_simulation}{Simulation} $\ast$\hyperlink{classwrench_1_1_s4_u___daemon_a305beca7ad2fb650ad1492b7c95e93c4}{simulation}, std\+::string \hyperlink{classwrench_1_1_s4_u___daemon_a52bc0b9a6cd248310749dac086819f00}{hostname}, \hyperlink{classwrench_1_1_batch_service}{Batch\+Service} $\ast$batch\+\_\+service, unsigned long num\+\_\+cores\+\_\+per\+\_\+node, bool use\+\_\+actual\+\_\+runtimes\+\_\+as\+\_\+requested\+\_\+runtimes, std\+::vector$<$ std\+::tuple$<$ std\+::string, double, double, double, double, unsigned int $>$$>$ \&workload\+\_\+trace)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A service that goes through a job submission trace (as loaded by a \hyperlink{classwrench_1_1_trace_file_loader}{Trace\+File\+Loader}), and \char`\"{}replays\char`\"{} it on a given \hyperlink{classwrench_1_1_batch_service}{Batch\+Service}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_workload_trace_file_replayer_abddae61ba16d8d18faf1767051d5c628}\label{classwrench_1_1_workload_trace_file_replayer_abddae61ba16d8d18faf1767051d5c628}} 
+\index{wrench\+::\+Workload\+Trace\+File\+Replayer@{wrench\+::\+Workload\+Trace\+File\+Replayer}!Workload\+Trace\+File\+Replayer@{Workload\+Trace\+File\+Replayer}}
+\index{Workload\+Trace\+File\+Replayer@{Workload\+Trace\+File\+Replayer}!wrench\+::\+Workload\+Trace\+File\+Replayer@{wrench\+::\+Workload\+Trace\+File\+Replayer}}
+\subsubsection{\texorpdfstring{Workload\+Trace\+File\+Replayer()}{WorkloadTraceFileReplayer()}}
+{\footnotesize\ttfamily wrench\+::\+Workload\+Trace\+File\+Replayer\+::\+Workload\+Trace\+File\+Replayer (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_simulation}{Simulation} $\ast$}]{simulation,  }\item[{std\+::string}]{hostname,  }\item[{\hyperlink{classwrench_1_1_batch_service}{Batch\+Service} $\ast$}]{batch\+\_\+service,  }\item[{unsigned long}]{num\+\_\+cores\+\_\+per\+\_\+node,  }\item[{bool}]{use\+\_\+actual\+\_\+runtimes\+\_\+as\+\_\+requested\+\_\+runtimes,  }\item[{std\+::vector$<$ std\+::tuple$<$ std\+::string, double, double, double, double, unsigned int $>$$>$ \&}]{workload\+\_\+trace }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simulation} & a pointer to the simulation object \\
+\hline
+{\em hostname} & the name of the host on which the trace file replayer will be started \\
+\hline
+{\em batch\+\_\+service} & the batch service to which it submits jobs \\
+\hline
+{\em num\+\_\+cores\+\_\+per\+\_\+node} & the number of cores per host on the batch service \\
+\hline
+{\em use\+\_\+actual\+\_\+runtimes\+\_\+as\+\_\+requested\+\_\+runtimes} & if true, use actual runtimes as requested runtimes \\
+\hline
+{\em workload\+\_\+trace} & the workload trace to be replayed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/batch/Workload\+Trace\+File\+Replayer.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/batch/Workload\+Trace\+File\+Replayer.\+cpp\end{DoxyCompactItemize}

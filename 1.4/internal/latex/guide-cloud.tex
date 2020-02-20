@@ -1,0 +1,68 @@
+Internal DocumentationOther\+: \href{../user/guide-cloud.html}{\tt User} -\/ \href{../developer/guide-cloud.html}{\tt Developer}\hypertarget{guide-cloud_guide-cloud-overview}{}\section{Overview}\label{guide-cloud_guide-cloud-overview}
+A cloud service is an abstraction of a compute service that corresponds to a cloud platform that provides access to virtualized compute resources, i.\+e., virtual machines (V\+Ms). The cloud service provides all necessary abstractions to manage V\+Ms, including creation, suspension, resume, etc. Compute jobs submitted to the cloud service run on previously created VM instances. If a VM that meets a job\textquotesingle{}s requirements cannot be found, the service will throw an exception. In the cloud service, a VM instance behaves as a \hyperlink{guide-baremetal}{bare-\/metal} service.
+
+The main difference between a cloud service and a \hyperlink{guide-virtualizedcluster}{virtualized cluster service} is that the latter does expose the underlying physical infrastructure (e.\+g., it is possible to instantiate a VM on a particular physical host, or to migrate a VM between two particular physical hosts).\hypertarget{guide-cloud_guide-cloud-creating}{}\section{Creating a cloud compute service}\label{guide-cloud_guide-cloud-creating}
+In W\+R\+E\+N\+CH, a cloud service represents a compute service (\hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}), which is defined by the \hyperlink{classwrench_1_1_cloud_service}{wrench\+::\+Cloud\+Service} class. An instantiation of a cloud service requires the following parameters\+:
+
+
+\begin{DoxyItemize}
+\item A hostname on which to start the service (this is the entry point to the service)
+\item A list ({\ttfamily std\+::vector}) of hostnames (all cores and all R\+AM of each host is available to the cloud service)
+\item A scratch space size, i.\+e., the size in bytes of storage local to the cloud service (used to store workflow files, as needed, during job executions)
+\item Maps ({\ttfamily std\+::map}) of configurable properties ({\ttfamily \hyperlink{classwrench_1_1_cloud_service_property}{wrench\+::\+Cloud\+Service\+Property}}) and configurable message payloads ({\ttfamily \hyperlink{classwrench_1_1_cloud_service_message_payload}{wrench\+::\+Cloud\+Service\+Message\+Payload}}).
+\end{DoxyItemize}
+
+The example below shows how to create an instance of a cloud service that runs on host \char`\"{}cloud\+\_\+gateway\char`\"{}, provides access to 4 execution hosts, and has a scratch space of 1\+TiB\+:
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{auto} cloud\_cs = simulation.add(
+          \textcolor{keyword}{new} \hyperlink{classwrench_1_1_cloud_service}{wrench::CloudService}(\textcolor{stringliteral}{"cloud\_gateway"}, \{\textcolor{stringliteral}{"host1"}, \textcolor{stringliteral}{"host2"}, \textcolor{stringliteral}{"host3"}, \textcolor{stringliteral}{"host4"}
+      \}, pow(2,40),
+                                   \{\{
+      \hyperlink{classwrench_1_1_compute_service_property_af0abab1e3bce4932c4482031f0c31ce8}{wrench::CloudServiceProperty::SUPPORTS\_PILOT\_JOBS}, \textcolor{stringliteral}{"false"}
+      \}\}));
+\end{DoxyCode}
+\hypertarget{guide-cloud_guide-cloud-creating-properties}{}\subsection{Cloud service properties}\label{guide-cloud_guide-cloud-creating-properties}
+In addition to properties inherited from {\ttfamily \hyperlink{classwrench_1_1_compute_service_property}{wrench\+::\+Compute\+Service\+Property}}, a cloud service supports the following properties\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \hyperlink{classwrench_1_1_cloud_service_property_a7e2fddc7f539dedff89fb41635a5b200}{wrench\+::\+Cloud\+Service\+Property\+::\+V\+M\+\_\+\+B\+O\+O\+T\+\_\+\+O\+V\+E\+R\+H\+E\+A\+D\+\_\+\+I\+N\+\_\+\+S\+E\+C\+O\+N\+DS}}
+\end{DoxyItemize}\hypertarget{guide-cloud_guide-cloud-managing}{}\section{Managing a cloud compute service}\label{guide-cloud_guide-cloud-managing}
+The cloud service provides several mechanisms to manage the set of V\+Ms instantiated on the execution hosts. Currently, it is possible to create, shutdown, start, suspend, and resume V\+Ms (see a complete list of functions available in the \hyperlink{classwrench_1_1_cloud_service}{wrench\+::\+Cloud\+Service} A\+PI documentation). The figure below shows the different states a VM can be\+:
+
+ ~\newline
+\hypertarget{guide-cloud_guide-cloud-using}{}\section{Submitting Jobs to a cloud compute service}\label{guide-cloud_guide-cloud-using}
+As expected, a cloud service provides implementations of the methods in the {\ttfamily \hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}} base class. The {\ttfamily \hyperlink{classwrench_1_1_compute_service_abc9e51234c29965341727f07b446ff0c}{wrench\+::\+Compute\+Service\+::submit\+Job()}} method takes as argument service-\/specific arguments as a {\ttfamily std\+::map$<$std\+::string, std\+::string$>$} of key-\/value pairs. For a cloud service, these arguments are optional and to be specified as follows\+:
+
+
+\begin{DoxyItemize}
+\item key\+: {\ttfamily -\/vm}; value\+: a VM name (as returned by \hyperlink{classwrench_1_1_cloud_service_a6e614c2edbe303de83a47c024e84e250}{wrench\+::\+Cloud\+Service\+::create\+VM}) on which the job will be executed.
+\end{DoxyItemize}
+
+If no argument is specified, the cloud service will pick the VM on which to execute the job.
+
+Here is an example job submission to the cloud service\+:
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Create a VM with 2 cores and 1 GiB of RAM}
+\textcolor{keyword}{auto} vm1 = cloud\_cs->createVM(2, pow(2,30));
+\textcolor{comment}{// Create a VM with 4 cores and 2 GiB of RAM}
+\textcolor{keyword}{auto} vm2 = cloud\_cs->createVM(4, pow(2,31));
+
+\textcolor{comment}{// Create a job manager}
+\textcolor{keyword}{auto} job\_manager = this->createJobManager();
+
+\textcolor{comment}{// Create a job}
+\textcolor{keyword}{auto} job = job\_manager->createStandardJob(tasks, \{\});
+
+\textcolor{comment}{// Create service-specific arguments so that the job will run on the second vm}
+std::map<std::string, std::string> service\_specific\_args;
+service\_specific\_args[\textcolor{stringliteral}{"-vm"}] = vm2;
+
+\textcolor{comment}{// Submit the job}
+job\_manager->submitJob(job, cloud\_cs, service\_specific\_args);
+\end{DoxyCode}
+ 

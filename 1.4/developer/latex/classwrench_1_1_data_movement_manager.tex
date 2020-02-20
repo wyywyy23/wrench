@@ -1,0 +1,183 @@
+\hypertarget{classwrench_1_1_data_movement_manager}{}\section{wrench\+:\+:Data\+Movement\+Manager Class Reference}
+\label{classwrench_1_1_data_movement_manager}\index{wrench\+::\+Data\+Movement\+Manager@{wrench\+::\+Data\+Movement\+Manager}}
+
+
+A helper daemon (co-\/located with a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}) that handles data movement operations.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Movement\+Manager.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Data\+Movement\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classwrench_1_1_data_movement_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classwrench_1_1_data_movement_manager_a815bf4ed2a32b39c0e46a6f5a3c10e51}{do\+Synchronous\+File\+Copy} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$file, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$src, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$dst, \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$file\+\_\+registry\+\_\+service=nullptr)
+\begin{DoxyCompactList}\small\item\em Ask the data manager to perform a synchronous file copy. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_data_movement_manager_ad9c2dd49c769884e01932df7ac90bb0e}{do\+Synchronous\+File\+Copy} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$file, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$src, std\+::string src\+\_\+partition, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$dst, std\+::string dst\+\_\+partition, \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$file\+\_\+registry\+\_\+service=nullptr)
+\begin{DoxyCompactList}\small\item\em Ask the data manager to perform a synchronous file copy. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_data_movement_manager_a3ddeb9700a10b5f249b91786e6dddcb0}{initiate\+Asynchronous\+File\+Copy} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$file, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$src, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$dst, \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$file\+\_\+registry\+\_\+service=nullptr)
+\begin{DoxyCompactList}\small\item\em Ask the data manager to initiate an asynchronous file copy. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_data_movement_manager_a87d7d38e2d45b6024789feac0213d0b2}{initiate\+Asynchronous\+File\+Copy} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$file, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$src, std\+::string src\+\_\+partition, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$dst, std\+::string dst\+\_\+partition, \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$file\+\_\+registry\+\_\+service=nullptr)
+\begin{DoxyCompactList}\small\item\em Ask the data manager to initiate an asynchronous file copy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_data_movement_manager_a231a54a5b09f83f8e6e9681cc3134864}\label{classwrench_1_1_data_movement_manager_a231a54a5b09f83f8e6e9681cc3134864}} 
+void \hyperlink{classwrench_1_1_data_movement_manager_a231a54a5b09f83f8e6e9681cc3134864}{kill} ()
+\begin{DoxyCompactList}\small\item\em Kill the manager (brutally terminate the daemon) \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_data_movement_manager_a72fc97280a6f1f475e168c1f71ec5f70}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop the manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A helper daemon (co-\/located with a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}) that handles data movement operations. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_data_movement_manager_a815bf4ed2a32b39c0e46a6f5a3c10e51}\label{classwrench_1_1_data_movement_manager_a815bf4ed2a32b39c0e46a6f5a3c10e51}} 
+\index{wrench\+::\+Data\+Movement\+Manager@{wrench\+::\+Data\+Movement\+Manager}!do\+Synchronous\+File\+Copy@{do\+Synchronous\+File\+Copy}}
+\index{do\+Synchronous\+File\+Copy@{do\+Synchronous\+File\+Copy}!wrench\+::\+Data\+Movement\+Manager@{wrench\+::\+Data\+Movement\+Manager}}
+\subsubsection{\texorpdfstring{do\+Synchronous\+File\+Copy()}{doSynchronousFileCopy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void wrench\+::\+Data\+Movement\+Manager\+::do\+Synchronous\+File\+Copy (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$}]{src,  }\item[{\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$}]{dst,  }\item[{\hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$}]{file\+\_\+registry\+\_\+service = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Ask the data manager to perform a synchronous file copy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file to copy \\
+\hline
+{\em src} & the source storage service (using the \char`\"{}/\char`\"{} partition) \\
+\hline
+{\em dst} & the destination storage service (using the \char`\"{}/\char`\"{} partition) \\
+\hline
+{\em file\+\_\+registry\+\_\+service} & a file registry service to update once the file copy has (successfully) completed (none if nullptr)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_data_movement_manager_ad9c2dd49c769884e01932df7ac90bb0e}\label{classwrench_1_1_data_movement_manager_ad9c2dd49c769884e01932df7ac90bb0e}} 
+\index{wrench\+::\+Data\+Movement\+Manager@{wrench\+::\+Data\+Movement\+Manager}!do\+Synchronous\+File\+Copy@{do\+Synchronous\+File\+Copy}}
+\index{do\+Synchronous\+File\+Copy@{do\+Synchronous\+File\+Copy}!wrench\+::\+Data\+Movement\+Manager@{wrench\+::\+Data\+Movement\+Manager}}
+\subsubsection{\texorpdfstring{do\+Synchronous\+File\+Copy()}{doSynchronousFileCopy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void wrench\+::\+Data\+Movement\+Manager\+::do\+Synchronous\+File\+Copy (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$}]{src,  }\item[{std\+::string}]{src\+\_\+partition,  }\item[{\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$}]{dst,  }\item[{std\+::string}]{dst\+\_\+partition,  }\item[{\hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$}]{file\+\_\+registry\+\_\+service = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Ask the data manager to perform a synchronous file copy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file to copy \\
+\hline
+{\em src} & the source storage service \\
+\hline
+{\em dst} & the destination storage service \\
+\hline
+{\em file\+\_\+registry\+\_\+service} & a file registry service to update once the file copy has (successfully) completed (none if nullptr)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_data_movement_manager_a3ddeb9700a10b5f249b91786e6dddcb0}\label{classwrench_1_1_data_movement_manager_a3ddeb9700a10b5f249b91786e6dddcb0}} 
+\index{wrench\+::\+Data\+Movement\+Manager@{wrench\+::\+Data\+Movement\+Manager}!initiate\+Asynchronous\+File\+Copy@{initiate\+Asynchronous\+File\+Copy}}
+\index{initiate\+Asynchronous\+File\+Copy@{initiate\+Asynchronous\+File\+Copy}!wrench\+::\+Data\+Movement\+Manager@{wrench\+::\+Data\+Movement\+Manager}}
+\subsubsection{\texorpdfstring{initiate\+Asynchronous\+File\+Copy()}{initiateAsynchronousFileCopy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void wrench\+::\+Data\+Movement\+Manager\+::initiate\+Asynchronous\+File\+Copy (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$}]{src,  }\item[{\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$}]{dst,  }\item[{\hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$}]{file\+\_\+registry\+\_\+service = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Ask the data manager to initiate an asynchronous file copy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file to copy \\
+\hline
+{\em src} & the source storage service (using the \char`\"{}/\char`\"{} partition) \\
+\hline
+{\em dst} & the destination storage service (using the \char`\"{}/\char`\"{} partition) \\
+\hline
+{\em file\+\_\+registry\+\_\+service} & a file registry service to update once the file copy has (successfully) completed (none if nullptr)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_data_movement_manager_a87d7d38e2d45b6024789feac0213d0b2}\label{classwrench_1_1_data_movement_manager_a87d7d38e2d45b6024789feac0213d0b2}} 
+\index{wrench\+::\+Data\+Movement\+Manager@{wrench\+::\+Data\+Movement\+Manager}!initiate\+Asynchronous\+File\+Copy@{initiate\+Asynchronous\+File\+Copy}}
+\index{initiate\+Asynchronous\+File\+Copy@{initiate\+Asynchronous\+File\+Copy}!wrench\+::\+Data\+Movement\+Manager@{wrench\+::\+Data\+Movement\+Manager}}
+\subsubsection{\texorpdfstring{initiate\+Asynchronous\+File\+Copy()}{initiateAsynchronousFileCopy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void wrench\+::\+Data\+Movement\+Manager\+::initiate\+Asynchronous\+File\+Copy (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$}]{src,  }\item[{std\+::string}]{src\+\_\+partition,  }\item[{\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$}]{dst,  }\item[{std\+::string}]{dst\+\_\+partition,  }\item[{\hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$}]{file\+\_\+registry\+\_\+service = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Ask the data manager to initiate an asynchronous file copy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file to copy \\
+\hline
+{\em src} & the source storage service \\
+\hline
+{\em src\+\_\+partition} & the source partition \\
+\hline
+{\em dst} & the destination storage service \\
+\hline
+{\em dst\+\_\+partition} & the destination partition \\
+\hline
+{\em file\+\_\+registry\+\_\+service} & a file registry service to update once the file copy has (successfully) completed (none if nullptr)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_data_movement_manager_a72fc97280a6f1f475e168c1f71ec5f70}\label{classwrench_1_1_data_movement_manager_a72fc97280a6f1f475e168c1f71ec5f70}} 
+\index{wrench\+::\+Data\+Movement\+Manager@{wrench\+::\+Data\+Movement\+Manager}!stop@{stop}}
+\index{stop@{stop}!wrench\+::\+Data\+Movement\+Manager@{wrench\+::\+Data\+Movement\+Manager}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void wrench\+::\+Data\+Movement\+Manager\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stop the manager. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classwrench_1_1_service_ac33a32f4758c6f51b27d2cfb9b46efda}{wrench\+::\+Service}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/managers/Data\+Movement\+Manager.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/managers/Data\+Movement\+Manager.\+cpp\end{DoxyCompactItemize}

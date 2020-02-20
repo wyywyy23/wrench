@@ -1,0 +1,61 @@
+\hypertarget{classwrench_1_1_trace_file_loader}{}\section{wrench\+:\+:Trace\+File\+Loader Class Reference}
+\label{classwrench_1_1_trace_file_loader}\index{wrench\+::\+Trace\+File\+Loader@{wrench\+::\+Trace\+File\+Loader}}
+
+
+A class that can load a job submission trace (a.\+k.\+a. supercomputer workload) in the S\+WF format (see \href{http://www.cs.huji.ac.il/labs/parallel/workload/swf.html}{\tt http\+://www.\+cs.\+huji.\+ac.\+il/labs/parallel/workload/swf.\+html}) and store it as a vector of simulation-\/relevant fields.  
+
+
+
+
+{\ttfamily \#include $<$Trace\+File\+Loader.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::tuple$<$ std\+::string, double, double, double, double, unsigned int $>$ $>$ \hyperlink{classwrench_1_1_trace_file_loader_a8e6e95774cf02ed1968521d473cdf6cb}{load\+From\+Trace\+File} (std\+::string filename, double load\+\_\+time\+\_\+compensation)
+\begin{DoxyCompactList}\small\item\em Load the workflow trace file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that can load a job submission trace (a.\+k.\+a. supercomputer workload) in the S\+WF format (see \href{http://www.cs.huji.ac.il/labs/parallel/workload/swf.html}{\tt http\+://www.\+cs.\+huji.\+ac.\+il/labs/parallel/workload/swf.\+html}) and store it as a vector of simulation-\/relevant fields. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_trace_file_loader_a8e6e95774cf02ed1968521d473cdf6cb}\label{classwrench_1_1_trace_file_loader_a8e6e95774cf02ed1968521d473cdf6cb}} 
+\index{wrench\+::\+Trace\+File\+Loader@{wrench\+::\+Trace\+File\+Loader}!load\+From\+Trace\+File@{load\+From\+Trace\+File}}
+\index{load\+From\+Trace\+File@{load\+From\+Trace\+File}!wrench\+::\+Trace\+File\+Loader@{wrench\+::\+Trace\+File\+Loader}}
+\subsubsection{\texorpdfstring{load\+From\+Trace\+File()}{loadFromTraceFile()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::tuple$<$ std\+::string, double, double, double, double, unsigned int $>$ $>$ wrench\+::\+Trace\+File\+Loader\+::load\+From\+Trace\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{filename,  }\item[{double}]{load\+\_\+time\+\_\+compensation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Load the workflow trace file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the path to the trace file in S\+WF format or in J\+S\+ON format \\
+\hline
+{\em load\+\_\+time\+\_\+compensation} & an offset to add to submit times in the trace file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of tuples, where each tuple is a job description with the following fields\+:
+\begin{DoxyItemize}
+\item job id
+\item submission time
+\item actual time
+\item requested time,
+\item requested ram
+\item requested number of nodes
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/util/Trace\+File\+Loader.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/batch/Trace\+File\+Loader.\+cpp\end{DoxyCompactItemize}

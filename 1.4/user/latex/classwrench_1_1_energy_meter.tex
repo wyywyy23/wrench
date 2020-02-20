@@ -1,0 +1,86 @@
+\hypertarget{classwrench_1_1_energy_meter}{}\section{wrench\+:\+:Energy\+Meter Class Reference}
+\label{classwrench_1_1_energy_meter}\index{wrench\+::\+Energy\+Meter@{wrench\+::\+Energy\+Meter}}
+Inheritance diagram for wrench\+:\+:Energy\+Meter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classwrench_1_1_energy_meter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_energy_meter_a2f39104adc8875ae269dea7c58b5aa06}\label{classwrench_1_1_energy_meter_a2f39104adc8875ae269dea7c58b5aa06}} 
+void \hyperlink{classwrench_1_1_energy_meter_a2f39104adc8875ae269dea7c58b5aa06}{kill} ()
+\begin{DoxyCompactList}\small\item\em Kill the energy meter (brutally terminate the daemon) \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_energy_meter_ab5191f00d7af7cff9cecb664d2e784d8}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop the energy meter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_energy_meter_a8533895c6eb032027069d3cd04b9f8f1}{Energy\+Meter} (\hyperlink{classwrench_1_1_w_m_s}{W\+MS} $\ast$wms, const std\+::map$<$ std\+::string, double $>$ \&measurement\+\_\+periods)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_energy_meter_a31196bca18a3db3804c4bafd32770c64}{Energy\+Meter} (\hyperlink{classwrench_1_1_w_m_s}{W\+MS} $\ast$wms, const std\+::vector$<$ std\+::string $>$ \&hostnames, double period)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_energy_meter_a8533895c6eb032027069d3cd04b9f8f1}\label{classwrench_1_1_energy_meter_a8533895c6eb032027069d3cd04b9f8f1}} 
+\index{wrench\+::\+Energy\+Meter@{wrench\+::\+Energy\+Meter}!Energy\+Meter@{Energy\+Meter}}
+\index{Energy\+Meter@{Energy\+Meter}!wrench\+::\+Energy\+Meter@{wrench\+::\+Energy\+Meter}}
+\subsubsection{\texorpdfstring{Energy\+Meter()}{EnergyMeter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily wrench\+::\+Energy\+Meter\+::\+Energy\+Meter (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_w_m_s}{W\+MS} $\ast$}]{wms,  }\item[{const std\+::map$<$ std\+::string, double $>$ \&}]{measurement\+\_\+periods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wms} & the \hyperlink{classwrench_1_1_w_m_s}{W\+MS} that uses this data movement manager  measurement\+\_\+periods\+: the measurement period for each metered host \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_energy_meter_a31196bca18a3db3804c4bafd32770c64}\label{classwrench_1_1_energy_meter_a31196bca18a3db3804c4bafd32770c64}} 
+\index{wrench\+::\+Energy\+Meter@{wrench\+::\+Energy\+Meter}!Energy\+Meter@{Energy\+Meter}}
+\index{Energy\+Meter@{Energy\+Meter}!wrench\+::\+Energy\+Meter@{wrench\+::\+Energy\+Meter}}
+\subsubsection{\texorpdfstring{Energy\+Meter()}{EnergyMeter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily wrench\+::\+Energy\+Meter\+::\+Energy\+Meter (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_w_m_s}{W\+MS} $\ast$}]{wms,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{hostnames,  }\item[{double}]{measurement\+\_\+period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wms} & the \hyperlink{classwrench_1_1_w_m_s}{W\+MS} that uses this data movement manager \\
+\hline
+{\em hostnames} & the list of metered hosts, as hostnames \\
+\hline
+{\em measurement\+\_\+period} & the measurement period \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_energy_meter_ab5191f00d7af7cff9cecb664d2e784d8}\label{classwrench_1_1_energy_meter_ab5191f00d7af7cff9cecb664d2e784d8}} 
+\index{wrench\+::\+Energy\+Meter@{wrench\+::\+Energy\+Meter}!stop@{stop}}
+\index{stop@{stop}!wrench\+::\+Energy\+Meter@{wrench\+::\+Energy\+Meter}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void wrench\+::\+Energy\+Meter\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stop the energy meter. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Workflow\+Execution\+Exception} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/managers/Energy\+Meter.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/managers/Energy\+Meter.\+cpp\end{DoxyCompactItemize}

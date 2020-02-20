@@ -1,0 +1,78 @@
+\hypertarget{classwrench_1_1_compute_service_submit_standard_job_answer_message}{}\section{wrench\+:\+:Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message Class Reference}
+\label{classwrench_1_1_compute_service_submit_standard_job_answer_message}\index{wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message@{wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message}}
+
+
+A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} in answer to a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} submission request.  
+
+
+
+
+{\ttfamily \#include $<$Compute\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_compute_service_submit_standard_job_answer_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_compute_service_submit_standard_job_answer_message_adf8c3914db94b1d9a8e346cc1369182f}{Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message} (\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$, \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$, bool \hyperlink{classwrench_1_1_compute_service_submit_standard_job_answer_message_a0cbc290754685f5a05beb6e1f07cc292}{success}, std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$ \hyperlink{classwrench_1_1_compute_service_submit_standard_job_answer_message_a34bd4f67111bbec0382e8c5de9391893}{failure\+\_\+cause}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_submit_standard_job_answer_message_a0447350ce10685583b7955ba3af22b34}\label{classwrench_1_1_compute_service_submit_standard_job_answer_message_a0447350ce10685583b7955ba3af22b34}} 
+\hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$ \hyperlink{classwrench_1_1_compute_service_submit_standard_job_answer_message_a0447350ce10685583b7955ba3af22b34}{compute\+\_\+service}
+\begin{DoxyCompactList}\small\item\em The compute service to which the job was submitted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_submit_standard_job_answer_message_a34bd4f67111bbec0382e8c5de9391893}\label{classwrench_1_1_compute_service_submit_standard_job_answer_message_a34bd4f67111bbec0382e8c5de9391893}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$ \hyperlink{classwrench_1_1_compute_service_submit_standard_job_answer_message_a34bd4f67111bbec0382e8c5de9391893}{failure\+\_\+cause}
+\begin{DoxyCompactList}\small\item\em The cause of the failure, or nullptr on success. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_submit_standard_job_answer_message_aae9ba684768fb8f3f1d92ed23ef85071}\label{classwrench_1_1_compute_service_submit_standard_job_answer_message_aae9ba684768fb8f3f1d92ed23ef85071}} 
+\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$ \hyperlink{classwrench_1_1_compute_service_submit_standard_job_answer_message_aae9ba684768fb8f3f1d92ed23ef85071}{job}
+\begin{DoxyCompactList}\small\item\em The standard job that was submitted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_submit_standard_job_answer_message_a0cbc290754685f5a05beb6e1f07cc292}\label{classwrench_1_1_compute_service_submit_standard_job_answer_message_a0cbc290754685f5a05beb6e1f07cc292}} 
+bool \hyperlink{classwrench_1_1_compute_service_submit_standard_job_answer_message_a0cbc290754685f5a05beb6e1f07cc292}{success}
+\begin{DoxyCompactList}\small\item\em Whether to job submission was successful. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} in answer to a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} submission request. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_submit_standard_job_answer_message_adf8c3914db94b1d9a8e346cc1369182f}\label{classwrench_1_1_compute_service_submit_standard_job_answer_message_adf8c3914db94b1d9a8e346cc1369182f}} 
+\index{wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message@{wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message}!Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message@{Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message}}
+\index{Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message@{Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message}!wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message@{wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message}}
+\subsubsection{\texorpdfstring{Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message()}{ComputeServiceSubmitStandardJobAnswerMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message\+::\+Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$}]{job,  }\item[{\hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$}]{compute\+\_\+service,  }\item[{bool}]{success,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$}]{failure\+\_\+cause,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & a standard job that had been submitted for execution \\
+\hline
+{\em compute\+\_\+service} & the compute service \\
+\hline
+{\em success} & true on success, false otherwise \\
+\hline
+{\em failure\+\_\+cause} & cause of the failure (nullptr if success == true) \\
+\hline
+{\em payload} & message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+arguments} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/Compute\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/Compute\+Service\+Message.\+cpp\end{DoxyCompactItemize}

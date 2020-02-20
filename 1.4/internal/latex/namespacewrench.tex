@@ -1,0 +1,467 @@
+\hypertarget{namespacewrench}{}\section{wrench Namespace Reference}
+\label{namespacewrench}\index{wrench@{wrench}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classwrench_1_1_alarm}{Alarm}
+\begin{DoxyCompactList}\small\item\em A one-\/shot service that sends a message to a mailbox after some specified amount of time and terminates. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_alarm_job_time_out_message}{Alarm\+Job\+Time\+Out\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by an alarm when a job goes over its requested execution time. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_alarm_w_m_s_deferred_start_message}{Alarm\+W\+M\+S\+Deferred\+Start\+Message}
+\begin{DoxyCompactList}\small\item\em Message sent by an alarm to a \hyperlink{classwrench_1_1_w_m_s}{W\+MS} to tell it that it can start executing its workflow. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_bare_metal_compute_service}{Bare\+Metal\+Compute\+Service}
+\begin{DoxyCompactList}\small\item\em A compute service that manages a set of multi-\/core compute hosts and provides access to their resources. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_bare_metal_compute_service_message_payload}{Bare\+Metal\+Compute\+Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for a Multi\+Host\+Multicore\+Compute\+Service. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_bare_metal_compute_service_property}{Bare\+Metal\+Compute\+Service\+Property}
+\begin{DoxyCompactList}\small\item\em Configurable properties for a Multi\+Host\+Multicore\+Compute\+Service. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_batch_execute_job_from_bat_sched_message}{Batch\+Execute\+Job\+From\+Bat\+Sched\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_batsched_network_listener}{Batsched\+Network\+Listener} to a Batsched-\/enabled \hyperlink{classwrench_1_1_batch_service}{Batch\+Service} to tell it to start a job execution, passing it the J\+S\+ON reply received from Batsched. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_batch_job}{Batch\+Job}
+\begin{DoxyCompactList}\small\item\em A batch job, which encapsulates a \hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job} and additional information used by a \hyperlink{classwrench_1_1_batch_service}{Batch\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_batch_query_answer_message}{Batch\+Query\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message send by a \hyperlink{classwrench_1_1_batsched_network_listener}{Batsched\+Network\+Listener} to a Batsched-\/enabled \hyperlink{classwrench_1_1_batch_service}{Batch\+Service} with a job start time estimate obtained from Batsched. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_batch_service}{Batch\+Service}
+\begin{DoxyCompactList}\small\item\em A batch-\/scheduled compute service that manages a set of compute hosts and controls access to their resource via a batch queue. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_batch_service_job_request_message}{Batch\+Service\+Job\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_batch_service}{Batch\+Service} to submit a batch job for execution. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_batch_service_message}{Batch\+Service\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class for messages received/sent by a \hyperlink{classwrench_1_1_batch_service}{Batch\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_batch_service_message_payload}{Batch\+Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for a \hyperlink{classwrench_1_1_batch_service}{Batch\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_batch_service_property}{Batch\+Service\+Property}
+\begin{DoxyCompactList}\small\item\em Configurable properties for a \hyperlink{classwrench_1_1_batch_service}{Batch\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_batsched_network_listener}{Batsched\+Network\+Listener}
+\begin{DoxyCompactList}\small\item\em A helper service that handles all interaction with Batsched. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service}
+\begin{DoxyCompactList}\small\item\em A cloud-\/based compute service that manages a set of physical hosts and controls access to their resources by (transparently) executing jobs in VM instances. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_create_v_m_answer_message}{Cloud\+Service\+Create\+V\+M\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} in answer to a VM creation request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_create_v_m_request_message}{Cloud\+Service\+Create\+V\+M\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} to request a VM creation. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_get_execution_hosts_answer_message}{Cloud\+Service\+Get\+Execution\+Hosts\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} in answer to a list of execution hosts request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_get_execution_hosts_request_message}{Cloud\+Service\+Get\+Execution\+Hosts\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} to request the list of its execution hosts. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_message}{Cloud\+Service\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class for messages received/sent by a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_message_payload}{Cloud\+Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_property}{Cloud\+Service\+Property}
+\begin{DoxyCompactList}\small\item\em Configurable properties for a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_resume_v_m_answer_message}{Cloud\+Service\+Resume\+V\+M\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} in answer to a VM resume request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_resume_v_m_request_message}{Cloud\+Service\+Resume\+V\+M\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} to request a VM resume. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_shutdown_v_m_answer_message}{Cloud\+Service\+Shutdown\+V\+M\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} in answer to a VM shutdown request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_shutdown_v_m_request_message}{Cloud\+Service\+Shutdown\+V\+M\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} to request a VM shutdown. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_start_v_m_answer_message}{Cloud\+Service\+Start\+V\+M\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} in answer to a VM start request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_start_v_m_request_message}{Cloud\+Service\+Start\+V\+M\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} to request a VM start. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_suspend_v_m_answer_message}{Cloud\+Service\+Suspend\+V\+M\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} in answer to a VM suspend request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_cloud_service_suspend_v_m_request_message}{Cloud\+Service\+Suspend\+V\+M\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} to request a VM suspend. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service}{Compute\+Service}
+\begin{DoxyCompactList}\small\item\em The compute service base class. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_message}{Compute\+Service\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class for messages received/sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_message_payload}{Compute\+Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_pilot_job_expired_message}{Compute\+Service\+Pilot\+Job\+Expired\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} when a \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} has expired. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_pilot_job_failed_message}{Compute\+Service\+Pilot\+Job\+Failed\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} when a \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} has failed. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_pilot_job_started_message}{Compute\+Service\+Pilot\+Job\+Started\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} when a \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} has started its execution. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_property}{Compute\+Service\+Property}
+\begin{DoxyCompactList}\small\item\em Configurable properties for a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_resource_information_answer_message}{Compute\+Service\+Resource\+Information\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} in answer to a resource information request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_resource_information_request_message}{Compute\+Service\+Resource\+Information\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} to request information on its compute resources. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_standard_job_done_message}{Compute\+Service\+Standard\+Job\+Done\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} when a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} has completed execution. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_standard_job_failed_message}{Compute\+Service\+Standard\+Job\+Failed\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} when a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} has failed to execute. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_submit_pilot_job_answer_message}{Compute\+Service\+Submit\+Pilot\+Job\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} in answer to a \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} submission request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_submit_pilot_job_request_message}{Compute\+Service\+Submit\+Pilot\+Job\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} to submit a \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} for execution. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_submit_standard_job_answer_message}{Compute\+Service\+Submit\+Standard\+Job\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} in answer to a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} submission request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_submit_standard_job_request_message}{Compute\+Service\+Submit\+Standard\+Job\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} to submit a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} for execution. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_answer_message}{Compute\+Service\+Terminate\+Pilot\+Job\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} in answer to a \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} termination request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_request_message}{Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} to terminate a \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} previously submitted for execution. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_terminate_standard_job_answer_message}{Compute\+Service\+Terminate\+Standard\+Job\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} in answer to a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} termination request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_service_terminate_standard_job_request_message}{Compute\+Service\+Terminate\+Standard\+Job\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} to terminate a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} previously submitted for execution. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_thread}{Compute\+Thread}
+\begin{DoxyCompactList}\small\item\em A one-\/shot service that simulates a C\+P\+U-\/bound thread that performs a given number of flops and then reports to some mailbox saying \char`\"{}\+I am done\char`\"{}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_thread_done_message}{Compute\+Thread\+Done\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_compute_thread}{Compute\+Thread} once it\textquotesingle{}s done performing its computation. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_compute_thread_has_died}{Compute\+Thread\+Has\+Died}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}compute thread has died\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_coordinate_lookup_answer_message}{Coordinate\+Lookup\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} in answer to a coordinate lookup request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_coordinate_lookup_request_message}{Coordinate\+Lookup\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} to request a coordinate lookup. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_data_movement_manager}{Data\+Movement\+Manager}
+\begin{DoxyCompactList}\small\item\em A helper daemon (co-\/located with a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}) that handles data movement operations. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_dynamic_optimization}{Dynamic\+Optimization}
+\begin{DoxyCompactList}\small\item\em An abstract class that serves as a base class for implementing dynamic (i.\+e., at runtime) optimizations to be used by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS} while executing a \hyperlink{classwrench_1_1_workflow}{Workflow}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_energy_meter}{Energy\+Meter}
+\item 
+class \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause}
+\begin{DoxyCompactList}\small\item\em A top-\/level class to describe all simulation-\/valid failures that can occur during workflow execution (and should/could be handled by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_fatal_failure}{Fatal\+Failure}
+\begin{DoxyCompactList}\small\item\em An \char`\"{}\+Unknown\char`\"{} failure cause (should not happen) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_already_being_copied}{File\+Already\+Being\+Copied}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}file is already there\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_copy_completed_event}{File\+Copy\+Completed\+Event}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}file copy has completed\char`\"{} \hyperlink{classwrench_1_1_workflow_execution_event}{Workflow\+Execution\+Event}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_copy_failed_event}{File\+Copy\+Failed\+Event}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}file copy has failed\char`\"{} \hyperlink{classwrench_1_1_workflow_execution_event}{Workflow\+Execution\+Event}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_not_found}{File\+Not\+Found}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}file was not found\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_add_entry_answer_message}{File\+Registry\+Add\+Entry\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} in answer to an entry addition request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_add_entry_request_message}{File\+Registry\+Add\+Entry\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} to request the addition of an entry. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_file_lookup_answer_message}{File\+Registry\+File\+Lookup\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} in answer to a file lookup request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message}{File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} in answer to a file lookup request, in which file locations are sorted by decreasing proximity to some reference host. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_file_lookup_by_proximity_request_message}{File\+Registry\+File\+Lookup\+By\+Proximity\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} to request a file lookup, expecting a reply in which file locations are sorted by decreasing proximity to some reference host. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_file_lookup_request_message}{File\+Registry\+File\+Lookup\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} to request a file lookup. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_message}{File\+Registry\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level \hyperlink{classwrench_1_1_file_registry_message}{File\+Registry\+Message} class. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_remove_entry_answer_message}{File\+Registry\+Remove\+Entry\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} in answer to an entry removal request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_remove_entry_request_message}{File\+Registry\+Remove\+Entry\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} to request the removal of an entry. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service}
+\begin{DoxyCompactList}\small\item\em A file registry service (a.\+k.\+a. replica catalog) that holds a database of which files are available at which storage services. More specifically, the database holds a set of $<$file, storage service$>$ entries. A \hyperlink{classwrench_1_1_w_m_s}{W\+MS} can add, lookup, and remove entries at will from this database. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_service_message_payload}{File\+Registry\+Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payload for a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_file_registry_service_property}{File\+Registry\+Service\+Property}
+\begin{DoxyCompactList}\small\item\em Configurable properties for a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_functionality_not_available}{Functionality\+Not\+Available}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}requested functionality is not available on that service\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_host_error}{Host\+Error}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}host error\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_h_t_condor_central_manager_service}{H\+T\+Condor\+Central\+Manager\+Service}
+\item 
+class \hyperlink{classwrench_1_1_h_t_condor_central_manager_service_message}{H\+T\+Condor\+Central\+Manager\+Service\+Message}
+\item 
+class \hyperlink{classwrench_1_1_h_t_condor_central_manager_service_message_payload}{H\+T\+Condor\+Central\+Manager\+Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for an H\+T\+Condor Central Manager service. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_h_t_condor_negotiator_service}{H\+T\+Condor\+Negotiator\+Service}
+\item 
+class \hyperlink{classwrench_1_1_h_t_condor_service}{H\+T\+Condor\+Service}
+\begin{DoxyCompactList}\small\item\em A workload management framework compute service. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_h_t_condor_service_message_payload}{H\+T\+Condor\+Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for an \hyperlink{classwrench_1_1_h_t_condor_service}{H\+T\+Condor\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_h_t_condor_service_property}{H\+T\+Condor\+Service\+Property}
+\begin{DoxyCompactList}\small\item\em Properties for an H\+T\+Condor service. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_job_cannot_be_forgotten}{Job\+Cannot\+Be\+Forgotten}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}job cannot be forgotten\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_job_cannot_be_terminated}{Job\+Cannot\+Be\+Terminated}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}job cannot be terminated\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_job_killed}{Job\+Killed}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}job has been killed\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_job_manager}{Job\+Manager}
+\begin{DoxyCompactList}\small\item\em A helper daemon (co-\/located with and explicitly started by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}), which is used to handle all job executions. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_job_manager_message}{Job\+Manager\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class for messages received/sent by a \hyperlink{classwrench_1_1_job_manager}{Job\+Manager}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_job_manager_standard_job_done_message}{Job\+Manager\+Standard\+Job\+Done\+Message}
+\item 
+class \hyperlink{classwrench_1_1_job_manager_standard_job_failed_message}{Job\+Manager\+Standard\+Job\+Failed\+Message}
+\item 
+class \hyperlink{classwrench_1_1_job_timeout}{Job\+Timeout}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}job has times out\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_job_type_not_supported}{Job\+Type\+Not\+Supported}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}compute service does not support requested job type\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_message_manager}{Message\+Manager}
+\begin{DoxyCompactList}\small\item\em A helper class that manages messages (in terms of memory deallocation to avoid leaks when a message was sent but never received) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_negotiator_completion_message}{Negotiator\+Completion\+Message}
+\item 
+class \hyperlink{classwrench_1_1_network_connection}{Network\+Connection}
+\begin{DoxyCompactList}\small\item\em A helper class that implements a network connection abstraction to be used by a service, e.\+g., when the service needs to limit its number of concurrent connections. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_network_connection_manager}{Network\+Connection\+Manager}
+\begin{DoxyCompactList}\small\item\em An abstraction that manages a pool of network connections. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_network_error}{Network\+Error}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}network error (or endpoint is down)\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_network_proximity_compute_answer_message}{Network\+Proximity\+Compute\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message received by a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} that updates its database of proximity values. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_network_proximity_daemon}{Network\+Proximity\+Daemon}
+\begin{DoxyCompactList}\small\item\em A daemon used by a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} to run network measurements (proximity is computed between two such running daemons) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_network_proximity_lookup_answer_message}{Network\+Proximity\+Lookup\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} in answer to a network proximity lookup request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_network_proximity_lookup_request_message}{Network\+Proximity\+Lookup\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} to request a network proximity lookup. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_network_proximity_message}{Network\+Proximity\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class for messages received/sent by a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service}
+\begin{DoxyCompactList}\small\item\em A network proximity service that continuously estimates inter-\/host latencies and can be queried for such estimates. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_network_proximity_service_message_payload}{Network\+Proximity\+Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_network_proximity_service_property}{Network\+Proximity\+Service\+Property}
+\begin{DoxyCompactList}\small\item\em Configurable properties for a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_network_proximity_transfer_message}{Network\+Proximity\+Transfer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent between \hyperlink{classwrench_1_1_network_proximity_daemon}{Network\+Proximity\+Daemon} processes to perform network measurements. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_next_contact_daemon_answer_message}{Next\+Contact\+Daemon\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} to a \hyperlink{classwrench_1_1_network_proximity_daemon}{Network\+Proximity\+Daemon} to tell it which other Network\+Proximity\+Daemons it should do measurements with next. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_next_contact_daemon_request_message}{Next\+Contact\+Daemon\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} by a \hyperlink{classwrench_1_1_network_proximity_daemon}{Network\+Proximity\+Daemon} to ask which other Network\+Proximity\+Daemons it should do measurements with next. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_no_scratch_space}{No\+Scratch\+Space}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}no scratch space\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_no_storage_service_for_file}{No\+Storage\+Service\+For\+File}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}file cannot be found anywhere\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_not_enough_resources}{Not\+Enough\+Resources}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}compute service doesn\textquotesingle{}t have enough cores\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job}
+\begin{DoxyCompactList}\small\item\em A pilot (i.\+e., non-\/standard) workflow job that can be submitted to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS} (via a \hyperlink{classwrench_1_1_job_manager}{Job\+Manager}) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_pilot_job_expired_event}{Pilot\+Job\+Expired\+Event}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}pilot job has expired\char`\"{} \hyperlink{classwrench_1_1_workflow_execution_event}{Workflow\+Execution\+Event}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_pilot_job_scheduler}{Pilot\+Job\+Scheduler}
+\begin{DoxyCompactList}\small\item\em A (mostly virtual) base class for implementing \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} scheduling algorithms to be used by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_pilot_job_started_event}{Pilot\+Job\+Started\+Event}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}pilot job has started\char`\"{} \hyperlink{classwrench_1_1_workflow_execution_event}{Workflow\+Execution\+Event}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_pointer_util}{Pointer\+Util}
+\begin{DoxyCompactList}\small\item\em A helper class that implements useful smart pointer operations. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_s4_u___daemon}{S4\+U\+\_\+\+Daemon}
+\begin{DoxyCompactList}\small\item\em A generic \char`\"{}running daemon\char`\"{} abstraction that serves as a basis for all simulated processes. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_s4_u___daemon_actor}{S4\+U\+\_\+\+Daemon\+Actor}
+\begin{DoxyCompactList}\small\item\em The S4U actor that\textquotesingle{}s the foundation for the \hyperlink{classwrench_1_1_s4_u___daemon}{S4\+U\+\_\+\+Daemon} abstraction. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_s4_u___mailbox}{S4\+U\+\_\+\+Mailbox}
+\begin{DoxyCompactList}\small\item\em Wrappers around S4U\textquotesingle{}s communication methods. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_s4_u___pending_communication}{S4\+U\+\_\+\+Pending\+Communication}
+\begin{DoxyCompactList}\small\item\em This is a simple wrapper class around S4U asynchronous communication checking methods. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_s4_u___simulation}{S4\+U\+\_\+\+Simulation}
+\begin{DoxyCompactList}\small\item\em Wrappers around S4U\textquotesingle{}s basic simulation methods. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_s4_u___virtual_machine}{S4\+U\+\_\+\+Virtual\+Machine}
+\begin{DoxyCompactList}\small\item\em A wrapper for the simgrid\+::s4u\+::\+Virtual\+Machine class. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_service}{Service}
+\begin{DoxyCompactList}\small\item\em A service that can be added to the simulation and that can be used by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS} when executing a workflow. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_service_daemon_stopped_message}{Service\+Daemon\+Stopped\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_service}{Service} to acknowledge a terminate request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_service_failure_detector}{Service\+Failure\+Detector}
+\item 
+class \hyperlink{classwrench_1_1_service_failure_detector_message}{Service\+Failure\+Detector\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class for messages received/sent by a Failure\+Detector. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_service_ha_crashede_message}{Service\+Ha\+Crashede\+Message}
+\item 
+class \hyperlink{classwrench_1_1_service_is_down}{Service\+Is\+Down}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}service is down\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_service_message}{Service\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class for messages received/sent by a \hyperlink{classwrench_1_1_service}{Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_service_message_payload}{Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for a \hyperlink{classwrench_1_1_service}{Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_service_property}{Service\+Property}
+\begin{DoxyCompactList}\small\item\em Configurable properties for a \hyperlink{classwrench_1_1_service}{Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_service_stop_daemon_message}{Service\+Stop\+Daemon\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_service}{Service} to request for it to terminate. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_service_t_t_l_expired_message}{Service\+T\+T\+L\+Expired\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_service}{Service} to notify it that its time-\/to-\/live has expired (which will cause the service to terminate) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simple_storage_service}{Simple\+Storage\+Service}
+\begin{DoxyCompactList}\small\item\em A storage service that provides direct access to some storage resource (e.\+g., a disk) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simple_storage_service_message_payload}{Simple\+Storage\+Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for a \hyperlink{classwrench_1_1_simple_storage_service}{Simple\+Storage\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simple_storage_service_property}{Simple\+Storage\+Service\+Property}
+\begin{DoxyCompactList}\small\item\em Configurable properties for a \hyperlink{classwrench_1_1_simple_storage_service}{Simple\+Storage\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation}{Simulation}
+\begin{DoxyCompactList}\small\item\em A class that provides basic simulation methods. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_message}{Simulation\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class to describe a message communicated by processes in the simulation. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_output}{Simulation\+Output}
+\begin{DoxyCompactList}\small\item\em A class that contains post-\/mortem simulation-\/generated data. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp}{Simulation\+Timestamp}
+\begin{DoxyCompactList}\small\item\em A time-\/stamped simulation event stored in \hyperlink{classwrench_1_1_simulation_output}{Simulation\+Output}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_energy_consumption}{Simulation\+Timestamp\+Energy\+Consumption}
+\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_file_copy}{Simulation\+Timestamp\+File\+Copy}
+\begin{DoxyCompactList}\small\item\em A base class for simulation timestamps regarding file copies. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_file_copy_completion}{Simulation\+Timestamp\+File\+Copy\+Completion}
+\begin{DoxyCompactList}\small\item\em A simulation timestamp class for file copy completions. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_file_copy_failure}{Simulation\+Timestamp\+File\+Copy\+Failure}
+\begin{DoxyCompactList}\small\item\em A simulation timestamp class for file copy failure times. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_file_copy_start}{Simulation\+Timestamp\+File\+Copy\+Start}
+\begin{DoxyCompactList}\small\item\em A simulation timestamp class for file copy start times. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_pair}{Simulation\+Timestamp\+Pair}
+\begin{DoxyCompactList}\small\item\em A base class for simulation timestamps. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_pstate_set}{Simulation\+Timestamp\+Pstate\+Set}
+\begin{DoxyCompactList}\small\item\em A simulation timestamp class for changes in a host\textquotesingle{}s pstate. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_task}{Simulation\+Timestamp\+Task}
+\begin{DoxyCompactList}\small\item\em A base class for simulation timestamps regarding workflow tasks. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_task_completion}{Simulation\+Timestamp\+Task\+Completion}
+\begin{DoxyCompactList}\small\item\em A simulation timestamp class for \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} completion times. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_task_failure}{Simulation\+Timestamp\+Task\+Failure}
+\begin{DoxyCompactList}\small\item\em A simulation timestamp class for \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} failure times. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_task_start}{Simulation\+Timestamp\+Task\+Start}
+\begin{DoxyCompactList}\small\item\em A simulation timestamp class for \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} start times. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_task_terminated}{Simulation\+Timestamp\+Task\+Terminated}
+\begin{DoxyCompactList}\small\item\em A simulation timestamp class for \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} termination times. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_timestamp_type}{Simulation\+Timestamp\+Type}
+\item 
+class \hyperlink{classwrench_1_1_simulation_trace}{Simulation\+Trace}
+\begin{DoxyCompactList}\small\item\em A template class to represent a trace of timestamps. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_simulation_trace_3_01_simulation_timestamp_pstate_set_01_4}{Simulation\+Trace$<$ Simulation\+Timestamp\+Pstate\+Set $>$}
+\begin{DoxyCompactList}\small\item\em A specialized class to represent a trace of \hyperlink{classwrench_1_1_simulation_timestamp_pstate_set}{Simulation\+Timestamp\+Pstate\+Set} timestamps. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_standard_job}{Standard\+Job}
+\begin{DoxyCompactList}\small\item\em A standard (i.\+e., non-\/pilot) workflow job that can be submitted to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS} (via a \hyperlink{classwrench_1_1_job_manager}{Job\+Manager}) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_standard_job_completed_event}{Standard\+Job\+Completed\+Event}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}standard job has completed\char`\"{} \hyperlink{classwrench_1_1_workflow_execution_event}{Workflow\+Execution\+Event}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_standard_job_executor}{Standard\+Job\+Executor}
+\begin{DoxyCompactList}\small\item\em A service that knows how to execute a standard job on a multi-\/node multi-\/core platform. Note that when killed in the middle of computing, this service will set (internal) running tasks\textquotesingle{} states to F\+A\+I\+L\+ED, and likely the calling service will want to make failed tasks R\+E\+A\+DY and N\+O\+T\+\_\+\+R\+E\+A\+DY again to \char`\"{}unwind\char`\"{} the failed executions and resubmit tasks for execution. Also, this service does not increment task failure counts, as it does not know if the \hyperlink{classwrench_1_1_standard_job_executor_aec6a1864dacefd357399bc058e3ae08f}{kill()} was an actual failure (i.\+e., some timeout) or a feature (i.\+e., a \hyperlink{classwrench_1_1_w_m_s}{W\+MS} changing its mind) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_standard_job_executor_done_message}{Standard\+Job\+Executor\+Done\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_standard_job_executor}{Standard\+Job\+Executor} to notify that it has completed a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_standard_job_executor_failed_message}{Standard\+Job\+Executor\+Failed\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_standard_job_executor}{Standard\+Job\+Executor} to notify that its \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} has failed. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_standard_job_executor_message}{Standard\+Job\+Executor\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class for messages received/sent by a \hyperlink{classwrench_1_1_standard_job_executor}{Standard\+Job\+Executor}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_standard_job_executor_message_payload}{Standard\+Job\+Executor\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for a \hyperlink{classwrench_1_1_standard_job_executor}{Standard\+Job\+Executor}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_standard_job_executor_property}{Standard\+Job\+Executor\+Property}
+\begin{DoxyCompactList}\small\item\em Configurable properties for a \hyperlink{classwrench_1_1_standard_job_executor}{Standard\+Job\+Executor}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_standard_job_failed_event}{Standard\+Job\+Failed\+Event}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}standard job has failed\char`\"{} \hyperlink{classwrench_1_1_workflow_execution_event}{Workflow\+Execution\+Event}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_standard_job_scheduler}{Standard\+Job\+Scheduler}
+\begin{DoxyCompactList}\small\item\em A (mostly virtual) base class for implementing \hyperlink{classwrench_1_1_standard_job}{Standard\+Job} scheduling algorithms to be used by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_static_optimization}{Static\+Optimization}
+\begin{DoxyCompactList}\small\item\em An abstract class that serves as a base class for implementing static (i.\+e., before workflow execution) optimizations to be used by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service}{Storage\+Service}
+\begin{DoxyCompactList}\small\item\em The storage service base class. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_file_content_message}{Storage\+Service\+File\+Content\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent/received by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} that has a file size as a payload. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_file_copy_answer_message}{Storage\+Service\+File\+Copy\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} in answer to a file copy request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_file_copy_request_message}{Storage\+Service\+File\+Copy\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to copy a file from another \hyperlink{classwrench_1_1_storage_service}{Storage\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_file_delete_answer_message}{Storage\+Service\+File\+Delete\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} in answer to a file deletion request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_file_delete_request_message}{Storage\+Service\+File\+Delete\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to delete a file. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_file_lookup_answer_message}{Storage\+Service\+File\+Lookup\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} in answer to a file lookup request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_file_lookup_request_message}{Storage\+Service\+File\+Lookup\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to lookup a file. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_file_read_answer_message}{Storage\+Service\+File\+Read\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} in answer to a file read request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_file_read_request_message}{Storage\+Service\+File\+Read\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to read a file. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_file_write_answer_message}{Storage\+Service\+File\+Write\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} in answer to a file write request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_file_write_request_message}{Storage\+Service\+File\+Write\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to write a file. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_free_space_answer_message}{Storage\+Service\+Free\+Space\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} in answer to a free space enquiry. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_free_space_request_message}{Storage\+Service\+Free\+Space\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to enquire about its free space. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_message}{Storage\+Service\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class for messages received/sent by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_message_payload}{Storage\+Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_not_enough_space}{Storage\+Service\+Not\+Enough\+Space}
+\begin{DoxyCompactList}\small\item\em A \char`\"{}not enough space on storage service\char`\"{} failure cause. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_storage_service_property}{Storage\+Service\+Property}
+\begin{DoxyCompactList}\small\item\em Configurable properties for a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_terminal_output}{Terminal\+Output}
+\begin{DoxyCompactList}\small\item\em Color-\/enabling wrappers around Simgrid\textquotesingle{}s X\+B\+T\+\_\+\+I\+N\+FO, X\+B\+T\+\_\+\+D\+E\+B\+UG, X\+B\+T\+\_\+\+W\+A\+RN logging macros. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_trace_file_loader}{Trace\+File\+Loader}
+\begin{DoxyCompactList}\small\item\em A class that can load a job submission trace (a.\+k.\+a. supercomputer workload) in the S\+WF format (see \href{http://www.cs.huji.ac.il/labs/parallel/workload/swf.html}{\tt http\+://www.\+cs.\+huji.\+ac.\+il/labs/parallel/workload/swf.\+html}) and store it as a vector of simulation-\/relevant fields. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_unit_parser}{Unit\+Parser}
+\begin{DoxyCompactList}\small\item\em A class used to part string specification of values with units into a single value (e.\+g., \char`\"{}2\+K\+B\char`\"{} -\/$>$ 2048 bytes, \char`\"{}2\+Kb\char`\"{} -\/$>$ 256 bytes) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_virtualized_cluster_service}{Virtualized\+Cluster\+Service}
+\begin{DoxyCompactList}\small\item\em A virtualized cluster-\/based compute service. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_virtualized_cluster_service_message}{Virtualized\+Cluster\+Service\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class for messages received/sent by a \hyperlink{classwrench_1_1_virtualized_cluster_service}{Virtualized\+Cluster\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_virtualized_cluster_service_message_payload}{Virtualized\+Cluster\+Service\+Message\+Payload}
+\begin{DoxyCompactList}\small\item\em Configurable message payloads for a \hyperlink{classwrench_1_1_virtualized_cluster_service}{Virtualized\+Cluster\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_virtualized_cluster_service_migrate_v_m_answer_message}{Virtualized\+Cluster\+Service\+Migrate\+V\+M\+Answer\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_virtualized_cluster_service}{Virtualized\+Cluster\+Service} in answer to a VM migration request. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_virtualized_cluster_service_migrate_v_m_request_message}{Virtualized\+Cluster\+Service\+Migrate\+V\+M\+Request\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent to a \hyperlink{classwrench_1_1_virtualized_cluster_service}{Virtualized\+Cluster\+Service} to request a VM migration. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_virtualized_cluster_service_property}{Virtualized\+Cluster\+Service\+Property}
+\begin{DoxyCompactList}\small\item\em Configurable properties for a \hyperlink{classwrench_1_1_virtualized_cluster_service}{Virtualized\+Cluster\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_w_m_s}{W\+MS}
+\begin{DoxyCompactList}\small\item\em A workflow management system (\hyperlink{classwrench_1_1_w_m_s}{W\+MS}) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_w_m_s_message}{W\+M\+S\+Message}
+\begin{DoxyCompactList}\small\item\em Top-\/level class for messages received/sent by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workflow}{Workflow}
+\begin{DoxyCompactList}\small\item\em A workflow (to be executed by a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}) \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workflow_execution_event}{Workflow\+Execution\+Event}
+\begin{DoxyCompactList}\small\item\em A class to represent the various execution events that are relevant to the execution of a workflow. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}
+\begin{DoxyCompactList}\small\item\em An generic exception that is thrown whenever something unexpected (but simulation-\/valid) occurrs during the simulated execution of a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workflow_file}{Workflow\+File}
+\begin{DoxyCompactList}\small\item\em A data file used/produced by a \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} in a \hyperlink{classwrench_1_1_workflow}{Workflow}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workflow_job}{Workflow\+Job}
+\begin{DoxyCompactList}\small\item\em Abstraction of a job used for executing tasks in a \hyperlink{classwrench_1_1_workflow}{Workflow}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task}
+\begin{DoxyCompactList}\small\item\em A computational task in a \hyperlink{classwrench_1_1_workflow}{Workflow}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workload_trace_file_replayer}{Workload\+Trace\+File\+Replayer}
+\begin{DoxyCompactList}\small\item\em A service that goes through a job submission trace (as loaded by a \hyperlink{classwrench_1_1_trace_file_loader}{Trace\+File\+Loader}), and \char`\"{}replays\char`\"{} it on a given \hyperlink{classwrench_1_1_batch_service}{Batch\+Service}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workload_trace_file_replayer_event_receiver}{Workload\+Trace\+File\+Replayer\+Event\+Receiver}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{classwrench_1_1_w_m_s}{W\+MS} that only submits a single job to a given batch service, which is used to implement batch workload replay. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workunit}{Workunit}
+\begin{DoxyCompactList}\small\item\em A class to describe a unit of work that\textquotesingle{}s a sub-\/component of a \hyperlink{classwrench_1_1_standard_job}{Standard\+Job}. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workunit_executor}{Workunit\+Executor}
+\begin{DoxyCompactList}\small\item\em An service that performs a Work\+Unit. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workunit_executor_done_message}{Workunit\+Executor\+Done\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_workunit_executor}{Workunit\+Executor} to notify that it has completed a Work\+Unit. \end{DoxyCompactList}\item 
+class \hyperlink{classwrench_1_1_workunit_executor_failed_message}{Workunit\+Executor\+Failed\+Message}
+\begin{DoxyCompactList}\small\item\em A message sent by a \hyperlink{classwrench_1_1_workunit_executor}{Workunit\+Executor} to notify that its Work\+Unit as failed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::tuple$<$ std\+::string, unsigned long $>$ \hyperlink{namespacewrench_a9601a7728120192951232d2e0a74a483}{parse\+Resource\+Spec} (std\+::string spec)
+\begin{DoxyCompactList}\small\item\em Helper static function to parse resource specifications to the $<$cores,ram$>$ format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copyright (c) 2017. The W\+R\+E\+N\+CH Team.
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Copyright (c) 2017-\/2018. The W\+R\+E\+N\+CH Team.
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Copyright (c) 2017-\/2019. The W\+R\+E\+N\+CH Team.
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacewrench_a9601a7728120192951232d2e0a74a483}\label{namespacewrench_a9601a7728120192951232d2e0a74a483}} 
+\index{wrench@{wrench}!parse\+Resource\+Spec@{parse\+Resource\+Spec}}
+\index{parse\+Resource\+Spec@{parse\+Resource\+Spec}!wrench@{wrench}}
+\subsubsection{\texorpdfstring{parse\+Resource\+Spec()}{parseResourceSpec()}}
+{\footnotesize\ttfamily static std\+::tuple$<$std\+::string, unsigned long$>$ wrench\+::parse\+Resource\+Spec (\begin{DoxyParamCaption}\item[{std\+::string}]{spec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper static function to parse resource specifications to the $<$cores,ram$>$ format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spec} & specification string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a $<$cores, ram$>$ tuple 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}

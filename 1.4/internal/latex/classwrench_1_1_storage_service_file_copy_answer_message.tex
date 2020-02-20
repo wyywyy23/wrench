@@ -1,0 +1,97 @@
+\hypertarget{classwrench_1_1_storage_service_file_copy_answer_message}{}\section{wrench\+:\+:Storage\+Service\+File\+Copy\+Answer\+Message Class Reference}
+\label{classwrench_1_1_storage_service_file_copy_answer_message}\index{wrench\+::\+Storage\+Service\+File\+Copy\+Answer\+Message@{wrench\+::\+Storage\+Service\+File\+Copy\+Answer\+Message}}
+
+
+A message sent by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} in answer to a file copy request.  
+
+
+
+
+{\ttfamily \#include $<$Storage\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Storage\+Service\+File\+Copy\+Answer\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_storage_service_file_copy_answer_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_a6849b485ea05a016cb88e08f0b29748d}{Storage\+Service\+File\+Copy\+Answer\+Message} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$\hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_a5d5da48c3b7a1274faf67a794477b352}{file}, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$\hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_aee16bb6721a2cca2bd17660eb69c5ede}{storage\+\_\+service}, std\+::string \hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_a90e2bf5ce4303f04c0d1d92ddb98e4af}{dst\+\_\+partition}, \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$\hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_ad879a0d25951e7474ac018bf5015d53c}{file\+\_\+registry\+\_\+service}, bool \hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_af024699e47c097438ec0425b1ec233a7}{file\+\_\+registry\+\_\+service\+\_\+updated}, bool \hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_a30bcbbab083b6517691515877b97633b}{success}, std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$ cause, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_copy_answer_message_a90e2bf5ce4303f04c0d1d92ddb98e4af}\label{classwrench_1_1_storage_service_file_copy_answer_message_a90e2bf5ce4303f04c0d1d92ddb98e4af}} 
+std\+::string \hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_a90e2bf5ce4303f04c0d1d92ddb98e4af}{dst\+\_\+partition}
+\begin{DoxyCompactList}\small\item\em The destination partition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_copy_answer_message_a9048b77f2734a5773bafffb7b0fbc5c6}\label{classwrench_1_1_storage_service_file_copy_answer_message_a9048b77f2734a5773bafffb7b0fbc5c6}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$ \hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_a9048b77f2734a5773bafffb7b0fbc5c6}{failure\+\_\+cause}
+\begin{DoxyCompactList}\small\item\em The cause of the failure, or nullptr if success. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_copy_answer_message_a5d5da48c3b7a1274faf67a794477b352}\label{classwrench_1_1_storage_service_file_copy_answer_message_a5d5da48c3b7a1274faf67a794477b352}} 
+\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$ \hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_a5d5da48c3b7a1274faf67a794477b352}{file}
+\begin{DoxyCompactList}\small\item\em The file was was copied, or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_copy_answer_message_ad879a0d25951e7474ac018bf5015d53c}\label{classwrench_1_1_storage_service_file_copy_answer_message_ad879a0d25951e7474ac018bf5015d53c}} 
+\hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$ \hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_ad879a0d25951e7474ac018bf5015d53c}{file\+\_\+registry\+\_\+service}
+\begin{DoxyCompactList}\small\item\em The file registry service that the user had requested be updated, or nullptr if none. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_copy_answer_message_af024699e47c097438ec0425b1ec233a7}\label{classwrench_1_1_storage_service_file_copy_answer_message_af024699e47c097438ec0425b1ec233a7}} 
+bool \hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_af024699e47c097438ec0425b1ec233a7}{file\+\_\+registry\+\_\+service\+\_\+updated}
+\begin{DoxyCompactList}\small\item\em Whether a file registry service has been updated or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_copy_answer_message_aee16bb6721a2cca2bd17660eb69c5ede}\label{classwrench_1_1_storage_service_file_copy_answer_message_aee16bb6721a2cca2bd17660eb69c5ede}} 
+\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$ \hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_aee16bb6721a2cca2bd17660eb69c5ede}{storage\+\_\+service}
+\begin{DoxyCompactList}\small\item\em The storage service that performed the copy (i.\+e., which stored the file) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_copy_answer_message_a30bcbbab083b6517691515877b97633b}\label{classwrench_1_1_storage_service_file_copy_answer_message_a30bcbbab083b6517691515877b97633b}} 
+bool \hyperlink{classwrench_1_1_storage_service_file_copy_answer_message_a30bcbbab083b6517691515877b97633b}{success}
+\begin{DoxyCompactList}\small\item\em Whether the copy was successful. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} in answer to a file copy request. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_copy_answer_message_a6849b485ea05a016cb88e08f0b29748d}\label{classwrench_1_1_storage_service_file_copy_answer_message_a6849b485ea05a016cb88e08f0b29748d}} 
+\index{wrench\+::\+Storage\+Service\+File\+Copy\+Answer\+Message@{wrench\+::\+Storage\+Service\+File\+Copy\+Answer\+Message}!Storage\+Service\+File\+Copy\+Answer\+Message@{Storage\+Service\+File\+Copy\+Answer\+Message}}
+\index{Storage\+Service\+File\+Copy\+Answer\+Message@{Storage\+Service\+File\+Copy\+Answer\+Message}!wrench\+::\+Storage\+Service\+File\+Copy\+Answer\+Message@{wrench\+::\+Storage\+Service\+File\+Copy\+Answer\+Message}}
+\subsubsection{\texorpdfstring{Storage\+Service\+File\+Copy\+Answer\+Message()}{StorageServiceFileCopyAnswerMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Storage\+Service\+File\+Copy\+Answer\+Message\+::\+Storage\+Service\+File\+Copy\+Answer\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$}]{storage\+\_\+service,  }\item[{std\+::string}]{dst\+\_\+partition,  }\item[{\hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} $\ast$}]{file\+\_\+registry\+\_\+service,  }\item[{bool}]{file\+\_\+registry\+\_\+service\+\_\+updated,  }\item[{bool}]{success,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$}]{failure\+\_\+cause,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file \\
+\hline
+{\em src} & the source storage service \\
+\hline
+{\em src\+\_\+partition} & the source partition \\
+\hline
+{\em dst} & the destination storage service \\
+\hline
+{\em dst\+\_\+partition} & the destination partition \\
+\hline
+{\em file\+\_\+registry\+\_\+service} & the file registry service to update (nullptr if none) \\
+\hline
+{\em file\+\_\+registry\+\_\+service\+\_\+updated} & whether the file registry service was updated \\
+\hline
+{\em success} & true on success, false otherwise \\
+\hline
+{\em failure\+\_\+cause} & the cause of a failure (nullptr if success==true) \\
+\hline
+{\em payload} & the message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/Storage\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/Storage\+Service\+Message.\+cpp\end{DoxyCompactItemize}

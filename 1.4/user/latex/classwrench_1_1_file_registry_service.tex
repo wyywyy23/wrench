@@ -1,0 +1,53 @@
+\hypertarget{classwrench_1_1_file_registry_service}{}\section{wrench\+:\+:File\+Registry\+Service Class Reference}
+\label{classwrench_1_1_file_registry_service}\index{wrench\+::\+File\+Registry\+Service@{wrench\+::\+File\+Registry\+Service}}
+
+
+A file registry service (a.\+k.\+a. replica catalog) that holds a database of which files are available at which storage services. More specifically, the database holds a set of $<$file, storage service$>$ entries. A \hyperlink{classwrench_1_1_w_m_s}{W\+MS} can add, lookup, and remove entries at will from this database.  
+
+
+
+
+{\ttfamily \#include $<$File\+Registry\+Service.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:File\+Registry\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classwrench_1_1_file_registry_service}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_file_registry_service_ab5b1061fc26163f291e905c27bdbf114}{File\+Registry\+Service} (std\+::string hostname, std\+::map$<$ std\+::string, std\+::string $>$ property\+\_\+list=\{\}, std\+::map$<$ std\+::string, std\+::string $>$ messagepayload\+\_\+list=\{\})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A file registry service (a.\+k.\+a. replica catalog) that holds a database of which files are available at which storage services. More specifically, the database holds a set of $<$file, storage service$>$ entries. A \hyperlink{classwrench_1_1_w_m_s}{W\+MS} can add, lookup, and remove entries at will from this database. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_file_registry_service_ab5b1061fc26163f291e905c27bdbf114}\label{classwrench_1_1_file_registry_service_ab5b1061fc26163f291e905c27bdbf114}} 
+\index{wrench\+::\+File\+Registry\+Service@{wrench\+::\+File\+Registry\+Service}!File\+Registry\+Service@{File\+Registry\+Service}}
+\index{File\+Registry\+Service@{File\+Registry\+Service}!wrench\+::\+File\+Registry\+Service@{wrench\+::\+File\+Registry\+Service}}
+\subsubsection{\texorpdfstring{File\+Registry\+Service()}{FileRegistryService()}}
+{\footnotesize\ttfamily wrench\+::\+File\+Registry\+Service\+::\+File\+Registry\+Service (\begin{DoxyParamCaption}\item[{std\+::string}]{hostname,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{property\+\_\+list = {\ttfamily \{\}},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{messagepayload\+\_\+list = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the hostname on which to start the service \\
+\hline
+{\em property\+\_\+list} & a property list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+{\em messagepayload\+\_\+list} & a message payload list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/file\+\_\+registry/File\+Registry\+Service.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/file\+\_\+registry/File\+Registry\+Service.\+cpp\end{DoxyCompactItemize}

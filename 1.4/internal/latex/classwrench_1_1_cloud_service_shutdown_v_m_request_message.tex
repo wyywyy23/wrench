@@ -1,0 +1,68 @@
+\hypertarget{classwrench_1_1_cloud_service_shutdown_v_m_request_message}{}\section{wrench\+:\+:Cloud\+Service\+Shutdown\+V\+M\+Request\+Message Class Reference}
+\label{classwrench_1_1_cloud_service_shutdown_v_m_request_message}\index{wrench\+::\+Cloud\+Service\+Shutdown\+V\+M\+Request\+Message@{wrench\+::\+Cloud\+Service\+Shutdown\+V\+M\+Request\+Message}}
+
+
+A message sent to a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} to request a VM shutdown.  
+
+
+
+
+{\ttfamily \#include $<$Cloud\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Cloud\+Service\+Shutdown\+V\+M\+Request\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classwrench_1_1_cloud_service_shutdown_v_m_request_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_cloud_service_shutdown_v_m_request_message_aaab0418486b262131e7a73fa0ef21d8e}{Cloud\+Service\+Shutdown\+V\+M\+Request\+Message} (const std\+::string \&\hyperlink{classwrench_1_1_cloud_service_shutdown_v_m_request_message_af79c7ae3a239735ac51b86a8789d17e3}{answer\+\_\+mailbox}, const std\+::string \&\hyperlink{classwrench_1_1_cloud_service_shutdown_v_m_request_message_a8c7a69388cd9451095a2e1aa96dc4fdb}{vm\+\_\+hostname}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_cloud_service_shutdown_v_m_request_message_af79c7ae3a239735ac51b86a8789d17e3}\label{classwrench_1_1_cloud_service_shutdown_v_m_request_message_af79c7ae3a239735ac51b86a8789d17e3}} 
+std\+::string \hyperlink{classwrench_1_1_cloud_service_shutdown_v_m_request_message_af79c7ae3a239735ac51b86a8789d17e3}{answer\+\_\+mailbox}
+\begin{DoxyCompactList}\small\item\em The mailbox to which the answer message should be sent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_cloud_service_shutdown_v_m_request_message_a8c7a69388cd9451095a2e1aa96dc4fdb}\label{classwrench_1_1_cloud_service_shutdown_v_m_request_message_a8c7a69388cd9451095a2e1aa96dc4fdb}} 
+std\+::string \hyperlink{classwrench_1_1_cloud_service_shutdown_v_m_request_message_a8c7a69388cd9451095a2e1aa96dc4fdb}{vm\+\_\+hostname}
+\begin{DoxyCompactList}\small\item\em The name of the new VM host. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent to a \hyperlink{classwrench_1_1_cloud_service}{Cloud\+Service} to request a VM shutdown. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_cloud_service_shutdown_v_m_request_message_aaab0418486b262131e7a73fa0ef21d8e}\label{classwrench_1_1_cloud_service_shutdown_v_m_request_message_aaab0418486b262131e7a73fa0ef21d8e}} 
+\index{wrench\+::\+Cloud\+Service\+Shutdown\+V\+M\+Request\+Message@{wrench\+::\+Cloud\+Service\+Shutdown\+V\+M\+Request\+Message}!Cloud\+Service\+Shutdown\+V\+M\+Request\+Message@{Cloud\+Service\+Shutdown\+V\+M\+Request\+Message}}
+\index{Cloud\+Service\+Shutdown\+V\+M\+Request\+Message@{Cloud\+Service\+Shutdown\+V\+M\+Request\+Message}!wrench\+::\+Cloud\+Service\+Shutdown\+V\+M\+Request\+Message@{wrench\+::\+Cloud\+Service\+Shutdown\+V\+M\+Request\+Message}}
+\subsubsection{\texorpdfstring{Cloud\+Service\+Shutdown\+V\+M\+Request\+Message()}{CloudServiceShutdownVMRequestMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Cloud\+Service\+Shutdown\+V\+M\+Request\+Message\+::\+Cloud\+Service\+Shutdown\+V\+M\+Request\+Message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{answer\+\_\+mailbox,  }\item[{const std\+::string \&}]{vm\+\_\+hostname,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em answer\+\_\+mailbox} & the mailbox to which to send the answer \\
+\hline
+{\em vm\+\_\+hostname} & the name of the VM host \\
+\hline
+{\em payload} & the message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/cloud/Cloud\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/cloud/Cloud\+Service\+Message.\+cpp\end{DoxyCompactItemize}

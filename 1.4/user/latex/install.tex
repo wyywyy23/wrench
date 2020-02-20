@@ -1,0 +1,111 @@
+User DocumentationOther\+: \href{../developer/install.html}{\tt Developer} -\/ \href{../internal/install.html}{\tt Internal}\hypertarget{install_install-prerequisites}{}\section{Prerequisites}\label{install_install-prerequisites}
+W\+R\+E\+N\+CH is developed in {\ttfamily C++}. The code follows the C++11 standard, and thus older compilers may fail to compile it. Therefore, we strongly recommend users to satisfy the following requirements\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries C\+Make} -\/ version 3.\+2.\+3 or higher
+\end{DoxyItemize}
+
+And, one of the following\+:
+\begin{DoxyItemize}
+\item {\bfseries g++} -\/ version 5.\+0 or higher
+\item {\bfseries clang} -\/ version 3.\+6 or higher
+\end{DoxyItemize}\hypertarget{install_install-prerequisites-dependencies}{}\subsection{Required Dependencies}\label{install_install-prerequisites-dependencies}
+
+\begin{DoxyItemize}
+\item \href{https://simgrid.org/}{\tt Sim\+Grid} -- version 3.\+21
+\item \href{http://lemon.cs.elte.hu/}{\tt Lemon C++ library} -- version 1.\+3.\+1 or higher
+\item \href{http://pugixml.org/}{\tt Pugi\+X\+ML} -- version 1.\+8 or higher
+\item \href{https://github.com/nlohmann/json}{\tt J\+S\+ON for Modern C++} -- version 2.\+1.\+1 or higher
+\end{DoxyItemize}\hypertarget{install_install-prerequisites-opt-dependencies}{}\subsection{Optional Dependencies}\label{install_install-prerequisites-opt-dependencies}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/google/googletest}{\tt Google Test} -- version 1.\+8 or higher (only required for running test cases)
+\item \href{http://www.doxygen.org}{\tt Doxygen} -- version 1.\+8 or higher (only required for generating documentation)
+\item \href{https://gitlab.inria.fr/batsim/batsched}{\tt Batsched} -- only needed for realistic simulation of resource managed by production batch schedulers
+\end{DoxyItemize}\hypertarget{install_install-source}{}\section{Source Install}\label{install_install-source}
+\hypertarget{install_install-source-build}{}\subsection{Building W\+R\+E\+N\+CH}\label{install_install-source-build}
+You can download the {\itshape wrench-\/1.\+4.\+tar.\+gz} archive from the \href{https://github.com/wrench-project/wrench/releases}{\tt Git\+Hub releases} page and install it as follows\+:
+
+
+\begin{DoxyCode}
+tar xf wrench-1.4.tar.gz
+cd wrench-1.4
+cmake .
+make
+make install # try "sudo make install" if you do not have write privileges
+\end{DoxyCode}
+
+
+To enable the use of Batsched (provided you have installed that package, see above)\+: 
+\begin{DoxyCode}
+cmake -DENABLE\_BATSCHED=on .
+\end{DoxyCode}
+
+
+If you want to stay on the bleeding edge, you should get the latest git version, and recompile it as you would do for an official archive\+:
+
+
+\begin{DoxyCode}
+git clone https://github.com/wrench-project/wrench
+\end{DoxyCode}
+\hypertarget{install_install-source-targets}{}\subsection{Existing Compilation Targets}\label{install_install-source-targets}
+In most cases, compiling and installing W\+R\+E\+N\+CH is enough\+:
+
+
+\begin{DoxyCode}
+make
+make install # try "sudo make install" if you do not have write privileges
+\end{DoxyCode}
+
+
+In addition, several compilation targets are provided in W\+R\+E\+N\+CH\+:
+
+
+\begin{DoxyCode}
+make doc               # Builds WRENCH documentation (in the ./docs directory) - Requires Doxygen
+make unit\_tests        # Builds WRENCH unit tests  (run them by typing ./unit\_tests) - Requires Google Test
+\end{DoxyCode}
+
+
+If you want to see actual compiler and linker invocations, add V\+E\+R\+B\+O\+SE=1 to your compilation command\+:
+
+
+\begin{DoxyCode}
+make VERBOSE=1
+\end{DoxyCode}
+\hypertarget{install_install-docker}{}\section{Docker Containers}\label{install_install-docker}
+W\+R\+E\+N\+CH is also distributed in Docker containers. Please, visit the \href{https://hub.docker.com/r/wrenchproject/wrench/}{\tt W\+R\+E\+N\+CH\textquotesingle{}s Repository on Docker Hub} to pull W\+R\+E\+N\+CH\textquotesingle{}s Docker images.
+
+The {\ttfamily latest} tag provides a container with the latest \href{https://github.com/wrench-project/wrench/releases}{\tt W\+R\+E\+N\+CH\textquotesingle{}s release}\+:
+
+
+\begin{DoxyCode}
+docker pull wrenchproject/wrench 
+# or
+docker run -it wrenchproject/wrench /bin/bash
+\end{DoxyCode}
+
+
+The {\ttfamily unstable} tag provides a container with the current code in the Git\+Hub\textquotesingle{}s {\ttfamily master} branch\+:
+
+
+\begin{DoxyCode}
+docker pull wrenchproject/wrench:unstable
+# or
+docker run -it wrenchproject/wrench:unstable /bin/bash
+\end{DoxyCode}
+
+
+Additional tags are available for all W\+R\+E\+N\+CH releases.\hypertarget{install_install-troubleshooting}{}\subsection{Installation Troubleshooting}\label{install_install-troubleshooting}
+\subparagraph*{{\ttfamily Could N\+OT find Pkg\+Config (missing\+: P\+K\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+E\+X\+E\+C\+U\+T\+A\+B\+LE)}}
+
+
+\begin{DoxyItemize}
+\item This error on Mac\+OS is because the {\ttfamily pkg-\/config} package is not installed
+\item Solution\+: install this package
+\begin{DoxyItemize}
+\item Mac\+Ports\+: {\ttfamily sudo port install pkg-\/config}
+\item Brew\+: {\ttfamily sudo brew install pkg-\/config} 
+\end{DoxyItemize}
+\end{DoxyItemize}

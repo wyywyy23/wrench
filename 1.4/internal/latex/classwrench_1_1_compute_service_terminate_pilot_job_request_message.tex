@@ -1,0 +1,68 @@
+\hypertarget{classwrench_1_1_compute_service_terminate_pilot_job_request_message}{}\section{wrench\+:\+:Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message Class Reference}
+\label{classwrench_1_1_compute_service_terminate_pilot_job_request_message}\index{wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message@{wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message}}
+
+
+A message sent to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} to terminate a \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} previously submitted for execution.  
+
+
+
+
+{\ttfamily \#include $<$Compute\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_compute_service_terminate_pilot_job_request_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_request_message_adb7dee68b8ac3adb23f9f756c5ca72cd}{Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message} (std\+::string \hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_request_message_ad4a4be726e0b373411ab2bea6106b6bc}{answer\+\_\+mailbox}, \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} $\ast$, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_terminate_pilot_job_request_message_ad4a4be726e0b373411ab2bea6106b6bc}\label{classwrench_1_1_compute_service_terminate_pilot_job_request_message_ad4a4be726e0b373411ab2bea6106b6bc}} 
+std\+::string \hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_request_message_ad4a4be726e0b373411ab2bea6106b6bc}{answer\+\_\+mailbox}
+\begin{DoxyCompactList}\small\item\em The mailbox to which the answer message should be sent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_service_terminate_pilot_job_request_message_a77ed445925fcff91561ffd6eebe6796b}\label{classwrench_1_1_compute_service_terminate_pilot_job_request_message_a77ed445925fcff91561ffd6eebe6796b}} 
+\hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} $\ast$ \hyperlink{classwrench_1_1_compute_service_terminate_pilot_job_request_message_a77ed445925fcff91561ffd6eebe6796b}{job}
+\begin{DoxyCompactList}\small\item\em The job to terminate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent to a \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} to terminate a \hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} previously submitted for execution. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_compute_service_terminate_pilot_job_request_message_adb7dee68b8ac3adb23f9f756c5ca72cd}\label{classwrench_1_1_compute_service_terminate_pilot_job_request_message_adb7dee68b8ac3adb23f9f756c5ca72cd}} 
+\index{wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message@{wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message}!Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message@{Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message}}
+\index{Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message@{Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message}!wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message@{wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message}}
+\subsubsection{\texorpdfstring{Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message()}{ComputeServiceTerminatePilotJobRequestMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message\+::\+Compute\+Service\+Terminate\+Pilot\+Job\+Request\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{answer\+\_\+mailbox,  }\item[{\hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} $\ast$}]{job,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em answer\+\_\+mailbox} & mailbox to which the answer message should be sent \\
+\hline
+{\em job} & a pilot job whose termination is requested \\
+\hline
+{\em payload} & message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+arguments} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/Compute\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/Compute\+Service\+Message.\+cpp\end{DoxyCompactItemize}

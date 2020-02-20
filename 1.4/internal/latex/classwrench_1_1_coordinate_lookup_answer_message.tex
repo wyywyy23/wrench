@@ -1,0 +1,63 @@
+\hypertarget{classwrench_1_1_coordinate_lookup_answer_message}{}\section{wrench\+:\+:Coordinate\+Lookup\+Answer\+Message Class Reference}
+\label{classwrench_1_1_coordinate_lookup_answer_message}\index{wrench\+::\+Coordinate\+Lookup\+Answer\+Message@{wrench\+::\+Coordinate\+Lookup\+Answer\+Message}}
+
+
+A message sent by a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} in answer to a coordinate lookup request.  
+
+
+
+
+{\ttfamily \#include $<$Network\+Proximity\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Coordinate\+Lookup\+Answer\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_coordinate_lookup_answer_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_coordinate_lookup_answer_message_ad32d9253fbb49913d426fa68285fb90f}{Coordinate\+Lookup\+Answer\+Message} (std\+::string \hyperlink{classwrench_1_1_coordinate_lookup_answer_message_a2df7247a445efa620e8c3a0161109be1}{requested\+\_\+host}, std\+::pair$<$ double, double $>$ \hyperlink{classwrench_1_1_coordinate_lookup_answer_message_acc1e9708cb8c9127d480415ca4d3452e}{xy\+\_\+coordinate}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_coordinate_lookup_answer_message_a2df7247a445efa620e8c3a0161109be1}\label{classwrench_1_1_coordinate_lookup_answer_message_a2df7247a445efa620e8c3a0161109be1}} 
+std\+::string \hyperlink{classwrench_1_1_coordinate_lookup_answer_message_a2df7247a445efa620e8c3a0161109be1}{requested\+\_\+host}
+\begin{DoxyCompactList}\small\item\em The name of the host whose coordinates were requested. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_coordinate_lookup_answer_message_acc1e9708cb8c9127d480415ca4d3452e}\label{classwrench_1_1_coordinate_lookup_answer_message_acc1e9708cb8c9127d480415ca4d3452e}} 
+std\+::pair$<$ double, double $>$ \hyperlink{classwrench_1_1_coordinate_lookup_answer_message_acc1e9708cb8c9127d480415ca4d3452e}{xy\+\_\+coordinate}
+\begin{DoxyCompactList}\small\item\em The current (x,y) coordinates of the requested host. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent by a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} in answer to a coordinate lookup request. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_coordinate_lookup_answer_message_ad32d9253fbb49913d426fa68285fb90f}\label{classwrench_1_1_coordinate_lookup_answer_message_ad32d9253fbb49913d426fa68285fb90f}} 
+\index{wrench\+::\+Coordinate\+Lookup\+Answer\+Message@{wrench\+::\+Coordinate\+Lookup\+Answer\+Message}!Coordinate\+Lookup\+Answer\+Message@{Coordinate\+Lookup\+Answer\+Message}}
+\index{Coordinate\+Lookup\+Answer\+Message@{Coordinate\+Lookup\+Answer\+Message}!wrench\+::\+Coordinate\+Lookup\+Answer\+Message@{wrench\+::\+Coordinate\+Lookup\+Answer\+Message}}
+\subsubsection{\texorpdfstring{Coordinate\+Lookup\+Answer\+Message()}{CoordinateLookupAnswerMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Coordinate\+Lookup\+Answer\+Message\+::\+Coordinate\+Lookup\+Answer\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{requested\+\_\+host,  }\item[{std\+::pair$<$ double, double $>$}]{xy\+\_\+coordinate,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em requested\+\_\+host} & the name of the host whose coordinates are being requested \\
+\hline
+{\em xy\+\_\+coordinate} & the (x,y) coordinate of the host \\
+\hline
+{\em payload} & the message size in bytes \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/network\+\_\+proximity/Network\+Proximity\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/network\+\_\+proximity/Network\+Proximity\+Message.\+cpp\end{DoxyCompactItemize}

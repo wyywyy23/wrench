@@ -1,0 +1,152 @@
+\hypertarget{classwrench_1_1_network_proximity_service}{}\section{wrench\+:\+:Network\+Proximity\+Service Class Reference}
+\label{classwrench_1_1_network_proximity_service}\index{wrench\+::\+Network\+Proximity\+Service@{wrench\+::\+Network\+Proximity\+Service}}
+
+
+A network proximity service that continuously estimates inter-\/host latencies and can be queried for such estimates.  
+
+
+
+
+{\ttfamily \#include $<$Network\+Proximity\+Service.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Network\+Proximity\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classwrench_1_1_network_proximity_service}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_network_proximity_service_a8f7021f0fd9a5a6393fc447652c2371b}{Network\+Proximity\+Service} (std\+::string db\+\_\+hostname, std\+::vector$<$ std\+::string $>$ hosts\+\_\+in\+\_\+network, std\+::map$<$ std\+::string, std\+::string $>$=\{\}, std\+::map$<$ std\+::string, std\+::string $>$=\{\})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_network_proximity_service_adca67c67fb6a683ffc91987c2e4e329a}\label{classwrench_1_1_network_proximity_service_adca67c67fb6a683ffc91987c2e4e329a}} 
+\hyperlink{classwrench_1_1_network_proximity_service_adca67c67fb6a683ffc91987c2e4e329a}{$\sim$\+Network\+Proximity\+Service} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::pair$<$ double, double $>$ \hyperlink{classwrench_1_1_network_proximity_service_af7392b6f906fa758328de9cfa283d1bc}{get\+Coordinate} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Look up the current (x,y) coordinates of a given host (only for a Vivaldi network service type) \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classwrench_1_1_network_proximity_service_a5e3f4189424c2d44db198efb7984e3ef}{get\+Hostname\+List} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of hosts monitored by this service (does not involve simulated network communications with the service) \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classwrench_1_1_network_proximity_service_a3a70bf6b279c431f5f9cffc4207822af}{get\+Network\+Proximity\+Service\+Type} ()
+\begin{DoxyCompactList}\small\item\em Get the network proximity service type. \end{DoxyCompactList}\item 
+double \hyperlink{classwrench_1_1_network_proximity_service_a3fe7aa39935af1eeeccdd18288f88068}{query} (std\+::pair$<$ std\+::string, std\+::string $>$ hosts)
+\begin{DoxyCompactList}\small\item\em Look up a proximity value in database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_network_proximity_service_a80fbe67338515e3277becf635af22534}\label{classwrench_1_1_network_proximity_service_a80fbe67338515e3277becf635af22534}} 
+static constexpr double \hyperlink{classwrench_1_1_network_proximity_service_a80fbe67338515e3277becf635af22534}{N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE} = D\+B\+L\+\_\+\+M\+AX
+\begin{DoxyCompactList}\small\item\em A convenient constant that is returned as a latency between two hosts when no latency estimates are available for this pair of hosts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A network proximity service that continuously estimates inter-\/host latencies and can be queried for such estimates. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_network_proximity_service_a8f7021f0fd9a5a6393fc447652c2371b}\label{classwrench_1_1_network_proximity_service_a8f7021f0fd9a5a6393fc447652c2371b}} 
+\index{wrench\+::\+Network\+Proximity\+Service@{wrench\+::\+Network\+Proximity\+Service}!Network\+Proximity\+Service@{Network\+Proximity\+Service}}
+\index{Network\+Proximity\+Service@{Network\+Proximity\+Service}!wrench\+::\+Network\+Proximity\+Service@{wrench\+::\+Network\+Proximity\+Service}}
+\subsubsection{\texorpdfstring{Network\+Proximity\+Service()}{NetworkProximityService()}}
+{\footnotesize\ttfamily wrench\+::\+Network\+Proximity\+Service\+::\+Network\+Proximity\+Service (\begin{DoxyParamCaption}\item[{std\+::string}]{hostname,  }\item[{std\+::vector$<$ std\+::string $>$}]{hosts\+\_\+in\+\_\+network,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{property\+\_\+list = {\ttfamily \{\}},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{messagepayload\+\_\+list = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the name of the host on which to start the service \\
+\hline
+{\em hosts\+\_\+in\+\_\+network} & the hosts participating in network measurements \\
+\hline
+{\em property\+\_\+list} & a property list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+{\em messagepayload\+\_\+list} & a message payload list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_network_proximity_service_af7392b6f906fa758328de9cfa283d1bc}\label{classwrench_1_1_network_proximity_service_af7392b6f906fa758328de9cfa283d1bc}} 
+\index{wrench\+::\+Network\+Proximity\+Service@{wrench\+::\+Network\+Proximity\+Service}!get\+Coordinate@{get\+Coordinate}}
+\index{get\+Coordinate@{get\+Coordinate}!wrench\+::\+Network\+Proximity\+Service@{wrench\+::\+Network\+Proximity\+Service}}
+\subsubsection{\texorpdfstring{get\+Coordinate()}{getCoordinate()}}
+{\footnotesize\ttfamily std\+::pair$<$ double, double $>$ wrench\+::\+Network\+Proximity\+Service\+::get\+Coordinate (\begin{DoxyParamCaption}\item[{std\+::string}]{requested\+\_\+host }\end{DoxyParamCaption})}
+
+
+
+Look up the current (x,y) coordinates of a given host (only for a Vivaldi network service type) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em requested\+\_\+host} & the host whose coordinates are being requested \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pair (x,y) coordinate values
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Work\+Flow\+Execution\+Exception} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_network_proximity_service_a5e3f4189424c2d44db198efb7984e3ef}\label{classwrench_1_1_network_proximity_service_a5e3f4189424c2d44db198efb7984e3ef}} 
+\index{wrench\+::\+Network\+Proximity\+Service@{wrench\+::\+Network\+Proximity\+Service}!get\+Hostname\+List@{get\+Hostname\+List}}
+\index{get\+Hostname\+List@{get\+Hostname\+List}!wrench\+::\+Network\+Proximity\+Service@{wrench\+::\+Network\+Proximity\+Service}}
+\subsubsection{\texorpdfstring{get\+Hostname\+List()}{getHostnameList()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ wrench\+::\+Network\+Proximity\+Service\+::get\+Hostname\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the list of hosts monitored by this service (does not involve simulated network communications with the service) 
+
+\begin{DoxyReturn}{Returns}
+a list of hostnames 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_network_proximity_service_a3a70bf6b279c431f5f9cffc4207822af}\label{classwrench_1_1_network_proximity_service_a3a70bf6b279c431f5f9cffc4207822af}} 
+\index{wrench\+::\+Network\+Proximity\+Service@{wrench\+::\+Network\+Proximity\+Service}!get\+Network\+Proximity\+Service\+Type@{get\+Network\+Proximity\+Service\+Type}}
+\index{get\+Network\+Proximity\+Service\+Type@{get\+Network\+Proximity\+Service\+Type}!wrench\+::\+Network\+Proximity\+Service@{wrench\+::\+Network\+Proximity\+Service}}
+\subsubsection{\texorpdfstring{get\+Network\+Proximity\+Service\+Type()}{getNetworkProximityServiceType()}}
+{\footnotesize\ttfamily std\+::string wrench\+::\+Network\+Proximity\+Service\+::get\+Network\+Proximity\+Service\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the network proximity service type. 
+
+\begin{DoxyReturn}{Returns}
+a string specifying the network proximity service type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_network_proximity_service_a3fe7aa39935af1eeeccdd18288f88068}\label{classwrench_1_1_network_proximity_service_a3fe7aa39935af1eeeccdd18288f88068}} 
+\index{wrench\+::\+Network\+Proximity\+Service@{wrench\+::\+Network\+Proximity\+Service}!query@{query}}
+\index{query@{query}!wrench\+::\+Network\+Proximity\+Service@{wrench\+::\+Network\+Proximity\+Service}}
+\subsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily double wrench\+::\+Network\+Proximity\+Service\+::query (\begin{DoxyParamCaption}\item[{std\+::pair$<$ std\+::string, std\+::string $>$}]{hosts }\end{DoxyParamCaption})}
+
+
+
+Look up a proximity value in database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hosts} & the pair of hosts whose proxiity is of interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The proximity value between the pair of hosts
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/network\+\_\+proximity/Network\+Proximity\+Service.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/network\+\_\+proximity/Network\+Proximity\+Service.\+cpp\end{DoxyCompactItemize}

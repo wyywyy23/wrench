@@ -1,0 +1,121 @@
+\hypertarget{classwrench_1_1_virtualized_cluster_service}{}\section{wrench\+:\+:Virtualized\+Cluster\+Service Class Reference}
+\label{classwrench_1_1_virtualized_cluster_service}\index{wrench\+::\+Virtualized\+Cluster\+Service@{wrench\+::\+Virtualized\+Cluster\+Service}}
+
+
+A virtualized cluster-\/based compute service.  
+
+
+
+
+{\ttfamily \#include $<$Virtualized\+Cluster\+Service.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Virtualized\+Cluster\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classwrench_1_1_virtualized_cluster_service}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_virtualized_cluster_service_a7be5224d65410f4570ce9f9e9c835bd5}{Virtualized\+Cluster\+Service} (const std\+::string \&hostname, std\+::vector$<$ std\+::string $>$ \&\hyperlink{classwrench_1_1_cloud_service_a8225cae457e491f3f3aad32653910ea0}{execution\+\_\+hosts}, double scratch\+\_\+space\+\_\+size, std\+::map$<$ std\+::string, std\+::string $>$ property\+\_\+list=\{\}, std\+::map$<$ std\+::string, std\+::string $>$ messagepayload\+\_\+list=\{\})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classwrench_1_1_virtualized_cluster_service_afb90d549ca85f41946b155cff49e37ce}{create\+VM} (const std\+::string \&pm\+\_\+hostname, unsigned long num\+\_\+cores=\hyperlink{classwrench_1_1_compute_service_a1160f521623440ad4e0e0823e08a7d22}{Compute\+Service\+::\+A\+L\+L\+\_\+\+C\+O\+R\+ES}, double ram\+\_\+memory=\hyperlink{classwrench_1_1_compute_service_abc4fe0bad59f544b4b34d0e7d4012d44}{Compute\+Service\+::\+A\+L\+L\+\_\+\+R\+AM}, std\+::map$<$ std\+::string, std\+::string $>$ property\+\_\+list=\{\}, std\+::map$<$ std\+::string, std\+::string $>$ messagepayload\+\_\+list=\{\})
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classwrench_1_1_bare_metal_compute_service}{Bare\+Metal\+Compute\+Service} VM on a physical machine. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classwrench_1_1_virtualized_cluster_service_a0a81357e7af9b42bbb7b376c56a90611}{migrate\+VM} (const std\+::string \&vm\+\_\+hostname, const std\+::string \&dest\+\_\+pm\+\_\+hostname)
+\begin{DoxyCompactList}\small\item\em Synchronously migrate a VM to another physical host. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A virtualized cluster-\/based compute service. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_virtualized_cluster_service_a7be5224d65410f4570ce9f9e9c835bd5}\label{classwrench_1_1_virtualized_cluster_service_a7be5224d65410f4570ce9f9e9c835bd5}} 
+\index{wrench\+::\+Virtualized\+Cluster\+Service@{wrench\+::\+Virtualized\+Cluster\+Service}!Virtualized\+Cluster\+Service@{Virtualized\+Cluster\+Service}}
+\index{Virtualized\+Cluster\+Service@{Virtualized\+Cluster\+Service}!wrench\+::\+Virtualized\+Cluster\+Service@{wrench\+::\+Virtualized\+Cluster\+Service}}
+\subsubsection{\texorpdfstring{Virtualized\+Cluster\+Service()}{VirtualizedClusterService()}}
+{\footnotesize\ttfamily wrench\+::\+Virtualized\+Cluster\+Service\+::\+Virtualized\+Cluster\+Service (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{execution\+\_\+hosts,  }\item[{double}]{scratch\+\_\+space\+\_\+size,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{property\+\_\+list = {\ttfamily \{\}},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{messagepayload\+\_\+list = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the name of the hostcreate on which to start the service \\
+\hline
+{\em execution\+\_\+hosts} & the hosts available for running virtual machines \\
+\hline
+{\em scratch\+\_\+space\+\_\+size} & the size for the scratch space of the cloud service \\
+\hline
+{\em property\+\_\+list} & a property list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+{\em messagepayload\+\_\+list} & a message payload list (\{\} means \char`\"{}use all defaults\char`\"{})\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_virtualized_cluster_service_afb90d549ca85f41946b155cff49e37ce}\label{classwrench_1_1_virtualized_cluster_service_afb90d549ca85f41946b155cff49e37ce}} 
+\index{wrench\+::\+Virtualized\+Cluster\+Service@{wrench\+::\+Virtualized\+Cluster\+Service}!create\+VM@{create\+VM}}
+\index{create\+VM@{create\+VM}!wrench\+::\+Virtualized\+Cluster\+Service@{wrench\+::\+Virtualized\+Cluster\+Service}}
+\subsubsection{\texorpdfstring{create\+V\+M()}{createVM()}}
+{\footnotesize\ttfamily std\+::string wrench\+::\+Virtualized\+Cluster\+Service\+::create\+VM (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pm\+\_\+hostname,  }\item[{unsigned long}]{num\+\_\+cores = {\ttfamily \hyperlink{classwrench_1_1_compute_service_a1160f521623440ad4e0e0823e08a7d22}{Compute\+Service\+::\+A\+L\+L\+\_\+\+C\+O\+R\+ES}},  }\item[{double}]{ram\+\_\+memory = {\ttfamily \hyperlink{classwrench_1_1_compute_service_abc4fe0bad59f544b4b34d0e7d4012d44}{Compute\+Service\+::\+A\+L\+L\+\_\+\+R\+AM}},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{property\+\_\+list = {\ttfamily \{\}},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{messagepayload\+\_\+list = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Create a \hyperlink{classwrench_1_1_bare_metal_compute_service}{Bare\+Metal\+Compute\+Service} VM on a physical machine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pm\+\_\+hostname} & the name of the physical machine host \\
+\hline
+{\em num\+\_\+cores} & the number of cores the service can use (use \hyperlink{classwrench_1_1_compute_service_a1160f521623440ad4e0e0823e08a7d22}{Compute\+Service\+::\+A\+L\+L\+\_\+\+C\+O\+R\+ES} to use all cores available on the host) \\
+\hline
+{\em ram\+\_\+memory} & the VM\textquotesingle{}s R\+AM memory capacity (use \hyperlink{classwrench_1_1_compute_service_abc4fe0bad59f544b4b34d0e7d4012d44}{Compute\+Service\+::\+A\+L\+L\+\_\+\+R\+AM} to use all R\+AM available on the host, this can be lead to an out of memory issue) \\
+\hline
+{\em property\+\_\+list} & a property list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+{\em messagepayload\+\_\+list} & a message payload list (\{\} means \char`\"{}use all defaults\char`\"{})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Virtual machine name
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_virtualized_cluster_service_a0a81357e7af9b42bbb7b376c56a90611}\label{classwrench_1_1_virtualized_cluster_service_a0a81357e7af9b42bbb7b376c56a90611}} 
+\index{wrench\+::\+Virtualized\+Cluster\+Service@{wrench\+::\+Virtualized\+Cluster\+Service}!migrate\+VM@{migrate\+VM}}
+\index{migrate\+VM@{migrate\+VM}!wrench\+::\+Virtualized\+Cluster\+Service@{wrench\+::\+Virtualized\+Cluster\+Service}}
+\subsubsection{\texorpdfstring{migrate\+V\+M()}{migrateVM()}}
+{\footnotesize\ttfamily bool wrench\+::\+Virtualized\+Cluster\+Service\+::migrate\+VM (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{vm\+\_\+hostname,  }\item[{const std\+::string \&}]{dest\+\_\+pm\+\_\+hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Synchronously migrate a VM to another physical host. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vm\+\_\+hostname} & virtual machine hostname \\
+\hline
+{\em dest\+\_\+pm\+\_\+hostname} & the name of the destination physical machine host\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the VM was successfully migrated 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/virtualized\+\_\+cluster/Virtualized\+Cluster\+Service.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/virtualized\+\_\+cluster/Virtualized\+Cluster\+Service.\+cpp\end{DoxyCompactItemize}

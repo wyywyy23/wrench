@@ -1,0 +1,167 @@
+\hypertarget{classwrench_1_1_h_t_condor_central_manager_service}{}\section{wrench\+:\+:H\+T\+Condor\+Central\+Manager\+Service Class Reference}
+\label{classwrench_1_1_h_t_condor_central_manager_service}\index{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service@{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service}}
+Inheritance diagram for wrench\+:\+:H\+T\+Condor\+Central\+Manager\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_h_t_condor_central_manager_service}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_h_t_condor_central_manager_service_acc295c6ed3ed9d036d72a41150f4a05a}{H\+T\+Condor\+Central\+Manager\+Service} (const std\+::string \&\hyperlink{classwrench_1_1_s4_u___daemon_a52bc0b9a6cd248310749dac086819f00}{hostname}, std\+::set$<$ \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$$>$ compute\+\_\+resources, std\+::map$<$ std\+::string, std\+::string $>$ \hyperlink{classwrench_1_1_service_a032143b1e2d7296dde9b4ca1e34845ce}{property\+\_\+list}=\{\}, std\+::map$<$ std\+::string, std\+::string $>$ \hyperlink{classwrench_1_1_service_a63865f20c92027ab626ab1347b0099d2}{messagepayload\+\_\+list}=\{\})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_h_t_condor_central_manager_service_a3b956f9e6702d1531595feae39677979}\label{classwrench_1_1_h_t_condor_central_manager_service_a3b956f9e6702d1531595feae39677979}} 
+\hyperlink{classwrench_1_1_h_t_condor_central_manager_service_a3b956f9e6702d1531595feae39677979}{$\sim$\+H\+T\+Condor\+Central\+Manager\+Service} () override
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_h_t_condor_central_manager_service_aa2fb9163f33416d64fe3ab16ac83361e}{submit\+Pilot\+Job} (\hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} $\ast$job, std\+::map$<$ std\+::string, std\+::string $>$ \&service\+\_\+specific\+\_\+arguments) override
+\begin{DoxyCompactList}\small\item\em Asynchronously submit a pilot job to the cloud service. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_h_t_condor_central_manager_service_a13c687548742cb39b6529e63a9b7e6a4}{submit\+Standard\+Job} (\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$job, std\+::map$<$ std\+::string, std\+::string $>$ \&service\+\_\+specific\+\_\+arguments) override
+\begin{DoxyCompactList}\small\item\em Submit a standard job to the H\+T\+Condor service. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_h_t_condor_central_manager_service_a3163566d90392f931fa4b39721a44eb5}{terminate\+Pilot\+Job} (\hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} $\ast$job) override
+\begin{DoxyCompactList}\small\item\em Terminate a pilot job to the compute service. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_h_t_condor_central_manager_service_aa88a7ea5ddd715053c026b94efde25f0}{terminate\+Standard\+Job} (\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$job) override
+\begin{DoxyCompactList}\small\item\em Terminate a standard job to the compute service (virtual) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_h_t_condor_central_manager_service_acc295c6ed3ed9d036d72a41150f4a05a}\label{classwrench_1_1_h_t_condor_central_manager_service_acc295c6ed3ed9d036d72a41150f4a05a}} 
+\index{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service@{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service}!H\+T\+Condor\+Central\+Manager\+Service@{H\+T\+Condor\+Central\+Manager\+Service}}
+\index{H\+T\+Condor\+Central\+Manager\+Service@{H\+T\+Condor\+Central\+Manager\+Service}!wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service@{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service}}
+\subsubsection{\texorpdfstring{H\+T\+Condor\+Central\+Manager\+Service()}{HTCondorCentralManagerService()}}
+{\footnotesize\ttfamily wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service\+::\+H\+T\+Condor\+Central\+Manager\+Service (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{std\+::set$<$ \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} $\ast$$>$}]{compute\+\_\+resources,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{property\+\_\+list = {\ttfamily \{\}},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{messagepayload\+\_\+list = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the hostname on which to start the service \\
+\hline
+{\em compute\+\_\+resources} & a set of compute resources available via the H\+T\+Condor pool \\
+\hline
+{\em property\+\_\+list} & a property list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+{\em messagepayload\+\_\+list} & a message payload list (\{\} means \char`\"{}use all defaults\char`\"{})\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_h_t_condor_central_manager_service_aa2fb9163f33416d64fe3ab16ac83361e}\label{classwrench_1_1_h_t_condor_central_manager_service_aa2fb9163f33416d64fe3ab16ac83361e}} 
+\index{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service@{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service}!submit\+Pilot\+Job@{submit\+Pilot\+Job}}
+\index{submit\+Pilot\+Job@{submit\+Pilot\+Job}!wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service@{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service}}
+\subsubsection{\texorpdfstring{submit\+Pilot\+Job()}{submitPilotJob()}}
+{\footnotesize\ttfamily void wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service\+::submit\+Pilot\+Job (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} $\ast$}]{job,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$ \&}]{service\+\_\+specific\+\_\+args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Asynchronously submit a pilot job to the cloud service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & a pilot job \\
+\hline
+{\em service\+\_\+specific\+\_\+args} & service specific arguments\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}.
+
+\mbox{\Hypertarget{classwrench_1_1_h_t_condor_central_manager_service_a13c687548742cb39b6529e63a9b7e6a4}\label{classwrench_1_1_h_t_condor_central_manager_service_a13c687548742cb39b6529e63a9b7e6a4}} 
+\index{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service@{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service}!submit\+Standard\+Job@{submit\+Standard\+Job}}
+\index{submit\+Standard\+Job@{submit\+Standard\+Job}!wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service@{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service}}
+\subsubsection{\texorpdfstring{submit\+Standard\+Job()}{submitStandardJob()}}
+{\footnotesize\ttfamily void wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service\+::submit\+Standard\+Job (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$}]{job,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$ \&}]{service\+\_\+specific\+\_\+args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Submit a standard job to the H\+T\+Condor service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & a standard job \\
+\hline
+{\em service\+\_\+specific\+\_\+args} & service specific arguments\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classwrench_1_1_workflow_execution_exception}{Workflow\+Execution\+Exception}} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}.
+
+\mbox{\Hypertarget{classwrench_1_1_h_t_condor_central_manager_service_a3163566d90392f931fa4b39721a44eb5}\label{classwrench_1_1_h_t_condor_central_manager_service_a3163566d90392f931fa4b39721a44eb5}} 
+\index{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service@{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service}!terminate\+Pilot\+Job@{terminate\+Pilot\+Job}}
+\index{terminate\+Pilot\+Job@{terminate\+Pilot\+Job}!wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service@{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service}}
+\subsubsection{\texorpdfstring{terminate\+Pilot\+Job()}{terminatePilotJob()}}
+{\footnotesize\ttfamily void wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service\+::terminate\+Pilot\+Job (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_pilot_job}{Pilot\+Job} $\ast$}]{job }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Terminate a pilot job to the compute service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & the job\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}.
+
+\mbox{\Hypertarget{classwrench_1_1_h_t_condor_central_manager_service_aa88a7ea5ddd715053c026b94efde25f0}\label{classwrench_1_1_h_t_condor_central_manager_service_aa88a7ea5ddd715053c026b94efde25f0}} 
+\index{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service@{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service}!terminate\+Standard\+Job@{terminate\+Standard\+Job}}
+\index{terminate\+Standard\+Job@{terminate\+Standard\+Job}!wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service@{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service}}
+\subsubsection{\texorpdfstring{terminate\+Standard\+Job()}{terminateStandardJob()}}
+{\footnotesize\ttfamily void wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service\+::terminate\+Standard\+Job (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_standard_job}{Standard\+Job} $\ast$}]{job }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Terminate a standard job to the compute service (virtual) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & the job\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/htcondor/H\+T\+Condor\+Central\+Manager\+Service.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/htcondor/H\+T\+Condor\+Central\+Manager\+Service.\+cpp\end{DoxyCompactItemize}

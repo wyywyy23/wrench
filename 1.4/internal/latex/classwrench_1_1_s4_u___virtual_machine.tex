@@ -1,0 +1,127 @@
+\hypertarget{classwrench_1_1_s4_u___virtual_machine}{}\section{wrench\+:\+:S4\+U\+\_\+\+Virtual\+Machine Class Reference}
+\label{classwrench_1_1_s4_u___virtual_machine}\index{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine@{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine}}
+
+
+A wrapper for the simgrid\+::s4u\+::\+Virtual\+Machine class.  
+
+
+
+
+{\ttfamily \#include $<$S4\+U\+\_\+\+Virtual\+Machine.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_s4_u___virtual_machine_addac41abb2982e54857a85c0d12c4e31}{S4\+U\+\_\+\+Virtual\+Machine} (const std\+::string \&vm\+\_\+hostname, const std\+::string \&pm\+\_\+hostname, unsigned long num\+\_\+cores, double ram\+\_\+memory)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+simgrid\+::s4u\+::\+Virtual\+Machine $\ast$ \hyperlink{classwrench_1_1_s4_u___virtual_machine_a3ad67f398b7e9d4f29885b2a2e7409f5}{get} ()
+\begin{DoxyCompactList}\small\item\em Get a pointer to the simgrid\+::s4u\+::\+Virtual\+Machine object. \end{DoxyCompactList}\item 
+simgrid\+::s4u\+::\+Host $\ast$ \hyperlink{classwrench_1_1_s4_u___virtual_machine_a6e02ca55b7d380f758381b91ced83dea}{get\+Pm} ()
+\begin{DoxyCompactList}\small\item\em Get a pointer to the physical machine host. \end{DoxyCompactList}\item 
+bool \hyperlink{classwrench_1_1_s4_u___virtual_machine_a5a5f2c45b48758870ac0221fa169ab88}{is\+Running} ()
+\begin{DoxyCompactList}\small\item\em Check whether the VM is running. \end{DoxyCompactList}\item 
+bool \hyperlink{classwrench_1_1_s4_u___virtual_machine_a4da281f4c3fda739d18c5b608c9ef21f}{is\+Suspended} ()
+\begin{DoxyCompactList}\small\item\em Check whether the VM is suspended. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___virtual_machine_acb8717a7a7364f6698400e7b4f0f29a2}\label{classwrench_1_1_s4_u___virtual_machine_acb8717a7a7364f6698400e7b4f0f29a2}} 
+void \hyperlink{classwrench_1_1_s4_u___virtual_machine_acb8717a7a7364f6698400e7b4f0f29a2}{resume} ()
+\begin{DoxyCompactList}\small\item\em Resume the virtual machine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___virtual_machine_a9ac9124fbe6ad1ba3ed7d17bdd8d8e3a}\label{classwrench_1_1_s4_u___virtual_machine_a9ac9124fbe6ad1ba3ed7d17bdd8d8e3a}} 
+void \hyperlink{classwrench_1_1_s4_u___virtual_machine_a9ac9124fbe6ad1ba3ed7d17bdd8d8e3a}{shutdown} ()
+\begin{DoxyCompactList}\small\item\em Shutdown the virtual machine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___virtual_machine_a3e54f3687c452d85fcfd6938ca955eed}\label{classwrench_1_1_s4_u___virtual_machine_a3e54f3687c452d85fcfd6938ca955eed}} 
+void \hyperlink{classwrench_1_1_s4_u___virtual_machine_a3e54f3687c452d85fcfd6938ca955eed}{start} ()
+\begin{DoxyCompactList}\small\item\em Start the virtual machine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___virtual_machine_a5b4d7c796edba0c35cda2ad44ead3275}\label{classwrench_1_1_s4_u___virtual_machine_a5b4d7c796edba0c35cda2ad44ead3275}} 
+void \hyperlink{classwrench_1_1_s4_u___virtual_machine_a5b4d7c796edba0c35cda2ad44ead3275}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop the virtual machine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___virtual_machine_a3f1845104d95c207bd5d69e7bf7e0490}\label{classwrench_1_1_s4_u___virtual_machine_a3f1845104d95c207bd5d69e7bf7e0490}} 
+void \hyperlink{classwrench_1_1_s4_u___virtual_machine_a3f1845104d95c207bd5d69e7bf7e0490}{suspend} ()
+\begin{DoxyCompactList}\small\item\em Suspend the virtual machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A wrapper for the simgrid\+::s4u\+::\+Virtual\+Machine class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___virtual_machine_addac41abb2982e54857a85c0d12c4e31}\label{classwrench_1_1_s4_u___virtual_machine_addac41abb2982e54857a85c0d12c4e31}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine@{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine}!S4\+U\+\_\+\+Virtual\+Machine@{S4\+U\+\_\+\+Virtual\+Machine}}
+\index{S4\+U\+\_\+\+Virtual\+Machine@{S4\+U\+\_\+\+Virtual\+Machine}!wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine@{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine}}
+\subsubsection{\texorpdfstring{S4\+U\+\_\+\+Virtual\+Machine()}{S4U\_VirtualMachine()}}
+{\footnotesize\ttfamily wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine\+::\+S4\+U\+\_\+\+Virtual\+Machine (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{vm\+\_\+hostname,  }\item[{const std\+::string \&}]{pm\+\_\+hostname,  }\item[{unsigned long}]{num\+\_\+cores,  }\item[{double}]{ram\+\_\+memory }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vm\+\_\+hostname} & the name of the VM host \\
+\hline
+{\em pm\+\_\+hostname} & the name of the physical machine host \\
+\hline
+{\em num\+\_\+cores} & the number of cores the VM can use \\
+\hline
+{\em ram\+\_\+memory} & the VM R\+AM memory capacity \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___virtual_machine_a3ad67f398b7e9d4f29885b2a2e7409f5}\label{classwrench_1_1_s4_u___virtual_machine_a3ad67f398b7e9d4f29885b2a2e7409f5}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine@{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine}!get@{get}}
+\index{get@{get}!wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine@{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily simgrid\+::s4u\+::\+Virtual\+Machine $\ast$ wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a pointer to the simgrid\+::s4u\+::\+Virtual\+Machine object. 
+
+\begin{DoxyReturn}{Returns}
+a pointer to the simgrid\+::s4u\+::\+Virtual\+Machine object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___virtual_machine_a6e02ca55b7d380f758381b91ced83dea}\label{classwrench_1_1_s4_u___virtual_machine_a6e02ca55b7d380f758381b91ced83dea}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine@{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine}!get\+Pm@{get\+Pm}}
+\index{get\+Pm@{get\+Pm}!wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine@{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine}}
+\subsubsection{\texorpdfstring{get\+Pm()}{getPm()}}
+{\footnotesize\ttfamily simgrid\+::s4u\+::\+Host $\ast$ wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine\+::get\+Pm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a pointer to the physical machine host. 
+
+\begin{DoxyReturn}{Returns}
+a pointer to the physical machine host 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___virtual_machine_a5a5f2c45b48758870ac0221fa169ab88}\label{classwrench_1_1_s4_u___virtual_machine_a5a5f2c45b48758870ac0221fa169ab88}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine@{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine}!is\+Running@{is\+Running}}
+\index{is\+Running@{is\+Running}!wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine@{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine}}
+\subsubsection{\texorpdfstring{is\+Running()}{isRunning()}}
+{\footnotesize\ttfamily bool wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine\+::is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check whether the VM is running. 
+
+\begin{DoxyReturn}{Returns}
+True if the VM is running, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___virtual_machine_a4da281f4c3fda739d18c5b608c9ef21f}\label{classwrench_1_1_s4_u___virtual_machine_a4da281f4c3fda739d18c5b608c9ef21f}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine@{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine}!is\+Suspended@{is\+Suspended}}
+\index{is\+Suspended@{is\+Suspended}!wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine@{wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine}}
+\subsubsection{\texorpdfstring{is\+Suspended()}{isSuspended()}}
+{\footnotesize\ttfamily bool wrench\+::\+S4\+U\+\_\+\+Virtual\+Machine\+::is\+Suspended (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check whether the VM is suspended. 
+
+\begin{DoxyReturn}{Returns}
+True if the VM is suspended, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/simgrid\+\_\+\+S4\+U\+\_\+util/S4\+U\+\_\+\+Virtual\+Machine.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/simgrid\+\_\+\+S4\+U\+\_\+util/S4\+U\+\_\+\+Virtual\+Machine.\+cpp\end{DoxyCompactItemize}

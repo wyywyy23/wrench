@@ -1,0 +1,68 @@
+\hypertarget{classwrench_1_1_storage_service_file_lookup_answer_message}{}\section{wrench\+:\+:Storage\+Service\+File\+Lookup\+Answer\+Message Class Reference}
+\label{classwrench_1_1_storage_service_file_lookup_answer_message}\index{wrench\+::\+Storage\+Service\+File\+Lookup\+Answer\+Message@{wrench\+::\+Storage\+Service\+File\+Lookup\+Answer\+Message}}
+
+
+A message sent by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} in answer to a file lookup request.  
+
+
+
+
+{\ttfamily \#include $<$Storage\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Storage\+Service\+File\+Lookup\+Answer\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_storage_service_file_lookup_answer_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_storage_service_file_lookup_answer_message_aaff2303ab4bc3b2859a948a55a43ea1f}{Storage\+Service\+File\+Lookup\+Answer\+Message} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$\hyperlink{classwrench_1_1_storage_service_file_lookup_answer_message_aecfa1c0fd28d996275e93ad80becbeb8}{file}, bool \hyperlink{classwrench_1_1_storage_service_file_lookup_answer_message_a707266a9904d1cea4b548a290c0ca432}{file\+\_\+is\+\_\+available}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_lookup_answer_message_aecfa1c0fd28d996275e93ad80becbeb8}\label{classwrench_1_1_storage_service_file_lookup_answer_message_aecfa1c0fd28d996275e93ad80becbeb8}} 
+\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$ \hyperlink{classwrench_1_1_storage_service_file_lookup_answer_message_aecfa1c0fd28d996275e93ad80becbeb8}{file}
+\begin{DoxyCompactList}\small\item\em The file that was looked up. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_lookup_answer_message_a707266a9904d1cea4b548a290c0ca432}\label{classwrench_1_1_storage_service_file_lookup_answer_message_a707266a9904d1cea4b548a290c0ca432}} 
+bool \hyperlink{classwrench_1_1_storage_service_file_lookup_answer_message_a707266a9904d1cea4b548a290c0ca432}{file\+\_\+is\+\_\+available}
+\begin{DoxyCompactList}\small\item\em Whether the file was found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent by a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} in answer to a file lookup request. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_lookup_answer_message_aaff2303ab4bc3b2859a948a55a43ea1f}\label{classwrench_1_1_storage_service_file_lookup_answer_message_aaff2303ab4bc3b2859a948a55a43ea1f}} 
+\index{wrench\+::\+Storage\+Service\+File\+Lookup\+Answer\+Message@{wrench\+::\+Storage\+Service\+File\+Lookup\+Answer\+Message}!Storage\+Service\+File\+Lookup\+Answer\+Message@{Storage\+Service\+File\+Lookup\+Answer\+Message}}
+\index{Storage\+Service\+File\+Lookup\+Answer\+Message@{Storage\+Service\+File\+Lookup\+Answer\+Message}!wrench\+::\+Storage\+Service\+File\+Lookup\+Answer\+Message@{wrench\+::\+Storage\+Service\+File\+Lookup\+Answer\+Message}}
+\subsubsection{\texorpdfstring{Storage\+Service\+File\+Lookup\+Answer\+Message()}{StorageServiceFileLookupAnswerMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Storage\+Service\+File\+Lookup\+Answer\+Message\+::\+Storage\+Service\+File\+Lookup\+Answer\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{bool}]{file\+\_\+is\+\_\+available,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file \\
+\hline
+{\em file\+\_\+is\+\_\+available} & true if the file is available on the storage system \\
+\hline
+{\em payload} & the message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/Storage\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/Storage\+Service\+Message.\+cpp\end{DoxyCompactItemize}

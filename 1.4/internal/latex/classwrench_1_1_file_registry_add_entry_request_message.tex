@@ -1,0 +1,68 @@
+\hypertarget{classwrench_1_1_file_registry_add_entry_request_message}{}\section{wrench\+:\+:File\+Registry\+Add\+Entry\+Request\+Message Class Reference}
+\label{classwrench_1_1_file_registry_add_entry_request_message}\index{wrench\+::\+File\+Registry\+Add\+Entry\+Request\+Message@{wrench\+::\+File\+Registry\+Add\+Entry\+Request\+Message}}
+
+
+A message sent to a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} to request the addition of an entry.  
+
+
+
+
+{\ttfamily \#include $<$File\+Registry\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:File\+Registry\+Add\+Entry\+Request\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_file_registry_add_entry_request_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_file_registry_add_entry_request_message_acb73050f3fee20e307faa2dee407dbca}{File\+Registry\+Add\+Entry\+Request\+Message} (std\+::string \hyperlink{classwrench_1_1_file_registry_add_entry_request_message_ad5f93da91104c2d9ce91ae6c1bc12cb6}{answer\+\_\+mailbox}, \hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$\hyperlink{classwrench_1_1_file_registry_add_entry_request_message_a852df55c4319cd183e92e68590fc6975}{file}, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$\hyperlink{classwrench_1_1_file_registry_add_entry_request_message_a97af80a03ee957c5961c3f40b9da42a5}{storage\+\_\+service}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_file_registry_add_entry_request_message_ad5f93da91104c2d9ce91ae6c1bc12cb6}\label{classwrench_1_1_file_registry_add_entry_request_message_ad5f93da91104c2d9ce91ae6c1bc12cb6}} 
+std\+::string \hyperlink{classwrench_1_1_file_registry_add_entry_request_message_ad5f93da91104c2d9ce91ae6c1bc12cb6}{answer\+\_\+mailbox}
+\begin{DoxyCompactList}\small\item\em The mailbox to which the answer message should be sent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_file_registry_add_entry_request_message_a852df55c4319cd183e92e68590fc6975}\label{classwrench_1_1_file_registry_add_entry_request_message_a852df55c4319cd183e92e68590fc6975}} 
+\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$ \hyperlink{classwrench_1_1_file_registry_add_entry_request_message_a852df55c4319cd183e92e68590fc6975}{file}
+\begin{DoxyCompactList}\small\item\em The file for which to add an entry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_file_registry_add_entry_request_message_a97af80a03ee957c5961c3f40b9da42a5}\label{classwrench_1_1_file_registry_add_entry_request_message_a97af80a03ee957c5961c3f40b9da42a5}} 
+\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$ \hyperlink{classwrench_1_1_file_registry_add_entry_request_message_a97af80a03ee957c5961c3f40b9da42a5}{storage\+\_\+service}
+\begin{DoxyCompactList}\small\item\em The storage service in that entry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent to a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} to request the addition of an entry. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_file_registry_add_entry_request_message_acb73050f3fee20e307faa2dee407dbca}\label{classwrench_1_1_file_registry_add_entry_request_message_acb73050f3fee20e307faa2dee407dbca}} 
+\index{wrench\+::\+File\+Registry\+Add\+Entry\+Request\+Message@{wrench\+::\+File\+Registry\+Add\+Entry\+Request\+Message}!File\+Registry\+Add\+Entry\+Request\+Message@{File\+Registry\+Add\+Entry\+Request\+Message}}
+\index{File\+Registry\+Add\+Entry\+Request\+Message@{File\+Registry\+Add\+Entry\+Request\+Message}!wrench\+::\+File\+Registry\+Add\+Entry\+Request\+Message@{wrench\+::\+File\+Registry\+Add\+Entry\+Request\+Message}}
+\subsubsection{\texorpdfstring{File\+Registry\+Add\+Entry\+Request\+Message()}{FileRegistryAddEntryRequestMessage()}}
+{\footnotesize\ttfamily wrench\+::\+File\+Registry\+Add\+Entry\+Request\+Message\+::\+File\+Registry\+Add\+Entry\+Request\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{answer\+\_\+mailbox,  }\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{\hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$}]{storage\+\_\+service,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em answer\+\_\+mailbox} & the mailbox to which the answer message should be sent \\
+\hline
+{\em file} & the file for which an entry should be added \\
+\hline
+{\em storage\+\_\+service} & the storage service in that entry \\
+\hline
+{\em payload} & the message size in bytes \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/file\+\_\+registry/File\+Registry\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/file\+\_\+registry/File\+Registry\+Message.\+cpp\end{DoxyCompactItemize}

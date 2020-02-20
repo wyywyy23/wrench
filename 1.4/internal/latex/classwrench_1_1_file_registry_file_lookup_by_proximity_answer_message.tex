@@ -1,0 +1,68 @@
+\hypertarget{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message}{}\section{wrench\+:\+:File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message Class Reference}
+\label{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message}\index{wrench\+::\+File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message@{wrench\+::\+File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message}}
+
+
+A message sent by a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} in answer to a file lookup request, in which file locations are sorted by decreasing proximity to some reference host.  
+
+
+
+
+{\ttfamily \#include $<$File\+Registry\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_adf913dc2c9cbc469a5cd57f149259a77}{File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message} (\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$\hyperlink{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_af2715215a2126aef33bc74809d61fc54}{file}, std\+::string \hyperlink{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_a91a458a389b51fc43095d72305223b1a}{reference\+\_\+host}, std\+::map$<$ double, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$$>$ \hyperlink{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_afd27d56abf5c464405ec7cbb26af69a2}{locations}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_af2715215a2126aef33bc74809d61fc54}\label{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_af2715215a2126aef33bc74809d61fc54}} 
+\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$ \hyperlink{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_af2715215a2126aef33bc74809d61fc54}{file}
+\begin{DoxyCompactList}\small\item\em The file to lookup. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_afd27d56abf5c464405ec7cbb26af69a2}\label{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_afd27d56abf5c464405ec7cbb26af69a2}} 
+std\+::map$<$ double, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$ $>$ \hyperlink{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_afd27d56abf5c464405ec7cbb26af69a2}{locations}
+\begin{DoxyCompactList}\small\item\em A map of all locations where the file resides sorted with respect to their distance from the host \textquotesingle{}host\+\_\+to\+\_\+measure\+\_\+from\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_a91a458a389b51fc43095d72305223b1a}\label{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_a91a458a389b51fc43095d72305223b1a}} 
+std\+::string \hyperlink{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_a91a458a389b51fc43095d72305223b1a}{reference\+\_\+host}
+\begin{DoxyCompactList}\small\item\em The host from which network proximity will be measured from. If \textquotesingle{}host\+\_\+to\+\_\+measure\+\_\+from\textquotesingle{} is host \textquotesingle{}A\textquotesingle{}, and the workflow file resides at hosts \textquotesingle{}B\textquotesingle{} and \textquotesingle{}C\textquotesingle{}, then the proximity will be computed between hosts \textquotesingle{}A\textquotesingle{} and \textquotesingle{}B\textquotesingle{}, and hosts \textquotesingle{}A\textquotesingle{} and \textquotesingle{}C\textquotesingle{} so that the locations of the workflow file may be sorted with respect to their current network proximity value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent by a \hyperlink{classwrench_1_1_file_registry_service}{File\+Registry\+Service} in answer to a file lookup request, in which file locations are sorted by decreasing proximity to some reference host. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_adf913dc2c9cbc469a5cd57f149259a77}\label{classwrench_1_1_file_registry_file_lookup_by_proximity_answer_message_adf913dc2c9cbc469a5cd57f149259a77}} 
+\index{wrench\+::\+File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message@{wrench\+::\+File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message}!File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message@{File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message}}
+\index{File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message@{File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message}!wrench\+::\+File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message@{wrench\+::\+File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message}}
+\subsubsection{\texorpdfstring{File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message()}{FileRegistryFileLookupByProximityAnswerMessage()}}
+{\footnotesize\ttfamily wrench\+::\+File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message\+::\+File\+Registry\+File\+Lookup\+By\+Proximity\+Answer\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{std\+::string}]{reference\+\_\+host,  }\item[{std\+::map$<$ double, \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} $\ast$$>$}]{locations,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file to look up \\
+\hline
+{\em reference\+\_\+host} & the host from which network proximity will be calculated from // \\
+\hline
+{\em locations} & the map of locations at which the file resides in ascending order with respect to their distance (network proximity) from \textquotesingle{}reference\+\_\+host\textquotesingle{} \\
+\hline
+{\em payload} & the message size in bytes \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/file\+\_\+registry/File\+Registry\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/file\+\_\+registry/File\+Registry\+Message.\+cpp\end{DoxyCompactItemize}

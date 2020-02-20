@@ -1,0 +1,71 @@
+\hypertarget{classwrench_1_1_storage_service_file_write_request_message}{}\section{wrench\+:\+:Storage\+Service\+File\+Write\+Request\+Message Class Reference}
+\label{classwrench_1_1_storage_service_file_write_request_message}\index{wrench\+::\+Storage\+Service\+File\+Write\+Request\+Message@{wrench\+::\+Storage\+Service\+File\+Write\+Request\+Message}}
+
+
+A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to write a file.  
+
+
+
+
+{\ttfamily \#include $<$Storage\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Storage\+Service\+File\+Write\+Request\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_storage_service_file_write_request_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_storage_service_file_write_request_message_a767efd7e4caab4b9e3d74592a1869f36}{Storage\+Service\+File\+Write\+Request\+Message} (std\+::string \hyperlink{classwrench_1_1_storage_service_file_write_request_message_aa09f6fbead99443ef62fa13a6f797412}{answer\+\_\+mailbox}, \hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$\hyperlink{classwrench_1_1_storage_service_file_write_request_message_a1e7b3431bbb6d82daeba75fd44eb84ed}{file}, std\+::string \&\hyperlink{classwrench_1_1_storage_service_file_write_request_message_a773acda112ce5b0e9740a2471da7d470}{dst\+\_\+partition}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_write_request_message_aa09f6fbead99443ef62fa13a6f797412}\label{classwrench_1_1_storage_service_file_write_request_message_aa09f6fbead99443ef62fa13a6f797412}} 
+std\+::string \hyperlink{classwrench_1_1_storage_service_file_write_request_message_aa09f6fbead99443ef62fa13a6f797412}{answer\+\_\+mailbox}
+\begin{DoxyCompactList}\small\item\em Mailbox to which the answer message should be sent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_write_request_message_a773acda112ce5b0e9740a2471da7d470}\label{classwrench_1_1_storage_service_file_write_request_message_a773acda112ce5b0e9740a2471da7d470}} 
+std\+::string \hyperlink{classwrench_1_1_storage_service_file_write_request_message_a773acda112ce5b0e9740a2471da7d470}{dst\+\_\+partition}
+\begin{DoxyCompactList}\small\item\em The file partition to write the file to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_write_request_message_a1e7b3431bbb6d82daeba75fd44eb84ed}\label{classwrench_1_1_storage_service_file_write_request_message_a1e7b3431bbb6d82daeba75fd44eb84ed}} 
+\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$ \hyperlink{classwrench_1_1_storage_service_file_write_request_message_a1e7b3431bbb6d82daeba75fd44eb84ed}{file}
+\begin{DoxyCompactList}\small\item\em The file to write. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to write a file. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_write_request_message_a767efd7e4caab4b9e3d74592a1869f36}\label{classwrench_1_1_storage_service_file_write_request_message_a767efd7e4caab4b9e3d74592a1869f36}} 
+\index{wrench\+::\+Storage\+Service\+File\+Write\+Request\+Message@{wrench\+::\+Storage\+Service\+File\+Write\+Request\+Message}!Storage\+Service\+File\+Write\+Request\+Message@{Storage\+Service\+File\+Write\+Request\+Message}}
+\index{Storage\+Service\+File\+Write\+Request\+Message@{Storage\+Service\+File\+Write\+Request\+Message}!wrench\+::\+Storage\+Service\+File\+Write\+Request\+Message@{wrench\+::\+Storage\+Service\+File\+Write\+Request\+Message}}
+\subsubsection{\texorpdfstring{Storage\+Service\+File\+Write\+Request\+Message()}{StorageServiceFileWriteRequestMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Storage\+Service\+File\+Write\+Request\+Message\+::\+Storage\+Service\+File\+Write\+Request\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{answer\+\_\+mailbox,  }\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{std\+::string \&}]{dst\+\_\+partition,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em answer\+\_\+mailbox} & the mailbox to which to send the answer \\
+\hline
+{\em file} & the file \\
+\hline
+{\em payload} & the message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/Storage\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/Storage\+Service\+Message.\+cpp\end{DoxyCompactItemize}

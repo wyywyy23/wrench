@@ -1,0 +1,561 @@
+\hypertarget{classwrench_1_1_s4_u___simulation}{}\section{wrench\+:\+:S4\+U\+\_\+\+Simulation Class Reference}
+\label{classwrench_1_1_s4_u___simulation}\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+
+
+Wrappers around S4U\textquotesingle{}s basic simulation methods.  
+
+
+
+
+{\ttfamily \#include $<$S4\+U\+\_\+\+Simulation.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classwrench_1_1_s4_u___simulation_a72770be3bff81efae817e322b8b228d6}{get\+All\+Hostnames} ()
+\begin{DoxyCompactList}\small\item\em Get the list of hostnames. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_s4_u___simulation_a70b123a78f90e8e1f432111c3ce93929}{initialize} (int $\ast$argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Initialize the Simgrid simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{classwrench_1_1_s4_u___simulation_a0139f6818fee5e36c1ac3cc18c417be7}{is\+Initialized} ()
+\begin{DoxyCompactList}\small\item\em Returns true if \hyperlink{classwrench_1_1_s4_u___simulation_a70b123a78f90e8e1f432111c3ce93929}{S4\+U\+\_\+\+Simulation\+::initialize()} has been called successfully previously. \end{DoxyCompactList}\item 
+bool \hyperlink{classwrench_1_1_s4_u___simulation_a43730166b317647c4af355ebce2de5fc}{is\+Platform\+Setup} ()
+\begin{DoxyCompactList}\small\item\em Returns true if \hyperlink{classwrench_1_1_s4_u___simulation_a787dce31d634da739172a9f0fb0e8e30}{S4\+U\+\_\+\+Simulation\+::setup\+Platform()} has been called successfully previously. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_s4_u___simulation_a7658128602b3a342bc0daecff9459f36}{run\+Simulation} ()
+\begin{DoxyCompactList}\small\item\em Start the simulation. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_s4_u___simulation_a787dce31d634da739172a9f0fb0e8e30}{setup\+Platform} (std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Initialize the simulated platform. Must only be called once. Due to the current Sim\+Grid implementation, if the file is not readable or not correctly formatted, this method will call exit() instead of throwing an exception. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_ab47a352ab32ee542413ed04255f0f6fc}\label{classwrench_1_1_s4_u___simulation_ab47a352ab32ee542413ed04255f0f6fc}} 
+void \hyperlink{classwrench_1_1_s4_u___simulation_ab47a352ab32ee542413ed04255f0f6fc}{shutdown} ()
+\begin{DoxyCompactList}\small\item\em Shutdown the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classwrench_1_1_s4_u___simulation_a3be8d3823b30b2b7ebb27771a8baa0cd}{compute} (double)
+\begin{DoxyCompactList}\small\item\em Simulates a computation on host on which the calling actor is running. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a5c4aa7aa025722d5f5b8bae6338066f0}\label{classwrench_1_1_s4_u___simulation_a5c4aa7aa025722d5f5b8bae6338066f0}} 
+static void \hyperlink{classwrench_1_1_s4_u___simulation_a5c4aa7aa025722d5f5b8bae6338066f0}{compute\+Zero\+Flop} ()
+\begin{DoxyCompactList}\small\item\em Compute zero flop, which take zero time but will block if the host\textquotesingle{}s pstate has a zero flop/sec speed, until the host\textquotesingle{}s pstate is changed to a pstate with non-\/zero flop/sec speed. \end{DoxyCompactList}\item 
+static std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \hyperlink{classwrench_1_1_s4_u___simulation_a9f45613070010a4d280b1a37af4c5061}{get\+All\+Hostnames\+By\+Cluster} ()
+\begin{DoxyCompactList}\small\item\em Get the by-\/cluster structure of the platform. \end{DoxyCompactList}\item 
+static double \hyperlink{classwrench_1_1_s4_u___simulation_aa6e86b42e87be87991c1e5bdf1a90a55}{get\+Clock} ()
+\begin{DoxyCompactList}\small\item\em Get the current simulation date. \end{DoxyCompactList}\item 
+static int \hyperlink{classwrench_1_1_s4_u___simulation_a203b09c00201a4d4501c25df69c2aca5}{get\+Current\+Pstate} (const std\+::string \&hostname)
+\begin{DoxyCompactList}\small\item\em Get the current power state of a host. \end{DoxyCompactList}\item 
+static double \hyperlink{classwrench_1_1_s4_u___simulation_a88c0d6933d98a0c3330f62139ac9f6d5}{get\+Energy\+Consumed\+By\+Host} (const std\+::string \&hostname)
+\begin{DoxyCompactList}\small\item\em Get the energy consumed by the host up to now. \end{DoxyCompactList}\item 
+static double \hyperlink{classwrench_1_1_s4_u___simulation_a37ddab7be97c813bcf5e02bd512cd519}{get\+Flop\+Rate} ()
+\begin{DoxyCompactList}\small\item\em Get the flop rate of the current host. \end{DoxyCompactList}\item 
+static double \hyperlink{classwrench_1_1_s4_u___simulation_a6ced6004e86834c5f89f553a17d8cb64}{get\+Host\+Flop\+Rate} (std\+::string hostname)
+\begin{DoxyCompactList}\small\item\em Get the flop rate of a host. \end{DoxyCompactList}\item 
+static double \hyperlink{classwrench_1_1_s4_u___simulation_a5619ac678a185fd7031d6f13d7ec463a}{get\+Host\+Memory\+Capacity} (std\+::string hostname)
+\begin{DoxyCompactList}\small\item\em Get the memory capacity of a host given a hostname. \end{DoxyCompactList}\item 
+static std\+::string \hyperlink{classwrench_1_1_s4_u___simulation_aa79d6550a2d924c37f6f58533d15518e}{get\+Host\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the hostname on which the calling actor is running. \end{DoxyCompactList}\item 
+static unsigned int \hyperlink{classwrench_1_1_s4_u___simulation_a1f64ef3a7e311e360ce7581e051b58fd}{get\+Host\+Num\+Cores} (std\+::string hostname)
+\begin{DoxyCompactList}\small\item\em Get the number of cores of a host. \end{DoxyCompactList}\item 
+static std\+::string \hyperlink{classwrench_1_1_s4_u___simulation_a5321cc7b90ea82a95357695cad1b8370}{get\+Host\+Property} (std\+::string hostname, std\+::string property\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get the property associated to the host specified in the platform file. \end{DoxyCompactList}\item 
+static std\+::vector$<$ int $>$ \hyperlink{classwrench_1_1_s4_u___simulation_a9b077f7a49a17ff009891dce42910b48}{get\+List\+Of\+Pstates} (const std\+::string \&hostname)
+\begin{DoxyCompactList}\small\item\em Get the list of power states available for a host. \end{DoxyCompactList}\item 
+static double \hyperlink{classwrench_1_1_s4_u___simulation_a386ca90dcf205eb01fd145f837dbe153}{get\+Max\+Power\+Consumption} (const std\+::string \&hostname)
+\begin{DoxyCompactList}\small\item\em Get the maximum power consumption (i.\+e., 100\% load) for a host at its current pstate. \end{DoxyCompactList}\item 
+static double \hyperlink{classwrench_1_1_s4_u___simulation_a3336a395e2463b4fcfd921d9fec190f9}{get\+Memory\+Capacity} ()
+\begin{DoxyCompactList}\small\item\em Get the memory capacity of the current host. \end{DoxyCompactList}\item 
+static double \hyperlink{classwrench_1_1_s4_u___simulation_a833e019cc24b6e8d99446211d4061b13}{get\+Min\+Power\+Consumption} (const std\+::string \&hostname)
+\begin{DoxyCompactList}\small\item\em Get the minimum power consumption (i.\+e., idling) for a host at its current pstate. \end{DoxyCompactList}\item 
+static int \hyperlink{classwrench_1_1_s4_u___simulation_ae3ad786868ba97b98e4414c521eefabf}{get\+Numberof\+Pstates} (const std\+::string \&hostname)
+\begin{DoxyCompactList}\small\item\em Get the total number of power states of a host. \end{DoxyCompactList}\item 
+static double \hyperlink{classwrench_1_1_s4_u___simulation_a159cc9630614cf8143e5131c3d38a2ed}{get\+Total\+Energy\+Consumed} (const std\+::vector$<$ std\+::string $>$ \&hostnames)
+\begin{DoxyCompactList}\small\item\em Get the total energy consumed by a set of hosts. \end{DoxyCompactList}\item 
+static bool \hyperlink{classwrench_1_1_s4_u___simulation_a64a1b7d70b4b0b5965b304d379b4a19d}{host\+Exists} (std\+::string hostname)
+\begin{DoxyCompactList}\small\item\em Determines whether a host exists for a given hostname. \end{DoxyCompactList}\item 
+static void \hyperlink{classwrench_1_1_s4_u___simulation_a8ee21fa866cf3bd222e2cbcf27b6d340}{set\+Pstate} (const std\+::string \&hostname, int pstate)
+\begin{DoxyCompactList}\small\item\em Set the power state of the host. \end{DoxyCompactList}\item 
+static void \hyperlink{classwrench_1_1_s4_u___simulation_af93ef50da20f860de80212a3cff1cfdb}{sleep} (double)
+\begin{DoxyCompactList}\small\item\em Simulates a sleep. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wrappers around S4U\textquotesingle{}s basic simulation methods. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a3be8d3823b30b2b7ebb27771a8baa0cd}\label{classwrench_1_1_s4_u___simulation_a3be8d3823b30b2b7ebb27771a8baa0cd}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!compute@{compute}}
+\index{compute@{compute}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily void wrench\+::\+S4\+U\+\_\+\+Simulation\+::compute (\begin{DoxyParamCaption}\item[{double}]{flops }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Simulates a computation on host on which the calling actor is running. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flops} & the number of flops \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::shared\+\_\+ptr$<$\+Host\+Error$>$} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a72770be3bff81efae817e322b8b228d6}\label{classwrench_1_1_s4_u___simulation_a72770be3bff81efae817e322b8b228d6}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+All\+Hostnames@{get\+All\+Hostnames}}
+\index{get\+All\+Hostnames@{get\+All\+Hostnames}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+All\+Hostnames()}{getAllHostnames()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+All\+Hostnames (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the list of hostnames. 
+
+\begin{DoxyReturn}{Returns}
+a vector of hostnames 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a9f45613070010a4d280b1a37af4c5061}\label{classwrench_1_1_s4_u___simulation_a9f45613070010a4d280b1a37af4c5061}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+All\+Hostnames\+By\+Cluster@{get\+All\+Hostnames\+By\+Cluster}}
+\index{get\+All\+Hostnames\+By\+Cluster@{get\+All\+Hostnames\+By\+Cluster}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+All\+Hostnames\+By\+Cluster()}{getAllHostnamesByCluster()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+All\+Hostnames\+By\+Cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the by-\/cluster structure of the platform. 
+
+\begin{DoxyReturn}{Returns}
+a map of all cluster names and their associated hostname list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_aa6e86b42e87be87991c1e5bdf1a90a55}\label{classwrench_1_1_s4_u___simulation_aa6e86b42e87be87991c1e5bdf1a90a55}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Clock@{get\+Clock}}
+\index{get\+Clock@{get\+Clock}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Clock()}{getClock()}}
+{\footnotesize\ttfamily double wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current simulation date. 
+
+\begin{DoxyReturn}{Returns}
+the simulation clock 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a203b09c00201a4d4501c25df69c2aca5}\label{classwrench_1_1_s4_u___simulation_a203b09c00201a4d4501c25df69c2aca5}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Current\+Pstate@{get\+Current\+Pstate}}
+\index{get\+Current\+Pstate@{get\+Current\+Pstate}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Current\+Pstate()}{getCurrentPstate()}}
+{\footnotesize\ttfamily int wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Current\+Pstate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current power state of a host. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the host name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the current pstate of the host (as specified in the platform xml description file) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a88c0d6933d98a0c3330f62139ac9f6d5}\label{classwrench_1_1_s4_u___simulation_a88c0d6933d98a0c3330f62139ac9f6d5}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Energy\+Consumed\+By\+Host@{get\+Energy\+Consumed\+By\+Host}}
+\index{get\+Energy\+Consumed\+By\+Host@{get\+Energy\+Consumed\+By\+Host}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Energy\+Consumed\+By\+Host()}{getEnergyConsumedByHost()}}
+{\footnotesize\ttfamily double wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Energy\+Consumed\+By\+Host (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the energy consumed by the host up to now. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the host name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the energy consumed by the host in Joules 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a37ddab7be97c813bcf5e02bd512cd519}\label{classwrench_1_1_s4_u___simulation_a37ddab7be97c813bcf5e02bd512cd519}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Flop\+Rate@{get\+Flop\+Rate}}
+\index{get\+Flop\+Rate@{get\+Flop\+Rate}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Flop\+Rate()}{getFlopRate()}}
+{\footnotesize\ttfamily double wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Flop\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the flop rate of the current host. 
+
+\begin{DoxyReturn}{Returns}
+the flop rate in floating point operations per second
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a6ced6004e86834c5f89f553a17d8cb64}\label{classwrench_1_1_s4_u___simulation_a6ced6004e86834c5f89f553a17d8cb64}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Host\+Flop\+Rate@{get\+Host\+Flop\+Rate}}
+\index{get\+Host\+Flop\+Rate@{get\+Host\+Flop\+Rate}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Host\+Flop\+Rate()}{getHostFlopRate()}}
+{\footnotesize\ttfamily double wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Host\+Flop\+Rate (\begin{DoxyParamCaption}\item[{std\+::string}]{hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the flop rate of a host. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the name of the host \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the flop rate in floating point operations per second
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a5619ac678a185fd7031d6f13d7ec463a}\label{classwrench_1_1_s4_u___simulation_a5619ac678a185fd7031d6f13d7ec463a}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Host\+Memory\+Capacity@{get\+Host\+Memory\+Capacity}}
+\index{get\+Host\+Memory\+Capacity@{get\+Host\+Memory\+Capacity}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Host\+Memory\+Capacity()}{getHostMemoryCapacity()}}
+{\footnotesize\ttfamily double wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Host\+Memory\+Capacity (\begin{DoxyParamCaption}\item[{std\+::string}]{hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the memory capacity of a host given a hostname. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the name of the host \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a memory capacity in bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_aa79d6550a2d924c37f6f58533d15518e}\label{classwrench_1_1_s4_u___simulation_aa79d6550a2d924c37f6f58533d15518e}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Host\+Name@{get\+Host\+Name}}
+\index{get\+Host\+Name@{get\+Host\+Name}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Host\+Name()}{getHostName()}}
+{\footnotesize\ttfamily std\+::string wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Host\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the hostname on which the calling actor is running. 
+
+\begin{DoxyReturn}{Returns}
+the hostname as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a1f64ef3a7e311e360ce7581e051b58fd}\label{classwrench_1_1_s4_u___simulation_a1f64ef3a7e311e360ce7581e051b58fd}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Host\+Num\+Cores@{get\+Host\+Num\+Cores}}
+\index{get\+Host\+Num\+Cores@{get\+Host\+Num\+Cores}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Host\+Num\+Cores()}{getHostNumCores()}}
+{\footnotesize\ttfamily unsigned int wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Host\+Num\+Cores (\begin{DoxyParamCaption}\item[{std\+::string}]{hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the number of cores of a host. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the name of the host \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of cores of the host
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a5321cc7b90ea82a95357695cad1b8370}\label{classwrench_1_1_s4_u___simulation_a5321cc7b90ea82a95357695cad1b8370}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Host\+Property@{get\+Host\+Property}}
+\index{get\+Host\+Property@{get\+Host\+Property}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Host\+Property()}{getHostProperty()}}
+{\footnotesize\ttfamily std\+::string wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Host\+Property (\begin{DoxyParamCaption}\item[{std\+::string}]{hostname,  }\item[{std\+::string}]{property\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the property associated to the host specified in the platform file. 
+
+\begin{DoxyReturn}{Returns}
+a string relating to the property specified in the platform file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a9b077f7a49a17ff009891dce42910b48}\label{classwrench_1_1_s4_u___simulation_a9b077f7a49a17ff009891dce42910b48}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+List\+Of\+Pstates@{get\+List\+Of\+Pstates}}
+\index{get\+List\+Of\+Pstates@{get\+List\+Of\+Pstates}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+List\+Of\+Pstates()}{getListOfPstates()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+List\+Of\+Pstates (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the list of power states available for a host. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the host name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list of power states available for the host (as specified in the platform xml description file) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a386ca90dcf205eb01fd145f837dbe153}\label{classwrench_1_1_s4_u___simulation_a386ca90dcf205eb01fd145f837dbe153}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Max\+Power\+Consumption@{get\+Max\+Power\+Consumption}}
+\index{get\+Max\+Power\+Consumption@{get\+Max\+Power\+Consumption}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Max\+Power\+Consumption()}{getMaxPowerConsumption()}}
+{\footnotesize\ttfamily double wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Max\+Power\+Consumption (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the maximum power consumption (i.\+e., 100\% load) for a host at its current pstate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the host name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The power consumption for this host if 100\% used (as specified in the platform xml description file) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a3336a395e2463b4fcfd921d9fec190f9}\label{classwrench_1_1_s4_u___simulation_a3336a395e2463b4fcfd921d9fec190f9}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Memory\+Capacity@{get\+Memory\+Capacity}}
+\index{get\+Memory\+Capacity@{get\+Memory\+Capacity}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Memory\+Capacity()}{getMemoryCapacity()}}
+{\footnotesize\ttfamily double wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Memory\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the memory capacity of the current host. 
+
+\begin{DoxyReturn}{Returns}
+a memory capacity in bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a833e019cc24b6e8d99446211d4061b13}\label{classwrench_1_1_s4_u___simulation_a833e019cc24b6e8d99446211d4061b13}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Min\+Power\+Consumption@{get\+Min\+Power\+Consumption}}
+\index{get\+Min\+Power\+Consumption@{get\+Min\+Power\+Consumption}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Min\+Power\+Consumption()}{getMinPowerConsumption()}}
+{\footnotesize\ttfamily double wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Min\+Power\+Consumption (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the minimum power consumption (i.\+e., idling) for a host at its current pstate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the host name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The power consumption for this host if idle (as specified in the platform xml description file) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_ae3ad786868ba97b98e4414c521eefabf}\label{classwrench_1_1_s4_u___simulation_ae3ad786868ba97b98e4414c521eefabf}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Numberof\+Pstates@{get\+Numberof\+Pstates}}
+\index{get\+Numberof\+Pstates@{get\+Numberof\+Pstates}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Numberof\+Pstates()}{getNumberofPstates()}}
+{\footnotesize\ttfamily int wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Numberof\+Pstates (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the total number of power states of a host. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the host name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of power states available for the host (as specified in the platform xml description file) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a159cc9630614cf8143e5131c3d38a2ed}\label{classwrench_1_1_s4_u___simulation_a159cc9630614cf8143e5131c3d38a2ed}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!get\+Total\+Energy\+Consumed@{get\+Total\+Energy\+Consumed}}
+\index{get\+Total\+Energy\+Consumed@{get\+Total\+Energy\+Consumed}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{get\+Total\+Energy\+Consumed()}{getTotalEnergyConsumed()}}
+{\footnotesize\ttfamily double wrench\+::\+S4\+U\+\_\+\+Simulation\+::get\+Total\+Energy\+Consumed (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{hostnames }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the total energy consumed by a set of hosts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & list of hostnames \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total energy consumed by all the hosts in Joules 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a64a1b7d70b4b0b5965b304d379b4a19d}\label{classwrench_1_1_s4_u___simulation_a64a1b7d70b4b0b5965b304d379b4a19d}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!host\+Exists@{host\+Exists}}
+\index{host\+Exists@{host\+Exists}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{host\+Exists()}{hostExists()}}
+{\footnotesize\ttfamily bool wrench\+::\+S4\+U\+\_\+\+Simulation\+::host\+Exists (\begin{DoxyParamCaption}\item[{std\+::string}]{hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Determines whether a host exists for a given hostname. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the name of the host \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a70b123a78f90e8e1f432111c3ce93929}\label{classwrench_1_1_s4_u___simulation_a70b123a78f90e8e1f432111c3ce93929}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!initialize@{initialize}}
+\index{initialize@{initialize}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void wrench\+::\+S4\+U\+\_\+\+Simulation\+::initialize (\begin{DoxyParamCaption}\item[{int $\ast$}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Initialize the Simgrid simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & the C-\/style argument counts \\
+\hline
+{\em argv} & the C-\/style argument list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a0139f6818fee5e36c1ac3cc18c417be7}\label{classwrench_1_1_s4_u___simulation_a0139f6818fee5e36c1ac3cc18c417be7}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!is\+Initialized@{is\+Initialized}}
+\index{is\+Initialized@{is\+Initialized}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{is\+Initialized()}{isInitialized()}}
+{\footnotesize\ttfamily bool wrench\+::\+S4\+U\+\_\+\+Simulation\+::is\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns true if \hyperlink{classwrench_1_1_s4_u___simulation_a70b123a78f90e8e1f432111c3ce93929}{S4\+U\+\_\+\+Simulation\+::initialize()} has been called successfully previously. 
+
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a43730166b317647c4af355ebce2de5fc}\label{classwrench_1_1_s4_u___simulation_a43730166b317647c4af355ebce2de5fc}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!is\+Platform\+Setup@{is\+Platform\+Setup}}
+\index{is\+Platform\+Setup@{is\+Platform\+Setup}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{is\+Platform\+Setup()}{isPlatformSetup()}}
+{\footnotesize\ttfamily bool wrench\+::\+S4\+U\+\_\+\+Simulation\+::is\+Platform\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns true if \hyperlink{classwrench_1_1_s4_u___simulation_a787dce31d634da739172a9f0fb0e8e30}{S4\+U\+\_\+\+Simulation\+::setup\+Platform()} has been called successfully previously. 
+
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a7658128602b3a342bc0daecff9459f36}\label{classwrench_1_1_s4_u___simulation_a7658128602b3a342bc0daecff9459f36}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!run\+Simulation@{run\+Simulation}}
+\index{run\+Simulation@{run\+Simulation}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{run\+Simulation()}{runSimulation()}}
+{\footnotesize\ttfamily void wrench\+::\+S4\+U\+\_\+\+Simulation\+::run\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the simulation. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a8ee21fa866cf3bd222e2cbcf27b6d340}\label{classwrench_1_1_s4_u___simulation_a8ee21fa866cf3bd222e2cbcf27b6d340}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!set\+Pstate@{set\+Pstate}}
+\index{set\+Pstate@{set\+Pstate}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{set\+Pstate()}{setPstate()}}
+{\footnotesize\ttfamily void wrench\+::\+S4\+U\+\_\+\+Simulation\+::set\+Pstate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{int}]{pstate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the power state of the host. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the host name \\
+\hline
+{\em pstate} & the power state index (the power state index is specified in the platform xml description file) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_a787dce31d634da739172a9f0fb0e8e30}\label{classwrench_1_1_s4_u___simulation_a787dce31d634da739172a9f0fb0e8e30}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!setup\+Platform@{setup\+Platform}}
+\index{setup\+Platform@{setup\+Platform}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{setup\+Platform()}{setupPlatform()}}
+{\footnotesize\ttfamily void wrench\+::\+S4\+U\+\_\+\+Simulation\+::setup\+Platform (\begin{DoxyParamCaption}\item[{std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Initialize the simulated platform. Must only be called once. Due to the current Sim\+Grid implementation, if the file is not readable or not correctly formatted, this method will call exit() instead of throwing an exception. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the path to an X\+ML platform description file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_s4_u___simulation_af93ef50da20f860de80212a3cff1cfdb}\label{classwrench_1_1_s4_u___simulation_af93ef50da20f860de80212a3cff1cfdb}} 
+\index{wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}!sleep@{sleep}}
+\index{sleep@{sleep}!wrench\+::\+S4\+U\+\_\+\+Simulation@{wrench\+::\+S4\+U\+\_\+\+Simulation}}
+\subsubsection{\texorpdfstring{sleep()}{sleep()}}
+{\footnotesize\ttfamily void wrench\+::\+S4\+U\+\_\+\+Simulation\+::sleep (\begin{DoxyParamCaption}\item[{double}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Simulates a sleep. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & the number of seconds to sleep\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::shared\+\_\+ptr$<$\+Host\+Error$>$} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/simgrid\+\_\+\+S4\+U\+\_\+util/S4\+U\+\_\+\+Simulation.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/simgrid\+\_\+\+S4\+U\+\_\+util/S4\+U\+\_\+\+Simulation.\+cpp\end{DoxyCompactItemize}

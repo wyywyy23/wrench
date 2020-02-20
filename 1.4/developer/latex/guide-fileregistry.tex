@@ -1,0 +1,65 @@
+Developer DocumentationOther\+: \href{../user/guide-fileregistry.html}{\tt User} -\/ \href{../internal/guide-fileregistry.html}{\tt Internal}\hypertarget{guide-fileregistry_guide-fileregistry-overview}{}\section{Overview}\label{guide-fileregistry_guide-fileregistry-overview}
+A file registry service is a simple store of key-\/value pairs where keys are files (i.\+e., {\ttfamily \hyperlink{classwrench_1_1_workflow_file}{wrench\+::\+Workflow\+File}}) and values are Storage Services (i.\+e., {\ttfamily \hyperlink{classwrench_1_1_storage_service}{wrench\+::\+Storage\+Service}}). It is used to keep track of the location of file copies. In real-\/world deployments, this service is often called a \char`\"{}replica catalog\char`\"{}.\hypertarget{guide-fileregistry_guide-fileregistry-creating}{}\section{Creating a file registry service}\label{guide-fileregistry_guide-fileregistry-creating}
+In W\+R\+E\+N\+CH, a file registry service is defined by the {\ttfamily \hyperlink{classwrench_1_1_file_registry_service}{wrench\+::\+File\+Registry\+Service}} class, an instantiation of which requires the following parameters\+:
+
+
+\begin{DoxyItemize}
+\item The name of a host on which to start the service (this is the entry point to the service);
+\item Maps ({\ttfamily std\+::map}) of configurable properties ({\ttfamily \hyperlink{classwrench_1_1_network_proximity_service_property}{wrench\+::\+Network\+Proximity\+Service\+Property}}) and configurable message payloads ({\ttfamily \hyperlink{classwrench_1_1_network_proximity_service_message_payload}{wrench\+::\+Network\+Proximity\+Service\+Message\+Payload}}).
+\end{DoxyItemize}
+
+The example below shows how to create an instance that runs on host \char`\"{}\+Replica\+Catalog\char`\"{}. The service\textquotesingle{}s properties are customized to specify that it takes 0.\+1 (simulated) seconds for the service to lookup an entry in its database.
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{auto} fr\_service = simulation->\hyperlink{classwrench_1_1_simulation_ad1f5c12285ecfaf5a2ce7dab5ec8b4c5}{add}(
+          \textcolor{keyword}{new} \hyperlink{classwrench_1_1_file_registry_service}{wrench::FileRegistryService}(\textcolor{stringliteral}{"ReplicaCatalog"},
+                                       \{\{wrench::FileRegistryService::LOOKUP\_COMPUTE\_COST, \textcolor{stringliteral}{"0.1"}\}\},
+                                       \{\});
+\end{DoxyCode}
+\hypertarget{guide-fileregistry_guide-fileregistry-creating-properties}{}\subsection{File registry service properties}\label{guide-fileregistry_guide-fileregistry-creating-properties}
+The properties that can be configured for a file registry service include\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily wrench\+::\+File\+Registry\+Service\+::\+L\+O\+O\+K\+U\+P\+\_\+\+C\+O\+M\+P\+U\+T\+E\+\_\+\+C\+O\+ST}
+\end{DoxyItemize}\hypertarget{guide-fileregistry_guide-fileregistry-using}{}\section{Using a file registry service}\label{guide-fileregistry_guide-fileregistry-using}
+Adding/removing an entry to a file registry service is done as follows\+:
+
+
+\begin{DoxyCode}
+\hyperlink{classwrench_1_1_workflow_file}{wrench::WorkflowFile} *some\_file;
+\hyperlink{classwrench_1_1_storage_service}{wrench::StorageService} *some\_storage\_service;
+
+[...]
+
+fr\_service->addEntry(some\_file, some\_storage\_service);
+fr\_service->removeEntry(some\_file, some\_storage\_service);
+\end{DoxyCode}
+
+
+Retrieving all entries for a given file is done as follows\+:
+
+
+\begin{DoxyCode}
+\hyperlink{classwrench_1_1_workflow_file}{wrench::WorkflowFile} *some\_file;
+
+[...]
+
+std::set<wrench::StorageService *> entries;
+entries = fr\_service->lookupEntry(some\_file);
+\end{DoxyCode}
+
+
+If a \hyperlink{guide-networkproximity}{network proximity service} is running, it is possible to retrieve entries for a file sorted by non-\/decreasing proximity from some reference host. Returned entries are stored in a (sorted) {\ttfamily std\+::map} where the keys are network distances to the reference host. For instance\+:
+
+
+\begin{DoxyCode}
+\hyperlink{classwrench_1_1_workflow_file}{wrench::WorkflowFile} *some\_file;
+\hyperlink{classwrench_1_1_network_proximity_service}{wrench::NetworkProximityService} *np\_service;
+
+[...]
+std::map<double, wrench::StorageService *> entries;
+entries = fr\_service->lookupEntry(some\_file, \textcolor{stringliteral}{"ReferenceHost"}, np\_service);
+\end{DoxyCode}
+ 

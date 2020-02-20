@@ -1,0 +1,89 @@
+\hypertarget{classwrench_1_1_bare_metal_compute_service}{}\section{wrench\+:\+:Bare\+Metal\+Compute\+Service Class Reference}
+\label{classwrench_1_1_bare_metal_compute_service}\index{wrench\+::\+Bare\+Metal\+Compute\+Service@{wrench\+::\+Bare\+Metal\+Compute\+Service}}
+
+
+A compute service that manages a set of multi-\/core compute hosts and provides access to their resources.  
+
+
+
+
+{\ttfamily \#include $<$Bare\+Metal\+Compute\+Service.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Bare\+Metal\+Compute\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_bare_metal_compute_service}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_bare_metal_compute_service_ad1f0b74b15538742ec16da2f805df662}{Bare\+Metal\+Compute\+Service} (const std\+::string \&hostname, const std\+::map$<$ std\+::string, std\+::tuple$<$ unsigned long, double $>$$>$ compute\+\_\+resources, double scratch\+\_\+space\+\_\+size, std\+::map$<$ std\+::string, std\+::string $>$ property\+\_\+list=\{\}, std\+::map$<$ std\+::string, std\+::string $>$ messagepayload\+\_\+list=\{\})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_bare_metal_compute_service_a67f03e4100d64ad6921dd65bfd1c8293}{Bare\+Metal\+Compute\+Service} (const std\+::string \&hostname, const std\+::set$<$ std\+::string $>$ compute\+\_\+hosts, double scratch\+\_\+space\+\_\+size, std\+::map$<$ std\+::string, std\+::string $>$ property\+\_\+list=\{\}, std\+::map$<$ std\+::string, std\+::string $>$ messagepayload\+\_\+list=\{\})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A compute service that manages a set of multi-\/core compute hosts and provides access to their resources. 
+
+One can think of this as a simple service that allows the user to run tasks and to specify for each task on which host it should run and with how many cores. If no host is specified, the service will pick the least loaded host. If no number of cores is specified, the service will use as many cores as possible. The service will make sure that the R\+AM capacity of a host is not exceeded by possibly delaying task executions until enough R\+AM is available. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_bare_metal_compute_service_ad1f0b74b15538742ec16da2f805df662}\label{classwrench_1_1_bare_metal_compute_service_ad1f0b74b15538742ec16da2f805df662}} 
+\index{wrench\+::\+Bare\+Metal\+Compute\+Service@{wrench\+::\+Bare\+Metal\+Compute\+Service}!Bare\+Metal\+Compute\+Service@{Bare\+Metal\+Compute\+Service}}
+\index{Bare\+Metal\+Compute\+Service@{Bare\+Metal\+Compute\+Service}!wrench\+::\+Bare\+Metal\+Compute\+Service@{wrench\+::\+Bare\+Metal\+Compute\+Service}}
+\subsubsection{\texorpdfstring{Bare\+Metal\+Compute\+Service()}{BareMetalComputeService()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily wrench\+::\+Bare\+Metal\+Compute\+Service\+::\+Bare\+Metal\+Compute\+Service (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{const std\+::map$<$ std\+::string, std\+::tuple$<$ unsigned long, double $>$$>$}]{compute\+\_\+resources,  }\item[{double}]{scratch\+\_\+space\+\_\+size,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{property\+\_\+list = {\ttfamily \{\}},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{messagepayload\+\_\+list = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the name of the host on which the service should be started \\
+\hline
+{\em compute\+\_\+resources} & a map of $<$num\+\_\+cores, memory$>$ tuples, indexed by hostname, which represents the compute resources available to this service.
+\begin{DoxyItemize}
+\item use num\+\_\+cores = \hyperlink{classwrench_1_1_compute_service_a1160f521623440ad4e0e0823e08a7d22}{Compute\+Service\+::\+A\+L\+L\+\_\+\+C\+O\+R\+ES} to use all cores available on the host
+\item use memory = \hyperlink{classwrench_1_1_compute_service_abc4fe0bad59f544b4b34d0e7d4012d44}{Compute\+Service\+::\+A\+L\+L\+\_\+\+R\+AM} to use all R\+AM available on the host 
+\end{DoxyItemize}\\
+\hline
+{\em scratch\+\_\+space\+\_\+size} & size (in bytes) of the compute service\textquotesingle{}s scratch storage paste \\
+\hline
+{\em property\+\_\+list} & a property list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+{\em messagepayload\+\_\+list} & a message payload list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_bare_metal_compute_service_a67f03e4100d64ad6921dd65bfd1c8293}\label{classwrench_1_1_bare_metal_compute_service_a67f03e4100d64ad6921dd65bfd1c8293}} 
+\index{wrench\+::\+Bare\+Metal\+Compute\+Service@{wrench\+::\+Bare\+Metal\+Compute\+Service}!Bare\+Metal\+Compute\+Service@{Bare\+Metal\+Compute\+Service}}
+\index{Bare\+Metal\+Compute\+Service@{Bare\+Metal\+Compute\+Service}!wrench\+::\+Bare\+Metal\+Compute\+Service@{wrench\+::\+Bare\+Metal\+Compute\+Service}}
+\subsubsection{\texorpdfstring{Bare\+Metal\+Compute\+Service()}{BareMetalComputeService()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily wrench\+::\+Bare\+Metal\+Compute\+Service\+::\+Bare\+Metal\+Compute\+Service (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{const std\+::set$<$ std\+::string $>$}]{compute\+\_\+hosts,  }\item[{double}]{scratch\+\_\+space\+\_\+size,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{property\+\_\+list = {\ttfamily \{\}},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{messagepayload\+\_\+list = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the name of the host on which the service should be started \\
+\hline
+{\em compute\+\_\+hosts,\+:} & the names of the hosts available as compute resources (the service will use all the cores and all the R\+AM of each host) \\
+\hline
+{\em scratch\+\_\+space\+\_\+size} & size (in bytes) of the compute service\textquotesingle{}s scratch storage paste \\
+\hline
+{\em property\+\_\+list} & a property list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+{\em messagepayload\+\_\+list} & a message payload list (\{\} means \char`\"{}use all defaults\char`\"{}) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/bare\+\_\+metal/Bare\+Metal\+Compute\+Service.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/bare\+\_\+metal/Bare\+Metal\+Compute\+Service.\+cpp\end{DoxyCompactItemize}

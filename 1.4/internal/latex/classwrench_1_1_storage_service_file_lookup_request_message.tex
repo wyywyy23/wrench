@@ -1,0 +1,73 @@
+\hypertarget{classwrench_1_1_storage_service_file_lookup_request_message}{}\section{wrench\+:\+:Storage\+Service\+File\+Lookup\+Request\+Message Class Reference}
+\label{classwrench_1_1_storage_service_file_lookup_request_message}\index{wrench\+::\+Storage\+Service\+File\+Lookup\+Request\+Message@{wrench\+::\+Storage\+Service\+File\+Lookup\+Request\+Message}}
+
+
+A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to lookup a file.  
+
+
+
+
+{\ttfamily \#include $<$Storage\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Storage\+Service\+File\+Lookup\+Request\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_storage_service_file_lookup_request_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_storage_service_file_lookup_request_message_ac998ebd2b7bb1ee3e6c487feba7e415b}{Storage\+Service\+File\+Lookup\+Request\+Message} (std\+::string \hyperlink{classwrench_1_1_storage_service_file_lookup_request_message_a84ed995c526f3e1f78841a05ace2d0ff}{answer\+\_\+mailbox}, \hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$\hyperlink{classwrench_1_1_storage_service_file_lookup_request_message_ad18495c6e35aec1ae6a28edf7e0d881d}{file}, std\+::string \&\hyperlink{classwrench_1_1_storage_service_file_lookup_request_message_a8ef342162da4740e29af692891bf47a8}{dst\+\_\+partition}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_lookup_request_message_a84ed995c526f3e1f78841a05ace2d0ff}\label{classwrench_1_1_storage_service_file_lookup_request_message_a84ed995c526f3e1f78841a05ace2d0ff}} 
+std\+::string \hyperlink{classwrench_1_1_storage_service_file_lookup_request_message_a84ed995c526f3e1f78841a05ace2d0ff}{answer\+\_\+mailbox}
+\begin{DoxyCompactList}\small\item\em Mailbox to which the answer message should be sent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_lookup_request_message_a8ef342162da4740e29af692891bf47a8}\label{classwrench_1_1_storage_service_file_lookup_request_message_a8ef342162da4740e29af692891bf47a8}} 
+std\+::string \hyperlink{classwrench_1_1_storage_service_file_lookup_request_message_a8ef342162da4740e29af692891bf47a8}{dst\+\_\+partition}
+\begin{DoxyCompactList}\small\item\em The file partition where to lookup the file for. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_lookup_request_message_ad18495c6e35aec1ae6a28edf7e0d881d}\label{classwrench_1_1_storage_service_file_lookup_request_message_ad18495c6e35aec1ae6a28edf7e0d881d}} 
+\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$ \hyperlink{classwrench_1_1_storage_service_file_lookup_request_message_ad18495c6e35aec1ae6a28edf7e0d881d}{file}
+\begin{DoxyCompactList}\small\item\em The file to lookup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent to a \hyperlink{classwrench_1_1_storage_service}{Storage\+Service} to lookup a file. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_storage_service_file_lookup_request_message_ac998ebd2b7bb1ee3e6c487feba7e415b}\label{classwrench_1_1_storage_service_file_lookup_request_message_ac998ebd2b7bb1ee3e6c487feba7e415b}} 
+\index{wrench\+::\+Storage\+Service\+File\+Lookup\+Request\+Message@{wrench\+::\+Storage\+Service\+File\+Lookup\+Request\+Message}!Storage\+Service\+File\+Lookup\+Request\+Message@{Storage\+Service\+File\+Lookup\+Request\+Message}}
+\index{Storage\+Service\+File\+Lookup\+Request\+Message@{Storage\+Service\+File\+Lookup\+Request\+Message}!wrench\+::\+Storage\+Service\+File\+Lookup\+Request\+Message@{wrench\+::\+Storage\+Service\+File\+Lookup\+Request\+Message}}
+\subsubsection{\texorpdfstring{Storage\+Service\+File\+Lookup\+Request\+Message()}{StorageServiceFileLookupRequestMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Storage\+Service\+File\+Lookup\+Request\+Message\+::\+Storage\+Service\+File\+Lookup\+Request\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{answer\+\_\+mailbox,  }\item[{\hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} $\ast$}]{file,  }\item[{std\+::string \&}]{dst\+\_\+partition,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em answer\+\_\+mailbox} & the mailbox to which to send the answer \\
+\hline
+{\em file} & the file \\
+\hline
+{\em dst\+\_\+partition} & the file partition to look up the file for \\
+\hline
+{\em payload} & the message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/Storage\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/Storage\+Service\+Message.\+cpp\end{DoxyCompactItemize}

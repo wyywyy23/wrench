@@ -1,0 +1,78 @@
+\hypertarget{classwrench_1_1_network_connection_manager}{}\section{wrench\+:\+:Network\+Connection\+Manager Class Reference}
+\label{classwrench_1_1_network_connection_manager}\index{wrench\+::\+Network\+Connection\+Manager@{wrench\+::\+Network\+Connection\+Manager}}
+
+
+An abstraction that manages a pool of network connections.  
+
+
+
+
+{\ttfamily \#include $<$Network\+Connection\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_network_connection_manager_afd93226fb4d7ab8949fe8319039c0038}{Network\+Connection\+Manager} (unsigned long max\+\_\+num\+\_\+data\+\_\+connections)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_network_connection_manager_afc8f9783ff5876f8fc98c2ab23734c6d}{add\+Connection} (std\+::unique\+\_\+ptr$<$ \hyperlink{classwrench_1_1_network_connection}{Network\+Connection} $>$ connection)
+\begin{DoxyCompactList}\small\item\em Add a new connection. \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classwrench_1_1_network_connection}{Network\+Connection} $>$, bool $>$ \hyperlink{classwrench_1_1_network_connection_manager_ae393426d265b864afe001ff4d887c5de}{wait\+For\+Network\+Connection} ()
+\begin{DoxyCompactList}\small\item\em Wait for the next network connection to change state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstraction that manages a pool of network connections. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_network_connection_manager_afd93226fb4d7ab8949fe8319039c0038}\label{classwrench_1_1_network_connection_manager_afd93226fb4d7ab8949fe8319039c0038}} 
+\index{wrench\+::\+Network\+Connection\+Manager@{wrench\+::\+Network\+Connection\+Manager}!Network\+Connection\+Manager@{Network\+Connection\+Manager}}
+\index{Network\+Connection\+Manager@{Network\+Connection\+Manager}!wrench\+::\+Network\+Connection\+Manager@{wrench\+::\+Network\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{Network\+Connection\+Manager()}{NetworkConnectionManager()}}
+{\footnotesize\ttfamily wrench\+::\+Network\+Connection\+Manager\+::\+Network\+Connection\+Manager (\begin{DoxyParamCaption}\item[{unsigned long}]{max\+\_\+num\+\_\+data\+\_\+connections }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+num\+\_\+data\+\_\+connections} & maximum number of data connections that can be active at the same time \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_network_connection_manager_afc8f9783ff5876f8fc98c2ab23734c6d}\label{classwrench_1_1_network_connection_manager_afc8f9783ff5876f8fc98c2ab23734c6d}} 
+\index{wrench\+::\+Network\+Connection\+Manager@{wrench\+::\+Network\+Connection\+Manager}!add\+Connection@{add\+Connection}}
+\index{add\+Connection@{add\+Connection}!wrench\+::\+Network\+Connection\+Manager@{wrench\+::\+Network\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{add\+Connection()}{addConnection()}}
+{\footnotesize\ttfamily void wrench\+::\+Network\+Connection\+Manager\+::add\+Connection (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classwrench_1_1_network_connection}{Network\+Connection} $>$}]{connection }\end{DoxyParamCaption})}
+
+
+
+Add a new connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & a network connection \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_network_connection_manager_ae393426d265b864afe001ff4d887c5de}\label{classwrench_1_1_network_connection_manager_ae393426d265b864afe001ff4d887c5de}} 
+\index{wrench\+::\+Network\+Connection\+Manager@{wrench\+::\+Network\+Connection\+Manager}!wait\+For\+Network\+Connection@{wait\+For\+Network\+Connection}}
+\index{wait\+For\+Network\+Connection@{wait\+For\+Network\+Connection}!wrench\+::\+Network\+Connection\+Manager@{wrench\+::\+Network\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{wait\+For\+Network\+Connection()}{waitForNetworkConnection()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classwrench_1_1_network_connection}{Network\+Connection} $>$, bool $>$ wrench\+::\+Network\+Connection\+Manager\+::wait\+For\+Network\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wait for the next network connection to change state. 
+
+\begin{DoxyReturn}{Returns}
+a network connection that has finished and its status (true\+: success, false\+: failure) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/storage/simple/Network\+Connection\+Manager.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/storage/simple/Network\+Connection\+Manager.\+cpp\end{DoxyCompactItemize}

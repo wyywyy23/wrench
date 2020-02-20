@@ -1,0 +1,68 @@
+\hypertarget{classwrench_1_1_batch_execute_job_from_bat_sched_message}{}\section{wrench\+:\+:Batch\+Execute\+Job\+From\+Bat\+Sched\+Message Class Reference}
+\label{classwrench_1_1_batch_execute_job_from_bat_sched_message}\index{wrench\+::\+Batch\+Execute\+Job\+From\+Bat\+Sched\+Message@{wrench\+::\+Batch\+Execute\+Job\+From\+Bat\+Sched\+Message}}
+
+
+A message sent by a \hyperlink{classwrench_1_1_batsched_network_listener}{Batsched\+Network\+Listener} to a Batsched-\/enabled \hyperlink{classwrench_1_1_batch_service}{Batch\+Service} to tell it to start a job execution, passing it the J\+S\+ON reply received from Batsched.  
+
+
+
+
+{\ttfamily \#include $<$Batch\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Batch\+Execute\+Job\+From\+Bat\+Sched\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classwrench_1_1_batch_execute_job_from_bat_sched_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_batch_execute_job_from_bat_sched_message_ac239c71112b1d05c5c2a5aabfcfb58b1}{Batch\+Execute\+Job\+From\+Bat\+Sched\+Message} (std\+::string \hyperlink{classwrench_1_1_batch_execute_job_from_bat_sched_message_a52482536e42f7d63830eec2afa8e1e48}{answer\+\_\+mailbox}, std\+::string \hyperlink{classwrench_1_1_batch_execute_job_from_bat_sched_message_a580ba37a834ee4e408f6e045314362e4}{batsched\+\_\+decision\+\_\+reply}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_batch_execute_job_from_bat_sched_message_a52482536e42f7d63830eec2afa8e1e48}\label{classwrench_1_1_batch_execute_job_from_bat_sched_message_a52482536e42f7d63830eec2afa8e1e48}} 
+std\+::string \hyperlink{classwrench_1_1_batch_execute_job_from_bat_sched_message_a52482536e42f7d63830eec2afa8e1e48}{answer\+\_\+mailbox}
+\begin{DoxyCompactList}\small\item\em The mailbox to answer to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_batch_execute_job_from_bat_sched_message_a580ba37a834ee4e408f6e045314362e4}\label{classwrench_1_1_batch_execute_job_from_bat_sched_message_a580ba37a834ee4e408f6e045314362e4}} 
+std\+::string \hyperlink{classwrench_1_1_batch_execute_job_from_bat_sched_message_a580ba37a834ee4e408f6e045314362e4}{batsched\+\_\+decision\+\_\+reply}
+\begin{DoxyCompactList}\small\item\em The decision reply from Batsched. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent by a \hyperlink{classwrench_1_1_batsched_network_listener}{Batsched\+Network\+Listener} to a Batsched-\/enabled \hyperlink{classwrench_1_1_batch_service}{Batch\+Service} to tell it to start a job execution, passing it the J\+S\+ON reply received from Batsched. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_batch_execute_job_from_bat_sched_message_ac239c71112b1d05c5c2a5aabfcfb58b1}\label{classwrench_1_1_batch_execute_job_from_bat_sched_message_ac239c71112b1d05c5c2a5aabfcfb58b1}} 
+\index{wrench\+::\+Batch\+Execute\+Job\+From\+Bat\+Sched\+Message@{wrench\+::\+Batch\+Execute\+Job\+From\+Bat\+Sched\+Message}!Batch\+Execute\+Job\+From\+Bat\+Sched\+Message@{Batch\+Execute\+Job\+From\+Bat\+Sched\+Message}}
+\index{Batch\+Execute\+Job\+From\+Bat\+Sched\+Message@{Batch\+Execute\+Job\+From\+Bat\+Sched\+Message}!wrench\+::\+Batch\+Execute\+Job\+From\+Bat\+Sched\+Message@{wrench\+::\+Batch\+Execute\+Job\+From\+Bat\+Sched\+Message}}
+\subsubsection{\texorpdfstring{Batch\+Execute\+Job\+From\+Bat\+Sched\+Message()}{BatchExecuteJobFromBatSchedMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Batch\+Execute\+Job\+From\+Bat\+Sched\+Message\+::\+Batch\+Execute\+Job\+From\+Bat\+Sched\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{answer\+\_\+mailbox,  }\item[{std\+::string}]{batsched\+\_\+decision\+\_\+reply,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em answer\+\_\+mailbox} & the mailbox to reply to \\
+\hline
+{\em batsched\+\_\+decision\+\_\+reply} & the decision reply from Batsched \\
+\hline
+{\em payload} & the message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/batch/Batch\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/batch/Batch\+Service\+Message.\+cpp\end{DoxyCompactItemize}

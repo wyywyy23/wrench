@@ -1,0 +1,45 @@
+Internal DocumentationOther\+: \href{../user/guide-virtualizedcluster.html}{\tt User} -\/ \href{../developer/guide-virtualizedcluster.html}{\tt Developer}\hypertarget{guide-virtualizedcluster_guide-virtualizedcluster-overview}{}\section{Overview}\label{guide-virtualizedcluster_guide-virtualizedcluster-overview}
+A virtualized cluster service is an abstraction of a compute service that corresponds to a platform of physical resources on which Virtual Machine (VM) instances can be created. The virtualized cluster service provides all necessary abstractions to manage V\+Ms and their allocation to physical resources, including creation on specific physical hosts, suspend/resume, migration, etc. Compute jobs submitted to the virtualized cluster service run on previously created VM instances. If a VM that meets a job\textquotesingle{}s requirements cannot be found, the service will throw an exception. In the virtualized cluster service, a VM behaves as a \hyperlink{guide-baremetal}{bare-\/metal} service.
+
+The main difference between a \hyperlink{guide-cloud}{cloud service} and a virtualized cluster service is that the latter does expose the underlying physical infrastructure (e.\+g., it is possible to instantiate a VM on a particular physical host, or to migrate a VM between two particular physical hosts).\hypertarget{guide-virtualizedcluster_guide-virtualizedcluster-creating}{}\section{Creating a virtualized cluster compute service}\label{guide-virtualizedcluster_guide-virtualizedcluster-creating}
+In W\+R\+E\+N\+CH, a virtualized cluster service represents a cloud service (\hyperlink{classwrench_1_1_cloud_service}{wrench\+::\+Cloud\+Service}, which itself represents a \hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}), which is defined by the \hyperlink{classwrench_1_1_virtualized_cluster_service}{wrench\+::\+Virtualized\+Cluster\+Service} class. An instantiation of a virtualized cluster service requires the following parameters\+:
+
+
+\begin{DoxyItemize}
+\item A hostname on which to start the service (this is the entry point to the service)
+\item A list ({\ttfamily std\+::vector}) of hostnames (all cores and all R\+AM of each host is available to the virtualized cluster service)
+\item A scratch space size, i.\+e., the size in bytes of storage local to the virtualized cluster service (used to store workflow files, as needed, during job executions)
+\item Maps ({\ttfamily std\+::map}) of configurable properties ({\ttfamily \hyperlink{classwrench_1_1_virtualized_cluster_service_property}{wrench\+::\+Virtualized\+Cluster\+Service\+Property}}) and configurable message payloads ({\ttfamily \hyperlink{classwrench_1_1_virtualized_cluster_service_message_payload}{wrench\+::\+Virtualized\+Cluster\+Service\+Message\+Payload}}).
+\end{DoxyItemize}
+
+The example below shows how to create an instance of a virtualized cluster service that runs on host \char`\"{}vc\+\_\+gateway\char`\"{}, provides access to 4 execution hosts, and has a scratch space of 1\+TiB\+:
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{auto} virtualized\_cluster\_cs = simulation.add(
+          \textcolor{keyword}{new} \hyperlink{classwrench_1_1_virtualized_cluster_service}{wrench::VirtualizedClusterService}(\textcolor{stringliteral}{"vc\_gateway"}, \{\textcolor{stringliteral}{"host1"}, \textcolor{stringliteral}{"
+      host2"}, \textcolor{stringliteral}{"host3"}, \textcolor{stringliteral}{"host4"}\}, pow(2,40),
+                                                \{\{
+      \hyperlink{classwrench_1_1_compute_service_property_af0abab1e3bce4932c4482031f0c31ce8}{wrench::VirtualizedClusterServiceProperty::SUPPORTS\_PILOT\_JOBS}
+      , \textcolor{stringliteral}{"false"}\}\}));
+\end{DoxyCode}
+\hypertarget{guide-virtualizedcluster_guide-virtualizedcluster-creating-properties}{}\subsection{Virtualized cluster service properties}\label{guide-virtualizedcluster_guide-virtualizedcluster-creating-properties}
+All properties for a virtualized cluster service are inherited from {\ttfamily \hyperlink{classwrench_1_1_cloud_service_property}{wrench\+::\+Cloud\+Service\+Property}} (see the \hyperlink{guide-cloud_guide-cloud-creating-properties}{Cloud service properties} section).\hypertarget{guide-virtualizedcluster_guide-virtualizedcluster-migrating}{}\section{Migrating a V\+M to another execution host}\label{guide-virtualizedcluster_guide-virtualizedcluster-migrating}
+As expected, a virtualized cluster service provides access to all mechanisms to \hyperlink{guide-cloud_guide-cloud-managing}{manage} the set of V\+Ms instantiated on the execution hosts. In addition to such capabilities, the virtualized cluster service provides an additional \hyperlink{classwrench_1_1_virtualized_cluster_service_afb90d549ca85f41946b155cff49e37ce}{wrench\+::\+Virtualized\+Cluster\+Service\+::create\+VM} function, which instantiates a VM on a specific execution host; and a \hyperlink{classwrench_1_1_virtualized_cluster_service_a0a81357e7af9b42bbb7b376c56a90611}{wrench\+::\+Virtualized\+Cluster\+Service\+::migrate\+VM} function, which allows VM migration between execution hosts.
+
+Here is an example of V\+Ms migration on a virtualized cluster service\+:
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Create a VM with 2 cores and 1 GiB of RAM on host1}
+\textcolor{keyword}{auto} vm1 = virtualized\_cluster\_cs->createVM(\textcolor{stringliteral}{"host1"}, 2, pow(2,30));
+\textcolor{comment}{// Create a VM with 4 cores and 2 GiB of RAM on host2}
+\textcolor{keyword}{auto} vm2 = virtualized\_cluster\_cs->createVM(\textcolor{stringliteral}{"host2"}, 4, pow(2,31));
+
+\textcolor{comment}{// Migrating vm1 to host3}
+virtualized\_cluster\_cs->migrateVM(vm1, \textcolor{stringliteral}{"host3"});
+\textcolor{comment}{// Migrating vm2 to host4}
+virtualized\_cluster\_cs->migrateVM(vm2, \textcolor{stringliteral}{"host4"});
+\end{DoxyCode}
+\hypertarget{guide-virtualizedcluster_guide-virtualizedcluster-using}{}\section{Submitting jobs to a virtualized cluster compute service}\label{guide-virtualizedcluster_guide-virtualizedcluster-using}
+See the \hyperlink{guide-cloud}{cloud service} page for an example of how to submit a job to a VM instance (as both the cloud service and virtualized cluster service operate in the same way). 

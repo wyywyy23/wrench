@@ -1,0 +1,83 @@
+\hypertarget{classwrench_1_1_workflow_execution_exception}{}\section{wrench\+:\+:Workflow\+Execution\+Exception Class Reference}
+\label{classwrench_1_1_workflow_execution_exception}\index{wrench\+::\+Workflow\+Execution\+Exception@{wrench\+::\+Workflow\+Execution\+Exception}}
+
+
+An generic exception that is thrown whenever something unexpected (but simulation-\/valid) occurrs during the simulated execution of a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}.  
+
+
+
+
+{\ttfamily \#include $<$Workflow\+Execution\+Exception.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Workflow\+Execution\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classwrench_1_1_workflow_execution_exception}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_workflow_execution_exception_a7b1eef40dc7846d0606ac66641379ced}{Workflow\+Execution\+Exception} (std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$ cause)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$ \hyperlink{classwrench_1_1_workflow_execution_exception_a45fbbd2bc144da41f1fd09efcdaa2481}{get\+Cause} ()
+\begin{DoxyCompactList}\small\item\em Get the failure cause. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \hyperlink{classwrench_1_1_workflow_execution_exception_a54f37236e3bfd00490835675220863c4}{what} () const  throw ()
+\begin{DoxyCompactList}\small\item\em Get the exception\textquotesingle{}s error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An generic exception that is thrown whenever something unexpected (but simulation-\/valid) occurrs during the simulated execution of a \hyperlink{classwrench_1_1_w_m_s}{W\+MS}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_workflow_execution_exception_a7b1eef40dc7846d0606ac66641379ced}\label{classwrench_1_1_workflow_execution_exception_a7b1eef40dc7846d0606ac66641379ced}} 
+\index{wrench\+::\+Workflow\+Execution\+Exception@{wrench\+::\+Workflow\+Execution\+Exception}!Workflow\+Execution\+Exception@{Workflow\+Execution\+Exception}}
+\index{Workflow\+Execution\+Exception@{Workflow\+Execution\+Exception}!wrench\+::\+Workflow\+Execution\+Exception@{wrench\+::\+Workflow\+Execution\+Exception}}
+\subsubsection{\texorpdfstring{Workflow\+Execution\+Exception()}{WorkflowExecutionException()}}
+{\footnotesize\ttfamily wrench\+::\+Workflow\+Execution\+Exception\+::\+Workflow\+Execution\+Exception (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause} $>$}]{cause }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cause} & the cause of the failure Constructor \\
+\hline
+{\em cause} & the cause of the failure \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_workflow_execution_exception_a45fbbd2bc144da41f1fd09efcdaa2481}\label{classwrench_1_1_workflow_execution_exception_a45fbbd2bc144da41f1fd09efcdaa2481}} 
+\index{wrench\+::\+Workflow\+Execution\+Exception@{wrench\+::\+Workflow\+Execution\+Exception}!get\+Cause@{get\+Cause}}
+\index{get\+Cause@{get\+Cause}!wrench\+::\+Workflow\+Execution\+Exception@{wrench\+::\+Workflow\+Execution\+Exception}}
+\subsubsection{\texorpdfstring{get\+Cause()}{getCause()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{classwrench_1_1_failure_cause}{Failure\+Cause}$>$ wrench\+::\+Workflow\+Execution\+Exception\+::get\+Cause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the failure cause. 
+
+\begin{DoxyReturn}{Returns}
+the failure cause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_workflow_execution_exception_a54f37236e3bfd00490835675220863c4}\label{classwrench_1_1_workflow_execution_exception_a54f37236e3bfd00490835675220863c4}} 
+\index{wrench\+::\+Workflow\+Execution\+Exception@{wrench\+::\+Workflow\+Execution\+Exception}!what@{what}}
+\index{what@{what}!wrench\+::\+Workflow\+Execution\+Exception@{wrench\+::\+Workflow\+Execution\+Exception}}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily virtual const char$\ast$ wrench\+::\+Workflow\+Execution\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw  ) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the exception\textquotesingle{}s error message. 
+
+\begin{DoxyReturn}{Returns}
+the exception\textquotesingle{}s message, as a C-\/style string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/exceptions/Workflow\+Execution\+Exception.\+h\end{DoxyCompactItemize}

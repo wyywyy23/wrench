@@ -1,0 +1,60 @@
+\hypertarget{classwrench_1_1_network_proximity_daemon}{}\section{wrench\+:\+:Network\+Proximity\+Daemon Class Reference}
+\label{classwrench_1_1_network_proximity_daemon}\index{wrench\+::\+Network\+Proximity\+Daemon@{wrench\+::\+Network\+Proximity\+Daemon}}
+
+
+A daemon used by a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} to run network measurements (proximity is computed between two such running daemons)  
+
+
+
+
+{\ttfamily \#include $<$Network\+Proximity\+Daemon.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Network\+Proximity\+Daemon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classwrench_1_1_network_proximity_daemon}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_network_proximity_daemon_af9584c1e4c1c8197418b22d2b458f270}{Network\+Proximity\+Daemon} (\hyperlink{classwrench_1_1_simulation}{Simulation} $\ast$\hyperlink{classwrench_1_1_s4_u___daemon_a305beca7ad2fb650ad1492b7c95e93c4}{simulation}, std\+::string \hyperlink{classwrench_1_1_s4_u___daemon_a52bc0b9a6cd248310749dac086819f00}{hostname}, std\+::string network\+\_\+proximity\+\_\+service\+\_\+mailbox, double message\+\_\+size, double measurement\+\_\+period, double noise, std\+::map$<$ std\+::string, std\+::string $>$ \hyperlink{classwrench_1_1_service_a63865f20c92027ab626ab1347b0099d2}{messagepayload\+\_\+list})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A daemon used by a \hyperlink{classwrench_1_1_network_proximity_service}{Network\+Proximity\+Service} to run network measurements (proximity is computed between two such running daemons) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_network_proximity_daemon_af9584c1e4c1c8197418b22d2b458f270}\label{classwrench_1_1_network_proximity_daemon_af9584c1e4c1c8197418b22d2b458f270}} 
+\index{wrench\+::\+Network\+Proximity\+Daemon@{wrench\+::\+Network\+Proximity\+Daemon}!Network\+Proximity\+Daemon@{Network\+Proximity\+Daemon}}
+\index{Network\+Proximity\+Daemon@{Network\+Proximity\+Daemon}!wrench\+::\+Network\+Proximity\+Daemon@{wrench\+::\+Network\+Proximity\+Daemon}}
+\subsubsection{\texorpdfstring{Network\+Proximity\+Daemon()}{NetworkProximityDaemon()}}
+{\footnotesize\ttfamily wrench\+::\+Network\+Proximity\+Daemon\+::\+Network\+Proximity\+Daemon (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_simulation}{Simulation} $\ast$}]{simulation,  }\item[{std\+::string}]{hostname,  }\item[{std\+::string}]{network\+\_\+proximity\+\_\+service\+\_\+mailbox,  }\item[{double}]{message\+\_\+size,  }\item[{double}]{measurement\+\_\+period,  }\item[{double}]{noise,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{messagepayload\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simulation} & a pointer to the simulation object \\
+\hline
+{\em hostname} & the hostname on which to start the service \\
+\hline
+{\em network\+\_\+proximity\+\_\+service\+\_\+mailbox} & the mailbox of the network proximity service \\
+\hline
+{\em message\+\_\+size} & the size of the message to be sent between network daemons to compute proximity \\
+\hline
+{\em measurement\+\_\+period} & the time-\/difference between two message transfer to compute proximity \\
+\hline
+{\em noise} & the noise to add to compute the time-\/difference \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/network\+\_\+proximity/Network\+Proximity\+Daemon.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/network\+\_\+proximity/Network\+Proximity\+Daemon.\+cpp\end{DoxyCompactItemize}

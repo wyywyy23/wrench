@@ -1,0 +1,72 @@
+\hypertarget{classwrench_1_1_workload_trace_file_replayer_event_receiver}{}\section{wrench\+:\+:Workload\+Trace\+File\+Replayer\+Event\+Receiver Class Reference}
+\label{classwrench_1_1_workload_trace_file_replayer_event_receiver}\index{wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver@{wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver}}
+
+
+A \hyperlink{classwrench_1_1_w_m_s}{W\+MS} that only submits a single job to a given batch service, which is used to implement batch workload replay.  
+
+
+
+
+{\ttfamily \#include $<$Workload\+Trace\+File\+Replayer\+Event\+Receiver.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Workload\+Trace\+File\+Replayer\+Event\+Receiver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classwrench_1_1_workload_trace_file_replayer_event_receiver}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_workload_trace_file_replayer_event_receiver_abc417862cd19293eb3a44ebbed985b9d}{Workload\+Trace\+File\+Replayer\+Event\+Receiver} (std\+::string hostname, std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_job_manager}{Job\+Manager} $>$ job\+\_\+manager)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+int \hyperlink{classwrench_1_1_workload_trace_file_replayer_event_receiver_af8ddb6f527d5f49a8b67bcc8a184c628}{main} () override
+\begin{DoxyCompactList}\small\item\em main method of the One\+Job\+W\+MS daemon \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classwrench_1_1_w_m_s}{W\+MS} that only submits a single job to a given batch service, which is used to implement batch workload replay. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_workload_trace_file_replayer_event_receiver_abc417862cd19293eb3a44ebbed985b9d}\label{classwrench_1_1_workload_trace_file_replayer_event_receiver_abc417862cd19293eb3a44ebbed985b9d}} 
+\index{wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver@{wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver}!Workload\+Trace\+File\+Replayer\+Event\+Receiver@{Workload\+Trace\+File\+Replayer\+Event\+Receiver}}
+\index{Workload\+Trace\+File\+Replayer\+Event\+Receiver@{Workload\+Trace\+File\+Replayer\+Event\+Receiver}!wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver@{wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver}}
+\subsubsection{\texorpdfstring{Workload\+Trace\+File\+Replayer\+Event\+Receiver()}{WorkloadTraceFileReplayerEventReceiver()}}
+{\footnotesize\ttfamily wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver (\begin{DoxyParamCaption}\item[{std\+::string}]{hostname,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classwrench_1_1_job_manager}{Job\+Manager} $>$}]{job\+\_\+manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & the name of the host on which the \char`\"{}one job\char`\"{} \hyperlink{classwrench_1_1_w_m_s}{W\+MS} will run \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_workload_trace_file_replayer_event_receiver_af8ddb6f527d5f49a8b67bcc8a184c628}\label{classwrench_1_1_workload_trace_file_replayer_event_receiver_af8ddb6f527d5f49a8b67bcc8a184c628}} 
+\index{wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver@{wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver}!main@{main}}
+\index{main@{main}!wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver@{wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int wrench\+::\+Workload\+Trace\+File\+Replayer\+Event\+Receiver\+::main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+main method of the One\+Job\+W\+MS daemon 
+
+\begin{DoxyReturn}{Returns}
+0 on success 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classwrench_1_1_w_m_s}{wrench\+::\+W\+MS}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/batch/Workload\+Trace\+File\+Replayer\+Event\+Receiver.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/batch/Workload\+Trace\+File\+Replayer\+Event\+Receiver.\+cpp\end{DoxyCompactItemize}

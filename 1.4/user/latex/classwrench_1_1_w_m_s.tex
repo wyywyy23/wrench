@@ -1,0 +1,135 @@
+\hypertarget{classwrench_1_1_w_m_s}{}\section{wrench\+:\+:W\+MS Class Reference}
+\label{classwrench_1_1_w_m_s}\index{wrench\+::\+W\+MS@{wrench\+::\+W\+MS}}
+
+
+A workflow management system (\hyperlink{classwrench_1_1_w_m_s}{W\+MS})  
+
+
+
+
+{\ttfamily \#include $<$W\+M\+S.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:W\+MS\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classwrench_1_1_w_m_s}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classwrench_1_1_w_m_s_a036f0865c72e8dfe4e40b9419f0dc735}{add\+Dynamic\+Optimization} (std\+::unique\+\_\+ptr$<$ Dynamic\+Optimization $>$)
+\begin{DoxyCompactList}\small\item\em Add a dynamic optimization to the list of optimizations. Optimizations are executed in order of insertion. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_w_m_s_a21b9ae8ef40ba22e5ef0052fb70f7731}{add\+Static\+Optimization} (std\+::unique\+\_\+ptr$<$ Static\+Optimization $>$)
+\begin{DoxyCompactList}\small\item\em Add a static optimization to the list of optimizations. Optimizations are executed in order of insertion. \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_w_m_s_afd2a6ae2f4d792046a6a17d5c0dc313f}{add\+Workflow} (\hyperlink{classwrench_1_1_workflow}{Workflow} $\ast$workflow, double start\+\_\+time=0)
+\begin{DoxyCompactList}\small\item\em Assign a workflow to the \hyperlink{classwrench_1_1_w_m_s}{W\+MS}. \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_pilot_job_scheduler}{Pilot\+Job\+Scheduler} $\ast$ \hyperlink{classwrench_1_1_w_m_s_ab84692140428dd81a6eccc115bf557e7}{get\+Pilot\+Job\+Scheduler} ()
+\begin{DoxyCompactList}\small\item\em Get the \hyperlink{classwrench_1_1_w_m_s}{W\+MS}\textquotesingle{}s pilot scheduler. \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_standard_job_scheduler}{Standard\+Job\+Scheduler} $\ast$ \hyperlink{classwrench_1_1_w_m_s_ae350b1268c2122d5094852d3b6241e7a}{get\+Standard\+Job\+Scheduler} ()
+\begin{DoxyCompactList}\small\item\em Get the \hyperlink{classwrench_1_1_w_m_s}{W\+MS}\textquotesingle{}s pilot scheduler. \end{DoxyCompactList}\item 
+\hyperlink{classwrench_1_1_workflow}{Workflow} $\ast$ \hyperlink{classwrench_1_1_w_m_s_a44b586fe5f584755375691a12d815aa3}{get\+Workflow} ()
+\begin{DoxyCompactList}\small\item\em Get the workflow that was assigned to the \hyperlink{classwrench_1_1_w_m_s}{W\+MS}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A workflow management system (\hyperlink{classwrench_1_1_w_m_s}{W\+MS}) 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_w_m_s_a036f0865c72e8dfe4e40b9419f0dc735}\label{classwrench_1_1_w_m_s_a036f0865c72e8dfe4e40b9419f0dc735}} 
+\index{wrench\+::\+W\+MS@{wrench\+::\+W\+MS}!add\+Dynamic\+Optimization@{add\+Dynamic\+Optimization}}
+\index{add\+Dynamic\+Optimization@{add\+Dynamic\+Optimization}!wrench\+::\+W\+MS@{wrench\+::\+W\+MS}}
+\subsubsection{\texorpdfstring{add\+Dynamic\+Optimization()}{addDynamicOptimization()}}
+{\footnotesize\ttfamily void wrench\+::\+W\+M\+S\+::add\+Dynamic\+Optimization (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ Dynamic\+Optimization $>$}]{optimization }\end{DoxyParamCaption})}
+
+
+
+Add a dynamic optimization to the list of optimizations. Optimizations are executed in order of insertion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em optimization} & a dynamic optimization implementation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_w_m_s_a21b9ae8ef40ba22e5ef0052fb70f7731}\label{classwrench_1_1_w_m_s_a21b9ae8ef40ba22e5ef0052fb70f7731}} 
+\index{wrench\+::\+W\+MS@{wrench\+::\+W\+MS}!add\+Static\+Optimization@{add\+Static\+Optimization}}
+\index{add\+Static\+Optimization@{add\+Static\+Optimization}!wrench\+::\+W\+MS@{wrench\+::\+W\+MS}}
+\subsubsection{\texorpdfstring{add\+Static\+Optimization()}{addStaticOptimization()}}
+{\footnotesize\ttfamily void wrench\+::\+W\+M\+S\+::add\+Static\+Optimization (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ Static\+Optimization $>$}]{optimization }\end{DoxyParamCaption})}
+
+
+
+Add a static optimization to the list of optimizations. Optimizations are executed in order of insertion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em optimization} & a static optimization implementation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwrench_1_1_w_m_s_afd2a6ae2f4d792046a6a17d5c0dc313f}\label{classwrench_1_1_w_m_s_afd2a6ae2f4d792046a6a17d5c0dc313f}} 
+\index{wrench\+::\+W\+MS@{wrench\+::\+W\+MS}!add\+Workflow@{add\+Workflow}}
+\index{add\+Workflow@{add\+Workflow}!wrench\+::\+W\+MS@{wrench\+::\+W\+MS}}
+\subsubsection{\texorpdfstring{add\+Workflow()}{addWorkflow()}}
+{\footnotesize\ttfamily void wrench\+::\+W\+M\+S\+::add\+Workflow (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow}{Workflow} $\ast$}]{workflow,  }\item[{double}]{start\+\_\+time = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Assign a workflow to the \hyperlink{classwrench_1_1_w_m_s}{W\+MS}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em workflow} & a workflow to execute \\
+\hline
+{\em start\+\_\+time} & the simulated time when the \hyperlink{classwrench_1_1_w_m_s}{W\+MS} should start executed the workflow (0 if not specified)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+Set the simulation pointer member variable of the workflow so that the workflow tasks have access to it for creating Simulation\+Timestamps\mbox{\Hypertarget{classwrench_1_1_w_m_s_ab84692140428dd81a6eccc115bf557e7}\label{classwrench_1_1_w_m_s_ab84692140428dd81a6eccc115bf557e7}} 
+\index{wrench\+::\+W\+MS@{wrench\+::\+W\+MS}!get\+Pilot\+Job\+Scheduler@{get\+Pilot\+Job\+Scheduler}}
+\index{get\+Pilot\+Job\+Scheduler@{get\+Pilot\+Job\+Scheduler}!wrench\+::\+W\+MS@{wrench\+::\+W\+MS}}
+\subsubsection{\texorpdfstring{get\+Pilot\+Job\+Scheduler()}{getPilotJobScheduler()}}
+{\footnotesize\ttfamily \hyperlink{classwrench_1_1_pilot_job_scheduler}{Pilot\+Job\+Scheduler} $\ast$ wrench\+::\+W\+M\+S\+::get\+Pilot\+Job\+Scheduler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \hyperlink{classwrench_1_1_w_m_s}{W\+MS}\textquotesingle{}s pilot scheduler. 
+
+\begin{DoxyReturn}{Returns}
+the pilot scheduler, or nullptr if none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_w_m_s_ae350b1268c2122d5094852d3b6241e7a}\label{classwrench_1_1_w_m_s_ae350b1268c2122d5094852d3b6241e7a}} 
+\index{wrench\+::\+W\+MS@{wrench\+::\+W\+MS}!get\+Standard\+Job\+Scheduler@{get\+Standard\+Job\+Scheduler}}
+\index{get\+Standard\+Job\+Scheduler@{get\+Standard\+Job\+Scheduler}!wrench\+::\+W\+MS@{wrench\+::\+W\+MS}}
+\subsubsection{\texorpdfstring{get\+Standard\+Job\+Scheduler()}{getStandardJobScheduler()}}
+{\footnotesize\ttfamily \hyperlink{classwrench_1_1_standard_job_scheduler}{Standard\+Job\+Scheduler} $\ast$ wrench\+::\+W\+M\+S\+::get\+Standard\+Job\+Scheduler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \hyperlink{classwrench_1_1_w_m_s}{W\+MS}\textquotesingle{}s pilot scheduler. 
+
+\begin{DoxyReturn}{Returns}
+the pilot scheduler, or nullptr if none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwrench_1_1_w_m_s_a44b586fe5f584755375691a12d815aa3}\label{classwrench_1_1_w_m_s_a44b586fe5f584755375691a12d815aa3}} 
+\index{wrench\+::\+W\+MS@{wrench\+::\+W\+MS}!get\+Workflow@{get\+Workflow}}
+\index{get\+Workflow@{get\+Workflow}!wrench\+::\+W\+MS@{wrench\+::\+W\+MS}}
+\subsubsection{\texorpdfstring{get\+Workflow()}{getWorkflow()}}
+{\footnotesize\ttfamily \hyperlink{classwrench_1_1_workflow}{Workflow} $\ast$ wrench\+::\+W\+M\+S\+::get\+Workflow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the workflow that was assigned to the \hyperlink{classwrench_1_1_w_m_s}{W\+MS}. 
+
+\begin{DoxyReturn}{Returns}
+a workflow 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/wms/W\+M\+S.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/wms/W\+M\+S.\+cpp\end{DoxyCompactItemize}

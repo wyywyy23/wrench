@@ -1,0 +1,282 @@
+\hypertarget{classwrench_1_1_simulation_output}{}\section{wrench\+:\+:Simulation\+Output Class Reference}
+\label{classwrench_1_1_simulation_output}\index{wrench\+::\+Simulation\+Output@{wrench\+::\+Simulation\+Output}}
+
+
+A class that contains post-\/mortem simulation-\/generated data.  
+
+
+
+
+{\ttfamily \#include $<$Simulation\+Output.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classwrench_1_1_simulation_output_a789834c9727ec0cd28faaf5176eaeecf}{dump\+Host\+Energy\+Consumption\+J\+S\+ON} (std\+::string file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Writes a J\+S\+ON file containing host energy consumption information as a J\+S\+ON array.  The J\+S\+ON array has the following format\+: \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_simulation_output_ac30cdf1fcfe9f3c61351d49acc36db52}{dump\+Platform\+Graph\+J\+S\+ON} (std\+::string file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Writes a J\+S\+ON file containing all hosts, network links, and the routes between each host.  The J\+S\+ON array has the following format\+: \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_simulation_output_a7a85709b2581c90b53c217e6805cf56c}{dump\+Workflow\+Execution\+J\+S\+ON} (\hyperlink{classwrench_1_1_workflow}{Workflow} $\ast$workflow, std\+::string file\+\_\+path, bool generate\+\_\+host\+\_\+utilization\+\_\+layout=false)
+\begin{DoxyCompactList}\small\item\em Writes \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} execution history for each task to a file, formatted as a J\+S\+ON array.  The J\+S\+ON array has the following format\+: \end{DoxyCompactList}\item 
+void \hyperlink{classwrench_1_1_simulation_output_aeb5ce1ef8b84cda7b0df5f21532088b2}{dump\+Workflow\+Graph\+J\+S\+ON} (\hyperlink{classwrench_1_1_workflow}{wrench\+::\+Workflow} $\ast$workflow, std\+::string file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Writes a J\+S\+ON graph representation of the \hyperlink{classwrench_1_1_workflow}{Workflow} to a file.  A node is added for each \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} and \hyperlink{classwrench_1_1_workflow_file}{Workflow\+File}. A \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} will have the type \char`\"{}task\char`\"{} and a \hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} will have the type \char`\"{}file\char`\"{}. A directed link is added for each dependency in the \hyperlink{classwrench_1_1_workflow}{Workflow}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ \hyperlink{classwrench_1_1_simulation_timestamp}{Simulation\+Timestamp}$<$ T $>$ $\ast$ $>$ \hyperlink{classwrench_1_1_simulation_output_a1d03324f34db985d0e181e42cf30cd9d}{get\+Trace} ()
+\begin{DoxyCompactList}\small\item\em Retrieve a copy of a simulation output trace once the simulation has completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that contains post-\/mortem simulation-\/generated data. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_simulation_output_a789834c9727ec0cd28faaf5176eaeecf}\label{classwrench_1_1_simulation_output_a789834c9727ec0cd28faaf5176eaeecf}} 
+\index{wrench\+::\+Simulation\+Output@{wrench\+::\+Simulation\+Output}!dump\+Host\+Energy\+Consumption\+J\+S\+ON@{dump\+Host\+Energy\+Consumption\+J\+S\+ON}}
+\index{dump\+Host\+Energy\+Consumption\+J\+S\+ON@{dump\+Host\+Energy\+Consumption\+J\+S\+ON}!wrench\+::\+Simulation\+Output@{wrench\+::\+Simulation\+Output}}
+\subsubsection{\texorpdfstring{dump\+Host\+Energy\+Consumption\+J\+S\+O\+N()}{dumpHostEnergyConsumptionJSON()}}
+{\footnotesize\ttfamily void wrench\+::\+Simulation\+Output\+::dump\+Host\+Energy\+Consumption\+J\+S\+ON (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Writes a J\+S\+ON file containing host energy consumption information as a J\+S\+ON array.  The J\+S\+ON array has the following format\+: 
+
+
+\begin{DoxyPre}
+[
+     \{
+         hostname: <string>,
+         pstates: [                 <-- if this host is a single core host, items in this list will be formatted as
+             \{                          the first item, else if this is a multi core host, items will be formatted as
+                 pstate: <int>,         the second item
+                 idle: <double>,
+                 running: <double>,   <-- if single core host
+                 speed: <double>
+             \},
+             \{
+                 pstate: <int>,
+                 idle: <double>,
+                 one\_core: <double>,  <-- if multi core host
+                 all\_cores: <double>, <-- if multi core host
+                 speed: <double>
+             \} ...
+         ],
+         watts\_off: <double>,
+         pstate\_trace: [
+             \{
+                 time: <double>,
+                 pstate: <int>
+             \}, ...
+         ],
+         consumed\_energy\_trace: [
+             \{
+                 time: <double>,
+                 joules: <double>
+             \}, ...
+         ]
+     \}, ...
+]
+\end{DoxyPre}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & the path to write the file\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+{\em std\+::runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_simulation_output_ac30cdf1fcfe9f3c61351d49acc36db52}\label{classwrench_1_1_simulation_output_ac30cdf1fcfe9f3c61351d49acc36db52}} 
+\index{wrench\+::\+Simulation\+Output@{wrench\+::\+Simulation\+Output}!dump\+Platform\+Graph\+J\+S\+ON@{dump\+Platform\+Graph\+J\+S\+ON}}
+\index{dump\+Platform\+Graph\+J\+S\+ON@{dump\+Platform\+Graph\+J\+S\+ON}!wrench\+::\+Simulation\+Output@{wrench\+::\+Simulation\+Output}}
+\subsubsection{\texorpdfstring{dump\+Platform\+Graph\+J\+S\+O\+N()}{dumpPlatformGraphJSON()}}
+{\footnotesize\ttfamily void wrench\+::\+Simulation\+Output\+::dump\+Platform\+Graph\+J\+S\+ON (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Writes a J\+S\+ON file containing all hosts, network links, and the routes between each host.  The J\+S\+ON array has the following format\+: 
+
+
+\begin{DoxyPre}
+\{
+   vertices: [
+       \{
+           type: <"host">,
+           id: <string>,
+           flop\_rate: <double (flops per second)>,
+           memory: <double (bytes)>,
+           cores: <unsigned\_long>
+       \},
+       \{
+           type: <"link">,
+           id: <string>,
+           bandwidth: <double (bytes per second)>,
+           latency: <double (in seconds)>
+       \}, . . .
+   ],
+   edges: [
+       \{
+           source: \{
+               type: <string>,
+               id: <string>
+           \}
+           target: \{
+               type: <string>,
+               id: <string>
+          \}
+       \}, . . .
+   ],
+  routes: [
+      \{
+          source: <string>,
+          target: <string>,
+          latency: <double (in seconds)>
+          route: [
+              link\_id, ...
+          ]
+      \}
+  ],
+\}
+\end{DoxyPre}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & the path to write the file\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_simulation_output_a7a85709b2581c90b53c217e6805cf56c}\label{classwrench_1_1_simulation_output_a7a85709b2581c90b53c217e6805cf56c}} 
+\index{wrench\+::\+Simulation\+Output@{wrench\+::\+Simulation\+Output}!dump\+Workflow\+Execution\+J\+S\+ON@{dump\+Workflow\+Execution\+J\+S\+ON}}
+\index{dump\+Workflow\+Execution\+J\+S\+ON@{dump\+Workflow\+Execution\+J\+S\+ON}!wrench\+::\+Simulation\+Output@{wrench\+::\+Simulation\+Output}}
+\subsubsection{\texorpdfstring{dump\+Workflow\+Execution\+J\+S\+O\+N()}{dumpWorkflowExecutionJSON()}}
+{\footnotesize\ttfamily void wrench\+::\+Simulation\+Output\+::dump\+Workflow\+Execution\+J\+S\+ON (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow}{Workflow} $\ast$}]{workflow,  }\item[{std\+::string}]{file\+\_\+path,  }\item[{bool}]{generate\+\_\+host\+\_\+utilization\+\_\+layout = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Writes \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} execution history for each task to a file, formatted as a J\+S\+ON array.  The J\+S\+ON array has the following format\+: 
+
+
+\begin{DoxyPre}
+   [
+     \{
+         task\_id: <string>,
+         execution\_host: \{
+             hostname: <string>,
+             flop\_rate: <double>,
+             memory: <double>,
+             cores: <unsigned\_long>
+         \},
+         num\_cores\_allocated: <unsigned\_long>,
+         vertical\_position: <unsigned\_long>,
+         whole\_task: \{ start: <double>, end: <double> \},
+         read:       \{ start: <double>, end: <double> \},
+         compute:    \{ start: <double>, end: <double> \},
+         write:      \{ start: <double>, end: <double> \},
+         failed: <double>,
+         terminated: <double>
+     \}, . . .
+   ]
+\end{DoxyPre}
+
+
+If generate\+\_\+host\+\_\+utilization\+\_\+layout is set to true, a recursive function searches for a possible host utilization layout where tasks are assumed to use contiguous numbers of cores on their execution hosts. Note that each \hyperlink{classwrench_1_1_compute_service}{Compute\+Service} does not enforce this, and such a layout may not exist for some workflow executions. In this situation, the function will go through the entire search space until all possible layouts are evaluated. For a large \hyperlink{classwrench_1_1_workflow}{Workflow}, this may take a very long time.
+
+If a host utilization layout is able to be generated, the \textquotesingle{}vertical\+\_\+position\textquotesingle{} values will be set for each task run, and the task can be plotted as a rectangle on a graph where the y-\/axis denotes the number of cores -\/ 1, and the x-\/axis denotes the workflow execution timeline. The vertical\+\_\+position specifies the bottom of the rectangle. num\+\_\+cores\+\_\+allocated specifies the height of the rectangle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em workflow} & a pointer to the \hyperlink{classwrench_1_1_workflow}{Workflow} \\
+\hline
+{\em file\+\_\+path} & the path to write the file \\
+\hline
+{\em generate\+\_\+host\+\_\+utilization\+\_\+layout} & boolean specifying whether or not you would like a possible host utilization layout to be generated\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_simulation_output_aeb5ce1ef8b84cda7b0df5f21532088b2}\label{classwrench_1_1_simulation_output_aeb5ce1ef8b84cda7b0df5f21532088b2}} 
+\index{wrench\+::\+Simulation\+Output@{wrench\+::\+Simulation\+Output}!dump\+Workflow\+Graph\+J\+S\+ON@{dump\+Workflow\+Graph\+J\+S\+ON}}
+\index{dump\+Workflow\+Graph\+J\+S\+ON@{dump\+Workflow\+Graph\+J\+S\+ON}!wrench\+::\+Simulation\+Output@{wrench\+::\+Simulation\+Output}}
+\subsubsection{\texorpdfstring{dump\+Workflow\+Graph\+J\+S\+O\+N()}{dumpWorkflowGraphJSON()}}
+{\footnotesize\ttfamily void wrench\+::\+Simulation\+Output\+::dump\+Workflow\+Graph\+J\+S\+ON (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_workflow}{wrench\+::\+Workflow} $\ast$}]{workflow,  }\item[{std\+::string}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Writes a J\+S\+ON graph representation of the \hyperlink{classwrench_1_1_workflow}{Workflow} to a file.  A node is added for each \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} and \hyperlink{classwrench_1_1_workflow_file}{Workflow\+File}. A \hyperlink{classwrench_1_1_workflow_task}{Workflow\+Task} will have the type \char`\"{}task\char`\"{} and a \hyperlink{classwrench_1_1_workflow_file}{Workflow\+File} will have the type \char`\"{}file\char`\"{}. A directed link is added for each dependency in the \hyperlink{classwrench_1_1_workflow}{Workflow}. 
+
+
+\begin{DoxyPre}
+\{
+     vertices: [
+         \{
+             type: <"task">,
+             id: <string>,
+             flops: <double>,
+             min\_cores: <unsigned\_long>,
+             max\_cores: <unsigned\_long>,
+             parallel\_efficiency: <double>,
+             memory: <double>,
+         \},
+         \{
+             type: <"file">,
+             id: <string>,
+             size: <double>
+         \}, . . .
+     ],
+     edges: [
+         \{
+             source: <string>,
+             target: <string>
+         \}, . . .
+     ]
+ \}
+ \end{DoxyPre}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em workflow} & a pointer to the workflow \\
+\hline
+{\em file\+\_\+path} & the path to write the file\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classwrench_1_1_simulation_output_a1d03324f34db985d0e181e42cf30cd9d}\label{classwrench_1_1_simulation_output_a1d03324f34db985d0e181e42cf30cd9d}} 
+\index{wrench\+::\+Simulation\+Output@{wrench\+::\+Simulation\+Output}!get\+Trace@{get\+Trace}}
+\index{get\+Trace@{get\+Trace}!wrench\+::\+Simulation\+Output@{wrench\+::\+Simulation\+Output}}
+\subsubsection{\texorpdfstring{get\+Trace()}{getTrace()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$\hyperlink{classwrench_1_1_simulation_timestamp}{Simulation\+Timestamp}$<$T$>$ $\ast$$>$ wrench\+::\+Simulation\+Output\+::get\+Trace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve a copy of a simulation output trace once the simulation has completed. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em a} & particular Simulation\+Timestamp\+X\+X\+XX class (defined in \hyperlink{_simulation_timestamp_types_8h_source}{Simulation\+Timestamp\+Types.\+h}) \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+a vector of pointers to Simulation\+Timestamp\+X\+X\+XX instances 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/simulation/Simulation\+Output.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/simulation/Simulation\+Output.\+cpp\end{DoxyCompactItemize}

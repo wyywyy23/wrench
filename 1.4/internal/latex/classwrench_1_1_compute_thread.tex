@@ -1,0 +1,81 @@
+\hypertarget{classwrench_1_1_compute_thread}{}\section{wrench\+:\+:Compute\+Thread Class Reference}
+\label{classwrench_1_1_compute_thread}\index{wrench\+::\+Compute\+Thread@{wrench\+::\+Compute\+Thread}}
+
+
+A one-\/shot service that simulates a C\+P\+U-\/bound thread that performs a given number of flops and then reports to some mailbox saying \char`\"{}\+I am done\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$Compute\+Thread.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Compute\+Thread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classwrench_1_1_compute_thread}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_compute_thread_af258bf21a65a0cf15912171c5e6ec472}{Compute\+Thread} (\hyperlink{classwrench_1_1_simulation}{Simulation} $\ast$\hyperlink{classwrench_1_1_s4_u___daemon_a305beca7ad2fb650ad1492b7c95e93c4}{simulation}, std\+::string \hyperlink{classwrench_1_1_s4_u___daemon_a52bc0b9a6cd248310749dac086819f00}{hostname}, double flops, std\+::string reply\+\_\+mailbox)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_compute_thread_a89973c4cd2c9ec39a1d26c05a1bc3b11}\label{classwrench_1_1_compute_thread_a89973c4cd2c9ec39a1d26c05a1bc3b11}} 
+void \hyperlink{classwrench_1_1_compute_thread_a89973c4cd2c9ec39a1d26c05a1bc3b11}{kill} ()
+\begin{DoxyCompactList}\small\item\em Terminate (brutally) the compute thread. \end{DoxyCompactList}\item 
+int \hyperlink{classwrench_1_1_compute_thread_aae43a83a656caf607342b248ee5cde2a}{main} () override
+\begin{DoxyCompactList}\small\item\em The main method of the compute thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A one-\/shot service that simulates a C\+P\+U-\/bound thread that performs a given number of flops and then reports to some mailbox saying \char`\"{}\+I am done\char`\"{}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_compute_thread_af258bf21a65a0cf15912171c5e6ec472}\label{classwrench_1_1_compute_thread_af258bf21a65a0cf15912171c5e6ec472}} 
+\index{wrench\+::\+Compute\+Thread@{wrench\+::\+Compute\+Thread}!Compute\+Thread@{Compute\+Thread}}
+\index{Compute\+Thread@{Compute\+Thread}!wrench\+::\+Compute\+Thread@{wrench\+::\+Compute\+Thread}}
+\subsubsection{\texorpdfstring{Compute\+Thread()}{ComputeThread()}}
+{\footnotesize\ttfamily wrench\+::\+Compute\+Thread\+::\+Compute\+Thread (\begin{DoxyParamCaption}\item[{\hyperlink{classwrench_1_1_simulation}{Simulation} $\ast$}]{simulation,  }\item[{std\+::string}]{hostname,  }\item[{double}]{flops,  }\item[{std\+::string}]{reply\+\_\+mailbox }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simulation} & a pointer to the simulation object \\
+\hline
+{\em hostname} & the host on which the compute thread should run \\
+\hline
+{\em flops} & the number of flops to perform \\
+\hline
+{\em reply\+\_\+mailbox} & the mailbox to which the \char`\"{}done/failed\char`\"{} message should be sent \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwrench_1_1_compute_thread_aae43a83a656caf607342b248ee5cde2a}\label{classwrench_1_1_compute_thread_aae43a83a656caf607342b248ee5cde2a}} 
+\index{wrench\+::\+Compute\+Thread@{wrench\+::\+Compute\+Thread}!main@{main}}
+\index{main@{main}!wrench\+::\+Compute\+Thread@{wrench\+::\+Compute\+Thread}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int wrench\+::\+Compute\+Thread\+::main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The main method of the compute thread. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classwrench_1_1_s4_u___daemon_a0073b1104849679756809330533400eb}{wrench\+::\+S4\+U\+\_\+\+Daemon}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/work\+\_\+unit\+\_\+executor/Compute\+Thread.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/work\+\_\+unit\+\_\+executor/Compute\+Thread.\+cpp\end{DoxyCompactItemize}

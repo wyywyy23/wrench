@@ -1,0 +1,68 @@
+\hypertarget{classwrench_1_1_batch_service_job_request_message}{}\section{wrench\+:\+:Batch\+Service\+Job\+Request\+Message Class Reference}
+\label{classwrench_1_1_batch_service_job_request_message}\index{wrench\+::\+Batch\+Service\+Job\+Request\+Message@{wrench\+::\+Batch\+Service\+Job\+Request\+Message}}
+
+
+A message sent to a \hyperlink{classwrench_1_1_batch_service}{Batch\+Service} to submit a batch job for execution.  
+
+
+
+
+{\ttfamily \#include $<$Batch\+Service\+Message.\+h$>$}
+
+Inheritance diagram for wrench\+:\+:Batch\+Service\+Job\+Request\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classwrench_1_1_batch_service_job_request_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwrench_1_1_batch_service_job_request_message_a563be67cfe2b719c47ab3c54850b523e}{Batch\+Service\+Job\+Request\+Message} (std\+::string \hyperlink{classwrench_1_1_batch_service_job_request_message_acf4e18e89cd2419af5f5de0f08a32254}{answer\+\_\+mailbox}, \hyperlink{classwrench_1_1_batch_job}{Batch\+Job} $\ast$\hyperlink{classwrench_1_1_batch_service_job_request_message_ab1279040739326a80418e60cf6b80b05}{job}, double \hyperlink{classwrench_1_1_simulation_message_a914f2732713f7c02898e66f05a7cb8a1}{payload})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwrench_1_1_batch_service_job_request_message_acf4e18e89cd2419af5f5de0f08a32254}\label{classwrench_1_1_batch_service_job_request_message_acf4e18e89cd2419af5f5de0f08a32254}} 
+std\+::string \hyperlink{classwrench_1_1_batch_service_job_request_message_acf4e18e89cd2419af5f5de0f08a32254}{answer\+\_\+mailbox}
+\begin{DoxyCompactList}\small\item\em The mailbox to answer to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwrench_1_1_batch_service_job_request_message_ab1279040739326a80418e60cf6b80b05}\label{classwrench_1_1_batch_service_job_request_message_ab1279040739326a80418e60cf6b80b05}} 
+\hyperlink{classwrench_1_1_batch_job}{Batch\+Job} $\ast$ \hyperlink{classwrench_1_1_batch_service_job_request_message_ab1279040739326a80418e60cf6b80b05}{job}
+\begin{DoxyCompactList}\small\item\em The batch job. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A message sent to a \hyperlink{classwrench_1_1_batch_service}{Batch\+Service} to submit a batch job for execution. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwrench_1_1_batch_service_job_request_message_a563be67cfe2b719c47ab3c54850b523e}\label{classwrench_1_1_batch_service_job_request_message_a563be67cfe2b719c47ab3c54850b523e}} 
+\index{wrench\+::\+Batch\+Service\+Job\+Request\+Message@{wrench\+::\+Batch\+Service\+Job\+Request\+Message}!Batch\+Service\+Job\+Request\+Message@{Batch\+Service\+Job\+Request\+Message}}
+\index{Batch\+Service\+Job\+Request\+Message@{Batch\+Service\+Job\+Request\+Message}!wrench\+::\+Batch\+Service\+Job\+Request\+Message@{wrench\+::\+Batch\+Service\+Job\+Request\+Message}}
+\subsubsection{\texorpdfstring{Batch\+Service\+Job\+Request\+Message()}{BatchServiceJobRequestMessage()}}
+{\footnotesize\ttfamily wrench\+::\+Batch\+Service\+Job\+Request\+Message\+::\+Batch\+Service\+Job\+Request\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{answer\+\_\+mailbox,  }\item[{\hyperlink{classwrench_1_1_batch_job}{Batch\+Job} $\ast$}]{job,  }\item[{double}]{payload }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em answer\+\_\+mailbox} & the mailbox to which the answer should be sent back \\
+\hline
+{\em job} & the batch job \\
+\hline
+{\em payload} & the message size in bytes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/include/wrench/services/compute/batch/Batch\+Service\+Message.\+h\item 
+/\+Users/rafsilva/\+Documents/isi/workspace/wrench/wrench/src/wrench/services/compute/batch/Batch\+Service\+Message.\+cpp\end{DoxyCompactItemize}

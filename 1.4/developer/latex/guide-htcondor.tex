@@ -1,0 +1,51 @@
+Developer DocumentationOther\+: \href{../user/guide-htcondor.html}{\tt User} -\/ \href{../internal/guide-htcondor.html}{\tt Internal}\hypertarget{guide-htcondor_guide-htcondor-overview}{}\section{Overview}\label{guide-htcondor_guide-htcondor-overview}
+\href{http://htcondor.org}{\tt H\+T\+Condor} is a workload management framework that supervises task executions on local and remote resources. H\+T\+Condor is composed of six main service daemons ({\ttfamily startd}, {\ttfamily starter}, {\ttfamily schedd}, {\ttfamily shadow}, {\ttfamily negotiator}, and {\ttfamily collector}). In addition, each host on which one or more of these daemons is spawned must also run a {\ttfamily master} daemon, which controls the execution of all other daemons (including initialization and completion).\hypertarget{guide-htcondor_guide-htcondor-creating}{}\section{Creating an H\+T\+Condor Service}\label{guide-htcondor_guide-htcondor-creating}
+H\+T\+Condor is composed of a pool of resources in which jobs are submitted to perform their computation. In W\+R\+E\+N\+CH, an H\+T\+Condor service represents a compute service ({\ttfamily \hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}}), which is defined by the {\ttfamily \hyperlink{classwrench_1_1_h_t_condor_service}{wrench\+::\+H\+T\+Condor\+Service}} class. An instantiation of an H\+T\+Condor service requires the following parameters\+:
+
+
+\begin{DoxyItemize}
+\item A hostname on which to start the service;
+\item The H\+T\+Condor pool name;
+\item A {\ttfamily std\+::set} of {\ttfamily \hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}} available to the H\+T\+Condor pool; and
+\item A {\ttfamily std\+::map} of properties ({\ttfamily \hyperlink{classwrench_1_1_h_t_condor_service_property}{wrench\+::\+H\+T\+Condor\+Service\+Property}}) and message payloads ({\ttfamily \hyperlink{classwrench_1_1_h_t_condor_service_message_payload}{wrench\+::\+H\+T\+Condor\+Service\+Message\+Payload}}).
+\end{DoxyItemize}
+
+The set of compute services may represent any computing instance natively provided by W\+R\+E\+N\+CH (e.\+g., bare-\/metal servers, cloud platforms, batch-\/scheduled clusters, etc.) or additional services derived from the {\ttfamily \hyperlink{classwrench_1_1_compute_service}{wrench\+::\+Compute\+Service}} base class. The example below shows how to create an instance of an H\+T\+Condor service with a pool of resources containing a \hyperlink{guide-baremetal}{Bare-\/metal} server\+:
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Simulation }
+\hyperlink{classwrench_1_1_simulation}{wrench::Simulation} simulation;
+simulation.\hyperlink{classwrench_1_1_simulation_a3c6d35f1f77f35cbc727ce31e5689992}{init}(&argc, argv);
+
+\textcolor{comment}{// Create bare-metal server}
+std::set<wrench::ComputeService *> compute\_services;
+compute\_services.insert(\textcolor{keyword}{new} \hyperlink{classwrench_1_1_bare_metal_compute_service}{wrench::BareMetalComputeService}(
+          \textcolor{stringliteral}{"execution\_hostname"},
+          \{std::make\_pair(
+                  \textcolor{stringliteral}{"execution\_hostname"},
+                  std::make\_tuple(\hyperlink{classwrench_1_1_simulation_a6f0f556690d10d683a61acc3f10f5521}{wrench::Simulation::getHostNumCores}(\textcolor{stringliteral}{"
+      execution\_hostname"}),
+                                  \hyperlink{classwrench_1_1_simulation_a757dde71d164a89ff52e49c4c52af0b5}{wrench::Simulation::getHostMemoryCapacity}
+      (\textcolor{stringliteral}{"execution\_hostname"})))\},
+          100000000000.0));
+
+\textcolor{keyword}{auto} compute\_service = simulation->\hyperlink{classwrench_1_1_simulation_ad1f5c12285ecfaf5a2ce7dab5ec8b4c5}{add}(
+          \textcolor{keyword}{new} \hyperlink{classwrench_1_1_h_t_condor_service}{wrench::HTCondorService}(hostname, 
+                                      \textcolor{stringliteral}{"local"}, 
+                                      std::move(compute\_services),
+                                      \{\{
+      \hyperlink{classwrench_1_1_compute_service_property_af0abab1e3bce4932c4482031f0c31ce8}{wrench::HTCondorServiceProperty::SUPPORTS\_PILOT\_JOBS}, \textcolor{stringliteral}{"
+      false"}\}\}
+                                      ));
+\end{DoxyCode}
+\hypertarget{guide-htcondor_guide-htcondor-anatomy}{}\section{Anatomy of the H\+T\+Condor Service}\label{guide-htcondor_guide-htcondor-anatomy}
+In W\+R\+E\+N\+CH, we implement the 3 fundamental H\+T\+Condor services, implemented as particular sets of daemons. The {\itshape Job Execution Service} consists of a {\ttfamily startd} daemon, which adds the host on which it is running to the H\+T\+Condor pool, and of a {\ttfamily starter} daemon, which manages task executions on this host. The {\itshape Central Manager Service} consists of a {\ttfamily collector} daemon, which collects information about all other daemons, and of a {\ttfamily negotiator} daemon, which performs task/resource matchmaking. The {\itshape Job Submission Service} consists of a {\ttfamily schedd} daemon, which maintains a queue of tasks, and of several instances of a {\ttfamily shadow} daemon, each of which corresponds to a task submitted to the Condor pool for execution.
+
+
+
+~
+
+W\+R\+E\+N\+CH H\+T\+Condor service implementation spawns two additional services during execution\+: \hyperlink{classwrench_1_1_h_t_condor_central_manager_service}{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service} and \hyperlink{classwrench_1_1_h_t_condor_negotiator_service}{wrench\+::\+H\+T\+Condor\+Negotiator\+Service}.
+
+The \hyperlink{classwrench_1_1_h_t_condor_central_manager_service}{wrench\+::\+H\+T\+Condor\+Central\+Manager\+Service} coordinates the execution of jobs submitted to the H\+T\+Condor pool. Jobs submitted to the \hyperlink{classwrench_1_1_h_t_condor_service}{wrench\+::\+H\+T\+Condor\+Service} are then queued in a {\ttfamily std\+::vector$<$\hyperlink{classwrench_1_1_standard_job}{wrench\+::\+Standard\+Job} $\ast$$>$}, which are then consumed as resources become available. The Central Manager also spawns the execution of the \hyperlink{classwrench_1_1_h_t_condor_negotiator_service}{wrench\+::\+H\+T\+Condor\+Negotiator\+Service}, which performs matchmaking between jobs and compute resources available in the pool. Note that job submission in H\+T\+Condor is asynchronous, thus our simulated services operates independent from each other (see the \href{#wrench-101-WMS-services}{\tt Interacting with services} section). 
