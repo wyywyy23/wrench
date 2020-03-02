@@ -169,7 +169,7 @@ namespace wrench {
             }
         }
 
-
+	enough_ram = true;
         if (!enough_ram) {
             throw std::invalid_argument(
                     "StandardJobExecutor::StandardJobExecutor(): insufficient memory resources to run the job");
