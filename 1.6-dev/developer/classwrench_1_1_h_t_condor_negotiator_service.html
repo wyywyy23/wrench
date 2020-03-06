@@ -109,9 +109,9 @@ Inheritance diagram for wrench::HTCondorNegotiatorService:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad34d9e38852b1780ed493f650c7ba79d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_h_t_condor_negotiator_service.html#ad34d9e38852b1780ed493f650c7ba79d">HTCondorNegotiatorService</a> (std::string &amp;hostname, std::map&lt; std::shared_ptr&lt; <a class="el" href="classwrench_1_1_compute_service.html">ComputeService</a> &gt;, unsigned long &gt; &amp;compute_resources, std::map&lt; <a class="el" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *, std::shared_ptr&lt; <a class="el" href="classwrench_1_1_compute_service.html">ComputeService</a> &gt;&gt; &amp;running_jobs, std::vector&lt; <a class="el" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *&gt; &amp;pending_jobs, std::string &amp;reply_mailbox)</td></tr>
-<tr class="memdesc:ad34d9e38852b1780ed493f650c7ba79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ad34d9e38852b1780ed493f650c7ba79d">More...</a><br /></td></tr>
-<tr class="separator:ad34d9e38852b1780ed493f650c7ba79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33306c80f57cca510d25a6f6d06f0c82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_h_t_condor_negotiator_service.html#a33306c80f57cca510d25a6f6d06f0c82">HTCondorNegotiatorService</a> (std::string &amp;hostname, std::map&lt; std::shared_ptr&lt; <a class="el" href="classwrench_1_1_compute_service.html">ComputeService</a> &gt;, unsigned long &gt; &amp;compute_resources, std::map&lt; <a class="el" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *, std::shared_ptr&lt; <a class="el" href="classwrench_1_1_compute_service.html">ComputeService</a> &gt;&gt; &amp;running_jobs, std::vector&lt; std::tuple&lt; <a class="el" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *, std::map&lt; std::string, std::string &gt;&gt;&gt; &amp;pending_jobs, std::string &amp;reply_mailbox)</td></tr>
+<tr class="memdesc:a33306c80f57cca510d25a6f6d06f0c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a33306c80f57cca510d25a6f6d06f0c82">More...</a><br /></td></tr>
+<tr class="separator:a33306c80f57cca510d25a6f6d06f0c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbf969719d1b43ccfce10e7546eecea0"><td class="memItemLeft" align="right" valign="top"><a id="abbf969719d1b43ccfce10e7546eecea0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_h_t_condor_negotiator_service.html#abbf969719d1b43ccfce10e7546eecea0">~HTCondorNegotiatorService</a> ()</td></tr>
 <tr class="memdesc:abbf969719d1b43ccfce10e7546eecea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
@@ -161,8 +161,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A HTCondor negotiator service. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad34d9e38852b1780ed493f650c7ba79d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad34d9e38852b1780ed493f650c7ba79d">&#9670;&nbsp;</a></span>HTCondorNegotiatorService()</h2>
+<a id="a33306c80f57cca510d25a6f6d06f0c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33306c80f57cca510d25a6f6d06f0c82">&#9670;&nbsp;</a></span>HTCondorNegotiatorService()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,7 +188,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::tuple&lt; <a class="el" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *, std::map&lt; std::string, std::string &gt;&gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>pending_jobs</em>, </td>
         </tr>
         <tr>
