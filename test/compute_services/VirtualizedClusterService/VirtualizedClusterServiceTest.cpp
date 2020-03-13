@@ -634,11 +634,10 @@ private:
             } catch (wrench::WorkflowExecutionException &e) {}
 
 
-
             job_manager->submitJob(two_task_job, vm_cs);
 
-
             // migrating the VM
+            wrench::Simulation::sleep(0.01); // TODO Without this sleep, the test hangs! This is being investigated...
 
             try { // try a bogus one for coverage
                 cs->migrateVM("NON-EXISTENT", "DualCoreHost");
@@ -1750,7 +1749,6 @@ private:
 
         // Create a job manager
         auto job_manager = this->createJobManager();
-
 
         // Create a VM on the Cloud Service
         auto vm_name = cloud_service->createVM(2, 1024);

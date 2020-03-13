@@ -12,7 +12,7 @@
 #include <wrench-dev.h>
 
 #include "wrench/simgrid_S4U_util/S4U_Mailbox.h"
-#include "../../src/wrench/services/compute/standard_job_executor/StandardJobExecutorMessage.h"
+#include "../../src/wrench/helper_services/standard_job_executor/StandardJobExecutorMessage.h"
 
 
 #include "../include/TestWithFork.h"
@@ -77,49 +77,49 @@ protected:
                           "<platform version=\"4.1\"> "
                           "   <zone id=\"AS0\" routing=\"Full\"> "
                           "       <host id=\"Host1\" speed=\"1f\" core=\"10\"> "
-                          "          <disk id=\"large_disk1\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"large_disk1\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"10000000000000B\"/>"
                           "             <prop id=\"mount\" value=\"/disk1/\"/>"
                           "          </disk>"
-                          "          <disk id=\"large_disk2\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"large_disk2\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"10000000000000B\"/>"
                           "             <prop id=\"mount\" value=\"/disk2/\"/>"
                           "          </disk>"
-                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"101B\"/>"
                           "             <prop id=\"mount\" value=\"/scratch\"/>"
                           "          </disk>"
                           "       </host>  "
                           "       <host id=\"Host2\" speed=\"1f\" core=\"10\"> "
-                          "          <disk id=\"large_disk\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"large_disk\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"10000000000000B\"/>"
                           "             <prop id=\"mount\" value=\"/\"/>"
                           "          </disk>"
-                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"101b\"/>"
                           "             <prop id=\"mount\" value=\"/scratch\"/>"
                           "          </disk>"
                           "       </host>  "
                           "       <host id=\"Host3\" speed=\"1f\" core=\"10\"> "
-                          "          <disk id=\"large_disk\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"large_disk\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"10000000000000B\"/>"
                           "             <prop id=\"mount\" value=\"/\"/>"
                           "          </disk>"
-                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"101B\"/>"
                           "             <prop id=\"mount\" value=\"/scratch\"/>"
                           "          </disk>"
                           "       </host>  "
                           "       <host id=\"Host4\" speed=\"1f\" core=\"10\">  "
-                          "          <disk id=\"large_disk1\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"large_disk1\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"10000000000000B\"/>"
                           "             <prop id=\"mount\" value=\"/disk1/\"/>"
                           "          </disk>"
-                          "          <disk id=\"large_disk2\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"large_disk2\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"10000000000000B\"/>"
                           "             <prop id=\"mount\" value=\"/disk2/\"/>"
                           "          </disk>"
-                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"101B\"/>"
                           "             <prop id=\"mount\" value=\"/scratch\"/>"
                           "          </disk>"
@@ -2922,17 +2922,17 @@ void StandardJobExecutorTest::do_WorkUnit_test() {
 
     // Create two WorkUnits
     std::shared_ptr<wrench::Workunit> wu1 = std::make_shared<wrench::Workunit>(nullptr,
-                                                                               (std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation>>>){},
+                                                                               (std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation>>>){},
                                                                                nullptr,
                                                                                (std::map<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>>){},
-                                                                               (std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation>>>){},
-                                                                               (std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>>>){});
+                                                                               (std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation>>>){},
+                                                                               (std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>>>){});
     std::shared_ptr<wrench::Workunit> wu2 = std::make_shared<wrench::Workunit>(nullptr,
-                                                                               (std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation>>>){},
+                                                                               (std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation>>>){},
                                                                                nullptr,
                                                                                (std::map<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>>){},
-                                                                               (std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation>>>){},
-                                                                               (std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>>>){});
+                                                                               (std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation>>>){},
+                                                                               (std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>>>){});
 
 
     ASSERT_THROW(wrench::Workunit::addDependency(wu1, nullptr), std::invalid_argument);

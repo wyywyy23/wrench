@@ -87,3 +87,113 @@ function populateLegend(currView) {
             .text("Terminated By User")
     }
 }
+
+
+function determineTaskEnd(d) {
+    var taskEnd
+    if (d.terminated !== -1) {
+        taskEnd = d.terminated
+    } else if (d.failed !== -1) {
+        taskEnd = d.failed
+    } else {
+        taskEnd = d.whole_task.end
+    }
+    return taskEnd
+}
+
+function determineTaskOverlap(data) {
+    var taskOverlap = {}
+    data.forEach(function(d) {
+        var taskStart = d.whole_task.start
+        var taskEnd = determineTaskEnd(d)
+        if (Object.keys(taskOverlap).length === 0) {
+            taskOverlap[0] = []
+            taskOverlap[0].push(d)
+        } else {
+            var i = 0
+            var placed = false
+            while (!placed) {
+                if (taskOverlap[i] === undefined) {
+                    taskOverlap[i] = []
+                }
+                var overlap = false
+                for (var j = 0; j < taskOverlap[i].length; j++) {
+                    var t = taskOverlap[i][j]
+                    var currTaskStart = t.whole_task.start
+                    var currTaskEnd = determineTaskEnd(t)
+                    if ((taskStart >= currTaskStart && taskStart <= currTaskEnd) || (taskEnd >= currTaskStart && taskEnd <= currTaskEnd)) {
+                        i++
+                        overlap = true
+                        break
+                    }
+                }
+                if (!overlap) {
+                    taskOverlap[i].push(d)
+                    placed = true
+                }
+            }
+        }
+    })
+    return taskOverlap
+}
+
+function searchOverlap(taskId, taskOverlap) {
+    for (var key in taskOverlap) {
+        if (taskOverlap.hasOwnProperty(key)) {
+            var currOverlap = taskOverlap[key]
+            for (var i = 0; i < currOverlap.length; i++) {
+                if (currOverlap[i].task_id === taskId) {
+                    return key
+                }
+            }
+        }
+    }
+}
+
+function extractFileContent(file) {
+    return new Promise(function(resolve, reject) {
+        let reader = new FileReader()
+        reader.onload = function(event) {
+            resolve(event.target.result);
+            // document.getElementById('fileContent').textContent = event.target.result;
+        }
+        reader.readAsText(file);
+        setTimeout(function() {
+            reject()
+        }, 5000)
+    })
+}
+
+function processFile(files, fileType) {
+    if (files.length === 0) {
+        return
+    }
+    extractFileContent(files[0])
+        .then(function(rawDataString) {
+            switch (fileType) {
+                case "taskData":
+                    const rawData = JSON.parse(rawDataString)
+                    if (!rawData.workflow_execution || !rawData.workflow_execution.tasks) {
+                        break
+                    }
+                    data = {
+                        file: files[0].name,
+                        contents: rawData.workflow_execution.tasks
+                    }
+                    break
+                case "energy":
+                    energyData = JSON.parse(rawData)
+                    break
+            }
+            initialise()
+        })
+        .catch(function() {
+            return
+        })
+}
+
+function sanitizeId(id) {
+    id = id.replace('#', '')
+    id = id.replace(' ', '')
+    return id
+}

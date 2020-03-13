@@ -10,7 +10,7 @@
 #include <wrench-dev.h>
 #include <wrench/simgrid_S4U_util/S4U_Mailbox.h>
 #include <wrench/simulation/SimulationMessage.h>
-#include "services/compute/standard_job_executor/StandardJobExecutorMessage.h"
+#include "helper_services/standard_job_executor/StandardJobExecutorMessage.h"
 #include <gtest/gtest.h>
 #include <wrench/services/compute/batch/BatchComputeService.h>
 #include <wrench/services/compute/batch/BatchComputeServiceMessage.h>
@@ -51,31 +51,31 @@ protected:
                           "<platform version=\"4.1\"> "
                           "   <zone id=\"AS0\" routing=\"Full\"> "
                           "       <host id=\"Host1\" speed=\"1f\" core=\"10\"> "
-                          "          <disk id=\"large_disk\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"large_disk\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"100B\"/>"
                           "             <prop id=\"mount\" value=\"/\"/>"
                           "          </disk>"
-                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"101B\"/>"
                           "             <prop id=\"mount\" value=\"/scratch\"/>"
                           "          </disk>"
                           "       </host>  "
                           "       <host id=\"Host2\" speed=\"1f\" core=\"10\"> "
-                          "          <disk id=\"large_disk\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"large_disk\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"100B\"/>"
                           "             <prop id=\"mount\" value=\"/\"/>"
                           "          </disk>"
-                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"101B\"/>"
                           "             <prop id=\"mount\" value=\"/scratch\"/>"
                           "          </disk>"
                           "       </host>  "
                           "       <host id=\"Host3\" speed=\"1f\" core=\"10\"> "
-                          "          <disk id=\"large_disk\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"large_disk\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"100B\"/>"
                           "             <prop id=\"mount\" value=\"/\"/>"
                           "          </disk>"
-                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"40MBps\">"
+                          "          <disk id=\"scratch\" read_bw=\"100MBps\" write_bw=\"100MBps\">"
                           "             <prop id=\"size\" value=\"101B\"/>"
                           "             <prop id=\"mount\" value=\"/scratch\"/>"
                           "          </disk>"
@@ -240,22 +240,22 @@ private:
 
         // Create a job with a null stuff in pre file copy
         try {
-            std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > pre_file_copies;
-            pre_file_copies.insert(std::make_tuple((wrench::WorkflowFile *)nullptr, wrench::FileLocation::SCRATCH, wrench::FileLocation::SCRATCH));
+            std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > pre_file_copies;
+            pre_file_copies.push_back(std::make_tuple((wrench::WorkflowFile *)nullptr, wrench::FileLocation::SCRATCH, wrench::FileLocation::SCRATCH));
             job_manager->createStandardJob({}, {}, pre_file_copies, {}, {});
             throw std::runtime_error("Should not be able to create a standard job with a (nullptr, *, *) pre file copy");
         } catch (std::invalid_argument &e) {
         }
         try {
-            std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > pre_file_copies;
-            pre_file_copies.insert(std::make_tuple(f, nullptr, wrench::FileLocation::SCRATCH));
+            std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > pre_file_copies;
+            pre_file_copies.push_back(std::make_tuple(f, nullptr, wrench::FileLocation::SCRATCH));
             job_manager->createStandardJob({}, {}, pre_file_copies, {}, {});
             throw std::runtime_error("Should not be able to create a standard job with a (*, nullptr, *) pre file copy");
         } catch (std::invalid_argument &e) {
         }
         try {
-            std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > pre_file_copies;
-            pre_file_copies.insert(std::make_tuple(f, wrench::FileLocation::SCRATCH, nullptr));
+            std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > pre_file_copies;
+            pre_file_copies.push_back(std::make_tuple(f, wrench::FileLocation::SCRATCH, nullptr));
             job_manager->createStandardJob({}, {}, pre_file_copies, {}, {});
             throw std::runtime_error("Should not be able to create a standard job with a (*, *, nullptr) pre file copy");
         } catch (std::invalid_argument &e) {
@@ -264,22 +264,22 @@ private:
 
         // Create a job with a null stuff in post file copy
         try {
-            std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > post_file_copies;
-            post_file_copies.insert(std::make_tuple((wrench::WorkflowFile *)nullptr, wrench::FileLocation::SCRATCH, wrench::FileLocation::SCRATCH));
+            std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > post_file_copies;
+            post_file_copies.push_back(std::make_tuple((wrench::WorkflowFile *)nullptr, wrench::FileLocation::SCRATCH, wrench::FileLocation::SCRATCH));
             job_manager->createStandardJob({}, {}, {}, post_file_copies, {});
             throw std::runtime_error("Should not be able to create a standard job with a (nullptr, *, *) post file copy");
         } catch (std::invalid_argument &e) {
         }
         try {
-            std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > post_file_copies;
-            post_file_copies.insert(std::make_tuple(f, nullptr, wrench::FileLocation::SCRATCH));
+            std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > post_file_copies;
+            post_file_copies.push_back(std::make_tuple(f, nullptr, wrench::FileLocation::SCRATCH));
             job_manager->createStandardJob({}, {}, {}, post_file_copies, {});
             throw std::runtime_error("Should not be able to create a standard job with a (*, nullptr, *) post file copy");
         } catch (std::invalid_argument &e) {
         }
         try {
-            std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > post_file_copies;
-            post_file_copies.insert(std::make_tuple(f, wrench::FileLocation::SCRATCH, nullptr));
+            std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > post_file_copies;
+            post_file_copies.push_back(std::make_tuple(f, wrench::FileLocation::SCRATCH, nullptr));
             job_manager->createStandardJob({}, {}, {}, post_file_copies, {});
             throw std::runtime_error("Should not be able to create a standard job with a (*, *, nullptr) post file copy");
         } catch (std::invalid_argument &e) {
@@ -287,16 +287,16 @@ private:
 
         // Create a job with SCRATCH as both src and dst
         try {
-            std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > pre_file_copies;
-            pre_file_copies.insert(std::make_tuple(f, wrench::FileLocation::SCRATCH, wrench::FileLocation::SCRATCH));
+            std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > pre_file_copies;
+            pre_file_copies.push_back(std::make_tuple(f, wrench::FileLocation::SCRATCH, wrench::FileLocation::SCRATCH));
             job_manager->createStandardJob({}, {}, pre_file_copies, {}, {});
             throw std::runtime_error("Should not be able to create a standard job with a pre file copy that has SCRATCH has both dst and src");
         } catch (std::invalid_argument &e) {
         }
         // Create a job with SCRATCH as both src and dst
         try {
-            std::set<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > post_file_copies;
-            post_file_copies.insert(std::make_tuple(f, wrench::FileLocation::SCRATCH, wrench::FileLocation::SCRATCH));
+            std::vector<std::tuple<wrench::WorkflowFile *, std::shared_ptr<wrench::FileLocation>, std::shared_ptr<wrench::FileLocation> > > post_file_copies;
+            post_file_copies.push_back(std::make_tuple(f, wrench::FileLocation::SCRATCH, wrench::FileLocation::SCRATCH));
             job_manager->createStandardJob({}, {}, {}, post_file_copies, {});
             throw std::runtime_error("Should not be able to create a standard job with a post file copy that has SCRATCH has both dst and src");
         } catch (std::invalid_argument &e) {
