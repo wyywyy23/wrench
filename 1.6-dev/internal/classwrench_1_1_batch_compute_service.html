@@ -113,9 +113,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a49082131bf5eb088baaeb3b15b158052"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_batch_compute_service.html#a49082131bf5eb088baaeb3b15b158052">BatchComputeService</a> (std::string &amp;<a class="el" href="classwrench_1_1_s4_u___daemon.html#a52bc0b9a6cd248310749dac086819f00">hostname</a>, std::vector&lt; std::string &gt; compute_hosts, std::string scratch_space_mount_point, std::map&lt; std::string, std::string &gt; <a class="el" href="classwrench_1_1_service.html#a032143b1e2d7296dde9b4ca1e34845ce">property_list</a>={}, std::map&lt; std::string, double &gt; <a class="el" href="classwrench_1_1_service.html#a0c5f5e448ffb18f17f70a34b376b6640">messagepayload_list</a>={})</td></tr>
 <tr class="memdesc:a49082131bf5eb088baaeb3b15b158052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a49082131bf5eb088baaeb3b15b158052">More...</a><br /></td></tr>
 <tr class="separator:a49082131bf5eb088baaeb3b15b158052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbb99bc55d35e347db61fa83c0f6f61e"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_batch_compute_service.html#afbb99bc55d35e347db61fa83c0f6f61e">getStartTimeEstimates</a> (std::set&lt; std::tuple&lt; std::string, unsigned int, unsigned int, double &gt;&gt; resources)</td></tr>
-<tr class="memdesc:afbb99bc55d35e347db61fa83c0f6f61e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve start time estimates for a set of job configurations.  <a href="#afbb99bc55d35e347db61fa83c0f6f61e">More...</a><br /></td></tr>
-<tr class="separator:afbb99bc55d35e347db61fa83c0f6f61e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aca94e9b53087e8a8adcc0edf1ae589"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_batch_compute_service.html#a5aca94e9b53087e8a8adcc0edf1ae589">getStartTimeEstimates</a> (std::set&lt; std::tuple&lt; std::string, unsigned long, unsigned long, double &gt;&gt; resources)</td></tr>
+<tr class="memdesc:a5aca94e9b53087e8a8adcc0edf1ae589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve start time estimates for a set of job configurations.  <a href="#a5aca94e9b53087e8a8adcc0edf1ae589">More...</a><br /></td></tr>
+<tr class="separator:a5aca94e9b53087e8a8adcc0edf1ae589"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classwrench_1_1_compute_service"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classwrench_1_1_compute_service')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classwrench_1_1_compute_service.html">wrench::ComputeService</a></td></tr>
 <tr class="memitem:a74c23d7f4010441d7aceb63b17565611 inherit pub_methods_classwrench_1_1_compute_service"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#a74c23d7f4010441d7aceb63b17565611">ComputeService</a> (const std::string &amp;<a class="el" href="classwrench_1_1_s4_u___daemon.html#a52bc0b9a6cd248310749dac086819f00">hostname</a>, std::string service_name, std::string mailbox_name_prefix, std::string scratch_space_mount_point)</td></tr>
 <tr class="memdesc:a74c23d7f4010441d7aceb63b17565611 inherit pub_methods_classwrench_1_1_compute_service"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classwrench_1_1_compute_service.html#a74c23d7f4010441d7aceb63b17565611">More...</a><br /></td></tr>
@@ -414,7 +414,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A batch-scheduled compute service that manages a set of compute hosts and controls access to their resource via a batch queue. </p>
-<p>In the current implementation of this service, like for many of its real-world counterparts, memory partitioning among jobs on the same host is not handled. When multiple jobs share hosts, which can happen when jobs require only a few cores per host and can thus be co-located on the same hosts in a non-exclusive fashion, each job simply runs as if it had access to the full RAM of each compute host it is scheduled on. The simulation of these memory contended scenarios is thus, for now, not realistic as there is no simulation of the effects of memory sharing (e.g., swapping). </p>
+<p>In the current implementation of this service, like for many of its real-world counterparts, memory partitioning among jobs onq the same host is not handled. When multiple jobs share hosts, which can happen when jobs require only a few cores per host and can thus be co-located on the same hosts in a non-exclusive fashion, each job simply runs as if it had access to the full RAM of each compute host it is scheduled on. The simulation of these memory contended scenarios is thus, for now, not realistic as there is no simulation of the effects of memory sharing (e.g., swapping). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a49082131bf5eb088baaeb3b15b158052"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49082131bf5eb088baaeb3b15b158052">&#9670;&nbsp;</a></span>BatchComputeService()</h2>
@@ -480,8 +480,8 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="afbb99bc55d35e347db61fa83c0f6f61e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbb99bc55d35e347db61fa83c0f6f61e">&#9670;&nbsp;</a></span>getStartTimeEstimates()</h2>
+<a id="a5aca94e9b53087e8a8adcc0edf1ae589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aca94e9b53087e8a8adcc0edf1ae589">&#9670;&nbsp;</a></span>getStartTimeEstimates()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,7 +489,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="memname">std::map&lt; std::string, double &gt; wrench::BatchComputeService::getStartTimeEstimates </td>
           <td>(</td>
-          <td class="paramtype">std::set&lt; std::tuple&lt; std::string, unsigned int, unsigned int, double &gt;&gt;&#160;</td>
+          <td class="paramtype">std::set&lt; std::tuple&lt; std::string, unsigned long, unsigned long, double &gt;&gt;&#160;</td>
           <td class="paramname"><em>set_of_jobs</em></td><td>)</td>
           <td></td>
         </tr>
@@ -501,8 +501,8 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   <table class="params">
     <tr><td class="paramname">set_of_jobs</td><td>the set of job configurations, each of them with an id. Each configuration is a tuple as follows:<ul>
 <li>a configuration id (std::string)</li>
-<li>a number of hosts (unsigned int)</li>
-<li>a number of cores per host (unsigned int)</li>
+<li>a number of hosts (unsigned long)</li>
+<li>a number of cores per host (unsigned long)</li>
 <li>a duration in seconds (double) </li>
 </ul>
 </td></tr>

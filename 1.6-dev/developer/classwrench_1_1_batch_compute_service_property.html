@@ -112,10 +112,10 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a58c3a7a25ee192ff4761f6ed3cea4533"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_batch_compute_service_property.html#a58c3a7a25ee192ff4761f6ed3cea4533">BATCH_QUEUE_ORDERING_ALGORITHM</a></td></tr>
 <tr class="memdesc:a58c3a7a25ee192ff4761f6ed3cea4533"><td class="mdescLeft">&#160;</td><td class="mdescRight">The batch queue ordering algorithm. Can be:  <a href="#a58c3a7a25ee192ff4761f6ed3cea4533">More...</a><br /></td></tr>
 <tr class="separator:a58c3a7a25ee192ff4761f6ed3cea4533"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38624d02629c5ab2b98058c046057205"><td class="memItemLeft" align="right" valign="top"><a id="a38624d02629c5ab2b98058c046057205"></a>
-static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_batch_compute_service_property.html#a38624d02629c5ab2b98058c046057205">BATCH_RJMS_DELAY</a></td></tr>
-<tr class="memdesc:a38624d02629c5ab2b98058c046057205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integral number of seconds that the Batch Scheduler adds to the runtime of each incoming job. This is something production batch systems do to avoid too aggressive job terminations. For instance, if a job says it wants to run for (at most) 60 seconds, the system will actually assume the job wants to run for (at most) 60 + 5 seconds. <br /></td></tr>
-<tr class="separator:a38624d02629c5ab2b98058c046057205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd8150f9959ce356635519f97b16fe4"><td class="memItemLeft" align="right" valign="top"><a id="adcd8150f9959ce356635519f97b16fe4"></a>
+static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_batch_compute_service_property.html#adcd8150f9959ce356635519f97b16fe4">BATCH_RJMS_PADDING_DELAY</a></td></tr>
+<tr class="memdesc:adcd8150f9959ce356635519f97b16fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integral number of seconds that the Batch Scheduler adds to the runtime of each incoming job. This is something production batch systems do to avoid too aggressive job terminations. For instance, if a job says it wants to run for (at most) 60 seconds, the system will actually assume the job wants to run for (at most) 60 + 5 seconds. <br /></td></tr>
+<tr class="separator:adcd8150f9959ce356635519f97b16fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e88135150aea2df7f815f7d751f03c7"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_batch_compute_service_property.html#a4e88135150aea2df7f815f7d751f03c7">BATCH_SCHEDULING_ALGORITHM</a></td></tr>
 <tr class="memdesc:a4e88135150aea2df7f815f7d751f03c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The batch scheduling algorithm. Can be:  <a href="#a4e88135150aea2df7f815f7d751f03c7">More...</a><br /></td></tr>
 <tr class="separator:a4e88135150aea2df7f815f7d751f03c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,7 +221,8 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a c
 <p>The batch scheduling algorithm. Can be: </p>
 <ul>
 <li>If ENABLE_BATSCHED is set to off / not set:<ul>
-<li>"FCFS": First Come First Serve</li>
+<li>"fcfs": First Come First Serve</li>
+<li>"conservative_bf": a home-grown implementation of FCFS with conservative backfilling, which only allocates resources at the node level</li>
 </ul>
 </li>
 <li>If ENABLE_BATSCHED is set to on:<ul>
@@ -318,8 +319,8 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a c
 
 <p>The host selection algorithm. Can be: </p>
 <ul>
-<li>If ENABLE_BATSCHED is set to off or not set: ignored</li>
-<li>If ENABLE_BATSCHED is set to on:<ul>
+<li>If ENABLE_BATSCHED is set to on or if the BATCH_SCHEDULING_ALGORITHM is not fcfs: ignored</li>
+<li>If ENABLE_BATSCHED is set to off or not set, and if the BATCH_SCHEDULING_ALGORITHM is fcfs:<ul>
 <li>FIRSTFIT (default)</li>
 <li>BESTFIT</li>
 <li>ROUNDROBIN </li>

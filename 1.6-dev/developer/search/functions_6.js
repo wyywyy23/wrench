@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['generatehostutilizationgraphlayout',['generateHostUtilizationGraphLayout',['../namespacewrench.html#ac68554a5edcdb1b4fda24cf84616fd6b',1,'wrench']]],
   ['getabsolutepathatmountpoint',['getAbsolutePathAtMountPoint',['../classwrench_1_1_file_location.html#a00c275ac3adad9d3f94e7f3d14032cb7',1,'wrench::FileLocation']]],
   ['getavailablecomputeservices',['getAvailableComputeServices',['../classwrench_1_1_w_m_s.html#ae875a712cde823ebd34fd062372cba23',1,'wrench::WMS']]],
   ['getavailablefileregistryservice',['getAvailableFileRegistryService',['../classwrench_1_1_w_m_s.html#a4748005397a89044b193cc43ee8dcdb0',1,'wrench::WMS']]],
@@ -112,7 +113,7 @@ var searchData=
   ['getsourcelocation',['getSourceLocation',['../classwrench_1_1_file_already_being_copied.html#ad03683a38c8d9d561a3f811d58c17f8a',1,'wrench::FileAlreadyBeingCopied']]],
   ['getstandardjobscheduler',['getStandardJobScheduler',['../classwrench_1_1_w_m_s.html#ae350b1268c2122d5094852d3b6241e7a',1,'wrench::WMS']]],
   ['getstartdate',['getStartDate',['../classwrench_1_1_workflow_task.html#a17462dd156a6080653f96a1abbbb379d',1,'wrench::WorkflowTask']]],
-  ['getstarttimeestimates',['getStartTimeEstimates',['../classwrench_1_1_batch_compute_service.html#afbb99bc55d35e347db61fa83c0f6f61e',1,'wrench::BatchComputeService']]],
+  ['getstarttimeestimates',['getStartTimeEstimates',['../classwrench_1_1_batch_compute_service.html#a5aca94e9b53087e8a8adcc0edf1ae589',1,'wrench::BatchComputeService']]],
   ['getstate',['getState',['../classwrench_1_1_pilot_job.html#a3890ff3cb3b494270c7a635748c91d95',1,'wrench::PilotJob::getState()'],['../classwrench_1_1_standard_job.html#a1fd45aa2f3ab8818d7bbf6d8d6a31a5c',1,'wrench::StandardJob::getState()'],['../classwrench_1_1_workflow_task.html#a990a3e96d944c37cb896a7ca0d84a4db',1,'wrench::WorkflowTask::getState()']]],
   ['getstorageservice',['getStorageService',['../classwrench_1_1_file_location.html#adc2afb8dd5c40a2ac26202378565e09a',1,'wrench::FileLocation::getStorageService()'],['../classwrench_1_1_storage_service_not_enough_space.html#a182a6b3119dce9ac2c90fce28edae81f',1,'wrench::StorageServiceNotEnoughSpace::getStorageService()'],['../classwrench_1_1_invalid_directory_path.html#af8dcd1a4610a0c504b03ae894714a21f',1,'wrench::InvalidDirectoryPath::getStorageService()']]],
   ['getsubmitdate',['getSubmitDate',['../classwrench_1_1_workflow_job.html#a05f015d4d97263662bf2d6d617611a34',1,'wrench::WorkflowJob']]],

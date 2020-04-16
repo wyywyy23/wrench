@@ -82,8 +82,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">wrench Namespace Reference</div>  </div>
 </div><!--header-->
@@ -304,21 +304,46 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A computational task in a <a class="el" href="classwrench_1_1_workflow.html" title="A workflow (to be executed by a WMS) ">Workflow</a>.  <a href="classwrench_1_1_workflow_task.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object representing an instance when a <a class="el" href="classwrench_1_1_workflow_task.html" title="A computational task in a Workflow. ">WorkflowTask</a> was run.  <a href="structwrench_1_1_workflow_task_execution_instance.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac1f3daa37620a4d99c2868c2a792448f"><td class="memItemLeft" align="right" valign="top"><a id="ac1f3daa37620a4d99c2868c2a792448f"></a>
+typedef struct <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">wrench::WorkflowTaskExecutionInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#ac1f3daa37620a4d99c2868c2a792448f">WorkflowTaskExecutionInstance</a></td></tr>
+<tr class="memdesc:ac1f3daa37620a4d99c2868c2a792448f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object representing an instance when a <a class="el" href="classwrench_1_1_workflow_task.html" title="A computational task in a Workflow. ">WorkflowTask</a> was run. <br /></td></tr>
+<tr class="separator:ac1f3daa37620a4d99c2868c2a792448f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ac68554a5edcdb1b4fda24cf84616fd6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#ac68554a5edcdb1b4fda24cf84616fd6b">generateHostUtilizationGraphLayout</a> (std::vector&lt; <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &gt; &amp;data)</td></tr>
+<tr class="memdesc:ac68554a5edcdb1b4fda24cf84616fd6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates graph layout for host utilization and adds that information to the JSON object.  <a href="#ac68554a5edcdb1b4fda24cf84616fd6b">More...</a><br /></td></tr>
+<tr class="separator:ac68554a5edcdb1b4fda24cf84616fd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2c13bb6adda55b869b88d6127e7eaeb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#aa2c13bb6adda55b869b88d6127e7eaeb">isPointOnSegment</a> (std::pair&lt; unsigned long long, unsigned long long &gt; segment, unsigned long long point)</td></tr>
+<tr class="memdesc:aa2c13bb6adda55b869b88d6127e7eaeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if a point lies on a line segment.  <a href="#aa2c13bb6adda55b869b88d6127e7eaeb">More...</a><br /></td></tr>
+<tr class="separator:aa2c13bb6adda55b869b88d6127e7eaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac9088b06677e34013ac9a14ff274a79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#aac9088b06677e34013ac9a14ff274a79">isSegmentOverlappingXAxis</a> (std::pair&lt; unsigned long long, unsigned long long &gt; segment1, std::pair&lt; unsigned long long, unsigned long long &gt; segment2)</td></tr>
+<tr class="memdesc:aac9088b06677e34013ac9a14ff274a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if two line segments overlap along the x-axis and allows for a slight overlap.  <a href="#aac9088b06677e34013ac9a14ff274a79">More...</a><br /></td></tr>
+<tr class="separator:aac9088b06677e34013ac9a14ff274a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69fc01a577913c988879ea96a5262bcf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#a69fc01a577913c988879ea96a5262bcf">isSegmentOverlappingYAxis</a> (std::pair&lt; unsigned long long, unsigned long long &gt; segment1, std::pair&lt; unsigned long long, unsigned long long &gt; segment2)</td></tr>
+<tr class="memdesc:a69fc01a577913c988879ea96a5262bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if two line segments overlap along the y-axis using exact values.  <a href="#a69fc01a577913c988879ea96a5262bcf">More...</a><br /></td></tr>
+<tr class="separator:a69fc01a577913c988879ea96a5262bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ff2710896f50b3198ed4c9c0441cb4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#ad0ff2710896f50b3198ed4c9c0441cb4">operator==</a> (const BatchJobSet &amp;left, const BatchJobSet &amp;right)</td></tr>
+<tr class="memdesc:ad0ff2710896f50b3198ed4c9c0441cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded operator.  <a href="#ad0ff2710896f50b3198ed4c9c0441cb4">More...</a><br /></td></tr>
+<tr class="separator:ad0ff2710896f50b3198ed4c9c0441cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9601a7728120192951232d2e0a74a483"><td class="memItemLeft" align="right" valign="top">static std::tuple&lt; std::string, unsigned long &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#a9601a7728120192951232d2e0a74a483">parseResourceSpec</a> (std::string spec)</td></tr>
 <tr class="memdesc:a9601a7728120192951232d2e0a74a483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper static method to parse resource specifications to the &lt;cores,ram&gt; format.  <a href="#a9601a7728120192951232d2e0a74a483">More...</a><br /></td></tr>
 <tr class="separator:a9601a7728120192951232d2e0a74a483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4785cb60f8ee73703f5d00578ce1fb59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#a4785cb60f8ee73703f5d00578ce1fb59">searchForLayout</a> (std::vector&lt; <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &gt; &amp;data, std::size_t index)</td></tr>
+<tr class="memdesc:a4785cb60f8ee73703f5d00578ce1fb59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches for a possible host utilization gantt chart layout and updates the data to include what vertical position to plot each rectangle.  <a href="#a4785cb60f8ee73703f5d00578ce1fb59">More...</a><br /></td></tr>
+<tr class="separator:a4785cb60f8ee73703f5d00578ce1fb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08eed994f72bd98d4c25508c479388b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#a08eed994f72bd98d4c25508c479388b6">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &amp;w)</td></tr>
+<tr class="memdesc:a08eed994f72bd98d4c25508c479388b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called by the nlohmann::json constructor when a <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html" title="Object representing an instance when a WorkflowTask was run. ">WorkflowTaskExecutionInstance</a> is passed in as a parameter. This returns the JSON representation of a <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html" title="Object representing an instance when a WorkflowTask was run. ">WorkflowTaskExecutionInstance</a>. The name of this function is important and should not be changed as it is what nlohmann expects (hardcoded in there).  <a href="#a08eed994f72bd98d4c25508c479388b6">More...</a><br /></td></tr>
+<tr class="separator:a08eed994f72bd98d4c25508c479388b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12c0e5148c72aa18e5e9119514a2d100"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#a12c0e5148c72aa18e5e9119514a2d100">toString</a> ()=0</td></tr>
 <tr class="memdesc:a12c0e5148c72aa18e5e9119514a2d100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an error message that describes the failure cause (to be overridden)  <a href="#a12c0e5148c72aa18e5e9119514a2d100">More...</a><br /></td></tr>
 <tr class="separator:a12c0e5148c72aa18e5e9119514a2d100"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a354ed82793f2d97831f5d5012a73a553"><td class="memItemLeft" align="right" valign="top"><a id="a354ed82793f2d97831f5d5012a73a553"></a>
-nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><b>host_utilization_layout</b></td></tr>
-<tr class="separator:a354ed82793f2d97831f5d5012a73a553"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Copyright (c) 2017-2018. The WRENCH Team.</p>
@@ -330,6 +355,190 @@ nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><b>host_utiliz
 <p>Copyright (c) 2017-2020. The WRENCH Team.</p>
 <p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="ac68554a5edcdb1b4fda24cf84616fd6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac68554a5edcdb1b4fda24cf84616fd6b">&#9670;&nbsp;</a></span>generateHostUtilizationGraphLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrench::generateHostUtilizationGraphLayout </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates graph layout for host utilization and adds that information to the JSON object. </p>
+<p>Searches for a possible gantt chart layout to represent host utilization. If a layout is found (no tasks overlap), then information about where to plot what is added to the JSON object. Note that this is a possible layout and does not reflect what task ran on what core specifically. For example, we may hav a task that was allocated 2-cores on a idle 4-core host. The task, when plotted on the gantt chart may end up in 1 of 3 positions (using cores 0 and 1, 1 and 2, or 2 and 3). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>JSON workflow execution data</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa2c13bb6adda55b869b88d6127e7eaeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2c13bb6adda55b869b88d6127e7eaeb">&#9670;&nbsp;</a></span>isPointOnSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wrench::isPointOnSegment </td>
+          <td>(</td>
+          <td class="paramtype">std::pair&lt; unsigned long long, unsigned long long &gt;&#160;</td>
+          <td class="paramname"><em>segment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long long&#160;</td>
+          <td class="paramname"><em>point</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines if a point lies on a line segment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">segment</td><td>pair of start and end points that make up the line segment </td></tr>
+    <tr><td class="paramname">point</td><td>point on a 1D plane </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a id="aac9088b06677e34013ac9a14ff274a79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9088b06677e34013ac9a14ff274a79">&#9670;&nbsp;</a></span>isSegmentOverlappingXAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wrench::isSegmentOverlappingXAxis </td>
+          <td>(</td>
+          <td class="paramtype">std::pair&lt; unsigned long long, unsigned long long &gt;&#160;</td>
+          <td class="paramname"><em>segment1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::pair&lt; unsigned long long, unsigned long long &gt;&#160;</td>
+          <td class="paramname"><em>segment2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines if two line segments overlap along the x-axis and allows for a slight overlap. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">segment1</td><td>first segment </td></tr>
+    <tr><td class="paramname">segment2</td><td>second segment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a id="a69fc01a577913c988879ea96a5262bcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69fc01a577913c988879ea96a5262bcf">&#9670;&nbsp;</a></span>isSegmentOverlappingYAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wrench::isSegmentOverlappingYAxis </td>
+          <td>(</td>
+          <td class="paramtype">std::pair&lt; unsigned long long, unsigned long long &gt;&#160;</td>
+          <td class="paramname"><em>segment1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::pair&lt; unsigned long long, unsigned long long &gt;&#160;</td>
+          <td class="paramname"><em>segment2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines if two line segments overlap along the y-axis using exact values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">segment1</td><td>first segment </td></tr>
+    <tr><td class="paramname">segment2</td><td>second segment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a id="ad0ff2710896f50b3198ed4c9c0441cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0ff2710896f50b3198ed4c9c0441cb4">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wrench::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const BatchJobSet &amp;&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BatchJobSet &amp;&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloaded operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>left-hand side </td></tr>
+    <tr><td class="paramname">right</td><td>right-hand side </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <a id="a9601a7728120192951232d2e0a74a483"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9601a7728120192951232d2e0a74a483">&#9670;&nbsp;</a></span>parseResourceSpec()</h2>
 
@@ -365,6 +574,82 @@ nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><b>host_utiliz
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4785cb60f8ee73703f5d00578ce1fb59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4785cb60f8ee73703f5d00578ce1fb59">&#9670;&nbsp;</a></span>searchForLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wrench::searchForLayout </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Searches for a possible host utilization gantt chart layout and updates the data to include what vertical position to plot each rectangle. </p>
+<p>Recursive backtracking search for a valid gantt chart layout. This algorithm looks for a vertical position to place each task execution event such that it doesn't overlap with any other task.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>JSON workflow execution data </td></tr>
+    <tr><td class="paramname">index</td><td>the index of the workflow execution data up to where we would like to check for a valid layout </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a id="a08eed994f72bd98d4c25508c479388b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08eed994f72bd98d4c25508c479388b6">&#9670;&nbsp;</a></span>to_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrench::to_json </td>
+          <td>(</td>
+          <td class="paramtype">nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &amp;&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function called by the nlohmann::json constructor when a <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html" title="Object representing an instance when a WorkflowTask was run. ">WorkflowTaskExecutionInstance</a> is passed in as a parameter. This returns the JSON representation of a <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html" title="Object representing an instance when a WorkflowTask was run. ">WorkflowTaskExecutionInstance</a>. The name of this function is important and should not be changed as it is what nlohmann expects (hardcoded in there). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">j</td><td>reference to a JSON object </td></tr>
+    <tr><td class="paramname">w</td><td>reference to a <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html" title="Object representing an instance when a WorkflowTask was run. ">WorkflowTaskExecutionInstance</a> </td></tr>
   </table>
   </dd>
 </dl>

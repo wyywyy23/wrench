@@ -1,6 +1,7 @@
 var searchData=
 [
   ['_7ebaremetalcomputeservice',['~BareMetalComputeService',['../classwrench_1_1_bare_metal_compute_service.html#a2f5c37d9c535f10a7495896082f4381e',1,'wrench::BareMetalComputeService']]],
+  ['_7ebatchscheduler',['~BatchScheduler',['../classwrench_1_1_batch_scheduler.html#ad7922066cff9cf9d7c7833bab572c74d',1,'wrench::BatchScheduler']]],
   ['_7ecloudcomputeservice',['~CloudComputeService',['../classwrench_1_1_cloud_compute_service.html#ac3f15161c14bf34c971e9df3aab01be2',1,'wrench::CloudComputeService']]],
   ['_7ehtcondorcentralmanagerservice',['~HTCondorCentralManagerService',['../classwrench_1_1_h_t_condor_central_manager_service.html#a3b956f9e6702d1531595feae39677979',1,'wrench::HTCondorCentralManagerService']]],
   ['_7ehtcondorcomputeservice',['~HTCondorComputeService',['../classwrench_1_1_h_t_condor_compute_service.html#a8725e8b620e5341d8dba31e21b53b84e',1,'wrench::HTCondorComputeService']]],

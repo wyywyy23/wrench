@@ -4,7 +4,7 @@ var searchData=
   ['baremetalcomputeservicemessagepayload',['BareMetalComputeServiceMessagePayload',['../classwrench_1_1_bare_metal_compute_service_message_payload.html',1,'wrench']]],
   ['baremetalcomputeserviceproperty',['BareMetalComputeServiceProperty',['../classwrench_1_1_bare_metal_compute_service_property.html',1,'wrench']]],
   ['batch_5fqueue_5fordering_5falgorithm',['BATCH_QUEUE_ORDERING_ALGORITHM',['../classwrench_1_1_batch_compute_service_property.html#a58c3a7a25ee192ff4761f6ed3cea4533',1,'wrench::BatchComputeServiceProperty']]],
-  ['batch_5frjms_5fdelay',['BATCH_RJMS_DELAY',['../classwrench_1_1_batch_compute_service_property.html#a38624d02629c5ab2b98058c046057205',1,'wrench::BatchComputeServiceProperty']]],
+  ['batch_5frjms_5fpadding_5fdelay',['BATCH_RJMS_PADDING_DELAY',['../classwrench_1_1_batch_compute_service_property.html#adcd8150f9959ce356635519f97b16fe4',1,'wrench::BatchComputeServiceProperty']]],
   ['batch_5fscheduling_5falgorithm',['BATCH_SCHEDULING_ALGORITHM',['../classwrench_1_1_batch_compute_service_property.html#a4e88135150aea2df7f815f7d751f03c7',1,'wrench::BatchComputeServiceProperty']]],
   ['batchcomputeservice',['BatchComputeService',['../classwrench_1_1_batch_compute_service.html',1,'wrench::BatchComputeService'],['../classwrench_1_1_batch_compute_service.html#a49082131bf5eb088baaeb3b15b158052',1,'wrench::BatchComputeService::BatchComputeService()']]],
   ['batchcomputeservicemessagepayload',['BatchComputeServiceMessagePayload',['../classwrench_1_1_batch_compute_service_message_payload.html',1,'wrench']]],

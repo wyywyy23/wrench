@@ -136,6 +136,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a496ef06931644698a2bebef0efc61353"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_timestamp_file_copy.html#a496ef06931644698a2bebef0efc61353">SimulationTimestampFileCopy</a> (<a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *<a class="el" href="classwrench_1_1_simulation_timestamp_file_copy.html#aaf6fab52084bae83e672a8247acdf118">file</a>, std::shared_ptr&lt; <a class="el" href="classwrench_1_1_file_location.html">FileLocation</a> &gt; src, std::shared_ptr&lt; <a class="el" href="classwrench_1_1_file_location.html">FileLocation</a> &gt; dst)</td></tr>
+<tr class="memdesc:a496ef06931644698a2bebef0efc61353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a496ef06931644698a2bebef0efc61353">More...</a><br /></td></tr>
+<tr class="separator:a496ef06931644698a2bebef0efc61353"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52176019ca3a4ff37d1700c80daac272"><td class="memItemLeft" align="right" valign="top"><a id="a52176019ca3a4ff37d1700c80daac272"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_timestamp_file_copy.html#a52176019ca3a4ff37d1700c80daac272">setEndpoints</a> ()</td></tr>
 <tr class="memdesc:a52176019ca3a4ff37d1700c80daac272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the endpoint of the calling object (<a class="el" href="classwrench_1_1_simulation_timestamp_file_copy_failure.html" title="A simulation timestamp class for file copy failure times. ">SimulationTimestampFileCopyFailure</a>, <a class="el" href="classwrench_1_1_simulation_timestamp_file_copy_completion.html" title="A simulation timestamp class for file copy completions. ">SimulationTimestampFileCopyCompletion</a>, <a class="el" href="classwrench_1_1_simulation_timestamp_file_copy_start.html" title="A simulation timestamp class for file copy start times. ">SimulationTimestampFileCopyStart</a>) with a <a class="el" href="classwrench_1_1_simulation_timestamp_file_copy_start.html" title="A simulation timestamp class for file copy start times. ">SimulationTimestampFileCopyStart</a> object. <br /></td></tr>
@@ -169,7 +172,60 @@ Static Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A base class for simulation timestamps regarding file copies. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a496ef06931644698a2bebef0efc61353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a496ef06931644698a2bebef0efc61353">&#9670;&nbsp;</a></span>SimulationTimestampFileCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wrench::SimulationTimestampFileCopy::SimulationTimestampFileCopy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_file_location.html">FileLocation</a> &gt;&#160;</td>
+          <td class="paramname"><em>src_location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_file_location.html">FileLocation</a> &gt;&#160;</td>
+          <td class="paramname"><em>dst_location</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the <a class="el" href="classwrench_1_1_workflow_file.html" title="A data file used/produced by a WorkflowTask in a Workflow. ">WorkflowFile</a> associated with this file copy </td></tr>
+    <tr><td class="paramname">src_location</td><td>the source location </td></tr>
+    <tr><td class="paramname">dst_location</td><td>the destination location </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac57c714caf136217729db61572de32ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac57c714caf136217729db61572de32ff">&#9670;&nbsp;</a></span>getDestination()</h2>
 

@@ -139,6 +139,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a71f5beb1712b4f797194c9795b674e45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_timestamp_file_write.html#a71f5beb1712b4f797194c9795b674e45">SimulationTimestampFileWrite</a> (<a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *<a class="el" href="classwrench_1_1_simulation_timestamp_file_write.html#a5d1fe2729a886a92c76f6cb980f4b9c3">file</a>, FileLocation *dst, <a class="el" href="classwrench_1_1_storage_service.html">StorageService</a> *<a class="el" href="classwrench_1_1_simulation_timestamp_file_write.html#a879078b59915d018bf127eac7853b1ec">service</a>, <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *<a class="el" href="classwrench_1_1_simulation_timestamp_file_write.html#a830b0777a4aea6fa0f87405ce715f574">task</a>=nullptr)</td></tr>
+<tr class="memdesc:a71f5beb1712b4f797194c9795b674e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a71f5beb1712b4f797194c9795b674e45">More...</a><br /></td></tr>
+<tr class="separator:a71f5beb1712b4f797194c9795b674e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5e0fface3667623e9f0f1b278099257"><td class="memItemLeft" align="right" valign="top"><a id="af5e0fface3667623e9f0f1b278099257"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_timestamp_file_write.html#af5e0fface3667623e9f0f1b278099257">setEndpoints</a> ()</td></tr>
 <tr class="memdesc:af5e0fface3667623e9f0f1b278099257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the endpoint of the calling object (<a class="el" href="classwrench_1_1_simulation_timestamp_file_write_failure.html" title="A simulation timestamp class for file write failure times. ">SimulationTimestampFileWriteFailure</a>, SimulationTimestampFileWriteTerminated, <a class="el" href="classwrench_1_1_simulation_timestamp_file_write_start.html" title="A simulation timestamp class for file write start times. ">SimulationTimestampFileWriteStart</a>) with a <a class="el" href="classwrench_1_1_simulation_timestamp_file_write_start.html" title="A simulation timestamp class for file write start times. ">SimulationTimestampFileWriteStart</a> object. <br /></td></tr>
@@ -176,7 +179,67 @@ Static Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A base class for simulation timestamps regarding file writes. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a71f5beb1712b4f797194c9795b674e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71f5beb1712b4f797194c9795b674e45">&#9670;&nbsp;</a></span>SimulationTimestampFileWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wrench::SimulationTimestampFileWrite::SimulationTimestampFileWrite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FileLocation *&#160;</td>
+          <td class="paramname"><em>dst_location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classwrench_1_1_storage_service.html">StorageService</a> *&#160;</td>
+          <td class="paramname"><em>service</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *&#160;</td>
+          <td class="paramname"><em>task</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the <a class="el" href="classwrench_1_1_workflow_file.html" title="A data file used/produced by a WorkflowTask in a Workflow. ">WorkflowFile</a> associated with this file write </td></tr>
+    <tr><td class="paramname">dst_location</td><td>the destination location </td></tr>
+    <tr><td class="paramname">service</td><td>service requesting file write </td></tr>
+    <tr><td class="paramname">task</td><td>a task associated to this file read (or nullptr) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="aacc75981037c362d9a6bafbec8260c41"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aacc75981037c362d9a6bafbec8260c41">&#9670;&nbsp;</a></span>getDestination()</h2>
 

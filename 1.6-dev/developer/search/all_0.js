@@ -12,7 +12,6 @@ var searchData=
   ['addoutputfile',['addOutputFile',['../classwrench_1_1_workflow_task.html#ac774b4fddc07753f5fc7daa31ae28fd3',1,'wrench::WorkflowTask']]],
   ['addstaticoptimization',['addStaticOptimization',['../classwrench_1_1_w_m_s.html#a21b9ae8ef40ba22e5ef0052fb70f7731',1,'wrench::WMS']]],
   ['addtask',['addTask',['../classwrench_1_1_workflow.html#a1c55d600aa8cc00d245d2ca6f01cd799',1,'wrench::Workflow']]],
-  ['addtimestamp',['addTimestamp',['../classwrench_1_1_simulation_output.html#ae5d690148a4ca7ac204c826e2acfc7c9',1,'wrench::SimulationOutput']]],
   ['addworkflow',['addWorkflow',['../classwrench_1_1_w_m_s.html#afd2a6ae2f4d792046a6a17d5c0dc313f',1,'wrench::WMS']]],
   ['all_5fcores',['ALL_CORES',['../classwrench_1_1_compute_service.html#a1160f521623440ad4e0e0823e08a7d22',1,'wrench::ComputeService']]],
   ['all_5fram',['ALL_RAM',['../classwrench_1_1_compute_service.html#abc4fe0bad59f544b4b34d0e7d4012d44',1,'wrench::ComputeService']]],

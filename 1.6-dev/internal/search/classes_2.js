@@ -40,6 +40,7 @@ var searchData=
   ['computethread',['ComputeThread',['../classwrench_1_1_compute_thread.html',1,'wrench']]],
   ['computethreaddonemessage',['ComputeThreadDoneMessage',['../classwrench_1_1_compute_thread_done_message.html',1,'wrench']]],
   ['computethreadhasdied',['ComputeThreadHasDied',['../classwrench_1_1_compute_thread_has_died.html',1,'wrench']]],
+  ['conservativebfbatchscheduler',['CONSERVATIVEBFBatchScheduler',['../classwrench_1_1_c_o_n_s_e_r_v_a_t_i_v_e_b_f_batch_scheduler.html',1,'wrench']]],
   ['coordinatelookupanswermessage',['CoordinateLookupAnswerMessage',['../classwrench_1_1_coordinate_lookup_answer_message.html',1,'wrench']]],
   ['coordinatelookuprequestmessage',['CoordinateLookupRequestMessage',['../classwrench_1_1_coordinate_lookup_request_message.html',1,'wrench']]]
 ];

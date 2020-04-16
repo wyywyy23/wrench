@@ -11,5 +11,7 @@ var searchData=
   ['batchexecutejobfrombatschedmessage',['BatchExecuteJobFromBatSchedMessage',['../classwrench_1_1_batch_execute_job_from_bat_sched_message.html',1,'wrench']]],
   ['batchjob',['BatchJob',['../classwrench_1_1_batch_job.html',1,'wrench']]],
   ['batchqueryanswermessage',['BatchQueryAnswerMessage',['../classwrench_1_1_batch_query_answer_message.html',1,'wrench']]],
+  ['batchscheduler',['BatchScheduler',['../classwrench_1_1_batch_scheduler.html',1,'wrench']]],
+  ['batschedbatchscheduler',['BatschedBatchScheduler',['../classwrench_1_1_batsched_batch_scheduler.html',1,'wrench']]],
   ['batschednetworklistener',['BatschedNetworkListener',['../classwrench_1_1_batsched_network_listener.html',1,'wrench']]]
 ];

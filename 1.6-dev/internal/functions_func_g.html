@@ -98,14 +98,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getAllHostnamesByCluster()
 : <a class="el" href="classwrench_1_1_s4_u___simulation.html#a9f45613070010a4d280b1a37af4c5061">wrench::S4U_Simulation</a>
 </li>
-<li>getAllocatedCoresPerNode()
-: <a class="el" href="classwrench_1_1_batch_job.html#a1c6f9da692d32e1ecc8e0e4beda76066">wrench::BatchJob</a>
-</li>
-<li>getAllocatedTime()
-: <a class="el" href="classwrench_1_1_batch_job.html#acee1e5a82e2a4d818607d11f1519e368">wrench::BatchJob</a>
-</li>
-<li>getArrivalTimeStamp()
-: <a class="el" href="classwrench_1_1_batch_job.html#a287fb8f69b4fecd1608cce0845f70951">wrench::BatchJob</a>
+<li>getArrivalTimestamp()
+: <a class="el" href="classwrench_1_1_batch_job.html#a2c826d8904363f2f72eb3007012c974d">wrench::BatchJob</a>
 </li>
 <li>getAvailableComputeServices()
 : <a class="el" href="classwrench_1_1_w_m_s.html#ae875a712cde823ebd34fd062372cba23">wrench::WMS</a>
@@ -122,8 +116,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getAverageCPU()
 : <a class="el" href="classwrench_1_1_workflow_task.html#af00a94dc20c6b2b6028aa13fce7581c6">wrench::WorkflowTask</a>
 </li>
-<li>getBeginTimeStamp()
-: <a class="el" href="classwrench_1_1_batch_job.html#ab0c6c2e27d347dadb07e57096470076c">wrench::BatchJob</a>
+<li>getBeginTimestamp()
+: <a class="el" href="classwrench_1_1_batch_job.html#a15d32bcacabc04f5ee0847a2f5ce0522">wrench::BatchJob</a>
 </li>
 <li>getBytesRead()
 : <a class="el" href="classwrench_1_1_workflow_task.html#aa058314eed75bf58cbfc86441c9e75cc">wrench::WorkflowTask</a>
@@ -205,8 +199,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getEndDate()
 : <a class="el" href="classwrench_1_1_workflow_task.html#a2c413ff97c665416c2c68898ef986df0">wrench::WorkflowTask</a>
 </li>
-<li>getEndingTimeStamp()
-: <a class="el" href="classwrench_1_1_batch_job.html#a654473de57c5827afa7ded5a0b3f2226">wrench::BatchJob</a>
+<li>getEndingTimestamp()
+: <a class="el" href="classwrench_1_1_batch_job.html#a7a6913b448153f72ee21638c791a0ece">wrench::BatchJob</a>
 </li>
 <li>getEndpoint()
 : <a class="el" href="classwrench_1_1_simulation_timestamp_file_copy.html#a2cd940b53a294459ebcab5bce823c9a0">wrench::SimulationTimestampFileCopy</a>
@@ -466,9 +460,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getNumLevels()
 : <a class="el" href="classwrench_1_1_workflow.html#a15f12b7d5088e8e1e2130545c2b795ea">wrench::Workflow</a>
 </li>
-<li>getNumNodes()
-: <a class="el" href="classwrench_1_1_batch_job.html#abf624dffc6a004f015bd5b6fbdf17c94">wrench::BatchJob</a>
-</li>
 <li>getNumTasks()
 : <a class="el" href="classwrench_1_1_standard_job.html#a5672a5454c94741589dde8edd8d9c56f">wrench::StandardJob</a>
 </li>
@@ -547,6 +538,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getReadyTasks()
 : <a class="el" href="classwrench_1_1_workflow.html#a4834ec73e7a707338bad20d1da8a69ed">wrench::Workflow</a>
 </li>
+<li>getRequestedCoresPerNode()
+: <a class="el" href="classwrench_1_1_batch_job.html#ad320351f6ba7382ed2fac0c7d3b07ea2">wrench::BatchJob</a>
+</li>
+<li>getRequestedNumNodes()
+: <a class="el" href="classwrench_1_1_batch_job.html#a11763c5f27fb1322357315d2af59be2f">wrench::BatchJob</a>
+</li>
+<li>getRequestedTime()
+: <a class="el" href="classwrench_1_1_batch_job.html#a042b20122d8b9d77b3e3a1a0dadf4a51">wrench::BatchJob</a>
+</li>
 <li>getResourcesAllocated()
 : <a class="el" href="classwrench_1_1_batch_job.html#a22557f2dea0008e1f985b4a373868490">wrench::BatchJob</a>
 </li>
@@ -596,7 +596,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classwrench_1_1_workflow_task.html#a17462dd156a6080653f96a1abbbb379d">wrench::WorkflowTask</a>
 </li>
 <li>getStartTimeEstimates()
-: <a class="el" href="classwrench_1_1_batch_compute_service.html#afbb99bc55d35e347db61fa83c0f6f61e">wrench::BatchComputeService</a>
+: <a class="el" href="classwrench_1_1_batch_compute_service.html#a5aca94e9b53087e8a8adcc0edf1ae589">wrench::BatchComputeService</a>
+, <a class="el" href="classwrench_1_1_batch_scheduler.html#a4385eeb1ef13a1a279d26f7909bd93e2">wrench::BatchScheduler</a>
+, <a class="el" href="classwrench_1_1_batsched_batch_scheduler.html#aac1b1f6d228700be63436d2cb54eaa09">wrench::BatschedBatchScheduler</a>
+, <a class="el" href="classwrench_1_1_c_o_n_s_e_r_v_a_t_i_v_e_b_f_batch_scheduler.html#a9905b2566cfbef58a879e812ad894d49">wrench::CONSERVATIVEBFBatchScheduler</a>
+, <a class="el" href="classwrench_1_1_f_c_f_s_batch_scheduler.html#a1390aca0a32d5de3dd8862a6f6390460">wrench::FCFSBatchScheduler</a>
 </li>
 <li>getState()
 : <a class="el" href="classwrench_1_1_pilot_job.html#a3890ff3cb3b494270c7a635748c91d95">wrench::PilotJob</a>

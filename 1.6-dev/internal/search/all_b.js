@@ -1,7 +1,7 @@
 var searchData=
 [
   ['last_5fchunk',['last_chunk',['../classwrench_1_1_storage_service_file_content_chunk_message.html#ae2da8449e04021df622b2fdb116f623e',1,'wrench::StorageServiceFileContentChunkMessage']]],
-  ['launch',['launch',['../classwrench_1_1_simulation.html#ae9589632de9a2311ed1d7f7747478985',1,'wrench::Simulation']]],
+  ['launch',['launch',['../classwrench_1_1_batsched_batch_scheduler.html#a203b08b6e7c83ce719f15c75270a37e9',1,'wrench::BatschedBatchScheduler::launch()'],['../classwrench_1_1_batch_scheduler.html#a00eaf0e7deea71cd4dad2f5a484faedf',1,'wrench::BatchScheduler::launch()'],['../classwrench_1_1_homegrown_batch_scheduler.html#abf41c44ea1591591aeb198aac41a6a1d',1,'wrench::HomegrownBatchScheduler::launch()'],['../classwrench_1_1_simulation.html#ae9589632de9a2311ed1d7f7747478985',1,'wrench::Simulation::launch()']]],
   ['life_5fsaver',['life_saver',['../classwrench_1_1_s4_u___daemon.html#a225aaf5b49366bbae345266e0046f2e1',1,'wrench::S4U_Daemon']]],
   ['listfilesindirectory',['listFilesInDirectory',['../classwrench_1_1_logical_file_system.html#a55b5f212f9ff0c08d42500811c704e12',1,'wrench::LogicalFileSystem']]],
   ['loadfromtracefile',['loadFromTraceFile',['../classwrench_1_1_trace_file_loader.html#a0c713c6192a563a881d91ed07d4582f9',1,'wrench::TraceFileLoader']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['generatehostutilizationgraphlayout',['generateHostUtilizationGraphLayout',['../namespacewrench.html#ac68554a5edcdb1b4fda24cf84616fd6b',1,'wrench']]],
   ['getchildren',['getChildren',['../classwrench_1_1_workflow_task.html#ae14f725d2a2ee9a75ded0e617c16ce9c',1,'wrench::WorkflowTask']]],
   ['getcompletiondate',['getCompletionDate',['../classwrench_1_1_workflow.html#ac3a1291469d2c0035352a99f0f964f3f',1,'wrench::Workflow']]],
   ['getcomputeservice',['getComputeService',['../class_job_type_not_supported.html#ac28815fcc28e568bc01abad1be3d12e3',1,'JobTypeNotSupported::getComputeService()'],['../class_not_enough_resources.html#a2651b121cd57ae0c3d53adcd061f7419',1,'NotEnoughResources::getComputeService()'],['../class_job_killed.html#a1bc2c0a123c2336f2ae08a707f49653b',1,'JobKilled::getComputeService()']]],

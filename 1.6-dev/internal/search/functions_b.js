@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['launch',['launch',['../classwrench_1_1_simulation.html#ae9589632de9a2311ed1d7f7747478985',1,'wrench::Simulation']]],
+  ['launch',['launch',['../classwrench_1_1_batsched_batch_scheduler.html#a203b08b6e7c83ce719f15c75270a37e9',1,'wrench::BatschedBatchScheduler::launch()'],['../classwrench_1_1_batch_scheduler.html#a00eaf0e7deea71cd4dad2f5a484faedf',1,'wrench::BatchScheduler::launch()'],['../classwrench_1_1_homegrown_batch_scheduler.html#abf41c44ea1591591aeb198aac41a6a1d',1,'wrench::HomegrownBatchScheduler::launch()'],['../classwrench_1_1_simulation.html#ae9589632de9a2311ed1d7f7747478985',1,'wrench::Simulation::launch()']]],
   ['listfilesindirectory',['listFilesInDirectory',['../classwrench_1_1_logical_file_system.html#a55b5f212f9ff0c08d42500811c704e12',1,'wrench::LogicalFileSystem']]],
   ['loadfromtracefile',['loadFromTraceFile',['../classwrench_1_1_trace_file_loader.html#a0c713c6192a563a881d91ed07d4582f9',1,'wrench::TraceFileLoader']]],
   ['location',['LOCATION',['../classwrench_1_1_file_location.html#ae62041d1dd72974f5edbb96fa9b73cb1',1,'wrench::FileLocation::LOCATION(std::shared_ptr&lt; StorageService &gt; ss)'],['../classwrench_1_1_file_location.html#a56dbb551725884b7456d058eb1b54b1c',1,'wrench::FileLocation::LOCATION(std::shared_ptr&lt; StorageService &gt; ss, std::string absolute_path)']]],
