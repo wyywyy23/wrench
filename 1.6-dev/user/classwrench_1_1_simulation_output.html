@@ -114,6 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a487c3e2c9e34f64137a1f68beb66a558"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a487c3e2c9e34f64137a1f68beb66a558">dumpWorkflowGraphJSON</a> (<a class="el" href="classwrench_1_1_workflow.html">wrench::Workflow</a> *workflow, std::string file_path, bool writing_file=true)</td></tr>
 <tr class="memdesc:a487c3e2c9e34f64137a1f68beb66a558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a JSON graph representation of the <a class="el" href="classwrench_1_1_workflow.html" title="A workflow (to be executed by a WMS) ">Workflow</a> to a file.  <a href="#a487c3e2c9e34f64137a1f68beb66a558">More...</a><br /></td></tr>
 <tr class="separator:a487c3e2c9e34f64137a1f68beb66a558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8036ce1d66c704673043463faaafaf52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a8036ce1d66c704673043463faaafaf52">enableDiskTimestamps</a> (bool enabled)</td></tr>
+<tr class="memdesc:a8036ce1d66c704673043463faaafaf52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or Disable the insertion of disk-related timestamps in the simulation output (enabled by default)  <a href="#a8036ce1d66c704673043463faaafaf52">More...</a><br /></td></tr>
+<tr class="separator:a8036ce1d66c704673043463faaafaf52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5745936cc26be43d3685f0a3c9315726"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a5745936cc26be43d3685f0a3c9315726">enableEnergyTimestamps</a> (bool enabled)</td></tr>
 <tr class="memdesc:a5745936cc26be43d3685f0a3c9315726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or Disable the insertion of energy-related timestamps in the simulation output (enabled by default)  <a href="#a5745936cc26be43d3685f0a3c9315726">More...</a><br /></td></tr>
 <tr class="separator:a5745936cc26be43d3685f0a3c9315726"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -524,6 +527,32 @@ Public Member Functions</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8036ce1d66c704673043463faaafaf52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8036ce1d66c704673043463faaafaf52">&#9670;&nbsp;</a></span>enableDiskTimestamps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrench::SimulationOutput::enableDiskTimestamps </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable or Disable the insertion of disk-related timestamps in the simulation output (enabled by default) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>true to enable, false to disable </td></tr>
   </table>
   </dd>
 </dl>

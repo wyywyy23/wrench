@@ -22,6 +22,7 @@ var searchData=
   ['batschednetworklistener',['BatschedNetworkListener',['../classwrench_1_1_batsched_network_listener.html',1,'wrench']]],
   ['beginthisprocesscolor',['beginThisProcessColor',['../classwrench_1_1_terminal_output.html#ad0b1974420fc4f0ba6eff293f6b2756c',1,'wrench::TerminalOutput']]],
   ['buffer_5fsize',['buffer_size',['../classwrench_1_1_storage_service_file_write_request_message.html#aba8d5e7f61d718d8ff46406d5b9c2bac',1,'wrench::StorageServiceFileWriteRequestMessage::buffer_size()'],['../classwrench_1_1_storage_service_file_read_request_message.html#a3c1410164ad61ab60269aca6b928f29f',1,'wrench::StorageServiceFileReadRequestMessage::buffer_size()'],['../classwrench_1_1_storage_service.html#a02633f0cbc837a1faf2e3b6333eddebe',1,'wrench::StorageService::buffer_size()'],['../classwrench_1_1_storage_service_property.html#a4a15fb8290bd904973c923a6e7d7ca39',1,'wrench::StorageServiceProperty::BUFFER_SIZE()']]],
+  ['bytes',['bytes',['../classwrench_1_1_simulation_timestamp_disk_read.html#a5caf9e27d53fd0dec38c4e858564c01d',1,'wrench::SimulationTimestampDiskRead::bytes()'],['../classwrench_1_1_simulation_timestamp_disk_write.html#ac81c88f13cb3bf027aedd55d64e2d56e',1,'wrench::SimulationTimestampDiskWrite::bytes()']]],
   ['bare_2dmetal',['Bare-Metal',['../guide-baremetal.html',1,'']]],
   ['batch',['Batch',['../guide-batch.html',1,'']]]
 ];

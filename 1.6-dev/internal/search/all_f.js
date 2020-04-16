@@ -7,6 +7,8 @@ var searchData=
   ['payload',['payload',['../classwrench_1_1_simulation_message.html#a914f2732713f7c02898e66f05a7cb8a1',1,'wrench::SimulationMessage']]],
   ['pegasusworkflowparser',['PegasusWorkflowParser',['../classwrench_1_1_pegasus_workflow_parser.html',1,'wrench']]],
   ['pending',['PENDING',['../classwrench_1_1_pilot_job.html#a0540139dbc8b0a8506a87b2f55020fc8ad580f9552e724bb04d8ce76b1577efa9',1,'wrench::PilotJob::PENDING()'],['../classwrench_1_1_standard_job.html#adad8bdfd5eb774da5be290864ce89c67a11ce0b60776dc4014022158180021ee8',1,'wrench::StandardJob::PENDING()'],['../classwrench_1_1_workflow_task.html#a1184f3d7aea21e1c87a9b17e84f1f92aaa5207e01401874a04d2ddae6191fd9af',1,'wrench::WorkflowTask::PENDING()']]],
+  ['pending_5fdisk_5freads',['pending_disk_reads',['../classwrench_1_1_simulation_timestamp_disk_read.html#aad8fe41e938cf857f8674d6fb2b718ab',1,'wrench::SimulationTimestampDiskRead']]],
+  ['pending_5fdisk_5fwrites',['pending_disk_writes',['../classwrench_1_1_simulation_timestamp_disk_write.html#a5038fbdcc2a252409e6c01fa2658cd51',1,'wrench::SimulationTimestampDiskWrite']]],
   ['pending_5ffile_5fcopies',['pending_file_copies',['../classwrench_1_1_simulation_timestamp_file_copy.html#a1684ecd4d796de22aaa0e85a80691248',1,'wrench::SimulationTimestampFileCopy']]],
   ['pending_5ffile_5freads',['pending_file_reads',['../classwrench_1_1_simulation_timestamp_file_read.html#a1f8ecc92dd1c46830e9e66b33a858877',1,'wrench::SimulationTimestampFileRead']]],
   ['pending_5ffile_5fwrites',['pending_file_writes',['../classwrench_1_1_simulation_timestamp_file_write.html#a459e2f6138c6b0040ca199756a5f1414',1,'wrench::SimulationTimestampFileWrite']]],
