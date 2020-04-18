@@ -7,5 +7,5 @@ var searchData=
   ['ispointonsegment',['isPointOnSegment',['../namespacewrench.html#aa2c13bb6adda55b869b88d6127e7eaeb',1,'wrench']]],
   ['issegmentoverlappingxaxis',['isSegmentOverlappingXAxis',['../namespacewrench.html#aac9088b06677e34013ac9a14ff274a79',1,'wrench']]],
   ['issegmentoverlappingyaxis',['isSegmentOverlappingYAxis',['../namespacewrench.html#a69fc01a577913c988879ea96a5262bcf',1,'wrench']]],
-  ['istimeout',['isTimeout',['../class_network_error.html#aed1abc8506b8ea2b9f9aa52ca57b4919',1,'NetworkError']]]
+  ['istimeout',['isTimeout',['../namespacewrench.html#a4aed0a6b6496e19e70e16da31eae8b19',1,'wrench']]]
 ];

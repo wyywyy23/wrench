@@ -13,13 +13,9 @@ var searchData=
   ['network_5fproximity_5fmessage_5fsize',['NETWORK_PROXIMITY_MESSAGE_SIZE',['../classwrench_1_1_network_proximity_service_property.html#ad29e681b572ce963991844a75794e4c2',1,'wrench::NetworkProximityServiceProperty']]],
   ['network_5fproximity_5fpeer_5flookup_5fseed',['NETWORK_PROXIMITY_PEER_LOOKUP_SEED',['../classwrench_1_1_network_proximity_service_property.html#a1c62b6bc5aef9b415d583aff4d44a892',1,'wrench::NetworkProximityServiceProperty']]],
   ['network_5fproximity_5fservice_5ftype',['NETWORK_PROXIMITY_SERVICE_TYPE',['../classwrench_1_1_network_proximity_service_property.html#a4cb766dcd609012ab68000cfd9dc11b1',1,'wrench::NetworkProximityServiceProperty']]],
-  ['networkerror',['NetworkError',['../class_network_error.html',1,'']]],
   ['networkproximityservice',['NetworkProximityService',['../classwrench_1_1_network_proximity_service.html',1,'wrench::NetworkProximityService'],['../classwrench_1_1_network_proximity_service.html#a9b22deb4b19d5a3287c0d5b02b7f4447',1,'wrench::NetworkProximityService::NetworkProximityService()']]],
   ['networkproximityservicemessagepayload',['NetworkProximityServiceMessagePayload',['../classwrench_1_1_network_proximity_service_message_payload.html',1,'wrench']]],
   ['networkproximityserviceproperty',['NetworkProximityServiceProperty',['../classwrench_1_1_network_proximity_service_property.html',1,'wrench']]],
-  ['noscratchspace',['NoScratchSpace',['../class_no_scratch_space.html',1,'']]],
   ['not_5fenough_5fcores_5fmessage_5fpayload',['NOT_ENOUGH_CORES_MESSAGE_PAYLOAD',['../classwrench_1_1_bare_metal_compute_service_message_payload.html#ae7c1a15d40447d30f00bee194929fd70',1,'wrench::BareMetalComputeServiceMessagePayload']]],
-  ['not_5fenough_5fstorage_5fspace_5fmessage_5fpayload',['NOT_ENOUGH_STORAGE_SPACE_MESSAGE_PAYLOAD',['../classwrench_1_1_storage_service_message_payload.html#ae0d8ee8f07c557944f77e8363ec8334a',1,'wrench::StorageServiceMessagePayload']]],
-  ['notallowed',['NotAllowed',['../class_not_allowed.html',1,'']]],
-  ['notenoughresources',['NotEnoughResources',['../class_not_enough_resources.html',1,'']]]
+  ['not_5fenough_5fstorage_5fspace_5fmessage_5fpayload',['NOT_ENOUGH_STORAGE_SPACE_MESSAGE_PAYLOAD',['../classwrench_1_1_storage_service_message_payload.html#ae0d8ee8f07c557944f77e8363ec8334a',1,'wrench::StorageServiceMessagePayload']]]
 ];
