@@ -162,15 +162,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a25e92459aa168085c88aa4f31694672d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a25e92459aa168085c88aa4f31694672d">addTimestampTaskTermination</a> (<a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *task)</td></tr>
 <tr class="memdesc:a25e92459aa168085c88aa4f31694672d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a task start termination.  <a href="#a25e92459aa168085c88aa4f31694672d">More...</a><br /></td></tr>
 <tr class="separator:a25e92459aa168085c88aa4f31694672d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34edc8ef23bbc4e4ef18c39de6a35613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a34edc8ef23bbc4e4ef18c39de6a35613">dumpDiskOperationsJSON</a> (std::string file_path, bool writing_file=true)</td></tr>
+<tr class="separator:a34edc8ef23bbc4e4ef18c39de6a35613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8763a007e7c8171242af16acd90a76e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a8763a007e7c8171242af16acd90a76e0">dumpHostEnergyConsumptionJSON</a> (std::string file_path, bool writing_file=true)</td></tr>
 <tr class="memdesc:a8763a007e7c8171242af16acd90a76e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a JSON file containing host energy consumption information as a JSON array.  <a href="#a8763a007e7c8171242af16acd90a76e0">More...</a><br /></td></tr>
 <tr class="separator:a8763a007e7c8171242af16acd90a76e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9dcb57bf81aae0847c9639e9025f089"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#ae9dcb57bf81aae0847c9639e9025f089">dumpPlatformGraphJSON</a> (std::string file_path, bool writing_file=true)</td></tr>
 <tr class="memdesc:ae9dcb57bf81aae0847c9639e9025f089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a JSON file containing all hosts, network links, and the routes between each host.  <a href="#ae9dcb57bf81aae0847c9639e9025f089">More...</a><br /></td></tr>
 <tr class="separator:ae9dcb57bf81aae0847c9639e9025f089"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcf5e95355aea4db08499dc321a45fe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#adcf5e95355aea4db08499dc321a45fe4">dumpUnifiedJSON</a> (<a class="el" href="classwrench_1_1_workflow.html">Workflow</a> *workflow, std::string file_path, bool include_platform=false, bool include_workflow_exec=true, bool include_workflow_graph=false, bool include_energy=false, bool generate_host_utilization_layout=false)</td></tr>
-<tr class="memdesc:adcf5e95355aea4db08499dc321a45fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that generates a unified JSON file containing the information specified by boolean arguments.  <a href="#adcf5e95355aea4db08499dc321a45fe4">More...</a><br /></td></tr>
-<tr class="separator:adcf5e95355aea4db08499dc321a45fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0de75820ebe5925d1fab41a12ad3c4aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a0de75820ebe5925d1fab41a12ad3c4aa">dumpUnifiedJSON</a> (<a class="el" href="classwrench_1_1_workflow.html">Workflow</a> *workflow, std::string file_path, bool include_platform=false, bool include_workflow_exec=true, bool include_workflow_graph=false, bool include_energy=false, bool generate_host_utilization_layout=false, bool include_disk=false)</td></tr>
+<tr class="memdesc:a0de75820ebe5925d1fab41a12ad3c4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that generates a unified JSON file containing the information specified by boolean arguments.  <a href="#a0de75820ebe5925d1fab41a12ad3c4aa">More...</a><br /></td></tr>
+<tr class="separator:a0de75820ebe5925d1fab41a12ad3c4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad8a3b8b2b25fd1bcad46adb395410b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#aad8a3b8b2b25fd1bcad46adb395410b8">dumpWorkflowExecutionJSON</a> (<a class="el" href="classwrench_1_1_workflow.html">Workflow</a> *workflow, std::string file_path, bool generate_host_utilization_layout=false, bool writing_file=true)</td></tr>
 <tr class="memdesc:aad8a3b8b2b25fd1bcad46adb395410b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes <a class="el" href="classwrench_1_1_workflow_task.html" title="A computational task in a Workflow. ">WorkflowTask</a> execution history for each task to a file, formatted as a JSON array.  <a href="#aad8a3b8b2b25fd1bcad46adb395410b8">More...</a><br /></td></tr>
 <tr class="separator:aad8a3b8b2b25fd1bcad46adb395410b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1077,6 +1079,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a34edc8ef23bbc4e4ef18c39de6a35613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34edc8ef23bbc4e4ef18c39de6a35613">&#9670;&nbsp;</a></span>dumpDiskOperationsJSON()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrench::SimulationOutput::dumpDiskOperationsJSON </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>file_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>writing_file</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td></td></tr>
+    <tr><td class="paramname">writing_file</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8763a007e7c8171242af16acd90a76e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8763a007e7c8171242af16acd90a76e0">&#9670;&nbsp;</a></span>dumpHostEnergyConsumptionJSON()</h2>
 
@@ -1243,8 +1280,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adcf5e95355aea4db08499dc321a45fe4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcf5e95355aea4db08499dc321a45fe4">&#9670;&nbsp;</a></span>dumpUnifiedJSON()</h2>
+<a id="a0de75820ebe5925d1fab41a12ad3c4aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de75820ebe5925d1fab41a12ad3c4aa">&#9670;&nbsp;</a></span>dumpUnifiedJSON()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1289,7 +1326,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>generate_host_utilization_layout</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>generate_host_utilization_layout</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>include_disk</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

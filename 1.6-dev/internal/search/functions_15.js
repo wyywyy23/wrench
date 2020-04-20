@@ -21,5 +21,5 @@ var searchData=
   ['workunitexecutorfailedmessage',['WorkunitExecutorFailedMessage',['../classwrench_1_1_workunit_executor_failed_message.html#a56235e5ced989482a55b00f5fdb4e2eb',1,'wrench::WorkunitExecutorFailedMessage']]],
   ['writefile',['writeFile',['../classwrench_1_1_storage_service.html#a81862260994bb6fd35cb78aa12164d09',1,'wrench::StorageService']]],
   ['writefiles',['writeFiles',['../classwrench_1_1_storage_service.html#a58f410f1310760abbfa001f8fae3d23c',1,'wrench::StorageService']]],
-  ['writetodisk',['writeToDisk',['../classwrench_1_1_s4_u___simulation.html#a5780ba490a813e72061708bf83385d11',1,'wrench::S4U_Simulation']]]
+  ['writetodisk',['writeToDisk',['../classwrench_1_1_s4_u___simulation.html#a5780ba490a813e72061708bf83385d11',1,'wrench::S4U_Simulation::writeToDisk()'],['../classwrench_1_1_simulation.html#abc3c97ca35314f5436d4533e48eac1f8',1,'wrench::Simulation::writeToDisk()']]]
 ];

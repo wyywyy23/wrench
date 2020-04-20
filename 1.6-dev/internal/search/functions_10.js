@@ -2,8 +2,8 @@ var searchData=
 [
   ['readfile',['readFile',['../classwrench_1_1_storage_service.html#ad969be2879e8d0ecca8a322b112e062e',1,'wrench::StorageService']]],
   ['readfiles',['readFiles',['../classwrench_1_1_storage_service.html#a8be48f10dfcc8e307fc3c84d4204da0e',1,'wrench::StorageService']]],
-  ['readfromdisk',['readFromDisk',['../classwrench_1_1_s4_u___simulation.html#a526a9c0989f4eb7c9dfd968d5c6ba7c9',1,'wrench::S4U_Simulation']]],
-  ['readfromdiskandwritetodiskconcurrently',['readFromDiskAndWriteToDiskConcurrently',['../classwrench_1_1_s4_u___simulation.html#a180f552d958e60e330ee6bb68259fd11',1,'wrench::S4U_Simulation']]],
+  ['readfromdisk',['readFromDisk',['../classwrench_1_1_s4_u___simulation.html#a526a9c0989f4eb7c9dfd968d5c6ba7c9',1,'wrench::S4U_Simulation::readFromDisk()'],['../classwrench_1_1_simulation.html#a52209c16a2fb1c7ab2d7cc2c9b7c63c3',1,'wrench::Simulation::readFromDisk()']]],
+  ['readfromdiskandwritetodiskconcurrently',['readFromDiskAndWriteToDiskConcurrently',['../classwrench_1_1_s4_u___simulation.html#a180f552d958e60e330ee6bb68259fd11',1,'wrench::S4U_Simulation::readFromDiskAndWriteToDiskConcurrently()'],['../classwrench_1_1_simulation.html#a6889f73264af113e4196ca22e511d51f',1,'wrench::Simulation::readFromDiskAndWriteToDiskConcurrently()']]],
   ['releasedaemonlock',['releaseDaemonLock',['../classwrench_1_1_s4_u___daemon.html#a872a3739833bc4034fe729877c258dcd',1,'wrench::S4U_Daemon']]],
   ['removeallfilesindirectory',['removeAllFilesInDirectory',['../classwrench_1_1_logical_file_system.html#ac97678fa1c729fc8d6f1fc40d9d904db',1,'wrench::LogicalFileSystem']]],
   ['removeemptydirectory',['removeEmptyDirectory',['../classwrench_1_1_logical_file_system.html#a17c3843918a988311d3f86da70cb1118',1,'wrench::LogicalFileSystem']]],
