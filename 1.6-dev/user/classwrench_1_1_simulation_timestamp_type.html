@@ -166,13 +166,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file</td><td>- tuple of three strings relating to File, Source and Whoami </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>XOR of hashes of filesize_t file_hash( const File &amp; file ) { return std::hash&lt;void *&gt;()(std::get&lt;0&gt;(file)) ^ std::hash&lt;void *&gt;()(std::get&lt;1&gt;(file)) ^ std::hash&lt;void *&gt;()(std::get&lt;2&gt;(file)); } </dd></dl>
+<ul>
+<li>size_t file_hash( const File &amp; file ) { return std::hash&lt;void *&gt;()(std::get&lt;0&gt;(file)) ^ std::hash&lt;void *&gt;()(std::get&lt;1&gt;(file)) ^ std::hash&lt;void *&gt;()(std::get&lt;2&gt;(file)); } </li>
+</ul>
 
 </div>
 </div>
