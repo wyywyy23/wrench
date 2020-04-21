@@ -105,6 +105,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getContent()
 : <a class="el" href="classwrench_1_1_simulation_timestamp.html#a8ae8b15faae854fb1615a700fd620ab8">wrench::SimulationTimestamp&lt; T &gt;</a>
 </li>
+<li>getCounter()
+: <a class="el" href="classwrench_1_1_simulation_timestamp_disk_read.html#ad2affdd1bb94e473363140f9531d26fc">wrench::SimulationTimestampDiskRead</a>
+, <a class="el" href="classwrench_1_1_simulation_timestamp_disk_write.html#a2af29f917f72f5b7eb515d2ce7f8624c">wrench::SimulationTimestampDiskWrite</a>
+</li>
 <li>getDate()
 : <a class="el" href="classwrench_1_1_simulation_timestamp.html#a706030fdac38ad1e853e588f7260c499">wrench::SimulationTimestamp&lt; T &gt;</a>
 , <a class="el" href="classwrench_1_1_simulation_timestamp_type.html#a7a368777b7c9babbf679725029135f5b">wrench::SimulationTimestampType</a>
@@ -125,11 +129,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getEnergyConsumed()
 : <a class="el" href="classwrench_1_1_simulation.html#ad5096f3b1d622eab4494eca4ae828d73">wrench::Simulation</a>
 </li>
+<li>getEntryTaskMap()
+: <a class="el" href="classwrench_1_1_workflow.html#a945a7abaaba58d66471d73c0593dfa34">wrench::Workflow</a>
+</li>
 <li>getEntryTasks()
-: <a class="el" href="classwrench_1_1_workflow.html#aebaaf64a1eb8cbb7b1f656bf1968f4b6">wrench::Workflow</a>
+: <a class="el" href="classwrench_1_1_workflow.html#a26cfa6934b4278813a689f2b469af88c">wrench::Workflow</a>
+</li>
+<li>getExitTaskMap()
+: <a class="el" href="classwrench_1_1_workflow.html#a84ad1eb390a482254574ee06d65bc566">wrench::Workflow</a>
 </li>
 <li>getExitTasks()
-: <a class="el" href="classwrench_1_1_workflow.html#a1af02dfb655af610a24c96f2e7638ce1">wrench::Workflow</a>
+: <a class="el" href="classwrench_1_1_workflow.html#a767fc6c829491ad0da476bd50a9d8cd5">wrench::Workflow</a>
 </li>
 <li>getFailureCount()
 : <a class="el" href="classwrench_1_1_workflow_task.html#a6103d36486855fb8caabb008bcfaacd4">wrench::WorkflowTask</a>
@@ -141,6 +151,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>getFileByID()
 : <a class="el" href="classwrench_1_1_workflow.html#a19b3b6f36f684f8c367f42a818b0a0c2">wrench::Workflow</a>
+</li>
+<li>getFileMap()
+: <a class="el" href="classwrench_1_1_workflow.html#a9b0aa2447de76ce5711446b7953de70a">wrench::Workflow</a>
+</li>
+<li>getFiles()
+: <a class="el" href="classwrench_1_1_workflow.html#ab6754d68d09294e56aaffbe75c891369">wrench::Workflow</a>
 </li>
 <li>getFlops()
 : <a class="el" href="classwrench_1_1_workflow_task.html#aec0aab3ed552960729a60d1d3c4a3de2">wrench::WorkflowTask</a>
@@ -170,8 +186,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classwrench_1_1_workflow_file.html#acafb99b2fc9a9482849c02af882d373f">wrench::WorkflowFile</a>
 , <a class="el" href="classwrench_1_1_workflow_task.html#a18ce8967b4b59d2d231a1218a8d3b813">wrench::WorkflowTask</a>
 </li>
+<li>getInputFileMap()
+: <a class="el" href="classwrench_1_1_workflow.html#af7966bf3435966993503c5762fd3c470">wrench::Workflow</a>
+</li>
 <li>getInputFiles()
-: <a class="el" href="classwrench_1_1_workflow.html#aa0b88cee8316ed20def3010c92a6d69c">wrench::Workflow</a>
+: <a class="el" href="classwrench_1_1_workflow.html#ad9af24c910d8148353d3b5296d5afb99">wrench::Workflow</a>
 </li>
 <li>getInputOf()
 : <a class="el" href="classwrench_1_1_workflow_file.html#aa264b4e60713848ed45701d1a5403b35">wrench::WorkflowFile</a>
@@ -216,6 +235,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getOutput()
 : <a class="el" href="classwrench_1_1_simulation.html#aff0338aa6831c6ac252cf0673fe68f44">wrench::Simulation</a>
 </li>
+<li>getOutputFileMap()
+: <a class="el" href="classwrench_1_1_workflow.html#a52a4d7e4ec7e6415def5cd7b55ed1e3e">wrench::Workflow</a>
+</li>
+<li>getOutputFiles()
+: <a class="el" href="classwrench_1_1_workflow.html#a23b8214f43ca8d0052f3e46ec780a773">wrench::Workflow</a>
+</li>
 <li>getOutputOf()
 : <a class="el" href="classwrench_1_1_workflow_file.html#a37f8fb29dac0d933bc0ae7d138baad31">wrench::WorkflowFile</a>
 </li>
@@ -255,6 +280,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>getTaskByID()
 : <a class="el" href="classwrench_1_1_workflow.html#a43d89af79196164d060115ee25200306">wrench::Workflow</a>
+</li>
+<li>getTaskChildren()
+: <a class="el" href="classwrench_1_1_workflow.html#a41bac6171a8698b355ffc90f0746d2fd">wrench::Workflow</a>
+</li>
+<li>getTaskMap()
+: <a class="el" href="classwrench_1_1_workflow.html#a7fc6283de87a8debf15ad2135b54a391">wrench::Workflow</a>
+</li>
+<li>getTaskParents()
+: <a class="el" href="classwrench_1_1_workflow.html#af1e29741cd98e691cd2aba0038453176">wrench::Workflow</a>
+</li>
+<li>getTasks()
+: <a class="el" href="classwrench_1_1_workflow.html#abc742b44f0895ae2a42e60c63621f8aa">wrench::Workflow</a>
 </li>
 <li>getTrace()
 : <a class="el" href="classwrench_1_1_simulation_output.html#a1d03324f34db985d0e181e42cf30cd9d">wrench::SimulationOutput</a>
