@@ -49,6 +49,5 @@ var searchData=
   ['free_5fspace',['free_space',['../classwrench_1_1_storage_service_free_space_answer_message.html#ab035983a284cf0402a7a69fca73e0076',1,'wrench::StorageServiceFreeSpaceAnswerMessage']]],
   ['free_5fspace_5fanswer_5fmessage_5fpayload',['FREE_SPACE_ANSWER_MESSAGE_PAYLOAD',['../classwrench_1_1_storage_service_message_payload.html#a00fa84710c6e868ff41ab593562e16c6',1,'wrench::StorageServiceMessagePayload']]],
   ['free_5fspace_5frequest_5fmessage_5fpayload',['FREE_SPACE_REQUEST_MESSAGE_PAYLOAD',['../classwrench_1_1_storage_service_message_payload.html#a681e602d270caf31ca9173de0bd09ac8',1,'wrench::StorageServiceMessagePayload']]],
-  ['functionalitynotavailable',['FunctionalityNotAvailable',['../classwrench_1_1_functionality_not_available.html',1,'wrench::FunctionalityNotAvailable'],['../classwrench_1_1_functionality_not_available.html#a170e6b94c59f97895ac54608bcd72cf5',1,'wrench::FunctionalityNotAvailable::FunctionalityNotAvailable()']]],
-  ['file_20registry',['File Registry',['../guide-fileregistry.html',1,'']]]
+  ['functionalitynotavailable',['FunctionalityNotAvailable',['../classwrench_1_1_functionality_not_available.html',1,'wrench::FunctionalityNotAvailable'],['../classwrench_1_1_functionality_not_available.html#a170e6b94c59f97895ac54608bcd72cf5',1,'wrench::FunctionalityNotAvailable::FunctionalityNotAvailable()']]]
 ];

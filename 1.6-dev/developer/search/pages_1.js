@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cloud',['Cloud',['../guide-cloud.html',1,'']]]
+  ['getting_20started',['Getting started',['../getting-started.html',1,'']]]
 ];

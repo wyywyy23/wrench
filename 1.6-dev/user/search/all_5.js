@@ -19,6 +19,5 @@ var searchData=
   ['flop_5frate_5fanswer_5fmessage_5fpayload',['FLOP_RATE_ANSWER_MESSAGE_PAYLOAD',['../classwrench_1_1_bare_metal_compute_service_message_payload.html#a10eabc33f0fc2110737b3cf151623250',1,'wrench::BareMetalComputeServiceMessagePayload']]],
   ['flop_5frate_5frequest_5fmessage_5fpayload',['FLOP_RATE_REQUEST_MESSAGE_PAYLOAD',['../classwrench_1_1_bare_metal_compute_service_message_payload.html#a1ab951377c6247c9b58c0f4494cf2950',1,'wrench::BareMetalComputeServiceMessagePayload']]],
   ['free_5fspace_5fanswer_5fmessage_5fpayload',['FREE_SPACE_ANSWER_MESSAGE_PAYLOAD',['../classwrench_1_1_storage_service_message_payload.html#a00fa84710c6e868ff41ab593562e16c6',1,'wrench::StorageServiceMessagePayload']]],
-  ['free_5fspace_5frequest_5fmessage_5fpayload',['FREE_SPACE_REQUEST_MESSAGE_PAYLOAD',['../classwrench_1_1_storage_service_message_payload.html#a681e602d270caf31ca9173de0bd09ac8',1,'wrench::StorageServiceMessagePayload']]],
-  ['file_20registry',['File Registry',['../guide-fileregistry.html',1,'']]]
+  ['free_5fspace_5frequest_5fmessage_5fpayload',['FREE_SPACE_REQUEST_MESSAGE_PAYLOAD',['../classwrench_1_1_storage_service_message_payload.html#a681e602d270caf31ca9173de0bd09ac8',1,'wrench::StorageServiceMessagePayload']]]
 ];

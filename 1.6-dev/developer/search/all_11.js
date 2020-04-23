@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['simplestorage',['SimpleStorage',['../guide-simplestorage.html',1,'']]],
   ['sanitizepath',['sanitizePath',['../classwrench_1_1_file_location.html#ae39ad55190a9cca32a128cf4404294ba',1,'wrench::FileLocation']]],
   ['scheduled_5fjobs',['scheduled_jobs',['../classwrench_1_1_negotiator_completion_message.html#a9d095086e3048f178279c93c9c57890c',1,'wrench::NegotiatorCompletionMessage']]],
   ['schedulepilotjobs',['schedulePilotJobs',['../classwrench_1_1_pilot_job_scheduler.html#a1ffeab878db93abe7c0fd72305ffe084',1,'wrench::PilotJobScheduler']]],

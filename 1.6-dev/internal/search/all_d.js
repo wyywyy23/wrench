@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['network_20proximity',['Network Proximity',['../guide-networkproximity.html',1,'']]],
   ['name',['name',['../classwrench_1_1_service.html#aaef1b34d99953a0d9aa7ec1e4560600b',1,'wrench::Service::name()'],['../classwrench_1_1_simulation_message.html#ab224f6dd8ec5ee2e7f65bfcdf2b8a86b',1,'wrench::SimulationMessage::name()'],['../classwrench_1_1_workflow_job.html#a098ede62860e053e09ae646500e1e8c7',1,'wrench::WorkflowJob::name()']]],
   ['necessary_5ffailure_5fcount_5fincrements',['necessary_failure_count_increments',['../classwrench_1_1_job_manager_standard_job_failed_message.html#a23cde37f6f41ec85557a3686e32962a1',1,'wrench::JobManagerStandardJobFailedMessage']]],
   ['necessary_5fstate_5fchanges',['necessary_state_changes',['../classwrench_1_1_job_manager_standard_job_done_message.html#a24cb65e78ab79663734a76ff3c24e995',1,'wrench::JobManagerStandardJobDoneMessage::necessary_state_changes()'],['../classwrench_1_1_job_manager_standard_job_failed_message.html#a872347ab64144896e7bf7aa3a462e683',1,'wrench::JobManagerStandardJobFailedMessage::necessary_state_changes()']]],

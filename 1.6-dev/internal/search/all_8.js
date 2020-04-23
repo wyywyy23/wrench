@@ -1,5 +1,11 @@
 var searchData=
 [
+  ['interacting_20with_20a_20bare_2dmetal_20compute_20service',['Interacting with a bare-metal compute service',['../guide-102-baremetal.html',1,'']]],
+  ['interacting_20with_20a_20batch_20compute_20service',['Interacting with a batch compute service',['../guide-102-batch.html',1,'']]],
+  ['interacting_20with_20a_20cloud_20compute_20service',['Interacting with a cloud compute service',['../guide-102-cloud.html',1,'']]],
+  ['interacting_20with_20a_20htcondor_20compute_20service',['Interacting with a HTCondor compute service',['../guide-102-htcondor.html',1,'']]],
+  ['interacting_20with_20a_20storage_20service',['Interacting with a storage service',['../guide-102-simplestorage.html',1,'']]],
+  ['interacting_20with_20a_20virtualized_20cluster_20service',['Interacting with a virtualized cluster service',['../guide-102-virtualizedcluster.html',1,'']]],
   ['igetmessage',['igetMessage',['../classwrench_1_1_s4_u___mailbox.html#a9e25753207135f1323df89fbe99c86ba',1,'wrench::S4U_Mailbox']]],
   ['ignore_5finvalid_5fjobs_5fin_5fworkload_5ftrace_5ffile',['IGNORE_INVALID_JOBS_IN_WORKLOAD_TRACE_FILE',['../classwrench_1_1_batch_compute_service_property.html#a493c47199d12e12d41db176b39b1ea12',1,'wrench::BatchComputeServiceProperty']]],
   ['increasenumcompletedservicescount',['increaseNumCompletedServicesCount',['../classwrench_1_1_service.html#a2e35a0e9482edc7cb3011db9238377e5',1,'wrench::Service']]],

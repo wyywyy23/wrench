@@ -33,6 +33,5 @@ var searchData=
   ['forgetjob',['forgetJob',['../classwrench_1_1_job_manager.html#ab10f770cc7ce3c022f889ad9cc3fcf0b',1,'wrench::JobManager']]],
   ['free_5fspace_5fanswer_5fmessage_5fpayload',['FREE_SPACE_ANSWER_MESSAGE_PAYLOAD',['../classwrench_1_1_storage_service_message_payload.html#a00fa84710c6e868ff41ab593562e16c6',1,'wrench::StorageServiceMessagePayload']]],
   ['free_5fspace_5frequest_5fmessage_5fpayload',['FREE_SPACE_REQUEST_MESSAGE_PAYLOAD',['../classwrench_1_1_storage_service_message_payload.html#a681e602d270caf31ca9173de0bd09ac8',1,'wrench::StorageServiceMessagePayload']]],
-  ['functionalitynotavailable',['FunctionalityNotAvailable',['../classwrench_1_1_functionality_not_available.html',1,'wrench']]],
-  ['file_20registry',['File Registry',['../guide-fileregistry.html',1,'']]]
+  ['functionalitynotavailable',['FunctionalityNotAvailable',['../classwrench_1_1_functionality_not_available.html',1,'wrench']]]
 ];

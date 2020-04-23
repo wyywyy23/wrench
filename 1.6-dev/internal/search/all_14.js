@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['virtualized_20cluster',['Virtualized Cluster',['../guide-virtualizedcluster.html',1,'']]],
   ['validateproperties',['validateProperties',['../classwrench_1_1_bare_metal_compute_service.html#a199bba66e56383b91125026715bde9cf',1,'wrench::BareMetalComputeService::validateProperties()'],['../classwrench_1_1_cloud_compute_service.html#a63fc712f096052e4cd7971e83bb3ca70',1,'wrench::CloudComputeService::validateProperties()']]],
   ['virtualizedclustercomputeservice',['VirtualizedClusterComputeService',['../classwrench_1_1_virtualized_cluster_compute_service.html',1,'wrench::VirtualizedClusterComputeService'],['../classwrench_1_1_virtualized_cluster_compute_service.html#a40a78b7e0efc2fc8bdd40196cb380b49',1,'wrench::VirtualizedClusterComputeService::VirtualizedClusterComputeService()']]],
   ['virtualizedclustercomputeservicemessage',['VirtualizedClusterComputeServiceMessage',['../classwrench_1_1_virtualized_cluster_compute_service_message.html',1,'wrench::VirtualizedClusterComputeServiceMessage'],['../classwrench_1_1_virtualized_cluster_compute_service_message.html#a4f5802c712db9eaf0c26a9255b293e9f',1,'wrench::VirtualizedClusterComputeServiceMessage::VirtualizedClusterComputeServiceMessage()']]],

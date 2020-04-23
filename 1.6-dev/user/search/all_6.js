@@ -73,8 +73,7 @@ var searchData=
   ['gettaskmap',['getTaskMap',['../classwrench_1_1_workflow.html#a7fc6283de87a8debf15ad2135b54a391',1,'wrench::Workflow']]],
   ['gettaskparents',['getTaskParents',['../classwrench_1_1_workflow.html#af1e29741cd98e691cd2aba0038453176',1,'wrench::Workflow']]],
   ['gettasks',['getTasks',['../classwrench_1_1_workflow.html#abc742b44f0895ae2a42e60c63621f8aa',1,'wrench::Workflow']]],
-  ['getting_20started',['Getting Started',['../getting-started.html',1,'']]],
+  ['getting_20started',['Getting started',['../getting-started.html',1,'']]],
   ['gettrace',['getTrace',['../classwrench_1_1_simulation_output.html#a1d03324f34db985d0e181e42cf30cd9d',1,'wrench::SimulationOutput']]],
-  ['getworkflow',['getWorkflow',['../classwrench_1_1_w_m_s.html#a44b586fe5f584755375691a12d815aa3',1,'wrench::WMS::getWorkflow()'],['../classwrench_1_1_workflow_file.html#ac8c018abfade90cb0594c812ec5e5eaf',1,'wrench::WorkflowFile::getWorkflow()']]],
-  ['guide',['Guide',['../guide.html',1,'']]]
+  ['getworkflow',['getWorkflow',['../classwrench_1_1_w_m_s.html#a44b586fe5f584755375691a12d815aa3',1,'wrench::WMS::getWorkflow()'],['../classwrench_1_1_workflow_file.html#ac8c018abfade90cb0594c812ec5e5eaf',1,'wrench::WorkflowFile::getWorkflow()']]]
 ];

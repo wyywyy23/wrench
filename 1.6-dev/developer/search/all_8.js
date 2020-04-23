@@ -1,5 +1,11 @@
 var searchData=
 [
+  ['interacting_20with_20a_20bare_2dmetal_20compute_20service',['Interacting with a bare-metal compute service',['../guide-102-baremetal.html',1,'']]],
+  ['interacting_20with_20a_20batch_20compute_20service',['Interacting with a batch compute service',['../guide-102-batch.html',1,'']]],
+  ['interacting_20with_20a_20cloud_20compute_20service',['Interacting with a cloud compute service',['../guide-102-cloud.html',1,'']]],
+  ['interacting_20with_20a_20htcondor_20compute_20service',['Interacting with a HTCondor compute service',['../guide-102-htcondor.html',1,'']]],
+  ['interacting_20with_20a_20storage_20service',['Interacting with a storage service',['../guide-102-simplestorage.html',1,'']]],
+  ['interacting_20with_20a_20virtualized_20cluster_20service',['Interacting with a virtualized cluster service',['../guide-102-virtualizedcluster.html',1,'']]],
   ['ignore_5finvalid_5fjobs_5fin_5fworkload_5ftrace_5ffile',['IGNORE_INVALID_JOBS_IN_WORKLOAD_TRACE_FILE',['../classwrench_1_1_batch_compute_service_property.html#a493c47199d12e12d41db176b39b1ea12',1,'wrench::BatchComputeServiceProperty']]],
   ['init',['init',['../classwrench_1_1_simulation.html#a3c6d35f1f77f35cbc727ce31e5689992',1,'wrench::Simulation']]],
   ['initiateasynchronousfilecopy',['initiateAsynchronousFileCopy',['../classwrench_1_1_data_movement_manager.html#aca33489c06e05260fe0a73fb7ee660e0',1,'wrench::DataMovementManager']]],

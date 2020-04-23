@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['network_20proximity',['Network Proximity',['../guide-networkproximity.html',1,'']]],
   ['negotiatorcompletionmessage',['NegotiatorCompletionMessage',['../classwrench_1_1_negotiator_completion_message.html',1,'wrench::NegotiatorCompletionMessage'],['../classwrench_1_1_negotiator_completion_message.html#a23d6a68f7ff679286b90a3c114945b54',1,'wrench::NegotiatorCompletionMessage::NegotiatorCompletionMessage()']]],
   ['network_5fdaemon_5fcommunication_5fcoverage',['NETWORK_DAEMON_COMMUNICATION_COVERAGE',['../classwrench_1_1_network_proximity_service_property.html#a19af22a3ba877db9832cd764de95d3d8',1,'wrench::NetworkProximityServiceProperty']]],
   ['network_5fdaemon_5fcontact_5fanswer_5fpayload',['NETWORK_DAEMON_CONTACT_ANSWER_PAYLOAD',['../classwrench_1_1_network_proximity_service_message_payload.html#ad265658bc0467be580921500ba87e4ae',1,'wrench::NetworkProximityServiceMessagePayload']]],

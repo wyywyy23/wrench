@@ -13,5 +13,12 @@ var searchData=
   ['createexecutableworkflowfromjson',['createExecutableWorkflowFromJSON',['../classwrench_1_1_pegasus_workflow_parser.html#a67bbfda5088da383448a248da47e90e0',1,'wrench::PegasusWorkflowParser']]],
   ['createworkflowfromdax',['createWorkflowFromDAX',['../classwrench_1_1_pegasus_workflow_parser.html#aa0728c1a98d47d51494c4f469bf2cb52',1,'wrench::PegasusWorkflowParser']]],
   ['createworkflowfromjson',['createWorkflowFromJSON',['../classwrench_1_1_pegasus_workflow_parser.html#a5e4be7f4f1b6d6d7af38b65470977805',1,'wrench::PegasusWorkflowParser']]],
-  ['cloud',['Cloud',['../guide-cloud.html',1,'']]]
+  ['creating_20a_20bare_2dmetal_20compute_20service',['Creating a bare-metal compute service',['../guide-101-baremetal.html',1,'']]],
+  ['creating_20a_20batch_20compute_20service',['Creating a batch compute service',['../guide-101-batch.html',1,'']]],
+  ['creating_20a_20cloud_20compute_20service',['Creating a cloud compute service',['../guide-101-cloud.html',1,'']]],
+  ['creating_20a_20file_20registry_20service',['Creating a file registry service',['../guide-101-fileregistry.html',1,'']]],
+  ['creating_20a_20htcondor_20compute_20service',['Creating a HTCondor compute service',['../guide-101-htcondor.html',1,'']]],
+  ['creating_20a_20network_20proximity_20service',['Creating a network proximity service',['../guide-101-networkproximity.html',1,'']]],
+  ['creating_20a_20simple_20storage_20service',['Creating a simple storage service',['../guide-101-simplestorage.html',1,'']]],
+  ['creating_20a_20virtualized_20cluster_20compute_20service',['Creating a virtualized cluster compute service',['../guide-101-virtualizedcluster.html',1,'']]]
 ];

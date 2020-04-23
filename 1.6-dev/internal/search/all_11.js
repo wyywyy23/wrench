@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['simplestorage',['SimpleStorage',['../guide-simplestorage.html',1,'']]],
   ['s4u_5fdaemon',['S4U_Daemon',['../classwrench_1_1_s4_u___daemon.html',1,'wrench::S4U_Daemon'],['../classwrench_1_1_s4_u___daemon.html#af63c270457dcf4a48ac9711c1fc2dc2e',1,'wrench::S4U_Daemon::S4U_Daemon()']]],
   ['s4u_5fdaemonactor',['S4U_DaemonActor',['../classwrench_1_1_s4_u___daemon_actor.html',1,'wrench::S4U_DaemonActor'],['../classwrench_1_1_s4_u___daemon_actor.html#a93470293602b656229cf003da3ecbae8',1,'wrench::S4U_DaemonActor::S4U_DaemonActor()']]],
   ['s4u_5fmailbox',['S4U_Mailbox',['../classwrench_1_1_s4_u___mailbox.html',1,'wrench']]],
