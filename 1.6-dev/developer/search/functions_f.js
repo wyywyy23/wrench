@@ -1,8 +1,6 @@
 var searchData=
 [
   ['readfile',['readFile',['../classwrench_1_1_storage_service.html#ad969be2879e8d0ecca8a322b112e062e',1,'wrench::StorageService']]],
-  ['readfromdisk',['readFromDisk',['../classwrench_1_1_simulation.html#a52209c16a2fb1c7ab2d7cc2c9b7c63c3',1,'wrench::Simulation']]],
-  ['readfromdiskandwritetodiskconcurrently',['readFromDiskAndWriteToDiskConcurrently',['../classwrench_1_1_simulation.html#a6889f73264af113e4196ca22e511d51f',1,'wrench::Simulation']]],
   ['removeentry',['removeEntry',['../classwrench_1_1_file_registry_service.html#a6bf6982726cdd789cd3956ecf360c07f',1,'wrench::FileRegistryService']]],
   ['removefile',['removeFile',['../classwrench_1_1_workflow.html#a343edce64d90995088075b6cf25adc25',1,'wrench::Workflow']]],
   ['removetask',['removeTask',['../classwrench_1_1_workflow.html#af2361b641261ea13079902bef91e11f4',1,'wrench::Workflow']]],

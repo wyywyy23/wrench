@@ -136,10 +136,6 @@ std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign=
 <tr class="memitem:ae9589632de9a2311ed1d7f7747478985"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#ae9589632de9a2311ed1d7f7747478985">launch</a> ()</td></tr>
 <tr class="memdesc:ae9589632de9a2311ed1d7f7747478985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launch the simulation.  <a href="#ae9589632de9a2311ed1d7f7747478985">More...</a><br /></td></tr>
 <tr class="separator:ae9589632de9a2311ed1d7f7747478985"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52209c16a2fb1c7ab2d7cc2c9b7c63c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a52209c16a2fb1c7ab2d7cc2c9b7c63c3">readFromDisk</a> (double num_bytes, std::string hostname, std::string mount_point)</td></tr>
-<tr class="separator:a52209c16a2fb1c7ab2d7cc2c9b7c63c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6889f73264af113e4196ca22e511d51f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a6889f73264af113e4196ca22e511d51f">readFromDiskAndWriteToDiskConcurrently</a> (double num_bytes_to_read, double num_bytes_to_write, std::string hostname, std::string read_mount_point, std::string write_mount_point)</td></tr>
-<tr class="separator:a6889f73264af113e4196ca22e511d51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf4675a8c9c62c93bfbd3dc4a4e46556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#adf4675a8c9c62c93bfbd3dc4a4e46556">setPstate</a> (const std::string &amp;hostname, int pstate)</td></tr>
 <tr class="memdesc:adf4675a8c9c62c93bfbd3dc4a4e46556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the power state of the host.  <a href="#adf4675a8c9c62c93bfbd3dc4a4e46556">More...</a><br /></td></tr>
 <tr class="separator:adf4675a8c9c62c93bfbd3dc4a4e46556"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,8 +157,6 @@ std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign=
 <tr class="memitem:a5aee9b87344fb0002d5cd78f2329b16e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_file_registry_service.html">FileRegistryService</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a5aee9b87344fb0002d5cd78f2329b16e">startNewService</a> (<a class="el" href="classwrench_1_1_file_registry_service.html">FileRegistryService</a> *service)</td></tr>
 <tr class="memdesc:a5aee9b87344fb0002d5cd78f2329b16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a new file registry service during <a class="el" href="classwrench_1_1_w_m_s.html" title="A workflow management system (WMS) ">WMS</a> execution (i.e., one that was not passed to <a class="el" href="classwrench_1_1_simulation.html#a7cf70e5793758149a8bf29992d870c91" title="Method to add a service to the simulation. ">Simulation::add()</a> before <a class="el" href="classwrench_1_1_simulation.html#ae9589632de9a2311ed1d7f7747478985" title="Launch the simulation. ">Simulation::launch()</a> was called). The simulation takes ownership of the reference and will call the destructor.  <a href="#a5aee9b87344fb0002d5cd78f2329b16e">More...</a><br /></td></tr>
 <tr class="separator:a5aee9b87344fb0002d5cd78f2329b16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc3c97ca35314f5436d4533e48eac1f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#abc3c97ca35314f5436d4533e48eac1f8">writeToDisk</a> (double num_bytes, std::string hostname, std::string mount_point)</td></tr>
-<tr class="separator:abc3c97ca35314f5436d4533e48eac1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -177,18 +171,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9721ec8f4c31dcb6bdb032c9ba08f815"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a9721ec8f4c31dcb6bdb032c9ba08f815">getCurrentSimulatedDate</a> ()</td></tr>
 <tr class="memdesc:a9721ec8f4c31dcb6bdb032c9ba08f815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current simulated date.  <a href="#a9721ec8f4c31dcb6bdb032c9ba08f815">More...</a><br /></td></tr>
 <tr class="separator:a9721ec8f4c31dcb6bdb032c9ba08f815"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae74b3ff1b394b4bc2986190412f4f32b"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#ae74b3ff1b394b4bc2986190412f4f32b">getFlopRate</a> ()</td></tr>
-<tr class="memdesc:ae74b3ff1b394b4bc2986190412f4f32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flop rate of one core of the host on which the calling process is running.  <a href="#ae74b3ff1b394b4bc2986190412f4f32b">More...</a><br /></td></tr>
-<tr class="separator:ae74b3ff1b394b4bc2986190412f4f32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a736b72b8fb5343f93d3a461f85f221ef"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a736b72b8fb5343f93d3a461f85f221ef">getHostFlopRate</a> (std::string hostname)</td></tr>
 <tr class="memdesc:a736b72b8fb5343f93d3a461f85f221ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flop rate of one core of a host given a hostname.  <a href="#a736b72b8fb5343f93d3a461f85f221ef">More...</a><br /></td></tr>
 <tr class="separator:a736b72b8fb5343f93d3a461f85f221ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a757dde71d164a89ff52e49c4c52af0b5"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a757dde71d164a89ff52e49c4c52af0b5">getHostMemoryCapacity</a> (std::string hostname)</td></tr>
 <tr class="memdesc:a757dde71d164a89ff52e49c4c52af0b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the memory capacity of a host given a hostname.  <a href="#a757dde71d164a89ff52e49c4c52af0b5">More...</a><br /></td></tr>
 <tr class="separator:a757dde71d164a89ff52e49c4c52af0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47bc946424d2957733f8d053a4b3ef60"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a47bc946424d2957733f8d053a4b3ef60">getHostName</a> ()</td></tr>
-<tr class="memdesc:a47bc946424d2957733f8d053a4b3ef60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the host on which the calling process is running.  <a href="#a47bc946424d2957733f8d053a4b3ef60">More...</a><br /></td></tr>
-<tr class="separator:a47bc946424d2957733f8d053a4b3ef60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15b4a28cfb0391525f3dba70317189be"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a15b4a28cfb0391525f3dba70317189be">getHostnameList</a> ()</td></tr>
 <tr class="memdesc:a15b4a28cfb0391525f3dba70317189be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of names of all the hosts in the platform.  <a href="#a15b4a28cfb0391525f3dba70317189be">More...</a><br /></td></tr>
 <tr class="separator:a15b4a28cfb0391525f3dba70317189be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,18 +192,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae76b92ce868c6e6c1683377d869a5b34"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#ae76b92ce868c6e6c1683377d869a5b34">getMaxPowerConsumption</a> (const std::string &amp;hostname)</td></tr>
 <tr class="memdesc:ae76b92ce868c6e6c1683377d869a5b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum power consumption for the host (i.e., 100% utilization) at its current pstate.  <a href="#ae76b92ce868c6e6c1683377d869a5b34">More...</a><br /></td></tr>
 <tr class="separator:ae76b92ce868c6e6c1683377d869a5b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0a5ca7331875bc551fc2cf1896e9dd4"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#ac0a5ca7331875bc551fc2cf1896e9dd4">getMemoryCapacity</a> ()</td></tr>
-<tr class="memdesc:ac0a5ca7331875bc551fc2cf1896e9dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the memory capacity of the host on which the calling process is running.  <a href="#ac0a5ca7331875bc551fc2cf1896e9dd4">More...</a><br /></td></tr>
-<tr class="separator:ac0a5ca7331875bc551fc2cf1896e9dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdf2ae84f6b3c8b51c5189199bebb52e"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#afdf2ae84f6b3c8b51c5189199bebb52e">getMinPowerConsumption</a> (const std::string &amp;hostname)</td></tr>
 <tr class="memdesc:afdf2ae84f6b3c8b51c5189199bebb52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum power consumption for the host (i.e., idling) at its current pstate.  <a href="#afdf2ae84f6b3c8b51c5189199bebb52e">More...</a><br /></td></tr>
 <tr class="separator:afdf2ae84f6b3c8b51c5189199bebb52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e8d5b963d2278c79b49a0ed7db2b933"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a5e8d5b963d2278c79b49a0ed7db2b933">getNumberofPstates</a> (const std::string &amp;hostname)</td></tr>
 <tr class="memdesc:a5e8d5b963d2278c79b49a0ed7db2b933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of power states of a host.  <a href="#a5e8d5b963d2278c79b49a0ed7db2b933">More...</a><br /></td></tr>
 <tr class="separator:a5e8d5b963d2278c79b49a0ed7db2b933"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5d966b1ac072a8a71db4bd527a62224"><td class="memItemLeft" align="right" valign="top">static unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#aa5d966b1ac072a8a71db4bd527a62224">getNumCores</a> ()</td></tr>
-<tr class="memdesc:aa5d966b1ac072a8a71db4bd527a62224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of cores of the host on which the calling process is running.  <a href="#aa5d966b1ac072a8a71db4bd527a62224">More...</a><br /></td></tr>
-<tr class="separator:aa5d966b1ac072a8a71db4bd527a62224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea87ea367873efdb53478945b880fc72"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#aea87ea367873efdb53478945b880fc72">isHostOn</a> (std::string hostname)</td></tr>
 <tr class="memdesc:aea87ea367873efdb53478945b880fc72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a host is on or not.  <a href="#aea87ea367873efdb53478945b880fc72">More...</a><br /></td></tr>
 <tr class="separator:aea87ea367873efdb53478945b880fc72"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -502,34 +484,6 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="ae74b3ff1b394b4bc2986190412f4f32b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae74b3ff1b394b4bc2986190412f4f32b">&#9670;&nbsp;</a></span>getFlopRate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double wrench::Simulation::getFlopRate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the flop rate of one core of the host on which the calling process is running. </p>
-<dl class="section return"><dt>Returns</dt><dd>a flop rate </dd></dl>
-
-</div>
-</div>
 <a id="a736b72b8fb5343f93d3a461f85f221ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a736b72b8fb5343f93d3a461f85f221ef">&#9670;&nbsp;</a></span>getHostFlopRate()</h2>
 
@@ -597,34 +551,6 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a memory capacity in bytes </dd></dl>
-
-</div>
-</div>
-<a id="a47bc946424d2957733f8d053a4b3ef60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47bc946424d2957733f8d053a4b3ef60">&#9670;&nbsp;</a></span>getHostName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string wrench::Simulation::getHostName </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the name of the host on which the calling process is running. </p>
-<dl class="section return"><dt>Returns</dt><dd>a host name </dd></dl>
 
 </div>
 </div>
@@ -789,34 +715,6 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="ac0a5ca7331875bc551fc2cf1896e9dd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0a5ca7331875bc551fc2cf1896e9dd4">&#9670;&nbsp;</a></span>getMemoryCapacity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double wrench::Simulation::getMemoryCapacity </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the memory capacity of the host on which the calling process is running. </p>
-<dl class="section return"><dt>Returns</dt><dd>a memory capacity in bytes </dd></dl>
-
-</div>
-</div>
 <a id="afdf2ae84f6b3c8b51c5189199bebb52e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afdf2ae84f6b3c8b51c5189199bebb52e">&#9670;&nbsp;</a></span>getMinPowerConsumption()</h2>
 
@@ -884,34 +782,6 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of power states available for the host (as specified in the platform xml description file) </dd></dl>
-
-</div>
-</div>
-<a id="aa5d966b1ac072a8a71db4bd527a62224"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5d966b1ac072a8a71db4bd527a62224">&#9670;&nbsp;</a></span>getNumCores()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long wrench::Simulation::getNumCores </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the number of cores of the host on which the calling process is running. </p>
-<dl class="section return"><dt>Returns</dt><dd>a number of cores </dd></dl>
 
 </div>
 </div>
@@ -1099,116 +969,6 @@ template&lt;class T &gt; </div>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::runtime_error</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a52209c16a2fb1c7ab2d7cc2c9b7c63c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52209c16a2fb1c7ab2d7cc2c9b7c63c3">&#9670;&nbsp;</a></span>readFromDisk()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void wrench::Simulation::readFromDisk </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>num_bytes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>hostname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>mount_point</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wrapper enabling timestamps for disk reads </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">num_bytes</td><td>- number of bytes read </td></tr>
-    <tr><td class="paramname">hostname</td><td>- hostname to read from </td></tr>
-    <tr><td class="paramname">mount_point</td><td>- mount point of disk to read from</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">invalid_argument</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a6889f73264af113e4196ca22e511d51f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6889f73264af113e4196ca22e511d51f">&#9670;&nbsp;</a></span>readFromDiskAndWriteToDiskConcurrently()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void wrench::Simulation::readFromDiskAndWriteToDiskConcurrently </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>num_bytes_to_read</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>num_bytes_to_write</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>hostname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>read_mount_point</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>write_mount_point</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wrapper enabling timestamps for concurrent disk read/writes </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">num_bytes_to_read</td><td>- number of bytes read </td></tr>
-    <tr><td class="paramname">num_bytes_to_write</td><td>- number of bytes written </td></tr>
-    <tr><td class="paramname">hostname</td><td>- hostname where disk is located </td></tr>
-    <tr><td class="paramname">read_mount_point</td><td>- mount point of disk to read from </td></tr>
-    <tr><td class="paramname">write_mount_point</td><td>- mount point of disk to write to</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">invalid_argument</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -1647,54 +1407,6 @@ template&lt;class T &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">linkname</td><td>the linkname </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="abc3c97ca35314f5436d4533e48eac1f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc3c97ca35314f5436d4533e48eac1f8">&#9670;&nbsp;</a></span>writeToDisk()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void wrench::Simulation::writeToDisk </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>num_bytes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>hostname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>mount_point</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wrapper enabling timestamps for disk writes </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">num_bytes</td><td>- number of bytes written </td></tr>
-    <tr><td class="paramname">hostname</td><td>- hostname to write to </td></tr>
-    <tr><td class="paramname">mount_point</td><td>- mount point of disk to write to</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">invalid_argument</td><td></td></tr>
   </table>
   </dd>
 </dl>

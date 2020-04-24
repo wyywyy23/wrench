@@ -15,6 +15,5 @@ var searchData=
   ['wrench',['wrench',['../namespacewrench.html',1,'']]],
   ['wrench_20101',['WRENCH 101',['../wrench-101.html',1,'']]],
   ['wrench_20102',['WRENCH 102',['../wrench-102.html',1,'']]],
-  ['writefile',['writeFile',['../classwrench_1_1_storage_service.html#a81862260994bb6fd35cb78aa12164d09',1,'wrench::StorageService']]],
-  ['writetodisk',['writeToDisk',['../classwrench_1_1_simulation.html#abc3c97ca35314f5436d4533e48eac1f8',1,'wrench::Simulation']]]
+  ['writefile',['writeFile',['../classwrench_1_1_storage_service.html#a81862260994bb6fd35cb78aa12164d09',1,'wrench::StorageService']]]
 ];

@@ -1,8 +1,6 @@
 var searchData=
 [
   ['readfile',['readFile',['../classwrench_1_1_storage_service.html#ad969be2879e8d0ecca8a322b112e062e',1,'wrench::StorageService']]],
-  ['readfromdisk',['readFromDisk',['../classwrench_1_1_simulation.html#a52209c16a2fb1c7ab2d7cc2c9b7c63c3',1,'wrench::Simulation']]],
-  ['readfromdiskandwritetodiskconcurrently',['readFromDiskAndWriteToDiskConcurrently',['../classwrench_1_1_simulation.html#a6889f73264af113e4196ca22e511d51f',1,'wrench::Simulation']]],
   ['ready',['READY',['../classwrench_1_1_workflow_task.html#a1184f3d7aea21e1c87a9b17e84f1f92aae983a946ee97e094f18524d6b392d2f9',1,'wrench::WorkflowTask']]],
   ['remove_5fentry_5fanswer_5fmessage_5fpayload',['REMOVE_ENTRY_ANSWER_MESSAGE_PAYLOAD',['../classwrench_1_1_file_registry_service_message_payload.html#a143ee2e1ad8b0861b040fa67efb17db8',1,'wrench::FileRegistryServiceMessagePayload']]],
   ['remove_5fentry_5fcompute_5fcost',['REMOVE_ENTRY_COMPUTE_COST',['../classwrench_1_1_file_registry_service_property.html#aa365ab3efd713b23827f22ee48626e46',1,'wrench::FileRegistryServiceProperty']]],
