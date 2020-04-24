@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../classwrench_1_1_file_transfer_thread.html#a44b7ca75f37b9bb0dbcc7dbcc2c225ba',1,'wrench::FileTransferThread']]]
+  ['networkproximityservice',['NetworkProximityService',['../classwrench_1_1_network_proximity_service.html#a9b22deb4b19d5a3287c0d5b02b7f4447',1,'wrench::NetworkProximityService']]]
 ];

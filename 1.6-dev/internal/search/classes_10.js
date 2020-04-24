@@ -9,7 +9,6 @@ var searchData=
   ['workflowjob',['WorkflowJob',['../classwrench_1_1_workflow_job.html',1,'wrench']]],
   ['workflowtask',['WorkflowTask',['../classwrench_1_1_workflow_task.html',1,'wrench']]],
   ['workflowtaskexecution',['WorkflowTaskExecution',['../structwrench_1_1_workflow_task_1_1_workflow_task_execution.html',1,'wrench::WorkflowTask']]],
-  ['workflowtaskexecutioninstance',['WorkflowTaskExecutionInstance',['../structwrench_1_1_workflow_task_execution_instance.html',1,'wrench']]],
   ['workloadtracefilereplayer',['WorkloadTraceFileReplayer',['../classwrench_1_1_workload_trace_file_replayer.html',1,'wrench']]],
   ['workloadtracefilereplayereventreceiver',['WorkloadTraceFileReplayerEventReceiver',['../classwrench_1_1_workload_trace_file_replayer_event_receiver.html',1,'wrench']]],
   ['workunit',['Workunit',['../classwrench_1_1_workunit.html',1,'wrench']]],

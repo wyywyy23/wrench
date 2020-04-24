@@ -30,5 +30,5 @@ var searchData=
   ['turnofflink',['turnOffLink',['../classwrench_1_1_s4_u___simulation.html#a7518c60e38eead4c773427fbc9868c23',1,'wrench::S4U_Simulation::turnOffLink()'],['../classwrench_1_1_simulation.html#a86839d69ef188fb1de7912a18c066d6b',1,'wrench::Simulation::turnOffLink()']]],
   ['turnonhost',['turnOnHost',['../classwrench_1_1_s4_u___simulation.html#aec9b4b9b0d3939358b58db23e26aecb4',1,'wrench::S4U_Simulation::turnOnHost()'],['../classwrench_1_1_simulation.html#aa6f48028194a6946d67426043fec6daa',1,'wrench::Simulation::turnOnHost()']]],
   ['turnonlink',['turnOnLink',['../classwrench_1_1_s4_u___simulation.html#a57d94e3f7036d281d3d593c3440d7dec',1,'wrench::S4U_Simulation::turnOnLink()'],['../classwrench_1_1_simulation.html#a82da9ee7a2c23039d5d7d95521d18a77',1,'wrench::Simulation::turnOnLink()']]],
-  ['type',['type',['../classwrench_1_1_workflow_job.html#a03d2b65193a36b34e5451489b5b73737',1,'wrench::WorkflowJob::type()'],['../classwrench_1_1_workflow_job.html#a5dcf81c50b5d221ef2a48126bf45d08b',1,'wrench::WorkflowJob::Type()']]]
+  ['type',['Type',['../classwrench_1_1_workflow_job.html#a5dcf81c50b5d221ef2a48126bf45d08b',1,'wrench::WorkflowJob::Type()'],['../classwrench_1_1_workflow_job.html#a03d2b65193a36b34e5451489b5b73737',1,'wrench::WorkflowJob::type()']]]
 ];

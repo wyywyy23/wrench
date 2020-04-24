@@ -82,7 +82,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">wrench Namespace Reference</div>  </div>
@@ -808,9 +807,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A computational task in a <a class="el" href="classwrench_1_1_workflow.html" title="A workflow (to be executed by a WMS) ">Workflow</a>.  <a href="classwrench_1_1_workflow_task.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object representing an instance when a <a class="el" href="classwrench_1_1_workflow_task.html" title="A computational task in a Workflow. ">WorkflowTask</a> was run.  <a href="structwrench_1_1_workflow_task_execution_instance.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workload_trace_file_replayer.html">WorkloadTraceFileReplayer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A service that goes through a job submission trace (as loaded by a <a class="el" href="classwrench_1_1_trace_file_loader.html" title="A class that can load a job submission trace (a.k.a. supercomputer workload) in the SWF format (see h...">TraceFileLoader</a>), and "replays" it on a given <a class="el" href="classwrench_1_1_batch_compute_service.html" title="A batch-scheduled compute service that manages a set of compute hosts and controls access to their re...">BatchComputeService</a>.  <a href="classwrench_1_1_workload_trace_file_replayer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -830,16 +826,9 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A message sent by a <a class="el" href="classwrench_1_1_workunit_executor.html" title="An service that performs a WorkUnit. ">WorkunitExecutor</a> to notify that its WorkUnit as failed.  <a href="classwrench_1_1_workunit_executor_failed_message.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ac1f3daa37620a4d99c2868c2a792448f"><td class="memItemLeft" align="right" valign="top"><a id="ac1f3daa37620a4d99c2868c2a792448f"></a>
-typedef struct <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">wrench::WorkflowTaskExecutionInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#ac1f3daa37620a4d99c2868c2a792448f">WorkflowTaskExecutionInstance</a></td></tr>
-<tr class="memdesc:ac1f3daa37620a4d99c2868c2a792448f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object representing an instance when a <a class="el" href="classwrench_1_1_workflow_task.html" title="A computational task in a Workflow. ">WorkflowTask</a> was run. <br /></td></tr>
-<tr class="separator:ac1f3daa37620a4d99c2868c2a792448f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac68554a5edcdb1b4fda24cf84616fd6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#ac68554a5edcdb1b4fda24cf84616fd6b">generateHostUtilizationGraphLayout</a> (std::vector&lt; <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &gt; &amp;data)</td></tr>
+<tr class="memitem:ac68554a5edcdb1b4fda24cf84616fd6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#ac68554a5edcdb1b4fda24cf84616fd6b">generateHostUtilizationGraphLayout</a> (std::vector&lt; WorkflowTaskExecutionInstance &gt; &amp;data)</td></tr>
 <tr class="memdesc:ac68554a5edcdb1b4fda24cf84616fd6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates graph layout for host utilization and adds that information to the JSON object.  <a href="#ac68554a5edcdb1b4fda24cf84616fd6b">More...</a><br /></td></tr>
 <tr class="separator:ac68554a5edcdb1b4fda24cf84616fd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2c13bb6adda55b869b88d6127e7eaeb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#aa2c13bb6adda55b869b88d6127e7eaeb">isPointOnSegment</a> (std::pair&lt; unsigned long long, unsigned long long &gt; segment, unsigned long long point)</td></tr>
@@ -857,11 +846,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a9601a7728120192951232d2e0a74a483"><td class="memItemLeft" align="right" valign="top">static std::tuple&lt; std::string, unsigned long &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#a9601a7728120192951232d2e0a74a483">parseResourceSpec</a> (std::string spec)</td></tr>
 <tr class="memdesc:a9601a7728120192951232d2e0a74a483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper static method to parse resource specifications to the &lt;cores,ram&gt; format.  <a href="#a9601a7728120192951232d2e0a74a483">More...</a><br /></td></tr>
 <tr class="separator:a9601a7728120192951232d2e0a74a483"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4785cb60f8ee73703f5d00578ce1fb59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#a4785cb60f8ee73703f5d00578ce1fb59">searchForLayout</a> (std::vector&lt; <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &gt; &amp;data, std::size_t index)</td></tr>
+<tr class="memitem:a4785cb60f8ee73703f5d00578ce1fb59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#a4785cb60f8ee73703f5d00578ce1fb59">searchForLayout</a> (std::vector&lt; WorkflowTaskExecutionInstance &gt; &amp;data, std::size_t index)</td></tr>
 <tr class="memdesc:a4785cb60f8ee73703f5d00578ce1fb59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches for a possible host utilization gantt chart layout and updates the data to include what vertical position to plot each rectangle.  <a href="#a4785cb60f8ee73703f5d00578ce1fb59">More...</a><br /></td></tr>
 <tr class="separator:a4785cb60f8ee73703f5d00578ce1fb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08eed994f72bd98d4c25508c479388b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#a08eed994f72bd98d4c25508c479388b6">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &amp;w)</td></tr>
-<tr class="memdesc:a08eed994f72bd98d4c25508c479388b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called by the nlohmann::json constructor when a <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html" title="Object representing an instance when a WorkflowTask was run. ">WorkflowTaskExecutionInstance</a> is passed in as a parameter. This returns the JSON representation of a <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html" title="Object representing an instance when a WorkflowTask was run. ">WorkflowTaskExecutionInstance</a>. The name of this function is important and should not be changed as it is what nlohmann expects (hardcoded in there).  <a href="#a08eed994f72bd98d4c25508c479388b6">More...</a><br /></td></tr>
+<tr class="memitem:a08eed994f72bd98d4c25508c479388b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewrench.html#a08eed994f72bd98d4c25508c479388b6">to_json</a> (nlohmann::json &amp;j, const WorkflowTaskExecutionInstance &amp;w)</td></tr>
+<tr class="memdesc:a08eed994f72bd98d4c25508c479388b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called by the nlohmann::json constructor when a WorkflowTaskExecutionInstance is passed in as a parameter. This returns the JSON representation of a WorkflowTaskExecutionInstance. The name of this function is important and should not be changed as it is what nlohmann expects (hardcoded in there).  <a href="#a08eed994f72bd98d4c25508c479388b6">More...</a><br /></td></tr>
 <tr class="separator:a08eed994f72bd98d4c25508c479388b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -883,7 +872,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void wrench::generateHostUtilizationGraphLayout </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; WorkflowTaskExecutionInstance &gt; &amp;&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1108,7 +1097,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool wrench::searchForLayout </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; WorkflowTaskExecutionInstance &gt; &amp;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
@@ -1153,7 +1142,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html">WorkflowTaskExecutionInstance</a> &amp;&#160;</td>
+          <td class="paramtype">const WorkflowTaskExecutionInstance &amp;&#160;</td>
           <td class="paramname"><em>w</em>&#160;</td>
         </tr>
         <tr>
@@ -1164,11 +1153,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Function called by the nlohmann::json constructor when a <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html" title="Object representing an instance when a WorkflowTask was run. ">WorkflowTaskExecutionInstance</a> is passed in as a parameter. This returns the JSON representation of a <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html" title="Object representing an instance when a WorkflowTask was run. ">WorkflowTaskExecutionInstance</a>. The name of this function is important and should not be changed as it is what nlohmann expects (hardcoded in there). </p>
+<p>Function called by the nlohmann::json constructor when a WorkflowTaskExecutionInstance is passed in as a parameter. This returns the JSON representation of a WorkflowTaskExecutionInstance. The name of this function is important and should not be changed as it is what nlohmann expects (hardcoded in there). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">j</td><td>reference to a JSON object </td></tr>
-    <tr><td class="paramname">w</td><td>reference to a <a class="el" href="structwrench_1_1_workflow_task_execution_instance.html" title="Object representing an instance when a WorkflowTask was run. ">WorkflowTaskExecutionInstance</a> </td></tr>
+    <tr><td class="paramname">w</td><td>reference to a WorkflowTaskExecutionInstance </td></tr>
   </table>
   </dd>
 </dl>

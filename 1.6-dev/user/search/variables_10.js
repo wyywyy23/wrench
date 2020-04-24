@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['scheduled_5fjobs',['scheduled_jobs',['../classwrench_1_1_negotiator_completion_message.html#a9d095086e3048f178279c93c9c57890c',1,'wrench::NegotiatorCompletionMessage']]],
   ['service',['service',['../classwrench_1_1_simulation_timestamp_file_read.html#aa49edb0de0b2203395e8de98167e31c9',1,'wrench::SimulationTimestampFileRead::service()'],['../classwrench_1_1_simulation_timestamp_file_write.html#a879078b59915d018bf127eac7853b1ec',1,'wrench::SimulationTimestampFileWrite::service()']]],
   ['shutdown_5fvm_5fanswer_5fmessage_5fpayload',['SHUTDOWN_VM_ANSWER_MESSAGE_PAYLOAD',['../classwrench_1_1_cloud_compute_service_message_payload.html#ad2e8891c37b6269969a7c64542b24bd4',1,'wrench::CloudComputeServiceMessagePayload']]],
   ['shutdown_5fvm_5frequest_5fmessage_5fpayload',['SHUTDOWN_VM_REQUEST_MESSAGE_PAYLOAD',['../classwrench_1_1_cloud_compute_service_message_payload.html#a0a15e60d6cc2acbb2b9301bf31b50865',1,'wrench::CloudComputeServiceMessagePayload']]],

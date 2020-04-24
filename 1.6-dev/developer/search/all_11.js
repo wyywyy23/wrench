@@ -1,7 +1,6 @@
 var searchData=
 [
   ['sanitizepath',['sanitizePath',['../classwrench_1_1_file_location.html#ae39ad55190a9cca32a128cf4404294ba',1,'wrench::FileLocation']]],
-  ['scheduled_5fjobs',['scheduled_jobs',['../classwrench_1_1_negotiator_completion_message.html#a9d095086e3048f178279c93c9c57890c',1,'wrench::NegotiatorCompletionMessage']]],
   ['schedulepilotjobs',['schedulePilotJobs',['../classwrench_1_1_pilot_job_scheduler.html#a1ffeab878db93abe7c0fd72305ffe084',1,'wrench::PilotJobScheduler']]],
   ['scheduletasks',['scheduleTasks',['../classwrench_1_1_standard_job_scheduler.html#a8bb084b41ecc569a35af538d0ebd64a8',1,'wrench::StandardJobScheduler']]],
   ['scratch',['SCRATCH',['../classwrench_1_1_file_location.html#a7dd382c599ef44a68528be08985c1145',1,'wrench::FileLocation']]],

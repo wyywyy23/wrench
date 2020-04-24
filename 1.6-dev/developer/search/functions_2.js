@@ -1,7 +1,6 @@
 var searchData=
 [
   ['checkdeferredstart',['checkDeferredStart',['../classwrench_1_1_w_m_s.html#ac264b461c6f5900b96a1c9e33f7f4d58',1,'wrench::WMS']]],
-  ['cleanup',['cleanup',['../classwrench_1_1_file_transfer_thread.html#a296e47665620ea1d60c58275f787491a',1,'wrench::FileTransferThread']]],
   ['cloudcomputeservice',['CloudComputeService',['../classwrench_1_1_cloud_compute_service.html#ad4a6ef48539aaa658dd5942188db2b48',1,'wrench::CloudComputeService']]],
   ['compute',['compute',['../classwrench_1_1_simulation.html#a26092a37ea422703f0880748844cf820',1,'wrench::Simulation']]],
   ['createdatamovementmanager',['createDataMovementManager',['../classwrench_1_1_w_m_s.html#aaf8902aadfd0542509cd0cae5519bcf3',1,'wrench::WMS']]],
