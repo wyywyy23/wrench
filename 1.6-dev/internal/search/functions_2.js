@@ -50,7 +50,7 @@ var searchData=
   ['createandstartalarm',['createAndStartAlarm',['../classwrench_1_1_alarm.html#aa786b7b67c563e7eea3d02ed4838fb9e',1,'wrench::Alarm']]],
   ['createdatamovementmanager',['createDataMovementManager',['../classwrench_1_1_w_m_s.html#aaf8902aadfd0542509cd0cae5519bcf3',1,'wrench::WMS']]],
   ['createdirectory',['createDirectory',['../classwrench_1_1_logical_file_system.html#a1b8832fbedba81b1df215c41f5fc7923',1,'wrench::LogicalFileSystem']]],
-  ['createenergymeter',['createEnergyMeter',['../classwrench_1_1_w_m_s.html#a4bcbecc3ae781f439d3c9979a5feb9de',1,'wrench::WMS::createEnergyMeter(const std::map&lt; std::string, double &gt; &amp;measurement_periods)'],['../classwrench_1_1_w_m_s.html#a37c10d2524485e308919672ad59985c4',1,'wrench::WMS::createEnergyMeter(const std::vector&lt; std::string &gt; &amp;hostnames, double measurement_period)']]],
+  ['createenergymeter',['createEnergyMeter',['../classwrench_1_1_w_m_s.html#a5fc42a94aca690011863e8883008bbf0',1,'wrench::WMS::createEnergyMeter(const std::map&lt; std::string, double &gt; &amp;measurement_periods)'],['../classwrench_1_1_w_m_s.html#a1b5edd90a9783a2eaa846a561f165fe0',1,'wrench::WMS::createEnergyMeter(const std::vector&lt; std::string &gt; &amp;hostnames, double measurement_period)']]],
   ['createexecutableworkflowfromjson',['createExecutableWorkflowFromJSON',['../classwrench_1_1_pegasus_workflow_parser.html#a67bbfda5088da383448a248da47e90e0',1,'wrench::PegasusWorkflowParser']]],
   ['createjobmanager',['createJobManager',['../classwrench_1_1_w_m_s.html#a3f1a1451efda2a41d2d96a41cf229698',1,'wrench::WMS']]],
   ['createlifesaver',['createLifeSaver',['../classwrench_1_1_s4_u___daemon.html#a591abd15d6a27371cb04b7839862cc1b',1,'wrench::S4U_Daemon']]],

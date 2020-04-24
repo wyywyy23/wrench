@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['energymeter',['EnergyMeter',['../classwrench_1_1_energy_meter.html',1,'wrench']]]
+  ['energymeterservice',['EnergyMeterService',['../classwrench_1_1_energy_meter_service.html',1,'wrench']]]
 ];

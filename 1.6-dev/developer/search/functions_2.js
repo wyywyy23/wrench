@@ -4,7 +4,7 @@ var searchData=
   ['cloudcomputeservice',['CloudComputeService',['../classwrench_1_1_cloud_compute_service.html#ad4a6ef48539aaa658dd5942188db2b48',1,'wrench::CloudComputeService']]],
   ['compute',['compute',['../classwrench_1_1_simulation.html#a26092a37ea422703f0880748844cf820',1,'wrench::Simulation']]],
   ['createdatamovementmanager',['createDataMovementManager',['../classwrench_1_1_w_m_s.html#aaf8902aadfd0542509cd0cae5519bcf3',1,'wrench::WMS']]],
-  ['createenergymeter',['createEnergyMeter',['../classwrench_1_1_w_m_s.html#a4bcbecc3ae781f439d3c9979a5feb9de',1,'wrench::WMS::createEnergyMeter(const std::map&lt; std::string, double &gt; &amp;measurement_periods)'],['../classwrench_1_1_w_m_s.html#a37c10d2524485e308919672ad59985c4',1,'wrench::WMS::createEnergyMeter(const std::vector&lt; std::string &gt; &amp;hostnames, double measurement_period)']]],
+  ['createenergymeter',['createEnergyMeter',['../classwrench_1_1_w_m_s.html#a5fc42a94aca690011863e8883008bbf0',1,'wrench::WMS::createEnergyMeter(const std::map&lt; std::string, double &gt; &amp;measurement_periods)'],['../classwrench_1_1_w_m_s.html#a1b5edd90a9783a2eaa846a561f165fe0',1,'wrench::WMS::createEnergyMeter(const std::vector&lt; std::string &gt; &amp;hostnames, double measurement_period)']]],
   ['createexecutableworkflowfromjson',['createExecutableWorkflowFromJSON',['../classwrench_1_1_pegasus_workflow_parser.html#a67bbfda5088da383448a248da47e90e0',1,'wrench::PegasusWorkflowParser']]],
   ['createjobmanager',['createJobManager',['../classwrench_1_1_w_m_s.html#a3f1a1451efda2a41d2d96a41cf229698',1,'wrench::WMS']]],
   ['createpilotjob',['createPilotJob',['../classwrench_1_1_job_manager.html#a9ef786306730359866e3fd2bd3aadaf7',1,'wrench::JobManager']]],
