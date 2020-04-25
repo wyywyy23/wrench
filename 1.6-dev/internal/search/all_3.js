@@ -2,6 +2,7 @@ var searchData=
 [
   ['daemon',['daemon',['../classwrench_1_1_next_contact_daemon_request_message.html#a6380628539fd5a3b2fca4f6476f00e8f',1,'wrench::NextContactDaemonRequestMessage']]],
   ['daemon_5fstopped_5fmessage_5fpayload',['DAEMON_STOPPED_MESSAGE_PAYLOAD',['../classwrench_1_1_service_message_payload.html#aec363c9226bc8285c41d9fff8c2814a9',1,'wrench::ServiceMessagePayload']]],
+  ['dagoftasks',['DagOfTasks',['../classwrench_1_1_dag_of_tasks.html',1,'wrench']]],
   ['data_5fwrite_5fmailbox_5fname',['data_write_mailbox_name',['../classwrench_1_1_storage_service_file_write_answer_message.html#a276f5189ed9540a316d3e08cf417c180',1,'wrench::StorageServiceFileWriteAnswerMessage']]],
   ['datamovementmanager',['DataMovementManager',['../classwrench_1_1_data_movement_manager.html',1,'wrench::DataMovementManager'],['../classwrench_1_1_data_movement_manager.html#a17bb73180f754566f1a8054b332107b0',1,'wrench::DataMovementManager::DataMovementManager()']]],
   ['default_5fram',['DEFAULT_RAM',['../classwrench_1_1_s4_u___simulation.html#ab7554f579ef153b756b134c3adbdcf1a',1,'wrench::S4U_Simulation']]],
@@ -16,6 +17,7 @@ var searchData=
   ['disablelog',['disableLog',['../classwrench_1_1_terminal_output.html#a486ea6759295a2a65926cb1ee491d737',1,'wrench::TerminalOutput']]],
   ['doesdirectoryexist',['doesDirectoryExist',['../classwrench_1_1_logical_file_system.html#afe7e7f5b38151d51d2efe93a025bbe31',1,'wrench::LogicalFileSystem']]],
   ['doeshostexist',['doesHostExist',['../classwrench_1_1_simulation.html#a90dd21c0628fb1c53a4c504068ce6f9f',1,'wrench::Simulation']]],
+  ['doespathexist',['doesPathExist',['../classwrench_1_1_dag_of_tasks.html#af35aa8101915fef1b51b1d1decfc2c48',1,'wrench::DagOfTasks']]],
   ['dosynchronousfilecopy',['doSynchronousFileCopy',['../classwrench_1_1_data_movement_manager.html#af43bc95ea5f19c5853a0dbfdcaf71d00',1,'wrench::DataMovementManager']]],
   ['down',['DOWN',['../classwrench_1_1_s4_u___daemon.html#a534c9875b6a15e2eb83781007120be03a6ea633d992dc7f72fb0a69c6e80a2a66',1,'wrench::S4U_Daemon']]],
   ['dputmessage',['dputMessage',['../classwrench_1_1_s4_u___mailbox.html#a8104a8751389d6e61f8fec07bcc15034',1,'wrench::S4U_Mailbox']]],

@@ -82,6 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">wrench Namespace Reference</div>  </div>
@@ -272,6 +273,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_coordinate_lookup_request_message.html">CoordinateLookupRequestMessage</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A message sent to a <a class="el" href="classwrench_1_1_network_proximity_service.html" title="A network proximity service that continuously estimates inter-host latencies and can be queried for s...">NetworkProximityService</a> to request a coordinate lookup.  <a href="classwrench_1_1_coordinate_lookup_request_message.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_dag_of_tasks.html">DagOfTasks</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An internal class that uses the Boost Graph Library to implement a DAG of <a class="el" href="classwrench_1_1_workflow_task.html" title="A computational task in a Workflow. ">WorkflowTask</a> objects.  <a href="classwrench_1_1_dag_of_tasks.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_data_movement_manager.html">DataMovementManager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper daemon (co-located with a <a class="el" href="classwrench_1_1_w_m_s.html" title="A workflow management system (WMS) ">WMS</a>) that handles data movement operations.  <a href="classwrench_1_1_data_movement_manager.html#details">More...</a><br /></td></tr>
@@ -765,6 +769,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_unit_parser.html">UnitParser</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class used to part string specification of values with units into a single value (e.g., "2KB" -&gt; 2048 bytes, "2Kb" -&gt; 256 bytes)  <a href="classwrench_1_1_unit_parser.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwrench_1_1_vertex_properties.html">VertexProperties</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_virtualized_cluster_compute_service.html">VirtualizedClusterComputeService</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A virtualized cluster-based compute service.  <a href="classwrench_1_1_virtualized_cluster_compute_service.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -825,6 +831,15 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workunit_executor_failed_message.html">WorkunitExecutorFailedMessage</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A message sent by a <a class="el" href="classwrench_1_1_workunit_executor.html" title="An service that performs a WorkUnit. ">WorkunitExecutor</a> to notify that its WorkUnit as failed.  <a href="classwrench_1_1_workunit_executor_failed_message.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a9719c3a83ee5f2023d6e4d74c1f58630"><td class="memItemLeft" align="right" valign="top"><a id="a9719c3a83ee5f2023d6e4d74c1f58630"></a>
+typedef boost::adjacency_list&lt; boost::listS, boost::vecS, boost::bidirectionalS, <a class="el" href="structwrench_1_1_vertex_properties.html">VertexProperties</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>DAG</b></td></tr>
+<tr class="separator:a9719c3a83ee5f2023d6e4d74c1f58630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7c1e68889eb42acd45ca4cc224bbdd"><td class="memItemLeft" align="right" valign="top"><a id="a1a7c1e68889eb42acd45ca4cc224bbdd"></a>
+typedef unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>vertex_t</b></td></tr>
+<tr class="separator:a1a7c1e68889eb42acd45ca4cc224bbdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>

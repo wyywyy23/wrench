@@ -112,12 +112,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7cf70e5793758149a8bf29992d870c91"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a7cf70e5793758149a8bf29992d870c91">add</a> (T *t)</td></tr>
 <tr class="memdesc:a7cf70e5793758149a8bf29992d870c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to add a service to the simulation.  <a href="#a7cf70e5793758149a8bf29992d870c91">More...</a><br /></td></tr>
 <tr class="separator:a7cf70e5793758149a8bf29992d870c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cdd71513430193f62d51f16b0b024db"><td class="memItemLeft" align="right" valign="top"><a id="a3cdd71513430193f62d51f16b0b024db"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getEnergyConsumed</b> (const std::string &amp;hostname)</td></tr>
+<tr class="memitem:a3cdd71513430193f62d51f16b0b024db"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a3cdd71513430193f62d51f16b0b024db">getEnergyConsumed</a> (const std::string &amp;hostname)</td></tr>
+<tr class="memdesc:a3cdd71513430193f62d51f16b0b024db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the current energy consumption of a host.  <a href="#a3cdd71513430193f62d51f16b0b024db">More...</a><br /></td></tr>
 <tr class="separator:a3cdd71513430193f62d51f16b0b024db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0c629e56627580a0dfd79a91edc7c3c"><td class="memItemLeft" align="right" valign="top"><a id="ac0c629e56627580a0dfd79a91edc7c3c"></a>
-std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEnergyConsumed</b> (const std::vector&lt; std::string &gt; &amp;hostnames)</td></tr>
-<tr class="separator:ac0c629e56627580a0dfd79a91edc7c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a872e01c310b838146257000f4cf073c8"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a872e01c310b838146257000f4cf073c8">getEnergyConsumed</a> (const std::vector&lt; std::string &gt; &amp;hostnames)</td></tr>
+<tr class="memdesc:a872e01c310b838146257000f4cf073c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the current energy consumption of a host.  <a href="#a872e01c310b838146257000f4cf073c8">More...</a><br /></td></tr>
+<tr class="separator:a872e01c310b838146257000f4cf073c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef34fe26bb64518e95536bed8b7a36fc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#aef34fe26bb64518e95536bed8b7a36fc">getEnergyConsumed</a> (const std::string &amp;hostname, bool record_as_time_stamp)</td></tr>
 <tr class="memdesc:aef34fe26bb64518e95536bed8b7a36fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the current energy consumption of a host and will add <a class="el" href="classwrench_1_1_simulation_timestamp_energy_consumption.html" title="A simulation timestamp class for energy consumption. ">SimulationTimestampEnergyConsumption</a> to simulation output if can_record is set to true.  <a href="#aef34fe26bb64518e95536bed8b7a36fc">More...</a><br /></td></tr>
 <tr class="separator:aef34fe26bb64518e95536bed8b7a36fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -396,8 +396,74 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a3cdd71513430193f62d51f16b0b024db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cdd71513430193f62d51f16b0b024db">&#9670;&nbsp;</a></span>getEnergyConsumed() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double wrench::Simulation::getEnergyConsumed </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>hostname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtains the current energy consumption of a host. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hostname</td><td>the host name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>current energy consumption in joules </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a872e01c310b838146257000f4cf073c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a872e01c310b838146257000f4cf073c8">&#9670;&nbsp;</a></span>getEnergyConsumed() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, double &gt; wrench::Simulation::getEnergyConsumed </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>hostnames</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtains the current energy consumption of a host. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hostnames</td><td>the list of hostnames </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>current energy consumption in joules for each host, as a map indexed by hostnames </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aef34fe26bb64518e95536bed8b7a36fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef34fe26bb64518e95536bed8b7a36fc">&#9670;&nbsp;</a></span>getEnergyConsumed() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aef34fe26bb64518e95536bed8b7a36fc">&#9670;&nbsp;</a></span>getEnergyConsumed() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,7 +507,7 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <a id="ab5793ec3ecd2975ddfa86ba29143d032"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5793ec3ecd2975ddfa86ba29143d032">&#9670;&nbsp;</a></span>getEnergyConsumed() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5793ec3ecd2975ddfa86ba29143d032">&#9670;&nbsp;</a></span>getEnergyConsumed() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

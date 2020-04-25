@@ -7,6 +7,7 @@ var searchData=
   ['disablelog',['disableLog',['../classwrench_1_1_terminal_output.html#a486ea6759295a2a65926cb1ee491d737',1,'wrench::TerminalOutput']]],
   ['doesdirectoryexist',['doesDirectoryExist',['../classwrench_1_1_logical_file_system.html#afe7e7f5b38151d51d2efe93a025bbe31',1,'wrench::LogicalFileSystem']]],
   ['doeshostexist',['doesHostExist',['../classwrench_1_1_simulation.html#a90dd21c0628fb1c53a4c504068ce6f9f',1,'wrench::Simulation']]],
+  ['doespathexist',['doesPathExist',['../classwrench_1_1_dag_of_tasks.html#af35aa8101915fef1b51b1d1decfc2c48',1,'wrench::DagOfTasks']]],
   ['dosynchronousfilecopy',['doSynchronousFileCopy',['../classwrench_1_1_data_movement_manager.html#af43bc95ea5f19c5853a0dbfdcaf71d00',1,'wrench::DataMovementManager']]],
   ['dputmessage',['dputMessage',['../classwrench_1_1_s4_u___mailbox.html#a8104a8751389d6e61f8fec07bcc15034',1,'wrench::S4U_Mailbox']]],
   ['dumpdiskoperationsjson',['dumpDiskOperationsJSON',['../classwrench_1_1_simulation_output.html#a34edc8ef23bbc4e4ef18c39de6a35613',1,'wrench::SimulationOutput']]],
