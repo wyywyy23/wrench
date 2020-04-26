@@ -187,6 +187,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afc59b67119511acac649652d560f238a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow.html#afc59b67119511acac649652d560f238a">isDone</a> ()</td></tr>
 <tr class="memdesc:afc59b67119511acac649652d560f238a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether all tasks are complete.  <a href="classwrench_1_1_workflow.html#afc59b67119511acac649652d560f238a">More...</a><br /></td></tr>
 <tr class="separator:afc59b67119511acac649652d560f238a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96abc2152c2b4defe6c664834567169"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow.html#af96abc2152c2b4defe6c664834567169">pathExists</a> (const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *src, const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *dst)</td></tr>
+<tr class="memdesc:af96abc2152c2b4defe6c664834567169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether one source is an ancestor of a destination task.  <a href="classwrench_1_1_workflow.html#af96abc2152c2b4defe6c664834567169">More...</a><br /></td></tr>
+<tr class="separator:af96abc2152c2b4defe6c664834567169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a343edce64d90995088075b6cf25adc25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow.html#a343edce64d90995088075b6cf25adc25">removeFile</a> (<a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *file)</td></tr>
 <tr class="memdesc:a343edce64d90995088075b6cf25adc25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a file from the workflow. WARNING: this method de-allocated memory for the file, making any pointer to the file invalid.  <a href="classwrench_1_1_workflow.html#a343edce64d90995088075b6cf25adc25">More...</a><br /></td></tr>
 <tr class="separator:a343edce64d90995088075b6cf25adc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -921,6 +924,44 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns whether all tasks are complete. </p>
 <dl class="section return"><dt>Returns</dt><dd>true or false </dd></dl>
+
+</div>
+</div>
+<a id="af96abc2152c2b4defe6c664834567169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96abc2152c2b4defe6c664834567169">&#9670;&nbsp;</a></span>pathExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wrench::Workflow::pathExists </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determine whether one source is an ancestor of a destination task. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>the source task </td></tr>
+    <tr><td class="paramname">dst</td><td>the destination task</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if there is a path from src to dst, false otherwise </dd></dl>
 
 </div>
 </div>
