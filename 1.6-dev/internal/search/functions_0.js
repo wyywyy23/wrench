@@ -34,7 +34,7 @@ var searchData=
   ['addtimestamptaskfailure_1280',['addTimestampTaskFailure',['../classwrench_1_1_simulation_output.html#a9131fbf4aa0ec4d5cffcf9a59cf3e12e',1,'wrench::SimulationOutput']]],
   ['addtimestamptaskstart_1281',['addTimestampTaskStart',['../classwrench_1_1_simulation_output.html#aac6d42d13461d2df14709e91d5281397',1,'wrench::SimulationOutput']]],
   ['addtimestamptasktermination_1282',['addTimestampTaskTermination',['../classwrench_1_1_simulation_output.html#a25e92459aa168085c88aa4f31694672d',1,'wrench::SimulationOutput']]],
-  ['addvertex_1283',['addVertex',['../classwrench_1_1_dag_of_tasks.html#aa762076fd03fc86c76d41ac78ad17e7e',1,'wrench::DagOfTasks']]],
+  ['addvertex_1283',['addVertex',['../classwrench_1_1_dag_of_tasks.html#a6595684ee6aea391ed17f61d920eb557',1,'wrench::DagOfTasks']]],
   ['addworkflow_1284',['addWorkflow',['../classwrench_1_1_w_m_s.html#afd2a6ae2f4d792046a6a17d5c0dc313f',1,'wrench::WMS']]],
   ['alarmjobtimeoutmessage_1285',['AlarmJobTimeOutMessage',['../classwrench_1_1_alarm_job_time_out_message.html#a6de4149e53b31a132d5d8c9fa24933e8',1,'wrench::AlarmJobTimeOutMessage']]],
   ['alarmwmsdeferredstartmessage_1286',['AlarmWMSDeferredStartMessage',['../classwrench_1_1_alarm_w_m_s_deferred_start_message.html#ade99acf79252141cb305cebc8f334d42',1,'wrench::AlarmWMSDeferredStartMessage']]],
