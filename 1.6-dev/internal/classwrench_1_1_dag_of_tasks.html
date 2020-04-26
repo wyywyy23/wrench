@@ -110,6 +110,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6595684ee6aea391ed17f61d920eb557"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_dag_of_tasks.html#a6595684ee6aea391ed17f61d920eb557">addVertex</a> (const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *task)</td></tr>
 <tr class="memdesc:a6595684ee6aea391ed17f61d920eb557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to add a task vertex to the DAG.  <a href="classwrench_1_1_dag_of_tasks.html#a6595684ee6aea391ed17f61d920eb557">More...</a><br /></td></tr>
 <tr class="separator:a6595684ee6aea391ed17f61d920eb557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc45e295afe3feab9027f56fda984cb8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_dag_of_tasks.html#afc45e295afe3feab9027f56fda984cb8">doesEdgeExist</a> (const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *src, const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *dst)</td></tr>
+<tr class="memdesc:afc45e295afe3feab9027f56fda984cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to check whether an edge exists between to task vertices.  <a href="classwrench_1_1_dag_of_tasks.html#afc45e295afe3feab9027f56fda984cb8">More...</a><br /></td></tr>
+<tr class="separator:afc45e295afe3feab9027f56fda984cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53af1d9677380893f766cf273ba6190e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_dag_of_tasks.html#a53af1d9677380893f766cf273ba6190e">doesPathExist</a> (const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *src, const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *dst)</td></tr>
 <tr class="memdesc:a53af1d9677380893f766cf273ba6190e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to check whether a path exists between to task vertices.  <a href="classwrench_1_1_dag_of_tasks.html#a53af1d9677380893f766cf273ba6190e">More...</a><br /></td></tr>
 <tr class="separator:a53af1d9677380893f766cf273ba6190e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,6 +201,44 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="afc45e295afe3feab9027f56fda984cb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc45e295afe3feab9027f56fda984cb8">&#9670;&nbsp;</a></span>doesEdgeExist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wrench::DagOfTasks::doesEdgeExist </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method to check whether an edge exists between to task vertices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>the source task </td></tr>
+    <tr><td class="paramname">dst</td><td>the destination task </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if there is a path between the tasks </dd></dl>
+
+</div>
+</div>
 <a id="a53af1d9677380893f766cf273ba6190e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a53af1d9677380893f766cf273ba6190e">&#9670;&nbsp;</a></span>doesPathExist()</h2>
 
@@ -232,7 +273,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>trus if there is a path netween the tasks </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if there is a path between the tasks </dd></dl>
 
 </div>
 </div>

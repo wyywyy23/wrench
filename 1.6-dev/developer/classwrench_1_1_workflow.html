@@ -199,6 +199,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af96abc2152c2b4defe6c664834567169"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow.html#af96abc2152c2b4defe6c664834567169">pathExists</a> (const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *src, const <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *dst)</td></tr>
 <tr class="memdesc:af96abc2152c2b4defe6c664834567169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether one source is an ancestor of a destination task.  <a href="classwrench_1_1_workflow.html#af96abc2152c2b4defe6c664834567169">More...</a><br /></td></tr>
 <tr class="separator:af96abc2152c2b4defe6c664834567169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf23b90b33c06dfaf8af4884a140de47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow.html#adf23b90b33c06dfaf8af4884a140de47">removeControlDependency</a> (<a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *src, <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *dest)</td></tr>
+<tr class="memdesc:adf23b90b33c06dfaf8af4884a140de47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a control dependency between tasks (does nothing if none)  <a href="classwrench_1_1_workflow.html#adf23b90b33c06dfaf8af4884a140de47">More...</a><br /></td></tr>
+<tr class="separator:adf23b90b33c06dfaf8af4884a140de47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a343edce64d90995088075b6cf25adc25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow.html#a343edce64d90995088075b6cf25adc25">removeFile</a> (<a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *file)</td></tr>
 <tr class="memdesc:a343edce64d90995088075b6cf25adc25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a file from the workflow. WARNING: this method de-allocated memory for the file, making any pointer to the file invalid.  <a href="classwrench_1_1_workflow.html#a343edce64d90995088075b6cf25adc25">More...</a><br /></td></tr>
 <tr class="separator:a343edce64d90995088075b6cf25adc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1049,6 +1052,43 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if there is a path from src to dst, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="adf23b90b33c06dfaf8af4884a140de47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf23b90b33c06dfaf8af4884a140de47">&#9670;&nbsp;</a></span>removeControlDependency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrench::Workflow::removeControlDependency </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a control dependency between tasks (does nothing if none) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>the source task </td></tr>
+    <tr><td class="paramname">dst</td><td>the destination task </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
