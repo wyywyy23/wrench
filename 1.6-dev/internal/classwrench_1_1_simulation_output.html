@@ -1152,10 +1152,38 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes a JSON file containing disk operation information as a JSON array. </p>
-<p>&gt;&gt;&gt;&gt;&gt;NOTE&lt;&lt;&lt;&lt;&lt; The timestamps the JSON is generated from are disabled by default. Enable them with <a class="el" href="classwrench_1_1_simulation_output.html#a8036ce1d66c704673043463faaafaf52" title="Enable or Disable the insertion of disk-related timestamps in the simulation output (enabled by defau...">SimulationOutput::enableDiskTimestamps()</a> to use</p>
+<p>&gt;&gt;&gt;&gt;&gt;NOTE&lt;&lt;&lt;&lt;&lt; The timestamps the JSON is generated from are disabled by default. Enable them with <a class="el" href="classwrench_1_1_simulation_output.html#a8036ce1d66c704673043463faaafaf52" title="Enable or Disable the insertion of disk-related timestamps in the simulation output (enabled by defau...">SimulationOutput::enableDiskTimestamps()</a> to use.</p>
 <p>The JSON array has the following format:</p>
-<p>{ "disk_operations": { "reads": [ { "bytes": 1048576.0, "end": 0.011059921999690343, "hostname": "storage_db.edu", "mount": "/", "start": 0.000574159999741952 }, { ... } ], "writes": [ { "bytes": 1048576.0, "end": 0.011059921999690343, "hostname": "storage_db.edu", "mount": "/", "start": 0.000574159999741952 }, { ... } ] } }</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<pre>
+{
+ "disk_operations": {
+     "io_host": {                        &lt;--- Hostname
+         "/": {                          &lt;--- Mount
+            "reads": [
+                 {
+                  "bytes": &lt;double&gt;,
+                  "end": &lt;double&gt;,
+                  "start": &lt;double&gt;
+                 },
+                 {
+                    ...
+                 }
+                 ],
+            "writes": [
+                {
+                 "bytes": &lt;double&gt;,
+                 "end": &lt;double&gt;,
+                 "start": &lt;double&gt;
+                 },
+                 {
+                  ...
+                 }
+                 ]
+             }
+         }
+  }
+}
+</pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_path</td><td>- path to save JSON at </td></tr>
     <tr><td class="paramname">writing_file</td><td>- boolean, default true, to write the JSON to the specified file path. Used for unified output.</td></tr>
@@ -1309,7 +1337,7 @@ Public Member Functions</h2></td></tr>
            }
            }, . . .
      ],
-   routes: [
+     routes: [
           {
               source: &lt;string&gt;,
               target: &lt;string&gt;,
@@ -1400,6 +1428,26 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function that generates a unified JSON file containing the information specified by boolean arguments. </p>
+<pre>
+  JSON Structure:
+  {
+      "disk_operations": {
+           ...
+       },
+       "energy_consumption": {
+           ...
+       },
+       "platform": {
+           ...
+       },
+       "workflow_execution": {
+           ...
+       },
+       "workflow_graph": {
+           ...
+       }
+  }
+*</pre><p>Any pieces not specified in the arguments are left out. For full structure see documentation of specific sections.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">workflow</td><td>a pointer to the <a class="el" href="classwrench_1_1_workflow.html" title="A workflow (to be executed by a WMS)">Workflow</a> </td></tr>
@@ -1409,7 +1457,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">include_workflow_graph</td><td>boolean whether to include workflow graph in JSON </td></tr>
     <tr><td class="paramname">include_energy</td><td>boolean whether to include energy consumption in JSON </td></tr>
     <tr><td class="paramname">generate_host_utilization_layout</td><td>boolean specifying whether or not you would like a possible host utilization layout to be generated </td></tr>
-    <tr><td class="paramname">include_disk</td><td>boolean specifying whether to include disk operation in JSON </td></tr>
+    <tr><td class="paramname">include_disk</td><td>boolean specifying whether to include disk operation in JSON (disk timestamps must be enabled) </td></tr>
   </table>
   </dd>
 </dl>
@@ -1457,28 +1505,53 @@ Public Member Functions</h2></td></tr>
 <p>Writes <a class="el" href="classwrench_1_1_workflow_task.html" title="A computational task in a Workflow.">WorkflowTask</a> execution history for each task to a file, formatted as a JSON array. </p>
 <p>The JSON array has the following format:</p>
 <pre>
-   {
+    {
      "workflow_execution": {
-        "tasks": [</pre><pre>     {
-         task_id: &lt;string&gt;,
-         execution_host: {
-             hostname: &lt;string&gt;,
-             flop_rate: &lt;double&gt;,
-             memory: &lt;double&gt;,
-             cores: &lt;unsigned_long&gt;
-         },
-         num_cores_allocated: &lt;unsigned_long&gt;,
-         vertical_position: &lt;unsigned_long&gt;,
-         whole_task: { start: &lt;double&gt;, end: &lt;double&gt; },
-         read:       { start: &lt;double&gt;, end: &lt;double&gt; },
-         compute:    { start: &lt;double&gt;, end: &lt;double&gt; },
-         write:      { start: &lt;double&gt;, end: &lt;double&gt; },
-         failed: &lt;double&gt;,
-         terminated: &lt;double&gt;
-     }, . . .
-   ]
-   }
-   }
+        "tasks": [
+            {
+               "compute": {
+                    "end": &lt;double&gt;,
+                    "start": &lt;double&gt;
+               },
+               "execution_host": {
+                    "cores": &lt;unsigned_long&gt;,
+                    "flop_rate": &lt;double&gt;,
+                    "hostname": &lt;string&gt;,
+                    "memory": &lt;double&gt;
+               },
+               "failed": &lt;double&gt;,
+               "num_cores_allocated": &lt;unsigned_long&gt;,
+               "read": [
+                    {
+                        "end": &lt;double&gt;,
+                        "start": &lt;double&gt;
+                    },
+                    {
+                        ...
+                    }
+               ],
+               "task_id": &lt;string&gt;,
+               "terminated": &lt;double&gt;,
+               "whole_task": {
+                    "end": &lt;double&gt;,
+                    "start": &lt;double&gt;
+                },
+                "write": [
+                    {
+                        "end": &lt;double&gt;,
+                        "start": &lt;double&gt;
+                    },
+                    {
+                        ...
+                    }
+                ],
+            },
+            {
+                ...
+            }
+            ]
+        }
+    }
 </pre><p>If generate_host_utilization_layout is set to true, a recursive function searches for a possible host utilization layout where tasks are assumed to use contiguous numbers of cores on their execution hosts. Note that each <a class="el" href="classwrench_1_1_compute_service.html" title="The compute service base class.">ComputeService</a> does not enforce this, and such a layout may not exist for some workflow executions. In this situation, the function will go through the entire search space until all possible layouts are evaluated. For a large <a class="el" href="classwrench_1_1_workflow.html" title="A workflow (to be executed by a WMS)">Workflow</a>, this may take a very long time.</p>
 <p>If a host utilization layout is able to be generated, the 'vertical_position' values will be set for each task run, and the task can be plotted as a rectangle on a graph where the y-axis denotes the number of cores - 1, and the x-axis denotes the workflow execution timeline. The vertical_position specifies the bottom of the rectangle. num_cores_allocated specifies the height of the rectangle.</p>
 <dl class="params"><dt>Parameters</dt><dd>
