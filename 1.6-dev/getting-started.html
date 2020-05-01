@@ -101,20 +101,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Using the WRENCH initialization tool</h1>
 <p>The <code>wrench-init</code> tool is a project generator built with WRENCH, which creates a simple project structure as follows:</p>
 <div class="fragment"><div class="line">project-folder/</div>
-<div class="line">├── cmakelists.txt</div>
-<div class="line">├── readme.md</div>
+<div class="line">├── CMakeLists.txt</div>
+<div class="line">├── CMakeModules</div>
+<div class="line">│   └── FindSimGrid.cmake</div>
 <div class="line">├── src/</div>
-<div class="line">│   ├── simplesimulator.cpp</div>
-<div class="line">│   ├── simplestandardjobscheduler.cpp</div>
-<div class="line">│   ├── simplestandardjobscheduler.h</div>
-<div class="line">│   ├── simplewms.cpp</div>
-<div class="line">│   └── simplewms.h </div>
+<div class="line">│   ├── SimpleSimulator.cpp</div>
+<div class="line">│   ├── SimpleStandardJobScheduler.cpp</div>
+<div class="line">│   ├── SimpleStandardJobScheduler.h</div>
+<div class="line">│   ├── SimpleWMS.cpp</div>
+<div class="line">│   └── SimpleWMS.h </div>
 <div class="line">├── test/</div>
 <div class="line">├── doc/</div>
 <div class="line">├── build/</div>
 <div class="line">└── data/</div>
-<div class="line">    ├── platform-files/</div>
-<div class="line">    └── workflow-files/</div>
+<div class="line">    └── platform-files/</div>
+<div class="line">        └── hosts.xml</div>
 </div><!-- fragment --><p>The <code>simplesimulator.cpp</code> source file contains the class representing the simulator (either cloud or batch). <code>simplestandardjobscheduler.h</code> and <code>simplestandardjobscheduler.cpp</code> contain a simple implementation for a <code><a class="el" href="classwrench_1_1_standard_job_scheduler.html" title="A (mostly virtual) base class for implementing StandardJob scheduling algorithms to be used by a WMS.">wrench::StandardJobScheduler</a></code>; <code>simplewms.h</code> and <code>simplewms.cpp</code> denote the implementation of a simple workflow management system. Example platform and workflow files are also generated into the <code>data</code> folder. These files provide the minimum necessary implementation for a WRENCH-enabled simulator.</p>
 <p>The <code>wrench-init</code> tool only requires a single argument, the name of the folder where the project skeleton will be generated:</p>
 <div class="fragment"><div class="line">$ wrench-init &lt;project_folder&gt;</div>
