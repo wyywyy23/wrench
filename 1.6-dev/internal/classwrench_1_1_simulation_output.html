@@ -1,16 +1,13 @@
-<!-- HTML header for doxygen 1.8.8-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- For Mobile Devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
     <meta name="generator" content="Doxygen 1.8.17"/>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <title>WRENCH: wrench::SimulationOutput Class Reference</title>
-    <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
     <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -23,39 +20,50 @@
     <link href="doxygen.css" rel="stylesheet" type="text/css"/>
     <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
     <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script type="text/javascript" src="jquery.smartmenus.js"></script>
-    <!-- SmartMenus jQuery Bootstrap Addon -->
     <script type="text/javascript" src="jquery.smartmenus.bootstrap.js"></script>
-    <!-- SmartMenus jQuery plugin -->
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <a href="http://wrench-project.org" class="navbar-brand">
+            <a href="https://wrench-project.org" class="navbar-brand">
                 <img alt="Logo" src="logo-horizontal.png" width="160" style="float: left"/>
                 1.6-dev
             </a>
         </div>
         <div id="main-nav" class="nav navbar-nav navbar-right">
             <ul class="sm sm-dox nav navbar-nav navbar-right" id="main-menu">
-                <li><a href="index.html">Overview</a></li>
-                <li><a href="install.html">Installation</a></li>
-                <li><a href="getting-started.html">Getting Started</a></li>
-                <li><a href="wrench-101.html">WRENCH 101</a></li>
-                <li><a href="wrench-102.html">WRENCH 102</a></li>
-                <li><a href="annotated.html">API Reference</a></li>
-                <li style="float: right">
-                    <input type="hidden" id="MSearchField">
+                <li class="nav-item"><a class="nav-link" href="/wrench/1.6-dev/index.html">Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="/wrench/1.6-dev/install.html">Installation</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="/wrench/1.6-dev/getting-started.html">Getting
+                    Started</a></li>
+                <li class="nav-item"><a class="nav-link" href="/wrench/1.6-dev/wrench-101.html">WRENCH 101</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="/wrench/1.6-dev/wrench-102.html">WRENCH 102</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="true" aria-expanded="false">APIs Reference</a>
+                    <div class="dropdown-menu">
+                        <a class="small dropdown-item" href="/wrench/1.6-dev/user/annotated.html">User</a>
+                        <a class="small dropdown-item"
+                           href="/wrench/1.6-dev/developer/annotated.html">Developer</a>
+                        <a class="small dropdown-item"
+                           href="/wrench/1.6-dev/internal/annotated.html">Internal</a>
+                    </div>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top" style="padding-top: 4em !important"><!-- do not remove this div, it is closed by doxygen! -->
     <div class="content" id="content">
         <div class="container">
             <div class="row">
@@ -1153,10 +1161,38 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes a JSON file containing disk operation information as a JSON array. </p>
-<p>&gt;&gt;&gt;&gt;&gt;NOTE&lt;&lt;&lt;&lt;&lt; The timestamps the JSON is generated from are disabled by default. Enable them with <a class="el" href="classwrench_1_1_simulation_output.html#a8036ce1d66c704673043463faaafaf52" title="Enable or Disable the insertion of disk-related timestamps in the simulation output (enabled by defau...">SimulationOutput::enableDiskTimestamps()</a> to use</p>
+<p>&gt;&gt;&gt;&gt;&gt;NOTE&lt;&lt;&lt;&lt;&lt; The timestamps the JSON is generated from are disabled by default. Enable them with <a class="el" href="classwrench_1_1_simulation_output.html#a8036ce1d66c704673043463faaafaf52" title="Enable or Disable the insertion of disk-related timestamps in the simulation output (enabled by defau...">SimulationOutput::enableDiskTimestamps()</a> to use.</p>
 <p>The JSON array has the following format:</p>
-<p>{ "disk_operations": { "reads": [ { "bytes": 1048576.0, "end": 0.011059921999690343, "hostname": "storage_db.edu", "mount": "/", "start": 0.000574159999741952 }, { ... } ], "writes": [ { "bytes": 1048576.0, "end": 0.011059921999690343, "hostname": "storage_db.edu", "mount": "/", "start": 0.000574159999741952 }, { ... } ] } }</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<pre>
+{
+ "disk_operations": {
+     "io_host": {                        &lt;--- Hostname
+         "/": {                          &lt;--- Mount
+            "reads": [
+                 {
+                  "bytes": &lt;double&gt;,
+                  "end": &lt;double&gt;,
+                  "start": &lt;double&gt;
+                 },
+                 {
+                    ...
+                 }
+                 ],
+            "writes": [
+                {
+                 "bytes": &lt;double&gt;,
+                 "end": &lt;double&gt;,
+                 "start": &lt;double&gt;
+                 },
+                 {
+                  ...
+                 }
+                 ]
+             }
+         }
+  }
+}
+</pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_path</td><td>- path to save JSON at </td></tr>
     <tr><td class="paramname">writing_file</td><td>- boolean, default true, to write the JSON to the specified file path. Used for unified output.</td></tr>
@@ -1310,7 +1346,7 @@ Public Member Functions</h2></td></tr>
            }
            }, . . .
      ],
-   routes: [
+     routes: [
           {
               source: &lt;string&gt;,
               target: &lt;string&gt;,
@@ -1401,6 +1437,26 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function that generates a unified JSON file containing the information specified by boolean arguments. </p>
+<pre>
+  JSON Structure:
+  {
+      "disk_operations": {
+           ...
+       },
+       "energy_consumption": {
+           ...
+       },
+       "platform": {
+           ...
+       },
+       "workflow_execution": {
+           ...
+       },
+       "workflow_graph": {
+           ...
+       }
+  }
+*</pre><p>Any pieces not specified in the arguments are left out. For full structure see documentation of specific sections.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">workflow</td><td>a pointer to the <a class="el" href="classwrench_1_1_workflow.html" title="A workflow (to be executed by a WMS)">Workflow</a> </td></tr>
@@ -1410,7 +1466,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">include_workflow_graph</td><td>boolean whether to include workflow graph in JSON </td></tr>
     <tr><td class="paramname">include_energy</td><td>boolean whether to include energy consumption in JSON </td></tr>
     <tr><td class="paramname">generate_host_utilization_layout</td><td>boolean specifying whether or not you would like a possible host utilization layout to be generated </td></tr>
-    <tr><td class="paramname">include_disk</td><td>boolean specifying whether to include disk operation in JSON </td></tr>
+    <tr><td class="paramname">include_disk</td><td>boolean specifying whether to include disk operation in JSON (disk timestamps must be enabled) </td></tr>
   </table>
   </dd>
 </dl>
@@ -1458,28 +1514,53 @@ Public Member Functions</h2></td></tr>
 <p>Writes <a class="el" href="classwrench_1_1_workflow_task.html" title="A computational task in a Workflow.">WorkflowTask</a> execution history for each task to a file, formatted as a JSON array. </p>
 <p>The JSON array has the following format:</p>
 <pre>
-   {
+    {
      "workflow_execution": {
-        "tasks": [</pre><pre>     {
-         task_id: &lt;string&gt;,
-         execution_host: {
-             hostname: &lt;string&gt;,
-             flop_rate: &lt;double&gt;,
-             memory: &lt;double&gt;,
-             cores: &lt;unsigned_long&gt;
-         },
-         num_cores_allocated: &lt;unsigned_long&gt;,
-         vertical_position: &lt;unsigned_long&gt;,
-         whole_task: { start: &lt;double&gt;, end: &lt;double&gt; },
-         read:       { start: &lt;double&gt;, end: &lt;double&gt; },
-         compute:    { start: &lt;double&gt;, end: &lt;double&gt; },
-         write:      { start: &lt;double&gt;, end: &lt;double&gt; },
-         failed: &lt;double&gt;,
-         terminated: &lt;double&gt;
-     }, . . .
-   ]
-   }
-   }
+        "tasks": [
+            {
+               "compute": {
+                    "end": &lt;double&gt;,
+                    "start": &lt;double&gt;
+               },
+               "execution_host": {
+                    "cores": &lt;unsigned_long&gt;,
+                    "flop_rate": &lt;double&gt;,
+                    "hostname": &lt;string&gt;,
+                    "memory": &lt;double&gt;
+               },
+               "failed": &lt;double&gt;,
+               "num_cores_allocated": &lt;unsigned_long&gt;,
+               "read": [
+                    {
+                        "end": &lt;double&gt;,
+                        "start": &lt;double&gt;
+                    },
+                    {
+                        ...
+                    }
+               ],
+               "task_id": &lt;string&gt;,
+               "terminated": &lt;double&gt;,
+               "whole_task": {
+                    "end": &lt;double&gt;,
+                    "start": &lt;double&gt;
+                },
+                "write": [
+                    {
+                        "end": &lt;double&gt;,
+                        "start": &lt;double&gt;
+                    },
+                    {
+                        ...
+                    }
+                ],
+            },
+            {
+                ...
+            }
+            ]
+        }
+    }
 </pre><p>If generate_host_utilization_layout is set to true, a recursive function searches for a possible host utilization layout where tasks are assumed to use contiguous numbers of cores on their execution hosts. Note that each <a class="el" href="classwrench_1_1_compute_service.html" title="The compute service base class.">ComputeService</a> does not enforce this, and such a layout may not exist for some workflow executions. In this situation, the function will go through the entire search space until all possible layouts are evaluated. For a large <a class="el" href="classwrench_1_1_workflow.html" title="A workflow (to be executed by a WMS)">Workflow</a>, this may take a very long time.</p>
 <p>If a host utilization layout is able to be generated, the 'vertical_position' values will be set for each task run, and the task can be plotted as a rectangle on a graph where the y-axis denotes the number of cores - 1, and the x-axis denotes the workflow execution timeline. The vertical_position specifies the bottom of the rectangle. num_cores_allocated specifies the height of the rectangle.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1730,14 +1811,48 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 </div>
-<hr class="footer"/>
-<address class="footer">
-    <small>
-        Generated by &#160;<a href="http://www.doxygen.org/index.html">
-        <img class="footer" src="doxygen.png" alt="doxygen"/>
-    </a> 1.8.17
-    </small>
-</address>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <p>
+                    <strong>&copy;2017-2020 WRENCH. All Rights Reserved.</strong><br />
+                </p>
+                <p style="padding-top: 1em">
+                    <a href="mailto:support@wrench-project.org" class="fa-stack fa-2x" style="font-size: 1.5em">
+                        <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                        <i class="fa fa-envelope fa-stack-1x"></i>
+                    </a>
+                    <a href="http://twitter.com/wrenchproject" target="_blank" class="fa-stack fa-2x"
+                       style="font-size: 1.5em">
+                        <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </a>
+                    <a href="https://github.com/wrench-project/wrench" target="_blank" class="fa-stack fa-2x"
+                       style="font-size: 1.5em">
+                        <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                        <i class="fab fa-github fa-stack-1x"></i>
+                    </a>
+                </p>
+            </div>
+            <div class="col-sm-4 text-center">
+            </div>
+            <div class="col-sm-4">
+                <p>WRENCH is funded by the National Science Foundation (NSF) under grants number <a
+                        href="https://nsf.gov/awardsearch/showAward?AWD_ID=1642369" target="_blank">1642369</a>,
+                    <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1642335" target="_blank">1642335</a>,
+                    <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1923539" target="_blank">1923539</a>, and
+                    <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1923621" target="_blank">1923621</a>;
+                    and the National Center for Scientific Research (CNRS) under grant number PICS07239.
+                </p>
+                <p style="font-weight: normal; font-size: 0.8em; margin-top: 1em">
+                    Any opinions, findings, and conclusions or recommendations expressed in this material are those
+                    of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
