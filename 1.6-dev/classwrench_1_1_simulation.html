@@ -149,8 +149,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae9589632de9a2311ed1d7f7747478985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launch the simulation.  <a href="classwrench_1_1_simulation.html#ae9589632de9a2311ed1d7f7747478985">More...</a><br /></td></tr>
 <tr class="separator:ae9589632de9a2311ed1d7f7747478985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52209c16a2fb1c7ab2d7cc2c9b7c63c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a52209c16a2fb1c7ab2d7cc2c9b7c63c3">readFromDisk</a> (double num_bytes, std::string hostname, std::string mount_point)</td></tr>
+<tr class="memdesc:a52209c16a2fb1c7ab2d7cc2c9b7c63c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper enabling timestamps for disk reads.  <a href="classwrench_1_1_simulation.html#a52209c16a2fb1c7ab2d7cc2c9b7c63c3">More...</a><br /></td></tr>
 <tr class="separator:a52209c16a2fb1c7ab2d7cc2c9b7c63c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6889f73264af113e4196ca22e511d51f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a6889f73264af113e4196ca22e511d51f">readFromDiskAndWriteToDiskConcurrently</a> (double num_bytes_to_read, double num_bytes_to_write, std::string hostname, std::string read_mount_point, std::string write_mount_point)</td></tr>
+<tr class="memdesc:a6889f73264af113e4196ca22e511d51f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper enabling timestamps for concurrent disk read/writes.  <a href="classwrench_1_1_simulation.html#a6889f73264af113e4196ca22e511d51f">More...</a><br /></td></tr>
 <tr class="separator:a6889f73264af113e4196ca22e511d51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf4675a8c9c62c93bfbd3dc4a4e46556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#adf4675a8c9c62c93bfbd3dc4a4e46556">setPstate</a> (const std::string &amp;hostname, int pstate)</td></tr>
 <tr class="memdesc:adf4675a8c9c62c93bfbd3dc4a4e46556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the power state of the host.  <a href="classwrench_1_1_simulation.html#adf4675a8c9c62c93bfbd3dc4a4e46556">More...</a><br /></td></tr>
@@ -174,6 +176,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a74cad703850cb0b3521e07de28d90826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a new storage service during <a class="el" href="classwrench_1_1_w_m_s.html" title="A workflow management system (WMS)">WMS</a> execution (i.e., one that was not passed to <a class="el" href="classwrench_1_1_simulation.html#a7cf70e5793758149a8bf29992d870c91" title="Method to add a service to the simulation.">Simulation::add()</a> before <a class="el" href="classwrench_1_1_simulation.html#ae9589632de9a2311ed1d7f7747478985" title="Launch the simulation.">Simulation::launch()</a> was called). The simulation takes ownership of the reference and will call the destructor.  <a href="classwrench_1_1_simulation.html#a74cad703850cb0b3521e07de28d90826">More...</a><br /></td></tr>
 <tr class="separator:a74cad703850cb0b3521e07de28d90826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc3c97ca35314f5436d4533e48eac1f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#abc3c97ca35314f5436d4533e48eac1f8">writeToDisk</a> (double num_bytes, std::string hostname, std::string mount_point)</td></tr>
+<tr class="memdesc:abc3c97ca35314f5436d4533e48eac1f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper enabling timestamps for disk writes.  <a href="classwrench_1_1_simulation.html#abc3c97ca35314f5436d4533e48eac1f8">More...</a><br /></td></tr>
 <tr class="separator:abc3c97ca35314f5436d4533e48eac1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -182,6 +185,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a26092a37ea422703f0880748844cf820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the calling process compute.  <a href="classwrench_1_1_simulation.html#a26092a37ea422703f0880748844cf820">More...</a><br /></td></tr>
 <tr class="separator:a26092a37ea422703f0880748844cf820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90dd21c0628fb1c53a4c504068ce6f9f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a90dd21c0628fb1c53a4c504068ce6f9f">doesHostExist</a> (std::string hostname)</td></tr>
+<tr class="memdesc:a90dd21c0628fb1c53a4c504068ce6f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for <a class="el" href="classwrench_1_1_s4_u___simulation.html" title="Wrappers around S4U&#39;s basic simulation methods.">S4U_Simulation</a> hostExists()  <a href="classwrench_1_1_simulation.html#a90dd21c0628fb1c53a4c504068ce6f9f">More...</a><br /></td></tr>
 <tr class="separator:a90dd21c0628fb1c53a4c504068ce6f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d204b229feec1eee4f1e82d92490d81"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a3d204b229feec1eee4f1e82d92490d81">getCurrentPstate</a> (const std::string &amp;hostname)</td></tr>
 <tr class="memdesc:a3d204b229feec1eee4f1e82d92490d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current power state of a host.  <a href="classwrench_1_1_simulation.html#a3d204b229feec1eee4f1e82d92490d81">More...</a><br /></td></tr>
@@ -353,7 +357,9 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Wrapper for <a class="el" href="classwrench_1_1_s4_u___simulation.html" title="Wrappers around S4U&#39;s basic simulation methods.">S4U_Simulation</a> hostExists() </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Wrapper for <a class="el" href="classwrench_1_1_s4_u___simulation.html" title="Wrappers around S4U&#39;s basic simulation methods.">S4U_Simulation</a> hostExists() </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hostname</td><td>- name of host being queried </td></tr>
   </table>
@@ -1214,7 +1220,9 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Wrapper enabling timestamps for disk reads </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Wrapper enabling timestamps for disk reads. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num_bytes</td><td>- number of bytes read </td></tr>
     <tr><td class="paramname">hostname</td><td>- hostname to read from </td></tr>
@@ -1274,7 +1282,9 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Wrapper enabling timestamps for concurrent disk read/writes </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Wrapper enabling timestamps for concurrent disk read/writes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num_bytes_to_read</td><td>- number of bytes read </td></tr>
     <tr><td class="paramname">num_bytes_to_write</td><td>- number of bytes written </td></tr>
@@ -1482,7 +1492,7 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the service instance</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the service instance </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td></td></tr>
@@ -1516,7 +1526,7 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the service instance</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the service instance </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td></td></tr>
@@ -1550,7 +1560,7 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the service instance</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the service instance </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td></td></tr>
@@ -1584,7 +1594,7 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the service instance</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the service instance </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::invalid_argument</td><td></td></tr>
@@ -1762,7 +1772,9 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Wrapper enabling timestamps for disk writes </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Wrapper enabling timestamps for disk writes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num_bytes</td><td>- number of bytes written </td></tr>
     <tr><td class="paramname">hostname</td><td>- hostname to write to </td></tr>
