@@ -1,13 +1,16 @@
+<!-- HTML header for doxygen 1.8.8-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- For Mobile Devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
     <meta name="generator" content="Doxygen 1.8.17"/>
-    <title>WRENCH: StorageService.h Source File</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <title>WRENCH: StorageService.h Source File</title>
+    <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
     <script type="text/javascript" src="dynsections.js"></script>
     <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -20,50 +23,39 @@
     <link href="doxygen.css" rel="stylesheet" type="text/css"/>
     <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script type="text/javascript" src="jquery.smartmenus.js"></script>
+    <!-- SmartMenus jQuery Bootstrap Addon -->
     <script type="text/javascript" src="jquery.smartmenus.bootstrap.js"></script>
+    <!-- SmartMenus jQuery plugin -->
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
+<nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <a href="https://wrench-project.org" class="navbar-brand">
+            <a href="http://wrench-project.org" class="navbar-brand">
                 <img alt="Logo" src="logo-horizontal.png" width="160" style="float: left"/>
                 1.6-dev
             </a>
         </div>
         <div id="main-nav" class="nav navbar-nav navbar-right">
             <ul class="sm sm-dox nav navbar-nav navbar-right" id="main-menu">
-                <li class="nav-item"><a class="nav-link" href="/wrench/1.6-dev/index.html">Overview</a></li>
-                <li class="nav-item"><a class="nav-link" href="/wrench/1.6-dev/install.html">Installation</a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="/wrench/1.6-dev/getting-started.html">Getting
-                    Started</a></li>
-                <li class="nav-item"><a class="nav-link" href="/wrench/1.6-dev/wrench-101.html">WRENCH 101</a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="/wrench/1.6-dev/wrench-102.html">WRENCH 102</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                       aria-haspopup="true" aria-expanded="false">APIs Reference</a>
-                    <div class="dropdown-menu">
-                        <a class="small dropdown-item" href="/wrench/1.6-dev/user/annotated.html">User</a>
-                        <a class="small dropdown-item"
-                           href="/wrench/1.6-dev/developer/annotated.html">Developer</a>
-                        <a class="small dropdown-item"
-                           href="/wrench/1.6-dev/internal/annotated.html">Internal</a>
-                    </div>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="install.html">Installation</a></li>
+                <li><a href="getting-started.html">Getting Started</a></li>
+                <li><a href="wrench-101.html">WRENCH 101</a></li>
+                <li><a href="wrench-102.html">WRENCH 102</a></li>
+                <li><a href="annotated.html">API Reference</a></li>
+                <li style="float: right">
+                    <input type="hidden" id="MSearchField">
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<div id="top" style="padding-top: 4em !important"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
     <div class="content" id="content">
         <div class="container">
             <div class="row">
@@ -241,7 +233,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="aclasswrench_1_1_storage_service_html_a3670e4f065a732e8430114d332eef7f3"><div class="ttname"><a href="classwrench_1_1_storage_service.html#a3670e4f065a732e8430114d332eef7f3">wrench::StorageService::getFreeSpace</a></div><div class="ttdeci">virtual std::map&lt; std::string, double &gt; getFreeSpace()</div><div class="ttdoc">Synchronously asks the storage service for its capacity at all its mount points.</div><div class="ttdef"><b>Definition:</b> StorageService.cpp:132</div></div>
 <div class="ttc" id="aclasswrench_1_1_storage_service_html_a02633f0cbc837a1faf2e3b6333eddebe"><div class="ttname"><a href="classwrench_1_1_storage_service.html#a02633f0cbc837a1faf2e3b6333eddebe">wrench::StorageService::buffer_size</a></div><div class="ttdeci">unsigned long buffer_size</div><div class="ttdoc">The service's buffer size.</div><div class="ttdef"><b>Definition:</b> StorageService.h:98</div></div>
 <div class="ttc" id="aclasswrench_1_1_s4_u___daemon_html_a52bc0b9a6cd248310749dac086819f00"><div class="ttname"><a href="classwrench_1_1_s4_u___daemon.html#a52bc0b9a6cd248310749dac086819f00">wrench::S4U_Daemon::hostname</a></div><div class="ttdeci">std::string hostname</div><div class="ttdoc">The name of the host on which the daemon is running.</div><div class="ttdef"><b>Definition:</b> S4U_Daemon.h:51</div></div>
-<div class="ttc" id="aclasswrench_1_1_simulation_html"><div class="ttname"><a href="classwrench_1_1_simulation.html">wrench::Simulation</a></div><div class="ttdoc">A class that provides basic simulation methods. Once the simulation object has been explicitly or imp...</div><div class="ttdef"><b>Definition:</b> Simulation.h:45</div></div>
+<div class="ttc" id="aclasswrench_1_1_simulation_html"><div class="ttname"><a href="classwrench_1_1_simulation.html">wrench::Simulation</a></div><div class="ttdoc">A class that provides basic simulation methods. Once the simulation object has been explicitly or imp...</div><div class="ttdef"><b>Definition:</b> Simulation.h:46</div></div>
 <div class="ttc" id="aclasswrench_1_1_storage_service_html_ae0c3a94307c5e0f47abe3262a680d322"><div class="ttname"><a href="classwrench_1_1_storage_service.html#ae0c3a94307c5e0f47abe3262a680d322">wrench::StorageService::file_systems</a></div><div class="ttdeci">std::map&lt; std::string, std::unique_ptr&lt; LogicalFileSystem &gt; &gt; file_systems</div><div class="ttdoc">File systems.</div><div class="ttdef"><b>Definition:</b> StorageService.h:101</div></div>
 <div class="ttc" id="aclasswrench_1_1_service_html"><div class="ttname"><a href="classwrench_1_1_service.html">wrench::Service</a></div><div class="ttdoc">A service that can be added to the simulation and that can be used by a WMS when executing a workflow...</div><div class="ttdef"><b>Definition:</b> Service.h:26</div></div>
 <div class="ttc" id="aclasswrench_1_1_workflow_file_html"><div class="ttname"><a href="classwrench_1_1_workflow_file.html">wrench::WorkflowFile</a></div><div class="ttdoc">A data file used/produced by a WorkflowTask in a Workflow.</div><div class="ttdef"><b>Definition:</b> WorkflowFile.h:26</div></div>
@@ -252,48 +244,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div>
 </div>
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <p>
-                    <strong>&copy;2017-2020 WRENCH. All Rights Reserved.</strong><br />
-                </p>
-                <p style="padding-top: 1em">
-                    <a href="mailto:support@wrench-project.org" class="fa-stack fa-2x" style="font-size: 1.5em">
-                        <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
-                        <i class="fa fa-envelope fa-stack-1x"></i>
-                    </a>
-                    <a href="http://twitter.com/wrenchproject" target="_blank" class="fa-stack fa-2x"
-                       style="font-size: 1.5em">
-                        <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
-                        <i class="fab fa-twitter fa-stack-1x"></i>
-                    </a>
-                    <a href="https://github.com/wrench-project/wrench" target="_blank" class="fa-stack fa-2x"
-                       style="font-size: 1.5em">
-                        <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
-                        <i class="fab fa-github fa-stack-1x"></i>
-                    </a>
-                </p>
-            </div>
-            <div class="col-sm-4 text-center">
-            </div>
-            <div class="col-sm-4">
-                <p>WRENCH is funded by the National Science Foundation (NSF) under grants number <a
-                        href="https://nsf.gov/awardsearch/showAward?AWD_ID=1642369" target="_blank">1642369</a>,
-                    <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1642335" target="_blank">1642335</a>,
-                    <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1923539" target="_blank">1923539</a>, and
-                    <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1923621" target="_blank">1923621</a>;
-                    and the National Center for Scientific Research (CNRS) under grant number PICS07239.
-                </p>
-                <p style="font-weight: normal; font-size: 0.8em; margin-top: 1em">
-                    Any opinions, findings, and conclusions or recommendations expressed in this material are those
-                    of the author(s) and do not necessarily reflect the views of the National Science Foundation.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+<hr class="footer"/>
+<address class="footer">
+    <small>
+        Generated by &#160;<a href="http://www.doxygen.org/index.html">
+        <img class="footer" src="doxygen.png" alt="doxygen"/>
+    </a> 1.8.17
+    </small>
+</address>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
