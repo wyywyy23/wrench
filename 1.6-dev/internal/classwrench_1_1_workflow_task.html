@@ -166,6 +166,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a46ed2cbccf91f55c73fb99900a953d60"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#a46ed2cbccf91f55c73fb99900a953d60">getClusterID</a> () const</td></tr>
 <tr class="memdesc:a46ed2cbccf91f55c73fb99900a953d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cluster Id for the task.  <a href="classwrench_1_1_workflow_task.html#a46ed2cbccf91f55c73fb99900a953d60">More...</a><br /></td></tr>
 <tr class="separator:a46ed2cbccf91f55c73fb99900a953d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22e8ee53e3dbee069d844d3e42a2310"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#ad22e8ee53e3dbee069d844d3e42a2310">getColor</a> ()</td></tr>
+<tr class="memdesc:ad22e8ee53e3dbee069d844d3e42a2310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the task's color ("" if none)  <a href="classwrench_1_1_workflow_task.html#ad22e8ee53e3dbee069d844d3e42a2310">More...</a><br /></td></tr>
+<tr class="separator:ad22e8ee53e3dbee069d844d3e42a2310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa02796c5c85aa9fb9a1467eb06506a59"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#aa02796c5c85aa9fb9a1467eb06506a59">getComputationEndDate</a> ()</td></tr>
 <tr class="memdesc:aa02796c5c85aa9fb9a1467eb06506a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the task's most recent computation end date.  <a href="classwrench_1_1_workflow_task.html#aa02796c5c85aa9fb9a1467eb06506a59">More...</a><br /></td></tr>
 <tr class="separator:aa02796c5c85aa9fb9a1467eb06506a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -278,6 +281,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ab8d621c9cf50b489fd6b092bea59872a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#ab8d621c9cf50b489fd6b092bea59872a">setClusterID</a> (std::string)</td></tr>
 <tr class="memdesc:ab8d621c9cf50b489fd6b092bea59872a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the cluster id for the task.  <a href="classwrench_1_1_workflow_task.html#ab8d621c9cf50b489fd6b092bea59872a">More...</a><br /></td></tr>
 <tr class="separator:ab8d621c9cf50b489fd6b092bea59872a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92a6ab9f646d20c5a1cb32cea77f1524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#a92a6ab9f646d20c5a1cb32cea77f1524">setColor</a> (std::string)</td></tr>
+<tr class="memdesc:a92a6ab9f646d20c5a1cb32cea77f1524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the task's color.  <a href="classwrench_1_1_workflow_task.html#a92a6ab9f646d20c5a1cb32cea77f1524">More...</a><br /></td></tr>
+<tr class="separator:a92a6ab9f646d20c5a1cb32cea77f1524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a573befd39e3efcc2a8979e81c4b106b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#a573befd39e3efcc2a8979e81c4b106b9">setComputationEndDate</a> (double date)</td></tr>
 <tr class="memdesc:a573befd39e3efcc2a8979e81c4b106b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the date when the computation portion of a <a class="el" href="classwrench_1_1_workflow_task.html" title="A computational task in a Workflow.">WorkflowTask</a> has ended.  <a href="classwrench_1_1_workflow_task.html#a573befd39e3efcc2a8979e81c4b106b9">More...</a><br /></td></tr>
 <tr class="separator:a573befd39e3efcc2a8979e81c4b106b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -529,6 +535,26 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get the cluster Id for the task. </p>
 <dl class="section return"><dt>Returns</dt><dd>a cluster id, or an empty string </dd></dl>
+
+</div>
+</div>
+<a id="ad22e8ee53e3dbee069d844d3e42a2310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22e8ee53e3dbee069d844d3e42a2310">&#9670;&nbsp;</a></span>getColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string wrench::WorkflowTask::getColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the task's color ("" if none) </p>
+<dl class="section return"><dt>Returns</dt><dd>A color string in "#rrggbb" format </dd></dl>
 
 </div>
 </div>
@@ -1270,6 +1296,32 @@ Static Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>cluster id the task belongs to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a92a6ab9f646d20c5a1cb32cea77f1524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a6ab9f646d20c5a1cb32cea77f1524">&#9670;&nbsp;</a></span>setColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrench::WorkflowTask::setColor </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the task's color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>A color string in "#rrggbb" format </td></tr>
   </table>
   </dd>
 </dl>
