@@ -147,28 +147,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                {MRJobExecutorMessagePayload::MAP_SIDE_SHUFFLE_REQUEST_PAYLOAD,       1024},</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                {MRJobExecutorMessagePayload::MAP_SIDE_HDFS_DATA_DELIVERY_PAYLOAD,    1024},</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                {MRJobExecutorMessagePayload::MAP_SIDE_HDFS_DATA_REQUEST_PAYLOAD,     1024},</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        };</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::set&lt;std::string&gt; compute_resources;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">int</span> main() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">bool</span> processNextMessage();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">void</span> setup_workers(std::vector&lt;std::shared_ptr&lt;Service&gt;&gt; &amp;mappers,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                           std::vector&lt;std::shared_ptr&lt;Service&gt;&gt; &amp;reducers,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                           std::shared_ptr&lt;Service&gt; &amp;hdfs,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                           std::shared_ptr&lt;Service&gt; &amp;shuffle);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    };</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif //WRENCH_HADOOPCOMPUTESERVICE_H</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                {MRJobExecutorMessagePayload::MAP_OUTPUT_MATERIALIZED_BYTES_PAYLOAD,  1024},</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::set&lt;std::string&gt; compute_resources;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">int</span> main() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">bool</span> processNextMessage();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> setup_workers(std::vector&lt;std::shared_ptr&lt;Service&gt;&gt; &amp;mapper_vec,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                           std::vector&lt;std::shared_ptr&lt;Service&gt;&gt; &amp;reducer_vec,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                           std::shared_ptr&lt;Service&gt; &amp;hdfs_ptr,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                           std::shared_ptr&lt;Service&gt; &amp;shuffle_ptr);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif //WRENCH_HADOOPCOMPUTESERVICE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasswrench_1_1_m_r_job_html"><div class="ttname"><a href="classwrench_1_1_m_r_job.html">wrench::MRJob</a></div><div class="ttdef"><b>Definition:</b> MRJob.h:18</div></div>
 <div class="ttc" id="aclasswrench_1_1_m_r_job_executor_html_a71cf9fb3219f4b3334f92df8bf1aedf0"><div class="ttname"><a href="classwrench_1_1_m_r_job_executor.html#a71cf9fb3219f4b3334f92df8bf1aedf0">wrench::MRJobExecutor::MRJobExecutor</a></div><div class="ttdeci">MRJobExecutor(const std::string &amp;hostname, MRJob *job, const std::set&lt; std::string &gt; compute_resources, std::string notify_mailbox, std::map&lt; std::string, std::string &gt; property_list, std::map&lt; std::string, double &gt; messagepayload_list)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> MRJobExecutor.cpp:35</div></div>
 <div class="ttc" id="aclasswrench_1_1_m_r_job_executor_html"><div class="ttname"><a href="classwrench_1_1_m_r_job_executor.html">wrench::MRJobExecutor</a></div><div class="ttdef"><b>Definition:</b> MRJobExecutor.h:23</div></div>
 <div class="ttc" id="anamespacewrench_html"><div class="ttname"><a href="namespacewrench.html">wrench</a></div><div class="ttdef"><b>Definition:</b> Alarm.cpp:20</div></div>
-<div class="ttc" id="aclasswrench_1_1_m_r_job_executor_html_a6b0caf93b664b1f44d9a1d31aa53afa2"><div class="ttname"><a href="classwrench_1_1_m_r_job_executor.html#a6b0caf93b664b1f44d9a1d31aa53afa2">wrench::MRJobExecutor::stop</a></div><div class="ttdeci">void stop() override</div><div class="ttdoc">Stop the compute service - must be called by the stop() method of derived classes.</div><div class="ttdef"><b>Definition:</b> MRJobExecutor.cpp:54</div></div>
+<div class="ttc" id="aclasswrench_1_1_m_r_job_executor_html_a6b0caf93b664b1f44d9a1d31aa53afa2"><div class="ttname"><a href="classwrench_1_1_m_r_job_executor.html#a6b0caf93b664b1f44d9a1d31aa53afa2">wrench::MRJobExecutor::stop</a></div><div class="ttdeci">void stop() override</div><div class="ttdoc">Stop the compute service - must be called by the stop() method of derived classes.</div><div class="ttdef"><b>Definition:</b> MRJobExecutor.cpp:53</div></div>
 <div class="ttc" id="aclasswrench_1_1_service_html_a0c5f5e448ffb18f17f70a34b376b6640"><div class="ttname"><a href="classwrench_1_1_service.html#a0c5f5e448ffb18f17f70a34b376b6640">wrench::Service::messagepayload_list</a></div><div class="ttdeci">std::map&lt; std::string, double &gt; messagepayload_list</div><div class="ttdoc">The service's messagepayload list.</div><div class="ttdef"><b>Definition:</b> Service.h:112</div></div>
 <div class="ttc" id="aclasswrench_1_1_s4_u___daemon_html_a52bc0b9a6cd248310749dac086819f00"><div class="ttname"><a href="classwrench_1_1_s4_u___daemon.html#a52bc0b9a6cd248310749dac086819f00">wrench::S4U_Daemon::hostname</a></div><div class="ttdeci">std::string hostname</div><div class="ttdoc">The name of the host on which the daemon is running.</div><div class="ttdef"><b>Definition:</b> S4U_Daemon.h:51</div></div>
 <div class="ttc" id="aclasswrench_1_1_hadoop_compute_service_property_html_a82f5ffb9a963e819dc80afdf383df71a"><div class="ttname"><a href="classwrench_1_1_hadoop_compute_service_property.html#a82f5ffb9a963e819dc80afdf383df71a">wrench::HadoopComputeServiceProperty::MAP_STARTUP_OVERHEAD</a></div><div class="ttdeci">static const std::string MAP_STARTUP_OVERHEAD</div><div class="ttdoc">The overhead to start a map task (placeholder example property to be changed later)</div><div class="ttdef"><b>Definition:</b> HadoopComputeServiceProperty.h:26</div></div>

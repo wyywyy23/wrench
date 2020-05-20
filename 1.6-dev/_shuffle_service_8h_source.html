@@ -110,10 +110,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewrench.html">wrench</a> {</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classwrench_1_1_shuffle_service.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classwrench_1_1_shuffle_service.html">ShuffleService</a> : <span class="keyword">public</span> <a class="code" href="classwrench_1_1_service.html">Service</a> {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classwrench_1_1_shuffle_service.html#ae8f22c533712c77f48548c2d8481f1c2">ShuffleService</a>(</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classwrench_1_1_shuffle_service.html#adb87783d6022da2224b82e667a8abaab">ShuffleService</a>(</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="keyword">const</span> std::string &amp;<a class="code" href="classwrench_1_1_s4_u___daemon.html#a52bc0b9a6cd248310749dac086819f00">hostname</a>,</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <a class="code" href="classwrench_1_1_m_r_job.html">MRJob</a> *job,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keyword">const</span> std::set&lt;std::string&gt; compute_resources,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keyword">const</span> std::set&lt;std::string&gt; &amp;compute_resources,</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                std::map&lt;std::string, std::string&gt; <a class="code" href="classwrench_1_1_service.html#a032143b1e2d7296dde9b4ca1e34845ce">property_list</a>,</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                std::map&lt;std::string, double&gt; <a class="code" href="classwrench_1_1_service.html#a0c5f5e448ffb18f17f70a34b376b6640">messagepayload_list</a></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        );</div>
@@ -122,28 +122,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classwrench_1_1_m_r_job.html">MRJob</a> *job;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::map&lt;std::string, std::string&gt; default_property_values = {};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::map&lt;std::string, double&gt; default_messagepayload_values = {};</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        std::set&lt;std::string&gt; compute_resources;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> main() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        std::vector&lt;double&gt; mapper_outputs;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        std::map&lt;std::string, std::string&gt; default_property_values = {};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        std::map&lt;std::string, double&gt; default_messagepayload_values = {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                {MRJobExecutorMessagePayload::MAP_SIDE_SHUFFLE_REQUEST_PAYLOAD,      1024},</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                {MRJobExecutorMessagePayload::MAP_OUTPUT_MATERIALIZED_BYTES_PAYLOAD, 1024},</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        };</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">bool</span> processNextMessage();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::set&lt;std::string&gt; compute_resources;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif //WRENCH_SHUFFLE_H</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">int</span> main() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">bool</span> processNextMessage();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif //WRENCH_SHUFFLE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasswrench_1_1_m_r_job_html"><div class="ttname"><a href="classwrench_1_1_m_r_job.html">wrench::MRJob</a></div><div class="ttdef"><b>Definition:</b> MRJob.h:18</div></div>
 <div class="ttc" id="anamespacewrench_html"><div class="ttname"><a href="namespacewrench.html">wrench</a></div><div class="ttdef"><b>Definition:</b> Alarm.cpp:20</div></div>
-<div class="ttc" id="aclasswrench_1_1_shuffle_service_html_a8b2d251ea50c8e0790d8280815894a6e"><div class="ttname"><a href="classwrench_1_1_shuffle_service.html#a8b2d251ea50c8e0790d8280815894a6e">wrench::ShuffleService::stop</a></div><div class="ttdeci">void stop() override</div><div class="ttdoc">Stop the compute service - must be called by the stop() method of derived classes.</div><div class="ttdef"><b>Definition:</b> ShuffleService.cpp:45</div></div>
-<div class="ttc" id="aclasswrench_1_1_shuffle_service_html_ae8f22c533712c77f48548c2d8481f1c2"><div class="ttname"><a href="classwrench_1_1_shuffle_service.html#ae8f22c533712c77f48548c2d8481f1c2">wrench::ShuffleService::ShuffleService</a></div><div class="ttdeci">ShuffleService(const std::string &amp;hostname, MRJob *job, const std::set&lt; std::string &gt; compute_resources, std::map&lt; std::string, std::string &gt; property_list, std::map&lt; std::string, double &gt; messagepayload_list)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> ShuffleService.cpp:30</div></div>
+<div class="ttc" id="aclasswrench_1_1_shuffle_service_html_a8b2d251ea50c8e0790d8280815894a6e"><div class="ttname"><a href="classwrench_1_1_shuffle_service.html#a8b2d251ea50c8e0790d8280815894a6e">wrench::ShuffleService::stop</a></div><div class="ttdeci">void stop() override</div><div class="ttdoc">Stop the compute service - must be called by the stop() method of derived classes.</div><div class="ttdef"><b>Definition:</b> ShuffleService.cpp:47</div></div>
 <div class="ttc" id="aclasswrench_1_1_service_html_a0c5f5e448ffb18f17f70a34b376b6640"><div class="ttname"><a href="classwrench_1_1_service.html#a0c5f5e448ffb18f17f70a34b376b6640">wrench::Service::messagepayload_list</a></div><div class="ttdeci">std::map&lt; std::string, double &gt; messagepayload_list</div><div class="ttdoc">The service's messagepayload list.</div><div class="ttdef"><b>Definition:</b> Service.h:112</div></div>
 <div class="ttc" id="aclasswrench_1_1_s4_u___daemon_html_a52bc0b9a6cd248310749dac086819f00"><div class="ttname"><a href="classwrench_1_1_s4_u___daemon.html#a52bc0b9a6cd248310749dac086819f00">wrench::S4U_Daemon::hostname</a></div><div class="ttdeci">std::string hostname</div><div class="ttdoc">The name of the host on which the daemon is running.</div><div class="ttdef"><b>Definition:</b> S4U_Daemon.h:51</div></div>
+<div class="ttc" id="aclasswrench_1_1_shuffle_service_html_adb87783d6022da2224b82e667a8abaab"><div class="ttname"><a href="classwrench_1_1_shuffle_service.html#adb87783d6022da2224b82e667a8abaab">wrench::ShuffleService::ShuffleService</a></div><div class="ttdeci">ShuffleService(const std::string &amp;hostname, MRJob *job, const std::set&lt; std::string &gt; &amp;compute_resources, std::map&lt; std::string, std::string &gt; property_list, std::map&lt; std::string, double &gt; messagepayload_list)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> ShuffleService.cpp:32</div></div>
 <div class="ttc" id="aclasswrench_1_1_service_html"><div class="ttname"><a href="classwrench_1_1_service.html">wrench::Service</a></div><div class="ttdoc">A service that can be added to the simulation and that can be used by a WMS when executing a workflow...</div><div class="ttdef"><b>Definition:</b> Service.h:26</div></div>
 <div class="ttc" id="aclasswrench_1_1_shuffle_service_html"><div class="ttname"><a href="classwrench_1_1_shuffle_service.html">wrench::ShuffleService</a></div><div class="ttdef"><b>Definition:</b> ShuffleService.h:17</div></div>
 <div class="ttc" id="aclasswrench_1_1_service_html_a032143b1e2d7296dde9b4ca1e34845ce"><div class="ttname"><a href="classwrench_1_1_service.html#a032143b1e2d7296dde9b4ca1e34845ce">wrench::Service::property_list</a></div><div class="ttdeci">std::map&lt; std::string, std::string &gt; property_list</div><div class="ttdoc">The service's property list.</div><div class="ttdef"><b>Definition:</b> Service.h:109</div></div>

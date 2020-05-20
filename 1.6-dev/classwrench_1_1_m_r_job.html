@@ -115,15 +115,18 @@ Inheritance diagram for wrench::MRJob:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a7628aa819526da05aeecb121f3f3cf79"><td class="memItemLeft" align="right" valign="top"><a id="a7628aa819526da05aeecb121f3f3cf79"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>appendReducerMailbox</b> (std::string reducer_mailbox)</td></tr>
+<tr class="separator:a7628aa819526da05aeecb121f3f3cf79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0acc395910d40245acb29199ea8df7b0"><td class="memItemLeft" align="right" valign="top"><a id="a0acc395910d40245acb29199ea8df7b0"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>calculateNumMappers</b> ()=0</td></tr>
 <tr class="separator:a0acc395910d40245acb29199ea8df7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a988fca090a90186eb84cc4277de01d7e"><td class="memItemLeft" align="right" valign="top"><a id="a988fca090a90186eb84cc4277de01d7e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getBlockSize</b> ()</td></tr>
-<tr class="separator:a988fca090a90186eb84cc4277de01d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71224e984c37d067519079dab594f482"><td class="memItemLeft" align="right" valign="top"><a id="a71224e984c37d067519079dab594f482"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getDataSize</b> ()</td></tr>
-<tr class="separator:a71224e984c37d067519079dab594f482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ca4d9621b9711b27df6b2ad41e815a"><td class="memItemLeft" align="right" valign="top"><a id="ac7ca4d9621b9711b27df6b2ad41e815a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getBlockSize</b> () const</td></tr>
+<tr class="separator:ac7ca4d9621b9711b27df6b2ad41e815a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb1f391527d9ce015d3083f8591775c9"><td class="memItemLeft" align="right" valign="top"><a id="abb1f391527d9ce015d3083f8591775c9"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getDataSize</b> () const</td></tr>
+<tr class="separator:abb1f391527d9ce015d3083f8591775c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17ff4dc489f8d8b13d6165bccbee7af8"><td class="memItemLeft" align="right" valign="top"><a id="a17ff4dc489f8d8b13d6165bccbee7af8"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getExecutorMailbox</b> ()</td></tr>
 <tr class="separator:a17ff4dc489f8d8b13d6165bccbee7af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,42 +136,45 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getHdfsMailbox
 <tr class="memitem:af9838178c9c1b42c5517294154ce030c"><td class="memItemLeft" align="right" valign="top"><a id="af9838178c9c1b42c5517294154ce030c"></a>
 std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getJobType</b> ()</td></tr>
 <tr class="separator:af9838178c9c1b42c5517294154ce030c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ec7083b362fa2e1a35f903ed92eab8e"><td class="memItemLeft" align="right" valign="top"><a id="a0ec7083b362fa2e1a35f903ed92eab8e"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getMapperFlops</b> ()</td></tr>
-<tr class="separator:a0ec7083b362fa2e1a35f903ed92eab8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac571e7faaf830989d128106fe63e0087"><td class="memItemLeft" align="right" valign="top"><a id="ac571e7faaf830989d128106fe63e0087"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getMapperKeyWidth</b> ()</td></tr>
-<tr class="separator:ac571e7faaf830989d128106fe63e0087"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a169a7d8a7147f359554d2b50dd1b05d6"><td class="memItemLeft" align="right" valign="top"><a id="a169a7d8a7147f359554d2b50dd1b05d6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getMapperValueWidth</b> ()</td></tr>
-<tr class="separator:a169a7d8a7147f359554d2b50dd1b05d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13863cb55555cdcc03bfa279ab7926fa"><td class="memItemLeft" align="right" valign="top"><a id="a13863cb55555cdcc03bfa279ab7926fa"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumMappers</b> ()</td></tr>
-<tr class="separator:a13863cb55555cdcc03bfa279ab7926fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a810656532bd5e630cd3cb5f6a020c796"><td class="memItemLeft" align="right" valign="top"><a id="a810656532bd5e630cd3cb5f6a020c796"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumReducers</b> ()</td></tr>
-<tr class="separator:a810656532bd5e630cd3cb5f6a020c796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed34453614d1023887d6632e206cc219"><td class="memItemLeft" align="right" valign="top"><a id="aed34453614d1023887d6632e206cc219"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getReducerFlops</b> ()</td></tr>
-<tr class="separator:aed34453614d1023887d6632e206cc219"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafcd415d63f3ae1a8af57e34424fbd35"><td class="memItemLeft" align="right" valign="top"><a id="aafcd415d63f3ae1a8af57e34424fbd35"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getReducerKeyWidth</b> ()</td></tr>
-<tr class="separator:aafcd415d63f3ae1a8af57e34424fbd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a130dd3b77001f7bb26f21bf870b6aff5"><td class="memItemLeft" align="right" valign="top"><a id="a130dd3b77001f7bb26f21bf870b6aff5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getReducerValueWidth</b> ()</td></tr>
-<tr class="separator:a130dd3b77001f7bb26f21bf870b6aff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54238e5e347af087cb6c7cb8c86decf1"><td class="memItemLeft" align="right" valign="top"><a id="a54238e5e347af087cb6c7cb8c86decf1"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getMapperFlops</b> () const</td></tr>
+<tr class="separator:a54238e5e347af087cb6c7cb8c86decf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c3b874c9a3c5837db510d4f1f83ffb7"><td class="memItemLeft" align="right" valign="top"><a id="a2c3b874c9a3c5837db510d4f1f83ffb7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getMapperKeyWidth</b> () const</td></tr>
+<tr class="separator:a2c3b874c9a3c5837db510d4f1f83ffb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f90a8a958a336b211040ba985eeb818"><td class="memItemLeft" align="right" valign="top"><a id="a4f90a8a958a336b211040ba985eeb818"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getMapperValueWidth</b> () const</td></tr>
+<tr class="separator:a4f90a8a958a336b211040ba985eeb818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f895895262044ee2a49746b4c6ba5a"><td class="memItemLeft" align="right" valign="top"><a id="ae4f895895262044ee2a49746b4c6ba5a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumMappers</b> () const</td></tr>
+<tr class="separator:ae4f895895262044ee2a49746b4c6ba5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f2651bb97196eb9eae1b6658804fea"><td class="memItemLeft" align="right" valign="top"><a id="a46f2651bb97196eb9eae1b6658804fea"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumReducers</b> () const</td></tr>
+<tr class="separator:a46f2651bb97196eb9eae1b6658804fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dfe69e3c33ad6b3993fab26521b4e96"><td class="memItemLeft" align="right" valign="top"><a id="a1dfe69e3c33ad6b3993fab26521b4e96"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getReducerFlops</b> () const</td></tr>
+<tr class="separator:a1dfe69e3c33ad6b3993fab26521b4e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e27992e9f37da14555076c817a99c9"><td class="memItemLeft" align="right" valign="top"><a id="ad4e27992e9f37da14555076c817a99c9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getReducerKeyWidth</b> () const</td></tr>
+<tr class="separator:ad4e27992e9f37da14555076c817a99c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea0d9324eff25799ec3e15cfc761bcf1"><td class="memItemLeft" align="right" valign="top"><a id="aea0d9324eff25799ec3e15cfc761bcf1"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReducerMailboxes</b> ()</td></tr>
+<tr class="separator:aea0d9324eff25799ec3e15cfc761bcf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ffaed5dd5ebe74b7172bc8fb21eff6"><td class="memItemLeft" align="right" valign="top"><a id="aa5ffaed5dd5ebe74b7172bc8fb21eff6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getReducerValueWidth</b> () const</td></tr>
+<tr class="separator:aa5ffaed5dd5ebe74b7172bc8fb21eff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ce164acc6cdd968adfdf38e6d8d83f7"><td class="memItemLeft" align="right" valign="top"><a id="a6ce164acc6cdd968adfdf38e6d8d83f7"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getShuffleMailbox</b> ()</td></tr>
 <tr class="separator:a6ce164acc6cdd968adfdf38e6d8d83f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afba9d958c6ed8b44a8f78551a2d485c9"><td class="memItemLeft" align="right" valign="top"><a id="afba9d958c6ed8b44a8f78551a2d485c9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getSortFactor</b> ()</td></tr>
-<tr class="separator:afba9d958c6ed8b44a8f78551a2d485c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a539b12ec5b17aabd7bddc12b6eb8060a"><td class="memItemLeft" align="right" valign="top"><a id="a539b12ec5b17aabd7bddc12b6eb8060a"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getSpillPercent</b> ()</td></tr>
-<tr class="separator:a539b12ec5b17aabd7bddc12b6eb8060a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d8a8005e1f25845bb7b99f4342f3879"><td class="memItemLeft" align="right" valign="top"><a id="a4d8a8005e1f25845bb7b99f4342f3879"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getUseCombiner</b> ()</td></tr>
-<tr class="separator:a4d8a8005e1f25845bb7b99f4342f3879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addba22e6145afee179a0e3760c0240de"><td class="memItemLeft" align="right" valign="top"><a id="addba22e6145afee179a0e3760c0240de"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getSortFactor</b> () const</td></tr>
+<tr class="separator:addba22e6145afee179a0e3760c0240de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f0ecdab8a185abc39997405c080867"><td class="memItemLeft" align="right" valign="top"><a id="aa7f0ecdab8a185abc39997405c080867"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getSpillPercent</b> () const</td></tr>
+<tr class="separator:aa7f0ecdab8a185abc39997405c080867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97048b76d75a4c25456daae54d9d005f"><td class="memItemLeft" align="right" valign="top"><a id="a97048b76d75a4c25456daae54d9d005f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getUseCombiner</b> () const</td></tr>
+<tr class="separator:a97048b76d75a4c25456daae54d9d005f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65325bd924a6ac841cb8fe9ff5342757"><td class="memItemLeft" align="right" valign="top"><a id="a65325bd924a6ac841cb8fe9ff5342757"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlockSize</b> (int block_size)</td></tr>
 <tr class="separator:a65325bd924a6ac841cb8fe9ff5342757"><td class="memSeparator" colspan="2">&#160;</td></tr>

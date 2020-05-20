@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_3d_3d_498',['operator==',['../namespacewrench.html#ad0ff2710896f50b3198ed4c9c0441cb4',1,'wrench']]]
+  ['networkproximityservice_529',['NetworkProximityService',['../classwrench_1_1_network_proximity_service.html#a9b22deb4b19d5a3287c0d5b02b7f4447',1,'wrench::NetworkProximityService']]]
 ];
