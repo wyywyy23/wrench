@@ -117,10 +117,10 @@ Architecture</h1>
 <p>WRENCH is an <em>open-source library</em> for developing simulators. It is neither a graphical interface nor a stand-alone simulator. WRENCH exposes several high-level simulation abstractions to provide high-level <b>building blocks</b> for developing custom simulators.</p>
 <p>WRENCH comprises four distinct layers:</p>
 <ul>
+<li><b>Top-Level Simulation:</b> A top-level set of abstractions to instantiate and simulate the execution of arbitrary workflows on arbitrary platforms using a particular WMS implementation.</li>
+<li><b>Simulated WMS:</b> Simulated WMS implementations (e.g., simulated existing production WMSs, simulated WMS research prototypes).</li>
+<li><b>Simulated Core CI Services:</b> Abstractions for simulated cyberinfrastructure (CI) components that can be used by a WMS to execute workflows (compute services, storage services, network proximity services, data location services, etc.).</li>
 <li><b>Simulation Core:</b> All necessary simulation models and base abstractions (computing, communicating, storing), provided by <a href="https://simgrid.org">SimGrid</a>.</li>
-<li><b>Simulated Core CI Services:</b> abstractions for simulated cyberinfrastructure (CI) components that can be used by a WMS to execute workflows (compute services, storage services, network proximity services, data location services, etc.).</li>
-<li><b>Simulated WMS:</b> simulated WMS implementations (e.g., simulated existing production WMSs, simulated WMS research prototypes).</li>
-<li><b>Top-Level Simulation:</b> a top-level set of abstractions to instantiate and simulate the execution of arbitrary workflows on arbitrary platforms using a particular WMS implementation.</li>
 </ul>
 <div class="image">
 <img src="wrench-architecture.png" alt=""/>
@@ -129,16 +129,16 @@ Architecture</h1>
 Three Classes of Users</h1>
 <p>WRENCH is intended for three different classes of users:</p>
 <ul>
-<li><b>WMS Users</b> use WRENCH to simulate workflow executions using already implemented WMS implementations and Core services.</li>
+<li><b>WMS Users</b> use WRENCH to simulate workflow executions using already implemented WMS implementations and Core Services.</li>
 <li><b>WMS Developers/Researchers</b> use WRENCH to prototype and evaluate software WMS designs and/or to investigate and evaluate novel algorithms to be implemented in WMSs, or experimented in novel CI (interacting with already implemented Core Services).</li>
 <li><b>Internal Developers</b> contribute to the WRENCH code, and in particular, implement new Core Services.</li>
 </ul>
 <h2><a class="anchor" id="overview-users-levels"></a>
 Three Levels of API Documentation</h2>
 <p>The WRENCH library provides three <em>incremental</em> levels of documentation, each targeting an API level:</p>
-<p><b>User:</b> targets users who want to use WRENCH for simulating the execution of scientific workflows in different simulation scenarios, using existing simulated WMSs already implemented using WRENCH. <em>Users</em> are NOT expected to develop new simulation abstractions or algorithms. Instead, they only use available simulation components as high-level building blocks to quickly build simulators. These simulators can be as simple as a single 50-line main() function.</p>
-<p><b>Developer:</b> targets <em>WMS developers</em> and <em>WMS researchers</em> who work on developing novel WMS designs and algorithms. In addition to documentation for all simulation components provided at the <em>User</em> level, <em>Developer</em> documentation include detailed documentation for interacting with simulated Core Services.</p>
-<p><b>Internal:</b> targets those users who want to contribute code to WRENCH. The <em>internal</em> documentation provides, in addition to both levels above, detailed documentation for all WRENCH classes including binders to SimGrid. This is the API needed to, for instance, implement new Core Services.</p>
+<p><b>User:</b> This level targets users who want to use WRENCH for simulating the execution of scientific workflows in different simulation scenarios, using existing simulated WMSs already implemented using WRENCH. <em>Users</em> are NOT expected to develop new simulation abstractions or algorithms. Instead, they only use available simulation components as high-level building blocks to quickly build simulators. These simulators can be as simple as a single 50-line main() function.</p>
+<p><b>Developer:</b> This level targets <em>WMS developers</em> and <em>WMS researchers</em> who work on developing novel WMS designs and algorithms. In addition to documentation for all simulation components provided at the <em>User</em> level, the <em>Developer</em> documentation includes detailed documentation for interacting with simulated Core Services.</p>
+<p><b>Internal:</b> This level targets those users who want to contribute code to WRENCH. It provides, in addition to both levels above, detailed documentation for all WRENCH classes including binders to SimGrid. This is the API needed to, for instance, implement new Core Services.</p>
 <h1><a class="anchor" id="overview-contact"></a>
 Get in Touch</h1>
 <p>The main channel to reach the WRENCH team is via the support email: <a href="#" onclick="location.href='mai'+'lto:'+'sup'+'po'+'rt@'+'wr'+'enc'+'h-'+'pro'+'je'+'ct.'+'or'+'g?s'+'ub'+'jec'+'t='+'WRE'+'NC'+'H S'+'up'+'por'+'t '+'Con'+'ta'+'ct:'+' Y'+'our'+' T'+'opi'+'c'; return false;">support@wrench-project.org</a>.</p>
