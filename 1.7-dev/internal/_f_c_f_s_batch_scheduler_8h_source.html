@@ -136,19 +136,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::map &lt;std::string, std::tuple&lt;unsigned long, double&gt;&gt; <a class="code" href="classwrench_1_1_f_c_f_s_batch_scheduler.html#aa430e1cd63f23b5cab8b4f8a54286fa6">scheduleOnHosts</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>, <span class="keywordtype">double</span>) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::map&lt;std::string, double&gt; <a class="code" href="classwrench_1_1_f_c_f_s_batch_scheduler.html#a1390aca0a32d5de3dd8862a6f6390460">getStartTimeEstimates</a>(std::set &lt;std::tuple&lt;std::string, unsigned long, unsigned long, double&gt;&gt; set_of_jobs) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    };</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/***********************/</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">/***********************/</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    };</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/***********************/</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/***********************/</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif //WRENCH_FCFSBATCHSCHEDULER_H</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif //WRENCH_FCFSBATCHSCHEDULER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasswrench_1_1_batch_scheduler_html_a8d7fc2963b0e9abd58c7b72ead16f6cb"><div class="ttname"><a href="classwrench_1_1_batch_scheduler.html#a8d7fc2963b0e9abd58c7b72ead16f6cb">wrench::BatchScheduler::cs</a></div><div class="ttdeci">BatchComputeService * cs</div><div class="ttdoc">Compute service for which this scheduler is operating.</div><div class="ttdef"><b>Definition:</b> BatchScheduler.h:107</div></div>
+<div class="ttc" id="aclasswrench_1_1_batch_scheduler_html_a8d7fc2963b0e9abd58c7b72ead16f6cb"><div class="ttname"><a href="classwrench_1_1_batch_scheduler.html#a8d7fc2963b0e9abd58c7b72ead16f6cb">wrench::BatchScheduler::cs</a></div><div class="ttdeci">BatchComputeService * cs</div><div class="ttdoc">Compute service for which this scheduler is operating.</div><div class="ttdef"><b>Definition:</b> BatchScheduler.h:106</div></div>
 <div class="ttc" id="aclasswrench_1_1_f_c_f_s_batch_scheduler_html"><div class="ttname"><a href="classwrench_1_1_f_c_f_s_batch_scheduler.html">wrench::FCFSBatchScheduler</a></div><div class="ttdoc">A class that implements a FCFS batch scheduler.</div><div class="ttdef"><b>Definition:</b> FCFSBatchScheduler.h:25</div></div>
 <div class="ttc" id="aclasswrench_1_1_f_c_f_s_batch_scheduler_html_ab5ab96a562d53a18ec9be53efddb8181"><div class="ttname"><a href="classwrench_1_1_f_c_f_s_batch_scheduler.html#ab5ab96a562d53a18ec9be53efddb8181">wrench::FCFSBatchScheduler::processQueuedJobs</a></div><div class="ttdeci">void processQueuedJobs() override</div><div class="ttdoc">Method to process queued jobs.</div><div class="ttdef"><b>Definition:</b> FCFSBatchScheduler.cpp:336</div></div>
 <div class="ttc" id="aclasswrench_1_1_f_c_f_s_batch_scheduler_html_a1390aca0a32d5de3dd8862a6f6390460"><div class="ttname"><a href="classwrench_1_1_f_c_f_s_batch_scheduler.html#a1390aca0a32d5de3dd8862a6f6390460">wrench::FCFSBatchScheduler::getStartTimeEstimates</a></div><div class="ttdeci">std::map&lt; std::string, double &gt; getStartTimeEstimates(std::set&lt; std::tuple&lt; std::string, unsigned long, unsigned long, double &gt;&gt; set_of_jobs) override</div><div class="ttdoc">Method to get start time estimates.</div><div class="ttdef"><b>Definition:</b> FCFSBatchScheduler.cpp:162</div></div>

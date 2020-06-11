@@ -122,9 +122,9 @@ Inheritance diagram for wrench::WorkloadTraceFileReplayer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad9bf2d33f3b79b9e186f3501f14fdb4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workload_trace_file_replayer.html#ad9bf2d33f3b79b9e186f3501f14fdb4c">WorkloadTraceFileReplayer</a> (std::string <a class="el" href="classwrench_1_1_s4_u___daemon.html#a52bc0b9a6cd248310749dac086819f00">hostname</a>, std::shared_ptr&lt; <a class="el" href="classwrench_1_1_batch_compute_service.html">BatchComputeService</a> &gt; batch_service, unsigned long num_cores_per_node, bool use_actual_runtimes_as_requested_runtimes, std::vector&lt; std::tuple&lt; std::string, double, double, double, double, unsigned int &gt;&gt; &amp;workload_trace)</td></tr>
-<tr class="memdesc:ad9bf2d33f3b79b9e186f3501f14fdb4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classwrench_1_1_workload_trace_file_replayer.html#ad9bf2d33f3b79b9e186f3501f14fdb4c">More...</a><br /></td></tr>
-<tr class="separator:ad9bf2d33f3b79b9e186f3501f14fdb4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9931d1d68d42edc4bef128d8e11a5ac1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workload_trace_file_replayer.html#a9931d1d68d42edc4bef128d8e11a5ac1">WorkloadTraceFileReplayer</a> (std::string <a class="el" href="classwrench_1_1_s4_u___daemon.html#a52bc0b9a6cd248310749dac086819f00">hostname</a>, std::shared_ptr&lt; <a class="el" href="classwrench_1_1_batch_compute_service.html">BatchComputeService</a> &gt; batch_service, unsigned long num_cores_per_node, bool use_actual_runtimes_as_requested_runtimes, std::vector&lt; std::tuple&lt; std::string, double, double, double, double, unsigned int, std::string &gt;&gt; &amp;workload_trace)</td></tr>
+<tr class="memdesc:a9931d1d68d42edc4bef128d8e11a5ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classwrench_1_1_workload_trace_file_replayer.html#a9931d1d68d42edc4bef128d8e11a5ac1">More...</a><br /></td></tr>
+<tr class="separator:a9931d1d68d42edc4bef128d8e11a5ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classwrench_1_1_w_m_s"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classwrench_1_1_w_m_s')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classwrench_1_1_w_m_s.html">wrench::WMS</a></td></tr>
 <tr class="memitem:a036f0865c72e8dfe4e40b9419f0dc735 inherit pub_methods_classwrench_1_1_w_m_s"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_w_m_s.html#a036f0865c72e8dfe4e40b9419f0dc735">addDynamicOptimization</a> (std::unique_ptr&lt; <a class="el" href="classwrench_1_1_dynamic_optimization.html">DynamicOptimization</a> &gt;)</td></tr>
 <tr class="memdesc:a036f0865c72e8dfe4e40b9419f0dc735 inherit pub_methods_classwrench_1_1_w_m_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a dynamic optimization to the list of optimizations. Optimizations are executed in order of insertion.  <a href="classwrench_1_1_w_m_s.html#a036f0865c72e8dfe4e40b9419f0dc735">More...</a><br /></td></tr>
@@ -446,8 +446,8 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A service that goes through a job submission trace (as loaded by a <a class="el" href="classwrench_1_1_trace_file_loader.html" title="A class that can load a job submission trace (a.k.a. supercomputer workload) in the SWF format (see h...">TraceFileLoader</a>), and "replays" it on a given <a class="el" href="classwrench_1_1_batch_compute_service.html" title="A batch-scheduled compute service that manages a set of compute hosts and controls access to their re...">BatchComputeService</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad9bf2d33f3b79b9e186f3501f14fdb4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9bf2d33f3b79b9e186f3501f14fdb4c">&#9670;&nbsp;</a></span>WorkloadTraceFileReplayer()</h2>
+<a id="a9931d1d68d42edc4bef128d8e11a5ac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9931d1d68d42edc4bef128d8e11a5ac1">&#9670;&nbsp;</a></span>WorkloadTraceFileReplayer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -479,7 +479,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::tuple&lt; std::string, double, double, double, double, unsigned int &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::tuple&lt; std::string, double, double, double, double, unsigned int, std::string &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>workload_trace</em>&#160;</td>
         </tr>
         <tr>

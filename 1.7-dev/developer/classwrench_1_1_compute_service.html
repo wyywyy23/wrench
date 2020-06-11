@@ -600,10 +600,11 @@ static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <li>If a hostname and a number of cores is provided (e.g., {"task1", "host1:12"}, the service will run the task on that host with the specified number of cores</li>
 </ul>
 </li>
-<li>to a <a class="el" href="classwrench_1_1_batch_compute_service.html" title="A batch-scheduled compute service that manages a set of compute hosts and controls access to their re...">BatchComputeService</a>: {"-t":"&lt;int&gt;","-N":"&lt;int&gt;","-c":"&lt;int&gt;"} (SLURM-like)<ul>
+<li>to a <a class="el" href="classwrench_1_1_batch_compute_service.html" title="A batch-scheduled compute service that manages a set of compute hosts and controls access to their re...">BatchComputeService</a>: {"-t":"&lt;int&gt;","-N":"&lt;int&gt;","-c":"&lt;int&gt;"[,{"-u":"&lt;string&gt;"}]} (SLURM-like)<ul>
 <li>"-t": number of requested job duration in minutes</li>
 <li>"-N": number of requested compute hosts</li>
 <li>"-c": number of requested cores per compute host</li>
+<li>"-u": username (optional)</li>
 </ul>
 </li>
 <li>to a <a class="el" href="classwrench_1_1_cloud_compute_service.html" title="A cloud-based compute service that manages a set of physical hosts and controls access to their resou...">CloudComputeService</a>: {}</li>

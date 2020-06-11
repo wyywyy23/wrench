@@ -111,15 +111,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a0c713c6192a563a881d91ed07d4582f9"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::tuple&lt; std::string, double, double, double, double, unsigned int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_trace_file_loader.html#a0c713c6192a563a881d91ed07d4582f9">loadFromTraceFile</a> (std::string filename, bool ignore_invalid_jobs, double desired_submit_time_of_first_job)</td></tr>
-<tr class="memdesc:a0c713c6192a563a881d91ed07d4582f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the workflow trace file.  <a href="classwrench_1_1_trace_file_loader.html#a0c713c6192a563a881d91ed07d4582f9">More...</a><br /></td></tr>
-<tr class="separator:a0c713c6192a563a881d91ed07d4582f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c15d4eb92506b69decbb2bb9b49d65a"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::tuple&lt; std::string, double, double, double, double, unsigned int, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_trace_file_loader.html#a1c15d4eb92506b69decbb2bb9b49d65a">loadFromTraceFile</a> (std::string filename, bool ignore_invalid_jobs, double desired_submit_time_of_first_job)</td></tr>
+<tr class="memdesc:a1c15d4eb92506b69decbb2bb9b49d65a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the workflow trace file.  <a href="classwrench_1_1_trace_file_loader.html#a1c15d4eb92506b69decbb2bb9b49d65a">More...</a><br /></td></tr>
+<tr class="separator:a1c15d4eb92506b69decbb2bb9b49d65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class that can load a job submission trace (a.k.a. supercomputer workload) in the SWF format (see <a href="http://www.cs.huji.ac.il/labs/parallel/workload/swf.html">http://www.cs.huji.ac.il/labs/parallel/workload/swf.html</a>) and store it as a vector of simulation-relevant fields. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0c713c6192a563a881d91ed07d4582f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c713c6192a563a881d91ed07d4582f9">&#9670;&nbsp;</a></span>loadFromTraceFile()</h2>
+<a id="a1c15d4eb92506b69decbb2bb9b49d65a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c15d4eb92506b69decbb2bb9b49d65a">&#9670;&nbsp;</a></span>loadFromTraceFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,7 +128,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::tuple&lt; std::string, double, double, double, double, unsigned int &gt; &gt; wrench::TraceFileLoader::loadFromTraceFile </td>
+          <td class="memname">std::vector&lt; std::tuple&lt; std::string, double, double, double, double, unsigned int, std::string &gt; &gt; wrench::TraceFileLoader::loadFromTraceFile </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>filename</em>, </td>
@@ -174,6 +174,7 @@ Static Public Member Functions</h2></td></tr>
 <li>requested time,</li>
 <li>requested ram</li>
 <li>requested number of nodes</li>
+<li>username</li>
 </ul>
 </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
