@@ -214,6 +214,15 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6f0f556690d10d683a61acc3f10f5521"><td class="memItemLeft" align="right" valign="top">static unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a6f0f556690d10d683a61acc3f10f5521">getHostNumCores</a> (std::string hostname)</td></tr>
 <tr class="memdesc:a6f0f556690d10d683a61acc3f10f5521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of cores of a host given a hostname.  <a href="classwrench_1_1_simulation.html#a6f0f556690d10d683a61acc3f10f5521">More...</a><br /></td></tr>
 <tr class="separator:a6f0f556690d10d683a61acc3f10f5521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1b497f044c31edc5b38750f25d9337"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a1f1b497f044c31edc5b38750f25d9337">getLinkBandwidth</a> (std::string linkname)</td></tr>
+<tr class="memdesc:a1f1b497f044c31edc5b38750f25d9337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the max bandwidth of a particular link.  <a href="classwrench_1_1_simulation.html#a1f1b497f044c31edc5b38750f25d9337">More...</a><br /></td></tr>
+<tr class="separator:a1f1b497f044c31edc5b38750f25d9337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850c80a1ece94db6f15ae3a2ea5e97c4"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a850c80a1ece94db6f15ae3a2ea5e97c4">getLinknameList</a> ()</td></tr>
+<tr class="memdesc:a850c80a1ece94db6f15ae3a2ea5e97c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of names of all the links in the platform.  <a href="classwrench_1_1_simulation.html#a850c80a1ece94db6f15ae3a2ea5e97c4">More...</a><br /></td></tr>
+<tr class="separator:a850c80a1ece94db6f15ae3a2ea5e97c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae04c1917069fa83fc824a75c72ea90"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a1ae04c1917069fa83fc824a75c72ea90">getLinkUsage</a> (std::string linkname)</td></tr>
+<tr class="memdesc:a1ae04c1917069fa83fc824a75c72ea90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current usage of a particular link.  <a href="classwrench_1_1_simulation.html#a1ae04c1917069fa83fc824a75c72ea90">More...</a><br /></td></tr>
+<tr class="separator:a1ae04c1917069fa83fc824a75c72ea90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb75fd040236995186d9ad45434fe069"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#abb75fd040236995186d9ad45434fe069">getListOfPstates</a> (const std::string &amp;hostname)</td></tr>
 <tr class="memdesc:abb75fd040236995186d9ad45434fe069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of power states available for a host.  <a href="classwrench_1_1_simulation.html#abb75fd040236995186d9ad45434fe069">More...</a><br /></td></tr>
 <tr class="separator:abb75fd040236995186d9ad45434fe069"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -800,6 +809,104 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a number of cores </dd></dl>
+
+</div>
+</div>
+<a id="a1f1b497f044c31edc5b38750f25d9337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f1b497f044c31edc5b38750f25d9337">&#9670;&nbsp;</a></span>getLinkBandwidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double wrench::Simulation::getLinkBandwidth </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>link_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the max bandwidth of a particular link. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">link_name</td><td>the link's name</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a bandwidth in Bps </dd></dl>
+
+</div>
+</div>
+<a id="a850c80a1ece94db6f15ae3a2ea5e97c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850c80a1ece94db6f15ae3a2ea5e97c4">&#9670;&nbsp;</a></span>getLinknameList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; wrench::Simulation::getLinknameList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the list of names of all the links in the platform. </p>
+<dl class="section return"><dt>Returns</dt><dd>a vector of link names </dd></dl>
+
+</div>
+</div>
+<a id="a1ae04c1917069fa83fc824a75c72ea90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ae04c1917069fa83fc824a75c72ea90">&#9670;&nbsp;</a></span>getLinkUsage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double wrench::Simulation::getLinkUsage </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>link_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current usage of a particular link. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">link_name</td><td>the link's name</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a bandwidth usage </dd></dl>
 
 </div>
 </div>
