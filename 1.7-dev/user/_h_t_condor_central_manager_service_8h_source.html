@@ -139,9 +139,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">        /***********************/</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> submitStandardJob(StandardJob *job,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                               std::map&lt;std::string, std::string&gt; &amp;service_specific_arguments) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                               <span class="keyword">const</span> std::map&lt;std::string, std::string&gt; &amp;service_specific_arguments) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> submitPilotJob(PilotJob *job, std::map&lt;std::string, std::string&gt; &amp;service_specific_arguments) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> submitPilotJob(PilotJob *job, <span class="keyword">const</span> std::map&lt;std::string, std::string&gt; &amp;service_specific_arguments) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">        /***********************/</span></div>

@@ -148,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> stop() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> submitJob(WorkflowJob *job, std::map&lt;std::string, std::string&gt; = {});</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> submitJob(WorkflowJob *job, <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;&amp; = {});</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> terminateJob(WorkflowJob *job);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
@@ -188,9 +188,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">        /***********************/</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        submitStandardJob(StandardJob *job, std::map&lt;std::string, std::string&gt; &amp;service_specific_arguments) = 0;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        submitStandardJob(StandardJob *job, <span class="keyword">const</span> std::map&lt;std::string, std::string&gt; &amp;service_specific_arguments) = 0;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> submitPilotJob(PilotJob *job, std::map&lt;std::string, std::string&gt; &amp;service_specific_arguments) = 0;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> submitPilotJob(PilotJob *job, <span class="keyword">const</span> std::map&lt;std::string, std::string&gt; &amp;service_specific_arguments) = 0;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> terminateStandardJob(StandardJob *job) = 0;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
