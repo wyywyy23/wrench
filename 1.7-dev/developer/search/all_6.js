@@ -147,7 +147,8 @@ var searchData=
   ['getttl_264',['getTTL',['../classwrench_1_1_compute_service.html#a244e08a35ea94061acc1396f9447bb0c',1,'wrench::ComputeService']]],
   ['gettype_265',['getType',['../classwrench_1_1_workflow_job.html#a1883671a4e72877bb7fcb0ce771fdc7e',1,'wrench::WorkflowJob']]],
   ['gettypeasstring_266',['getTypeAsString',['../classwrench_1_1_workflow_job.html#a8162ab7d79c56373d610f8cb7b3f1f07',1,'wrench::WorkflowJob']]],
-  ['getworkflow_267',['getWorkflow',['../classwrench_1_1_w_m_s.html#a44b586fe5f584755375691a12d815aa3',1,'wrench::WMS::getWorkflow()'],['../classwrench_1_1_workflow_file.html#ac8c018abfade90cb0594c812ec5e5eaf',1,'wrench::WorkflowFile::getWorkflow()'],['../classwrench_1_1_workflow_task.html#aea29ebd47e1e3a1b955fafc0e72dff50',1,'wrench::WorkflowTask::getWorkflow()']]],
-  ['getwriteoutputenddate_268',['getWriteOutputEndDate',['../classwrench_1_1_workflow_task.html#aa9a538645c4946f7a257d66a80d45401',1,'wrench::WorkflowTask']]],
-  ['getwriteoutputstartdate_269',['getWriteOutputStartDate',['../classwrench_1_1_workflow_task.html#a2905c939f467778439fea8a956b0381b',1,'wrench::WorkflowTask']]]
+  ['getvmcomputeservice_267',['getVMComputeService',['../classwrench_1_1_cloud_compute_service.html#ad3f1a159adfc39649ca699265ad184df',1,'wrench::CloudComputeService']]],
+  ['getworkflow_268',['getWorkflow',['../classwrench_1_1_w_m_s.html#a44b586fe5f584755375691a12d815aa3',1,'wrench::WMS::getWorkflow()'],['../classwrench_1_1_workflow_file.html#ac8c018abfade90cb0594c812ec5e5eaf',1,'wrench::WorkflowFile::getWorkflow()'],['../classwrench_1_1_workflow_task.html#aea29ebd47e1e3a1b955fafc0e72dff50',1,'wrench::WorkflowTask::getWorkflow()']]],
+  ['getwriteoutputenddate_269',['getWriteOutputEndDate',['../classwrench_1_1_workflow_task.html#aa9a538645c4946f7a257d66a80d45401',1,'wrench::WorkflowTask']]],
+  ['getwriteoutputstartdate_270',['getWriteOutputStartDate',['../classwrench_1_1_workflow_task.html#a2905c939f467778439fea8a956b0381b',1,'wrench::WorkflowTask']]]
 ];

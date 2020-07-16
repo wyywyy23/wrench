@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['datamovementmanager_558',['DataMovementManager',['../classwrench_1_1_data_movement_manager.html',1,'wrench']]],
-  ['dynamicoptimization_559',['DynamicOptimization',['../classwrench_1_1_dynamic_optimization.html',1,'wrench']]]
+  ['datamovementmanager_559',['DataMovementManager',['../classwrench_1_1_data_movement_manager.html',1,'wrench']]],
+  ['dynamicoptimization_560',['DynamicOptimization',['../classwrench_1_1_dynamic_optimization.html',1,'wrench']]]
 ];

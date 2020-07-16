@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operationtype_1095',['OperationType',['../classwrench_1_1_network_error.html#a18331f823c565c53be139bdac90437d8',1,'wrench::NetworkError']]]
+  ['operationtype_1097',['OperationType',['../classwrench_1_1_network_error.html#a18331f823c565c53be139bdac90437d8',1,'wrench::NetworkError']]]
 ];
