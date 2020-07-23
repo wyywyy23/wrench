@@ -176,12 +176,15 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#a289d4a0c5254772575340095b73cf7d4">stop</a> () override</td></tr>
 <tr class="memdesc:a289d4a0c5254772575340095b73cf7d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the compute service - must be called by the <a class="el" href="classwrench_1_1_compute_service.html#a289d4a0c5254772575340095b73cf7d4" title="Stop the compute service - must be called by the stop() method of derived classes.">stop()</a> method of derived classes. <br /></td></tr>
 <tr class="separator:a289d4a0c5254772575340095b73cf7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae645109f59ff431a0bd4bc794a8997a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#ae645109f59ff431a0bd4bc794a8997a4">submitPilotJob</a> (<a class="el" href="classwrench_1_1_pilot_job.html">PilotJob</a> *job, const std::map&lt; std::string, std::string &gt; &amp;service_specific_arguments)=0</td></tr>
-<tr class="memdesc:ae645109f59ff431a0bd4bc794a8997a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to submit a pilot job to the service.  <a href="classwrench_1_1_compute_service.html#ae645109f59ff431a0bd4bc794a8997a4">More...</a><br /></td></tr>
-<tr class="separator:ae645109f59ff431a0bd4bc794a8997a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42506c5686e846193bc7dbd4bd804a8a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#a42506c5686e846193bc7dbd4bd804a8a">submitStandardJob</a> (<a class="el" href="classwrench_1_1_standard_job.html">StandardJob</a> *job, const std::map&lt; std::string, std::string &gt; &amp;service_specific_arguments)=0</td></tr>
-<tr class="memdesc:a42506c5686e846193bc7dbd4bd804a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to submit a standard job to the service.  <a href="classwrench_1_1_compute_service.html#a42506c5686e846193bc7dbd4bd804a8a">More...</a><br /></td></tr>
-<tr class="separator:a42506c5686e846193bc7dbd4bd804a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc9e51234c29965341727f07b446ff0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#abc9e51234c29965341727f07b446ff0c">submitJob</a> (<a class="el" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *job, std::map&lt; std::string, std::string &gt;={})</td></tr>
+<tr class="memdesc:abc9e51234c29965341727f07b446ff0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submit a job to the compute service.  <a href="classwrench_1_1_compute_service.html#abc9e51234c29965341727f07b446ff0c">More...</a><br /></td></tr>
+<tr class="separator:abc9e51234c29965341727f07b446ff0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96d4857d6e9ec654d8d48b046a87924d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#a96d4857d6e9ec654d8d48b046a87924d">submitPilotJob</a> (<a class="el" href="classwrench_1_1_pilot_job.html">PilotJob</a> *job, std::map&lt; std::string, std::string &gt; &amp;service_specific_arguments)=0</td></tr>
+<tr class="memdesc:a96d4857d6e9ec654d8d48b046a87924d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to submit a pilot job to the service.  <a href="classwrench_1_1_compute_service.html#a96d4857d6e9ec654d8d48b046a87924d">More...</a><br /></td></tr>
+<tr class="separator:a96d4857d6e9ec654d8d48b046a87924d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6015d44a0410b957346ccbc29f715d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#a3b6015d44a0410b957346ccbc29f715d">submitStandardJob</a> (<a class="el" href="classwrench_1_1_standard_job.html">StandardJob</a> *job, std::map&lt; std::string, std::string &gt; &amp;service_specific_arguments)=0</td></tr>
+<tr class="memdesc:a3b6015d44a0410b957346ccbc29f715d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to submit a standard job to the service.  <a href="classwrench_1_1_compute_service.html#a3b6015d44a0410b957346ccbc29f715d">More...</a><br /></td></tr>
+<tr class="separator:a3b6015d44a0410b957346ccbc29f715d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd8cd30b0c6a7f23be2a16e9c8910822"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#acd8cd30b0c6a7f23be2a16e9c8910822">supportsPilotJobs</a> ()</td></tr>
 <tr class="memdesc:acd8cd30b0c6a7f23be2a16e9c8910822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether the compute service supports pilot jobs or not.  <a href="classwrench_1_1_compute_service.html#acd8cd30b0c6a7f23be2a16e9c8910822">More...</a><br /></td></tr>
 <tr class="separator:acd8cd30b0c6a7f23be2a16e9c8910822"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -313,9 +316,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6532846cd02094b6095341d37d5b2bf7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_storage_service.html">StorageService</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#a6532846cd02094b6095341d37d5b2bf7">getScratchSharedPtr</a> ()</td></tr>
 <tr class="memdesc:a6532846cd02094b6095341d37d5b2bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a shared pointer to the compute service's scratch storage space.  <a href="classwrench_1_1_compute_service.html#a6532846cd02094b6095341d37d5b2bf7">More...</a><br /></td></tr>
 <tr class="separator:a6532846cd02094b6095341d37d5b2bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96d355cb96a3a17acd3ffede3ef85ecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#a96d355cb96a3a17acd3ffede3ef85ecc">submitJob</a> (<a class="el" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *job, const std::map&lt; std::string, std::string &gt; &amp;={})</td></tr>
-<tr class="memdesc:a96d355cb96a3a17acd3ffede3ef85ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submit a job to the compute service.  <a href="classwrench_1_1_compute_service.html#a96d355cb96a3a17acd3ffede3ef85ecc">More...</a><br /></td></tr>
-<tr class="separator:a96d355cb96a3a17acd3ffede3ef85ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classwrench_1_1_service"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classwrench_1_1_service')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classwrench_1_1_service.html">wrench::Service</a></td></tr>
 <tr class="memitem:a405ee888a74f503d9d99ef87964dc814 inherit pro_methods_classwrench_1_1_service"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_service.html#a405ee888a74f503d9d99ef87964dc814">Service</a> (std::string <a class="el" href="classwrench_1_1_s4_u___daemon.html#a52bc0b9a6cd248310749dac086819f00">hostname</a>, std::string process_name_prefix, std::string mailbox_name_prefix)</td></tr>
 <tr class="memdesc:a405ee888a74f503d9d99ef87964dc814 inherit pro_methods_classwrench_1_1_service"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classwrench_1_1_service.html#a405ee888a74f503d9d99ef87964dc814">More...</a><br /></td></tr>
@@ -922,14 +922,11 @@ a pointer to the shared scratch space </dd></dl>
 
 </div>
 </div>
-<a id="a96d355cb96a3a17acd3ffede3ef85ecc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96d355cb96a3a17acd3ffede3ef85ecc">&#9670;&nbsp;</a></span>submitJob()</h2>
+<a id="abc9e51234c29965341727f07b446ff0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9e51234c29965341727f07b446ff0c">&#9670;&nbsp;</a></span>submitJob()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void wrench::ComputeService::submitJob </td>
@@ -940,7 +937,7 @@ a pointer to the shared scratch space </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramtype">std::map&lt; std::string, std::string &gt;&#160;</td>
           <td class="paramname"><em>service_specific_args</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
@@ -949,11 +946,6 @@ a pointer to the shared scratch space </dd></dl>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Submit a job to the compute service. </p>
@@ -991,8 +983,8 @@ a pointer to the shared scratch space </dd></dl>
 
 </div>
 </div>
-<a id="ae645109f59ff431a0bd4bc794a8997a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae645109f59ff431a0bd4bc794a8997a4">&#9670;&nbsp;</a></span>submitPilotJob()</h2>
+<a id="a96d4857d6e9ec654d8d48b046a87924d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96d4857d6e9ec654d8d48b046a87924d">&#9670;&nbsp;</a></span>submitPilotJob()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1009,7 +1001,7 @@ a pointer to the shared scratch space </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramtype">std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
           <td class="paramname"><em>service_specific_arguments</em>&#160;</td>
         </tr>
         <tr>
@@ -1034,12 +1026,12 @@ a pointer to the shared scratch space </dd></dl>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classwrench_1_1_h_t_condor_compute_service.html#a080a6fa5c7ee357544dfa8bde6bb47ec">wrench::HTCondorComputeService</a>, <a class="el" href="classwrench_1_1_h_t_condor_central_manager_service.html#a86b8b01913f6e76dadbd87d23ac9c0fa">wrench::HTCondorCentralManagerService</a>, <a class="el" href="classwrench_1_1_cloud_compute_service.html#a4ef777696f8a7af6825b035ef70d132c">wrench::CloudComputeService</a>, and <a class="el" href="classwrench_1_1_bare_metal_compute_service.html#adfd70ceaf7903fbd3c2b5d8328e7c734">wrench::BareMetalComputeService</a>.</p>
+<p>Implemented in <a class="el" href="classwrench_1_1_h_t_condor_compute_service.html#a7b998d7dd092ffb046152fcb3142e83d">wrench::HTCondorComputeService</a>, <a class="el" href="classwrench_1_1_h_t_condor_central_manager_service.html#aa2fb9163f33416d64fe3ab16ac83361e">wrench::HTCondorCentralManagerService</a>, <a class="el" href="classwrench_1_1_cloud_compute_service.html#a27b75d92cb6065262fa69755d7ecef5e">wrench::CloudComputeService</a>, and <a class="el" href="classwrench_1_1_bare_metal_compute_service.html#a4cb81396122a15f7e4ac9005bd1729eb">wrench::BareMetalComputeService</a>.</p>
 
 </div>
 </div>
-<a id="a42506c5686e846193bc7dbd4bd804a8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42506c5686e846193bc7dbd4bd804a8a">&#9670;&nbsp;</a></span>submitStandardJob()</h2>
+<a id="a3b6015d44a0410b957346ccbc29f715d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6015d44a0410b957346ccbc29f715d">&#9670;&nbsp;</a></span>submitStandardJob()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1056,7 +1048,7 @@ a pointer to the shared scratch space </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramtype">std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
           <td class="paramname"><em>service_specific_arguments</em>&#160;</td>
         </tr>
         <tr>
@@ -1081,7 +1073,7 @@ a pointer to the shared scratch space </dd></dl>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classwrench_1_1_h_t_condor_compute_service.html#aa162f484094044a041c0a5ad5f280436">wrench::HTCondorComputeService</a>, <a class="el" href="classwrench_1_1_h_t_condor_central_manager_service.html#ae58b1582c4ea36796407e614e6cf9872">wrench::HTCondorCentralManagerService</a>, <a class="el" href="classwrench_1_1_cloud_compute_service.html#a5711e42d5bd8316ea027d2a60b3985ec">wrench::CloudComputeService</a>, and <a class="el" href="classwrench_1_1_bare_metal_compute_service.html#ad2a071c08eb32b15f81caa757913175d">wrench::BareMetalComputeService</a>.</p>
+<p>Implemented in <a class="el" href="classwrench_1_1_h_t_condor_compute_service.html#a93146ddd6bcc2357b695de0d5d9b6372">wrench::HTCondorComputeService</a>, <a class="el" href="classwrench_1_1_h_t_condor_central_manager_service.html#a13c687548742cb39b6529e63a9b7e6a4">wrench::HTCondorCentralManagerService</a>, <a class="el" href="classwrench_1_1_cloud_compute_service.html#a24d9caaf0c1e155a9dc94423a538fe2c">wrench::CloudComputeService</a>, and <a class="el" href="classwrench_1_1_bare_metal_compute_service.html#a7d2c3ad71439be57b66adbbe7861627f">wrench::BareMetalComputeService</a>.</p>
 
 </div>
 </div>

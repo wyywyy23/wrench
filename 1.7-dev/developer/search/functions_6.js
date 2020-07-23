@@ -145,9 +145,7 @@ var searchData=
   ['getttl_843',['getTTL',['../classwrench_1_1_compute_service.html#a244e08a35ea94061acc1396f9447bb0c',1,'wrench::ComputeService']]],
   ['gettype_844',['getType',['../classwrench_1_1_workflow_job.html#a1883671a4e72877bb7fcb0ce771fdc7e',1,'wrench::WorkflowJob']]],
   ['gettypeasstring_845',['getTypeAsString',['../classwrench_1_1_workflow_job.html#a8162ab7d79c56373d610f8cb7b3f1f07',1,'wrench::WorkflowJob']]],
-  ['getvmcomputeservice_846',['getVMComputeService',['../classwrench_1_1_cloud_compute_service.html#ad3f1a159adfc39649ca699265ad184df',1,'wrench::CloudComputeService']]],
-  ['getvmphysicalhostname_847',['getVMPhysicalHostname',['../classwrench_1_1_virtualized_cluster_compute_service.html#a9e48b3245250f3cdb338e69757dff94f',1,'wrench::VirtualizedClusterComputeService']]],
-  ['getworkflow_848',['getWorkflow',['../classwrench_1_1_w_m_s.html#a44b586fe5f584755375691a12d815aa3',1,'wrench::WMS::getWorkflow()'],['../classwrench_1_1_workflow_file.html#ac8c018abfade90cb0594c812ec5e5eaf',1,'wrench::WorkflowFile::getWorkflow()'],['../classwrench_1_1_workflow_task.html#aea29ebd47e1e3a1b955fafc0e72dff50',1,'wrench::WorkflowTask::getWorkflow()']]],
-  ['getwriteoutputenddate_849',['getWriteOutputEndDate',['../classwrench_1_1_workflow_task.html#aa9a538645c4946f7a257d66a80d45401',1,'wrench::WorkflowTask']]],
-  ['getwriteoutputstartdate_850',['getWriteOutputStartDate',['../classwrench_1_1_workflow_task.html#a2905c939f467778439fea8a956b0381b',1,'wrench::WorkflowTask']]]
+  ['getworkflow_846',['getWorkflow',['../classwrench_1_1_w_m_s.html#a44b586fe5f584755375691a12d815aa3',1,'wrench::WMS::getWorkflow()'],['../classwrench_1_1_workflow_file.html#ac8c018abfade90cb0594c812ec5e5eaf',1,'wrench::WorkflowFile::getWorkflow()'],['../classwrench_1_1_workflow_task.html#aea29ebd47e1e3a1b955fafc0e72dff50',1,'wrench::WorkflowTask::getWorkflow()']]],
+  ['getwriteoutputenddate_847',['getWriteOutputEndDate',['../classwrench_1_1_workflow_task.html#aa9a538645c4946f7a257d66a80d45401',1,'wrench::WorkflowTask']]],
+  ['getwriteoutputstartdate_848',['getWriteOutputStartDate',['../classwrench_1_1_workflow_task.html#a2905c939f467778439fea8a956b0381b',1,'wrench::WorkflowTask']]]
 ];
