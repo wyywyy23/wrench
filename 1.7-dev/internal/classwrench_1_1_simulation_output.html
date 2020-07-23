@@ -163,6 +163,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a80e18420524740402ea43ed2cf308bd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a80e18420524740402ea43ed2cf308bd6">addTimestampFileWriteStart</a> (<a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *file, <a class="el" href="classwrench_1_1_file_location.html">FileLocation</a> *src, <a class="el" href="classwrench_1_1_storage_service.html">StorageService</a> *service, <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *task=nullptr)</td></tr>
 <tr class="memdesc:a80e18420524740402ea43ed2cf308bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a file write start timestamp.  <a href="classwrench_1_1_simulation_output.html#a80e18420524740402ea43ed2cf308bd6">More...</a><br /></td></tr>
 <tr class="separator:a80e18420524740402ea43ed2cf308bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c6c676af7466b6968d01e2e862bc80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a63c6c676af7466b6968d01e2e862bc80">addTimestampLinkUsage</a> (std::string linkname, double bytes_per_second)</td></tr>
+<tr class="memdesc:a63c6c676af7466b6968d01e2e862bc80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a link usage timestamp.  <a href="classwrench_1_1_simulation_output.html#a63c6c676af7466b6968d01e2e862bc80">More...</a><br /></td></tr>
+<tr class="separator:a63c6c676af7466b6968d01e2e862bc80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1ac1badf74b5f130c312fd82de5a87e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#ae1ac1badf74b5f130c312fd82de5a87e">addTimestampPstateSet</a> (std::string hostname, int pstate)</td></tr>
 <tr class="memdesc:ae1ac1badf74b5f130c312fd82de5a87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a pstate change/set timestamp.  <a href="classwrench_1_1_simulation_output.html#ae1ac1badf74b5f130c312fd82de5a87e">More...</a><br /></td></tr>
 <tr class="separator:ae1ac1badf74b5f130c312fd82de5a87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,6 +208,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16a904d875134201a2fbfd6eb4d0ea37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a16a904d875134201a2fbfd6eb4d0ea37">enableFileReadWriteCopyTimestamps</a> (bool enabled)</td></tr>
 <tr class="memdesc:a16a904d875134201a2fbfd6eb4d0ea37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or Disable the insertion of file-related timestamps in the simulation output (enabled by default)  <a href="classwrench_1_1_simulation_output.html#a16a904d875134201a2fbfd6eb4d0ea37">More...</a><br /></td></tr>
 <tr class="separator:a16a904d875134201a2fbfd6eb4d0ea37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd16fdb95c0216bf7b66e872f482406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a8dd16fdb95c0216bf7b66e872f482406">enableLinkTimestamps</a> (bool enabled)</td></tr>
+<tr class="memdesc:a8dd16fdb95c0216bf7b66e872f482406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or Disable the insertion of link-usage-related timestamps in the simulation output (enabled by default)  <a href="classwrench_1_1_simulation_output.html#a8dd16fdb95c0216bf7b66e872f482406">More...</a><br /></td></tr>
+<tr class="separator:a8dd16fdb95c0216bf7b66e872f482406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53017a8582b00f0488dabb8d2a37410d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation_output.html#a53017a8582b00f0488dabb8d2a37410d">enableWorkflowTaskTimestamps</a> (bool enabled)</td></tr>
 <tr class="memdesc:a53017a8582b00f0488dabb8d2a37410d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or Disable the insertion of task-related timestamps in the simulation output (enabled by default)  <a href="classwrench_1_1_simulation_output.html#a53017a8582b00f0488dabb8d2a37410d">More...</a><br /></td></tr>
 <tr class="separator:a53017a8582b00f0488dabb8d2a37410d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1039,6 +1045,43 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a63c6c676af7466b6968d01e2e862bc80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c6c676af7466b6968d01e2e862bc80">&#9670;&nbsp;</a></span>addTimestampLinkUsage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrench::SimulationOutput::addTimestampLinkUsage </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>linkname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>bytes_per_second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a link usage timestamp. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">linkname</td><td>a linkname </td></tr>
+    <tr><td class="paramname">bytes_per_second</td><td>link usage in bytes_per_second </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae1ac1badf74b5f130c312fd82de5a87e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1ac1badf74b5f130c312fd82de5a87e">&#9670;&nbsp;</a></span>addTimestampPstateSet()</h2>
 
@@ -1775,6 +1818,32 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Enable or Disable the insertion of file-related timestamps in the simulation output (enabled by default) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>true to enable, false to disable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8dd16fdb95c0216bf7b66e872f482406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd16fdb95c0216bf7b66e872f482406">&#9670;&nbsp;</a></span>enableLinkTimestamps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrench::SimulationOutput::enableLinkTimestamps </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable or Disable the insertion of link-usage-related timestamps in the simulation output (enabled by default) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">enabled</td><td>true to enable, false to disable </td></tr>
