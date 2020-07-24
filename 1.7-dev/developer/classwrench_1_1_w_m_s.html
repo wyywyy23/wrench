@@ -189,12 +189,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac264b461c6f5900b96a1c9e33f7f4d58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_w_m_s.html#ac264b461c6f5900b96a1c9e33f7f4d58">checkDeferredStart</a> ()</td></tr>
 <tr class="memdesc:ac264b461c6f5900b96a1c9e33f7f4d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the <a class="el" href="classwrench_1_1_w_m_s.html" title="A workflow management system (WMS)">WMS</a> has a deferred start simulation time (likely the first call in the main() routine of any <a class="el" href="classwrench_1_1_w_m_s.html" title="A workflow management system (WMS)">WMS</a>.  <a href="classwrench_1_1_w_m_s.html#ac264b461c6f5900b96a1c9e33f7f4d58">More...</a><br /></td></tr>
 <tr class="separator:ac264b461c6f5900b96a1c9e33f7f4d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad0142b48d766f9f50b70ea2c1e1e157"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_bandwidth_meter_service.html">BandwidthMeterService</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_w_m_s.html#aad0142b48d766f9f50b70ea2c1e1e157">createBandwidthMeter</a> (const std::map&lt; std::string, double &gt; &amp;measurement_periods)</td></tr>
-<tr class="memdesc:aad0142b48d766f9f50b70ea2c1e1e157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate and start a bandwidth meter.  <a href="classwrench_1_1_w_m_s.html#aad0142b48d766f9f50b70ea2c1e1e157">More...</a><br /></td></tr>
-<tr class="separator:aad0142b48d766f9f50b70ea2c1e1e157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6169c4ef2b397fa479013f4ecae1e6a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_bandwidth_meter_service.html">BandwidthMeterService</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_w_m_s.html#ae6169c4ef2b397fa479013f4ecae1e6a">createBandwidthMeter</a> (const std::vector&lt; std::string &gt; &amp;linknames, double measurement_period)</td></tr>
-<tr class="memdesc:ae6169c4ef2b397fa479013f4ecae1e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate and start a bandwidth meter.  <a href="classwrench_1_1_w_m_s.html#ae6169c4ef2b397fa479013f4ecae1e6a">More...</a><br /></td></tr>
-<tr class="separator:ae6169c4ef2b397fa479013f4ecae1e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf8902aadfd0542509cd0cae5519bcf3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_data_movement_manager.html">DataMovementManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_w_m_s.html#aaf8902aadfd0542509cd0cae5519bcf3">createDataMovementManager</a> ()</td></tr>
 <tr class="memdesc:aaf8902aadfd0542509cd0cae5519bcf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate and start a data movement manager.  <a href="classwrench_1_1_w_m_s.html#aaf8902aadfd0542509cd0cae5519bcf3">More...</a><br /></td></tr>
 <tr class="separator:aaf8902aadfd0542509cd0cae5519bcf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -489,87 +483,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="aad0142b48d766f9f50b70ea2c1e1e157"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad0142b48d766f9f50b70ea2c1e1e157">&#9670;&nbsp;</a></span>createBandwidthMeter() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_bandwidth_meter_service.html">BandwidthMeterService</a> &gt; wrench::WMS::createBandwidthMeter </td>
-          <td>(</td>
-          <td class="paramtype">const std::map&lt; std::string, double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>measurement_periods</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Instantiate and start a bandwidth meter. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">measurement_periods</td><td>the measurement period for each metered link</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a link meter </dd></dl>
-
-</div>
-</div>
-<a id="ae6169c4ef2b397fa479013f4ecae1e6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6169c4ef2b397fa479013f4ecae1e6a">&#9670;&nbsp;</a></span>createBandwidthMeter() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_bandwidth_meter_service.html">BandwidthMeterService</a> &gt; wrench::WMS::createBandwidthMeter </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>linknames</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>measurement_period</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Instantiate and start a bandwidth meter. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">linknames</td><td>the list of metered links, as linknames </td></tr>
-    <tr><td class="paramname">measurement_period</td><td>the measurement period </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a link meter </dd></dl>
 
 </div>
 </div>

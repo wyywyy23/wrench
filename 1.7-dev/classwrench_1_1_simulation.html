@@ -136,9 +136,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab5793ec3ecd2975ddfa86ba29143d032"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#ab5793ec3ecd2975ddfa86ba29143d032">getEnergyConsumed</a> (const std::vector&lt; std::string &gt; &amp;hostnames, bool record_as_time_stamps)</td></tr>
 <tr class="memdesc:ab5793ec3ecd2975ddfa86ba29143d032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the current energy consumption of a host and will add <a class="el" href="classwrench_1_1_simulation_timestamp_energy_consumption.html" title="A simulation timestamp class for energy consumption.">SimulationTimestampEnergyConsumption</a> to simulation output if can_record is set to true.  <a href="classwrench_1_1_simulation.html#ab5793ec3ecd2975ddfa86ba29143d032">More...</a><br /></td></tr>
 <tr class="separator:ab5793ec3ecd2975ddfa86ba29143d032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8089146d03fa483914ff235f3706f73d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a8089146d03fa483914ff235f3706f73d">getLinkUsage</a> (const std::string &amp;linkname, bool record_as_time_stamp)</td></tr>
-<tr class="memdesc:a8089146d03fa483914ff235f3706f73d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the current link bandwidth usage on a link and will add <a class="el" href="classwrench_1_1_simulation_timestamp_link_usage.html" title="A simulation timestamp class for link usage.">SimulationTimestampLinkUsage</a> to simulation output if record_as_time_stamp is set to true.  <a href="classwrench_1_1_simulation.html#a8089146d03fa483914ff235f3706f73d">More...</a><br /></td></tr>
-<tr class="separator:a8089146d03fa483914ff235f3706f73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff0338aa6831c6ac252cf0673fe68f44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwrench_1_1_simulation_output.html">SimulationOutput</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#aff0338aa6831c6ac252cf0673fe68f44">getOutput</a> ()</td></tr>
 <tr class="memdesc:aff0338aa6831c6ac252cf0673fe68f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the simulation output object.  <a href="classwrench_1_1_simulation.html#aff0338aa6831c6ac252cf0673fe68f44">More...</a><br /></td></tr>
 <tr class="separator:aff0338aa6831c6ac252cf0673fe68f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,9 +187,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a90dd21c0628fb1c53a4c504068ce6f9f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a90dd21c0628fb1c53a4c504068ce6f9f">doesHostExist</a> (std::string hostname)</td></tr>
 <tr class="memdesc:a90dd21c0628fb1c53a4c504068ce6f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for <a class="el" href="classwrench_1_1_s4_u___simulation.html" title="Wrappers around S4U&#39;s basic simulation methods.">S4U_Simulation</a> hostExists()  <a href="classwrench_1_1_simulation.html#a90dd21c0628fb1c53a4c504068ce6f9f">More...</a><br /></td></tr>
 <tr class="separator:a90dd21c0628fb1c53a4c504068ce6f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58a1ce644e6200074cf2a55cc0c27011"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a58a1ce644e6200074cf2a55cc0c27011">doesLinkExist</a> (std::string linkname)</td></tr>
-<tr class="memdesc:a58a1ce644e6200074cf2a55cc0c27011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for <a class="el" href="classwrench_1_1_s4_u___simulation.html" title="Wrappers around S4U&#39;s basic simulation methods.">S4U_Simulation</a> linkExists()  <a href="classwrench_1_1_simulation.html#a58a1ce644e6200074cf2a55cc0c27011">More...</a><br /></td></tr>
-<tr class="separator:a58a1ce644e6200074cf2a55cc0c27011"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d204b229feec1eee4f1e82d92490d81"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a3d204b229feec1eee4f1e82d92490d81">getCurrentPstate</a> (const std::string &amp;hostname)</td></tr>
 <tr class="memdesc:a3d204b229feec1eee4f1e82d92490d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current power state of a host.  <a href="classwrench_1_1_simulation.html#a3d204b229feec1eee4f1e82d92490d81">More...</a><br /></td></tr>
 <tr class="separator:a3d204b229feec1eee4f1e82d92490d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -377,41 +371,6 @@ template&lt;class T &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hostname</td><td>- name of host being queried </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>boolean of existence </dd></dl>
-
-</div>
-</div>
-<a id="a58a1ce644e6200074cf2a55cc0c27011"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58a1ce644e6200074cf2a55cc0c27011">&#9670;&nbsp;</a></span>doesLinkExist()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool wrench::Simulation::doesLinkExist </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>linkname</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Wrapper for <a class="el" href="classwrench_1_1_s4_u___simulation.html" title="Wrappers around S4U&#39;s basic simulation methods.">S4U_Simulation</a> linkExists() </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">linkname</td><td>- name of link being queried </td></tr>
   </table>
   </dd>
 </dl>
@@ -916,52 +875,8 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="a8089146d03fa483914ff235f3706f73d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8089146d03fa483914ff235f3706f73d">&#9670;&nbsp;</a></span>getLinkUsage() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double wrench::Simulation::getLinkUsage </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>linkname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>record_as_time_stamp</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Obtains the current link bandwidth usage on a link and will add <a class="el" href="classwrench_1_1_simulation_timestamp_link_usage.html" title="A simulation timestamp class for link usage.">SimulationTimestampLinkUsage</a> to simulation output if record_as_time_stamp is set to true. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">linkname</td><td>the link name </td></tr>
-    <tr><td class="paramname">record_as_time_stamp</td><td>bool signaling whether or not to record a <a class="el" href="classwrench_1_1_simulation_timestamp_link_usage.html" title="A simulation timestamp class for link usage.">SimulationTimestampLinkUsage</a> object </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>current bandwidth usage in Bps </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a1ae04c1917069fa83fc824a75c72ea90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ae04c1917069fa83fc824a75c72ea90">&#9670;&nbsp;</a></span>getLinkUsage() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ae04c1917069fa83fc824a75c72ea90">&#9670;&nbsp;</a></span>getLinkUsage()</h2>
 
 <div class="memitem">
 <div class="memproto">
