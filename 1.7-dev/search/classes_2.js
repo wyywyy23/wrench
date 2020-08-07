@@ -41,6 +41,8 @@ var searchData=
   ['computethreaddonemessage_1081',['ComputeThreadDoneMessage',['../classwrench_1_1_compute_thread_done_message.html',1,'wrench']]],
   ['computethreadhasdied_1082',['ComputeThreadHasDied',['../classwrench_1_1_compute_thread_has_died.html',1,'wrench']]],
   ['conservativebfbatchscheduler_1083',['CONSERVATIVEBFBatchScheduler',['../classwrench_1_1_c_o_n_s_e_r_v_a_t_i_v_e_b_f_batch_scheduler.html',1,'wrench']]],
-  ['coordinatelookupanswermessage_1084',['CoordinateLookupAnswerMessage',['../classwrench_1_1_coordinate_lookup_answer_message.html',1,'wrench']]],
-  ['coordinatelookuprequestmessage_1085',['CoordinateLookupRequestMessage',['../classwrench_1_1_coordinate_lookup_request_message.html',1,'wrench']]]
+  ['constantefficiencyparallelmodel_1084',['ConstantEfficiencyParallelModel',['../classwrench_1_1_constant_efficiency_parallel_model.html',1,'wrench']]],
+  ['coordinatelookupanswermessage_1085',['CoordinateLookupAnswerMessage',['../classwrench_1_1_coordinate_lookup_answer_message.html',1,'wrench']]],
+  ['coordinatelookuprequestmessage_1086',['CoordinateLookupRequestMessage',['../classwrench_1_1_coordinate_lookup_request_message.html',1,'wrench']]],
+  ['customparallelmodel_1087',['CustomParallelModel',['../classwrench_1_1_custom_parallel_model.html',1,'wrench']]]
 ];

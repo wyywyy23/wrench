@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['parallelmodel_353',['ParallelModel',['../classwrench_1_1_parallel_model.html',1,'wrench']]],
   ['parseresourcespec_354',['parseResourceSpec',['../namespacewrench.html#a3fc54549aba2210e001bd1ec6206f048',1,'wrench']]],
   ['pathexists_355',['pathExists',['../classwrench_1_1_workflow.html#af96abc2152c2b4defe6c664834567169',1,'wrench::Workflow']]],
   ['pegasusworkflowparser_356',['PegasusWorkflowParser',['../classwrench_1_1_pegasus_workflow_parser.html',1,'wrench']]],

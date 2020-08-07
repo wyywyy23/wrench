@@ -11,9 +11,11 @@ var searchData=
   ['addinputfile_8',['addInputFile',['../classwrench_1_1_workflow_task.html#a3498047afb74ea6ce2132d44f8c678e8',1,'wrench::WorkflowTask']]],
   ['addoutputfile_9',['addOutputFile',['../classwrench_1_1_workflow_task.html#ac774b4fddc07753f5fc7daa31ae28fd3',1,'wrench::WorkflowTask']]],
   ['addstaticoptimization_10',['addStaticOptimization',['../classwrench_1_1_w_m_s.html#a21b9ae8ef40ba22e5ef0052fb70f7731',1,'wrench::WMS']]],
-  ['addtask_11',['addTask',['../classwrench_1_1_workflow.html#a1c55d600aa8cc00d245d2ca6f01cd799',1,'wrench::Workflow']]],
+  ['addtask_11',['addTask',['../classwrench_1_1_workflow.html#ae1a163d52de55fa70695447a40bd9dfe',1,'wrench::Workflow']]],
   ['addworkflow_12',['addWorkflow',['../classwrench_1_1_w_m_s.html#afd2a6ae2f4d792046a6a17d5c0dc313f',1,'wrench::WMS']]],
   ['all_5fcores_13',['ALL_CORES',['../classwrench_1_1_compute_service.html#a1160f521623440ad4e0e0823e08a7d22',1,'wrench::ComputeService']]],
   ['all_5fram_14',['ALL_RAM',['../classwrench_1_1_compute_service.html#abc4fe0bad59f544b4b34d0e7d4012d44',1,'wrench::ComputeService']]],
-  ['assertserviceisup_15',['assertServiceIsUp',['../classwrench_1_1_service.html#a7d7280ca209668863c3f82bd40a94439',1,'wrench::Service']]]
+  ['amdahl_15',['AMDAHL',['../classwrench_1_1_parallel_model.html#ac4be2af98e027f7f7363110deddada0a',1,'wrench::ParallelModel']]],
+  ['amdahlparallelmodel_16',['AmdahlParallelModel',['../classwrench_1_1_amdahl_parallel_model.html',1,'wrench']]],
+  ['assertserviceisup_17',['assertServiceIsUp',['../classwrench_1_1_service.html#a7d7280ca209668863c3f82bd40a94439',1,'wrench::Service']]]
 ];

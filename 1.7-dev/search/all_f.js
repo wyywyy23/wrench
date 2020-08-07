@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['parallelmodel_631',['ParallelModel',['../classwrench_1_1_parallel_model.html',1,'wrench']]],
   ['parent_5fcompute_5fservice_632',['parent_compute_service',['../classwrench_1_1_workflow_job.html#a185058028c02ea4b6886bd79808d8424',1,'wrench::WorkflowJob']]],
   ['parse_5fcompute_5fspeed_633',['parse_compute_speed',['../classwrench_1_1_unit_parser.html#acecafdaf98911db93c720caf954207d1',1,'wrench::UnitParser']]],
   ['parse_5fsize_634',['parse_size',['../classwrench_1_1_unit_parser.html#ad57b7f7b520c57fa1faf6c97cf66973b',1,'wrench::UnitParser']]],

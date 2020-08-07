@@ -113,6 +113,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getAllLinknames()
 : <a class="el" href="classwrench_1_1_s4_u___simulation.html#a3cb2a0e327c4da9cd6f0109df4e9724e">wrench::S4U_Simulation</a>
 </li>
+<li>getAlpha()
+: <a class="el" href="classwrench_1_1_amdahl_parallel_model.html#abc6bb7766de12dd05f212c056ea44f0a">wrench::AmdahlParallelModel</a>
+</li>
 <li>getArrivalTimestamp()
 : <a class="el" href="classwrench_1_1_batch_job.html#a2c826d8904363f2f72eb3007012c974d">wrench::BatchJob</a>
 </li>
@@ -223,6 +226,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getDisks()
 : <a class="el" href="classwrench_1_1_s4_u___simulation.html#a95880f199776397f7c74a1b215a80fc0">wrench::S4U_Simulation</a>
 </li>
+<li>getEfficiency()
+: <a class="el" href="classwrench_1_1_constant_efficiency_parallel_model.html#af46c459ffb034eb319f5ecc25854e869">wrench::ConstantEfficiencyParallelModel</a>
+</li>
 <li>getEndDate()
 : <a class="el" href="classwrench_1_1_workflow_task.html#a2c413ff97c665416c2c68898ef986df0">wrench::WorkflowTask</a>
 </li>
@@ -239,7 +245,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classwrench_1_1_simulation_timestamp_task.html#af8e8da0d1710e20f4e517852c53cb1f2">wrench::SimulationTimestampTask</a>
 </li>
 <li>getEnergyConsumed()
-: <a class="el" href="classwrench_1_1_simulation.html#a3cdd71513430193f62d51f16b0b024db">wrench::Simulation</a>
+: <a class="el" href="classwrench_1_1_simulation.html#aef34fe26bb64518e95536bed8b7a36fc">wrench::Simulation</a>
 </li>
 <li>getEnergyConsumedByHost()
 : <a class="el" href="classwrench_1_1_s4_u___simulation.html#a88c0d6933d98a0c3330f62139ac9f6d5">wrench::S4U_Simulation</a>
@@ -401,15 +407,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classwrench_1_1_s4_u___simulation.html#a6947e71502ef447928ea05d1a9ad915b">wrench::S4U_Simulation</a>
 , <a class="el" href="classwrench_1_1_simulation.html#a1f1b497f044c31edc5b38750f25d9337">wrench::Simulation</a>
 </li>
-<li>getLinkname()
-: <a class="el" href="classwrench_1_1_simulation_timestamp_link_usage.html#a2716151690b9d54fb73a49513e92e1dd">wrench::SimulationTimestampLinkUsage</a>
-</li>
 <li>getLinknameList()
 : <a class="el" href="classwrench_1_1_simulation.html#a850c80a1ece94db6f15ae3a2ea5e97c4">wrench::Simulation</a>
 </li>
 <li>getLinkUsage()
 : <a class="el" href="classwrench_1_1_s4_u___simulation.html#a513dfde6bd06a18bc3c26bffe97646fe">wrench::S4U_Simulation</a>
-, <a class="el" href="classwrench_1_1_simulation.html#a8089146d03fa483914ff235f3706f73d">wrench::Simulation</a>
+, <a class="el" href="classwrench_1_1_simulation.html#a1ae04c1917069fa83fc824a75c72ea90">wrench::Simulation</a>
 </li>
 <li>getListOfPstates()
 : <a class="el" href="classwrench_1_1_s4_u___simulation.html#a9b077f7a49a17ff009891dce42910b48">wrench::S4U_Simulation</a>
@@ -542,8 +545,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getOutputOf()
 : <a class="el" href="classwrench_1_1_workflow_file.html#a37f8fb29dac0d933bc0ae7d138baad31">wrench::WorkflowFile</a>
 </li>
-<li>getParallelEfficiency()
-: <a class="el" href="classwrench_1_1_workflow_task.html#ab7e3113ba73aebc6e2776a6e56984662">wrench::WorkflowTask</a>
+<li>getParallelModel()
+: <a class="el" href="classwrench_1_1_workflow_task.html#aebcc914c5d2e8907ece7c65a01cc8b01">wrench::WorkflowTask</a>
 </li>
 <li>getParentComputeService()
 : <a class="el" href="classwrench_1_1_workflow_job.html#afb6fc31fa4d3afea46274c2937cdb501">wrench::WorkflowJob</a>
@@ -762,17 +765,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getUpcomingState()
 : <a class="el" href="classwrench_1_1_workflow_task.html#acb8706e0b3d3d7457300f698cab24ef7">wrench::WorkflowTask</a>
 </li>
-<li>getUsage()
-: <a class="el" href="classwrench_1_1_simulation_timestamp_link_usage.html#a43582b4b6346a3b39097053f72d9feeb">wrench::SimulationTimestampLinkUsage</a>
-</li>
 <li>getUsername()
 : <a class="el" href="classwrench_1_1_batch_job.html#ae76704f19914ddb392243860fd2700fd">wrench::BatchJob</a>
 </li>
 <li>getVMComputeService()
 : <a class="el" href="classwrench_1_1_cloud_compute_service.html#ad3f1a159adfc39649ca699265ad184df">wrench::CloudComputeService</a>
-</li>
-<li>getVMPhysicalHostname()
-: <a class="el" href="classwrench_1_1_virtualized_cluster_compute_service.html#a9e48b3245250f3cdb338e69757dff94f">wrench::VirtualizedClusterComputeService</a>
 </li>
 <li>getWorkflow()
 : <a class="el" href="classwrench_1_1_w_m_s.html#a44b586fe5f584755375691a12d815aa3">wrench::WMS</a>
@@ -781,6 +778,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>getWorkflowJob()
 : <a class="el" href="classwrench_1_1_batch_job.html#a5ee5804010f310bf636f7569c3ed80c0">wrench::BatchJob</a>
+</li>
+<li>getWorkPerThread()
+: <a class="el" href="classwrench_1_1_amdahl_parallel_model.html#a454db2b9765ad14284d6a1444dea56d9">wrench::AmdahlParallelModel</a>
+, <a class="el" href="classwrench_1_1_constant_efficiency_parallel_model.html#ab028ffbf0fce81957b4db4c98731aa11">wrench::ConstantEfficiencyParallelModel</a>
+, <a class="el" href="classwrench_1_1_custom_parallel_model.html#a8ff8aa5f85c5022ad3da839cc625d8c4">wrench::CustomParallelModel</a>
 </li>
 <li>getWriteOutputEndDate()
 : <a class="el" href="classwrench_1_1_workflow_task.html#aa9a538645c4946f7a257d66a80d45401">wrench::WorkflowTask</a>

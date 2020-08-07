@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['bandwidthmeterservice_1008',['BandwidthMeterService',['../classwrench_1_1_bandwidth_meter_service.html',1,'wrench']]],
   ['baremetalcomputeservice_1009',['BareMetalComputeService',['../classwrench_1_1_bare_metal_compute_service.html',1,'wrench']]],
   ['baremetalcomputeservicemessagepayload_1010',['BareMetalComputeServiceMessagePayload',['../classwrench_1_1_bare_metal_compute_service_message_payload.html',1,'wrench']]],
   ['baremetalcomputeserviceproperty_1011',['BareMetalComputeServiceProperty',['../classwrench_1_1_bare_metal_compute_service_property.html',1,'wrench']]],
