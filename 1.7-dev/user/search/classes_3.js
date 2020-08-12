@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['energymeterservice_335',['EnergyMeterService',['../classwrench_1_1_energy_meter_service.html',1,'wrench']]]
+  ['fileregistryservice_324',['FileRegistryService',['../classwrench_1_1_file_registry_service.html',1,'wrench']]],
+  ['fileregistryservicemessagepayload_325',['FileRegistryServiceMessagePayload',['../classwrench_1_1_file_registry_service_message_payload.html',1,'wrench']]],
+  ['fileregistryserviceproperty_326',['FileRegistryServiceProperty',['../classwrench_1_1_file_registry_service_property.html',1,'wrench']]]
 ];

@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['baremetalcomputeservice_321',['BareMetalComputeService',['../classwrench_1_1_bare_metal_compute_service.html',1,'wrench']]],
-  ['baremetalcomputeservicemessagepayload_322',['BareMetalComputeServiceMessagePayload',['../classwrench_1_1_bare_metal_compute_service_message_payload.html',1,'wrench']]],
-  ['baremetalcomputeserviceproperty_323',['BareMetalComputeServiceProperty',['../classwrench_1_1_bare_metal_compute_service_property.html',1,'wrench']]],
-  ['batchcomputeservice_324',['BatchComputeService',['../classwrench_1_1_batch_compute_service.html',1,'wrench']]],
-  ['batchcomputeservicemessagepayload_325',['BatchComputeServiceMessagePayload',['../classwrench_1_1_batch_compute_service_message_payload.html',1,'wrench']]],
-  ['batchcomputeserviceproperty_326',['BatchComputeServiceProperty',['../classwrench_1_1_batch_compute_service_property.html',1,'wrench']]]
+  ['cloudcomputeservice_317',['CloudComputeService',['../classwrench_1_1_cloud_compute_service.html',1,'wrench']]],
+  ['cloudcomputeservicemessagepayload_318',['CloudComputeServiceMessagePayload',['../classwrench_1_1_cloud_compute_service_message_payload.html',1,'wrench']]],
+  ['cloudcomputeserviceproperty_319',['CloudComputeServiceProperty',['../classwrench_1_1_cloud_compute_service_property.html',1,'wrench']]],
+  ['computeservice_320',['ComputeService',['../classwrench_1_1_compute_service.html',1,'wrench']]],
+  ['computeservicemessagepayload_321',['ComputeServiceMessagePayload',['../classwrench_1_1_compute_service_message_payload.html',1,'wrench']]],
+  ['computeserviceproperty_322',['ComputeServiceProperty',['../classwrench_1_1_compute_service_property.html',1,'wrench']]]
 ];
