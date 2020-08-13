@@ -123,9 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0e1f7dc16f875f18c0990e6bd1843932"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow.html#a0e1f7dc16f875f18c0990e6bd1843932">addFile</a> (std::string, double)</td></tr>
 <tr class="memdesc:a0e1f7dc16f875f18c0990e6bd1843932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new file to the workflow.  <a href="classwrench_1_1_workflow.html#a0e1f7dc16f875f18c0990e6bd1843932">More...</a><br /></td></tr>
 <tr class="separator:a0e1f7dc16f875f18c0990e6bd1843932"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c55d600aa8cc00d245d2ca6f01cd799"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow.html#a1c55d600aa8cc00d245d2ca6f01cd799">addTask</a> (std::string, double flops, unsigned long min_num_cores, unsigned long max_num_cores, double parallel_efficiency, double memory_requirement)</td></tr>
-<tr class="memdesc:a1c55d600aa8cc00d245d2ca6f01cd799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and add a new computational task to the workflow.  <a href="classwrench_1_1_workflow.html#a1c55d600aa8cc00d245d2ca6f01cd799">More...</a><br /></td></tr>
-<tr class="separator:a1c55d600aa8cc00d245d2ca6f01cd799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a163d52de55fa70695447a40bd9dfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow.html#ae1a163d52de55fa70695447a40bd9dfe">addTask</a> (std::string, double flops, unsigned long min_num_cores, unsigned long max_num_cores, double memory_requirement)</td></tr>
+<tr class="memdesc:ae1a163d52de55fa70695447a40bd9dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and add a new computational task to the workflow.  <a href="classwrench_1_1_workflow.html#ae1a163d52de55fa70695447a40bd9dfe">More...</a><br /></td></tr>
+<tr class="separator:ae1a163d52de55fa70695447a40bd9dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73a5f2898f4fdda4cb38933c2c485b28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow.html#a73a5f2898f4fdda4cb38933c2c485b28">exportToEPS</a> (std::string)</td></tr>
 <tr class="memdesc:a73a5f2898f4fdda4cb38933c2c485b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the workflow's dependency graph to EPS.  <a href="classwrench_1_1_workflow.html#a73a5f2898f4fdda4cb38933c2c485b28">More...</a><br /></td></tr>
 <tr class="separator:a73a5f2898f4fdda4cb38933c2c485b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -329,8 +329,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1c55d600aa8cc00d245d2ca6f01cd799"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c55d600aa8cc00d245d2ca6f01cd799">&#9670;&nbsp;</a></span>addTask()</h2>
+<a id="ae1a163d52de55fa70695447a40bd9dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1a163d52de55fa70695447a40bd9dfe">&#9670;&nbsp;</a></span>addTask()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,12 +363,6 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>parallel_efficiency</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>memory_requirement</em>&#160;</td>
         </tr>
         <tr>
@@ -386,7 +380,6 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">flops</td><td>number of flops </td></tr>
     <tr><td class="paramname">min_num_cores</td><td>the minimum number of cores required to run the task </td></tr>
     <tr><td class="paramname">max_num_cores</td><td>the maximum number of cores that can be used by the task (use INT_MAX for infinity) </td></tr>
-    <tr><td class="paramname">parallel_efficiency</td><td>the multi-core parallel efficiency (number between 0.0 and 1.0) </td></tr>
     <tr><td class="paramname">memory_requirement</td><td>memory requirement (in bytes)</td></tr>
   </table>
   </dd>

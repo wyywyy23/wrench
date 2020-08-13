@@ -205,9 +205,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a924961b2ae2ee254373cdea7c9c4511f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#a924961b2ae2ee254373cdea7c9c4511f">getOutputFiles</a> ()</td></tr>
 <tr class="memdesc:a924961b2ae2ee254373cdea7c9c4511f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of output <a class="el" href="classwrench_1_1_workflow_file.html" title="A data file used/produced by a WorkflowTask in a Workflow.">WorkflowFile</a> objects for the task.  <a href="classwrench_1_1_workflow_task.html#a924961b2ae2ee254373cdea7c9c4511f">More...</a><br /></td></tr>
 <tr class="separator:a924961b2ae2ee254373cdea7c9c4511f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7e3113ba73aebc6e2776a6e56984662"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#ab7e3113ba73aebc6e2776a6e56984662">getParallelEfficiency</a> () const</td></tr>
-<tr class="memdesc:ab7e3113ba73aebc6e2776a6e56984662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parallel efficiency of the task.  <a href="classwrench_1_1_workflow_task.html#ab7e3113ba73aebc6e2776a6e56984662">More...</a><br /></td></tr>
-<tr class="separator:ab7e3113ba73aebc6e2776a6e56984662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebcc914c5d2e8907ece7c65a01cc8b01"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_parallel_model.html">ParallelModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#aebcc914c5d2e8907ece7c65a01cc8b01">getParallelModel</a> ()</td></tr>
+<tr class="memdesc:aebcc914c5d2e8907ece7c65a01cc8b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the task's parallel model.  <a href="classwrench_1_1_workflow_task.html#aebcc914c5d2e8907ece7c65a01cc8b01">More...</a><br /></td></tr>
+<tr class="separator:aebcc914c5d2e8907ece7c65a01cc8b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11b6cbdcbd0e1bcaa4ac7b91b551b2fe"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classwrench_1_1_workflow_task.html">WorkflowTask</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#a11b6cbdcbd0e1bcaa4ac7b91b551b2fe">getParents</a> () const</td></tr>
 <tr class="memdesc:a11b6cbdcbd0e1bcaa4ac7b91b551b2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parents of a task.  <a href="classwrench_1_1_workflow_task.html#a11b6cbdcbd0e1bcaa4ac7b91b551b2fe">More...</a><br /></td></tr>
 <tr class="separator:a11b6cbdcbd0e1bcaa4ac7b91b551b2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,6 +256,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a92a6ab9f646d20c5a1cb32cea77f1524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#a92a6ab9f646d20c5a1cb32cea77f1524">setColor</a> (std::string)</td></tr>
 <tr class="memdesc:a92a6ab9f646d20c5a1cb32cea77f1524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the task's color.  <a href="classwrench_1_1_workflow_task.html#a92a6ab9f646d20c5a1cb32cea77f1524">More...</a><br /></td></tr>
 <tr class="separator:a92a6ab9f646d20c5a1cb32cea77f1524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a789d01615f762cca3d1da32ac6b3d725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#a789d01615f762cca3d1da32ac6b3d725">setParallelModel</a> (std::shared_ptr&lt; <a class="el" href="classwrench_1_1_parallel_model.html">ParallelModel</a> &gt; model)</td></tr>
+<tr class="memdesc:a789d01615f762cca3d1da32ac6b3d725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the task's parallel model.  <a href="classwrench_1_1_workflow_task.html#a789d01615f762cca3d1da32ac6b3d725">More...</a><br /></td></tr>
+<tr class="separator:a789d01615f762cca3d1da32ac6b3d725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5101ae5e4e386705a549e4e91432049"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#ae5101ae5e4e386705a549e4e91432049">setPriority</a> (long)</td></tr>
 <tr class="memdesc:ae5101ae5e4e386705a549e4e91432049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the task priority.  <a href="classwrench_1_1_workflow_task.html#ae5101ae5e4e386705a549e4e91432049">More...</a><br /></td></tr>
 <tr class="separator:ae5101ae5e4e386705a549e4e91432049"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -836,23 +839,23 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab7e3113ba73aebc6e2776a6e56984662"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7e3113ba73aebc6e2776a6e56984662">&#9670;&nbsp;</a></span>getParallelEfficiency()</h2>
+<a id="aebcc914c5d2e8907ece7c65a01cc8b01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebcc914c5d2e8907ece7c65a01cc8b01">&#9670;&nbsp;</a></span>getParallelModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double wrench::WorkflowTask::getParallelEfficiency </td>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_parallel_model.html">ParallelModel</a> &gt; wrench::WorkflowTask::getParallelModel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the parallel efficiency of the task. </p>
-<dl class="section return"><dt>Returns</dt><dd>a parallel efficiency (number between 0.0 and 1.0) </dd></dl>
+<p>Get the task's parallel model. </p>
+<dl class="section return"><dt>Returns</dt><dd>the parallel model </dd></dl>
 
 </div>
 </div>
@@ -1200,6 +1203,32 @@ Static Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">color</td><td>A color string in "#rrggbb" format </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a789d01615f762cca3d1da32ac6b3d725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a789d01615f762cca3d1da32ac6b3d725">&#9670;&nbsp;</a></span>setParallelModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrench::WorkflowTask::setParallelModel </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classwrench_1_1_parallel_model.html">ParallelModel</a> &gt;&#160;</td>
+          <td class="paramname"><em>model</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the task's parallel model. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">model</td><td>a parallel model </td></tr>
   </table>
   </dd>
 </dl>

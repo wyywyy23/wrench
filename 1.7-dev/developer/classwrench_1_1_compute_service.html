@@ -170,9 +170,6 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#a289d4a0c5254772575340095b73cf7d4">stop</a> () override</td></tr>
 <tr class="memdesc:a289d4a0c5254772575340095b73cf7d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the compute service - must be called by the <a class="el" href="classwrench_1_1_compute_service.html#a289d4a0c5254772575340095b73cf7d4" title="Stop the compute service - must be called by the stop() method of derived classes.">stop()</a> method of derived classes. <br /></td></tr>
 <tr class="separator:a289d4a0c5254772575340095b73cf7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc9e51234c29965341727f07b446ff0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#abc9e51234c29965341727f07b446ff0c">submitJob</a> (<a class="el" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *job, std::map&lt; std::string, std::string &gt;={})</td></tr>
-<tr class="memdesc:abc9e51234c29965341727f07b446ff0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submit a job to the compute service.  <a href="classwrench_1_1_compute_service.html#abc9e51234c29965341727f07b446ff0c">More...</a><br /></td></tr>
-<tr class="separator:abc9e51234c29965341727f07b446ff0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd8cd30b0c6a7f23be2a16e9c8910822"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_compute_service.html#acd8cd30b0c6a7f23be2a16e9c8910822">supportsPilotJobs</a> ()</td></tr>
 <tr class="memdesc:acd8cd30b0c6a7f23be2a16e9c8910822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether the compute service supports pilot jobs or not.  <a href="classwrench_1_1_compute_service.html#acd8cd30b0c6a7f23be2a16e9c8910822">More...</a><br /></td></tr>
 <tr class="separator:acd8cd30b0c6a7f23be2a16e9c8910822"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -560,67 +557,6 @@ static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Checks if the compute service has a scratch space. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the compute service has some scratch storage space, false otherwise </dd></dl>
-
-</div>
-</div>
-<a id="abc9e51234c29965341727f07b446ff0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc9e51234c29965341727f07b446ff0c">&#9670;&nbsp;</a></span>submitJob()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void wrench::ComputeService::submitJob </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *&#160;</td>
-          <td class="paramname"><em>job</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::map&lt; std::string, std::string &gt;&#160;</td>
-          <td class="paramname"><em>service_specific_args</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Submit a job to the compute service. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">job</td><td>the job </td></tr>
-    <tr><td class="paramname">service_specific_args</td><td>arguments specific to compute services when needed:<ul>
-<li>to a <a class="el" href="classwrench_1_1_bare_metal_compute_service.html" title="A compute service that manages a set of multi-core compute hosts and provides access to their resourc...">BareMetalComputeService</a>: {}<ul>
-<li>If no entry is provided for a taskID, the service will pick on which host and with how many cores to run the task</li>
-<li>If a number of cores is provided (e.g., {"task1", "12"}), the service will pick the host on which to run the task</li>
-<li>If a hostname and a number of cores is provided (e.g., {"task1", "host1:12"}, the service will run the task on that host with the specified number of cores</li>
-</ul>
-</li>
-<li>to a <a class="el" href="classwrench_1_1_batch_compute_service.html" title="A batch-scheduled compute service that manages a set of compute hosts and controls access to their re...">BatchComputeService</a>: {"-t":"&lt;int&gt;","-N":"&lt;int&gt;","-c":"&lt;int&gt;"[,{"-u":"&lt;string&gt;"}]} (SLURM-like)<ul>
-<li>"-t": number of requested job duration in minutes</li>
-<li>"-N": number of requested compute hosts</li>
-<li>"-c": number of requested cores per compute host</li>
-<li>"-u": username (optional)</li>
-</ul>
-</li>
-<li>to a <a class="el" href="classwrench_1_1_cloud_compute_service.html" title="A cloud-based compute service that manages a set of physical hosts and controls access to their resou...">CloudComputeService</a>: {}</li>
-</ul>
-</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classwrench_1_1_workflow_execution_exception.html" title="An generic exception that is thrown whenever something unexpected (but simulation-valid) occurs durin...">WorkflowExecutionException</a></td><td></td></tr>
-    <tr><td class="paramname">std::invalid_argument</td><td></td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
