@@ -294,7 +294,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ae21597fdb24597909735883bda7544cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the task's end date.  <a href="classwrench_1_1_workflow_task.html#ae21597fdb24597909735883bda7544cf">More...</a><br /></td></tr>
 <tr class="separator:ae21597fdb24597909735883bda7544cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaabcde52939be67fbc645f937a7a1bc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#aaabcde52939be67fbc645f937a7a1bc2">setExecutionHost</a> (std::string hostname)</td></tr>
-<tr class="memdesc:aaabcde52939be67fbc645f937a7a1bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the host on which this task is running.  <a href="classwrench_1_1_workflow_task.html#aaabcde52939be67fbc645f937a7a1bc2">More...</a><br /></td></tr>
+<tr class="memdesc:aaabcde52939be67fbc645f937a7a1bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the host on which this task is running.If the hostname is a VM name, then the corresponding physical host name will be set!  <a href="classwrench_1_1_workflow_task.html#aaabcde52939be67fbc645f937a7a1bc2">More...</a><br /></td></tr>
 <tr class="separator:aaabcde52939be67fbc645f937a7a1bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03f9ebebaa0ec710e6b094f04eb221f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_workflow_task.html#a03f9ebebaa0ec710e6b094f04eb221f5">setFailureDate</a> (double date)</td></tr>
 <tr class="memdesc:a03f9ebebaa0ec710e6b094f04eb221f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the date when the task has failed.  <a href="classwrench_1_1_workflow_task.html#a03f9ebebaa0ec710e6b094f04eb221f5">More...</a><br /></td></tr>
@@ -1443,13 +1443,14 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the host on which this task is running. </p>
+<p>Sets the host on which this task is running.If the hostname is a VM name, then the corresponding physical host name will be set! </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hostname</td><td>the host name </td></tr>
   </table>
   </dd>
 </dl>
+<p>Convert the hostname to a physical hostname if needed</p>
 
 </div>
 </div>
