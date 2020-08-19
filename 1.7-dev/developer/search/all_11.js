@@ -98,12 +98,14 @@ var searchData=
   ['submitjob_506',['submitJob',['../classwrench_1_1_job_manager.html#ac77fc8366fd26af7086ef424bbe36368',1,'wrench::JobManager']]],
   ['submitpilotjob_507',['submitPilotJob',['../classwrench_1_1_h_t_condor_central_manager_service.html#a86b8b01913f6e76dadbd87d23ac9c0fa',1,'wrench::HTCondorCentralManagerService::submitPilotJob()'],['../classwrench_1_1_h_t_condor_compute_service.html#a080a6fa5c7ee357544dfa8bde6bb47ec',1,'wrench::HTCondorComputeService::submitPilotJob()']]],
   ['submitstandardjob_508',['submitStandardJob',['../classwrench_1_1_h_t_condor_central_manager_service.html#ae58b1582c4ea36796407e614e6cf9872',1,'wrench::HTCondorCentralManagerService::submitStandardJob()'],['../classwrench_1_1_h_t_condor_compute_service.html#aa162f484094044a041c0a5ad5f280436',1,'wrench::HTCondorComputeService::submitStandardJob()']]],
-  ['supports_5fpilot_5fjobs_509',['SUPPORTS_PILOT_JOBS',['../classwrench_1_1_compute_service_property.html#af0abab1e3bce4932c4482031f0c31ce8',1,'wrench::ComputeServiceProperty']]],
-  ['supports_5fstandard_5fjobs_510',['SUPPORTS_STANDARD_JOBS',['../classwrench_1_1_compute_service_property.html#a4e1b5e2e1effa86cfac0da608f112c14',1,'wrench::ComputeServiceProperty']]],
-  ['supportspilotjobs_511',['supportsPilotJobs',['../classwrench_1_1_compute_service.html#acd8cd30b0c6a7f23be2a16e9c8910822',1,'wrench::ComputeService']]],
-  ['supportsstandardjobs_512',['supportsStandardJobs',['../classwrench_1_1_compute_service.html#a0f15f4038c447b0f580b9d2a7bf0cd22',1,'wrench::ComputeService']]],
-  ['suspend_513',['suspend',['../classwrench_1_1_service.html#a109d72a3528bae253804ef12a7ffa202',1,'wrench::Service']]],
-  ['suspend_5fvm_5fanswer_5fmessage_5fpayload_514',['SUSPEND_VM_ANSWER_MESSAGE_PAYLOAD',['../classwrench_1_1_cloud_compute_service_message_payload.html#aa32a7bd0331f1919551ccd0efef42a25',1,'wrench::CloudComputeServiceMessagePayload']]],
-  ['suspend_5fvm_5frequest_5fmessage_5fpayload_515',['SUSPEND_VM_REQUEST_MESSAGE_PAYLOAD',['../classwrench_1_1_cloud_compute_service_message_payload.html#ac55c83cc9354c3521b034cc07f41d132',1,'wrench::CloudComputeServiceMessagePayload']]],
-  ['suspendvm_516',['suspendVM',['../classwrench_1_1_cloud_compute_service.html#a0012572651810e2d1c3f53ab248318fd',1,'wrench::CloudComputeService']]]
+  ['supports_5fgrid_5funiverse_509',['SUPPORTS_GRID_UNIVERSE',['../classwrench_1_1_h_t_condor_compute_service_property.html#aabee13b095780e00df7d749df26f3323',1,'wrench::HTCondorComputeServiceProperty']]],
+  ['supports_5fpilot_5fjobs_510',['SUPPORTS_PILOT_JOBS',['../classwrench_1_1_compute_service_property.html#af0abab1e3bce4932c4482031f0c31ce8',1,'wrench::ComputeServiceProperty']]],
+  ['supports_5fstandard_5fjobs_511',['SUPPORTS_STANDARD_JOBS',['../classwrench_1_1_compute_service_property.html#a4e1b5e2e1effa86cfac0da608f112c14',1,'wrench::ComputeServiceProperty']]],
+  ['supportsgriduniverse_512',['supportsGridUniverse',['../classwrench_1_1_h_t_condor_compute_service.html#a44cbd5d91df27465e276edd3e0d8a245',1,'wrench::HTCondorComputeService']]],
+  ['supportspilotjobs_513',['supportsPilotJobs',['../classwrench_1_1_compute_service.html#acd8cd30b0c6a7f23be2a16e9c8910822',1,'wrench::ComputeService']]],
+  ['supportsstandardjobs_514',['supportsStandardJobs',['../classwrench_1_1_compute_service.html#a0f15f4038c447b0f580b9d2a7bf0cd22',1,'wrench::ComputeService']]],
+  ['suspend_515',['suspend',['../classwrench_1_1_service.html#a109d72a3528bae253804ef12a7ffa202',1,'wrench::Service']]],
+  ['suspend_5fvm_5fanswer_5fmessage_5fpayload_516',['SUSPEND_VM_ANSWER_MESSAGE_PAYLOAD',['../classwrench_1_1_cloud_compute_service_message_payload.html#aa32a7bd0331f1919551ccd0efef42a25',1,'wrench::CloudComputeServiceMessagePayload']]],
+  ['suspend_5fvm_5frequest_5fmessage_5fpayload_517',['SUSPEND_VM_REQUEST_MESSAGE_PAYLOAD',['../classwrench_1_1_cloud_compute_service_message_payload.html#ac55c83cc9354c3521b034cc07f41d132',1,'wrench::CloudComputeServiceMessagePayload']]],
+  ['suspendvm_518',['suspendVM',['../classwrench_1_1_cloud_compute_service.html#a0012572651810e2d1c3f53ab248318fd',1,'wrench::CloudComputeService']]]
 ];
