@@ -206,5 +206,7 @@ var searchData=
   ['getworkperthread_481',['getWorkPerThread',['../classwrench_1_1_amdahl_parallel_model.html#a454db2b9765ad14284d6a1444dea56d9',1,'wrench::AmdahlParallelModel::getWorkPerThread()'],['../classwrench_1_1_constant_efficiency_parallel_model.html#ab028ffbf0fce81957b4db4c98731aa11',1,'wrench::ConstantEfficiencyParallelModel::getWorkPerThread()'],['../classwrench_1_1_custom_parallel_model.html#a8ff8aa5f85c5022ad3da839cc625d8c4',1,'wrench::CustomParallelModel::getWorkPerThread()']]],
   ['getwriteoutputenddate_482',['getWriteOutputEndDate',['../classwrench_1_1_workflow_task.html#aa9a538645c4946f7a257d66a80d45401',1,'wrench::WorkflowTask']]],
   ['getwriteoutputstartdate_483',['getWriteOutputStartDate',['../classwrench_1_1_workflow_task.html#a2905c939f467778439fea8a956b0381b',1,'wrench::WorkflowTask']]],
-  ['guide_484',['Guide',['../guide.html',1,'']]]
+  ['grid_5fpost_5fexecution_5fdelay_484',['GRID_POST_EXECUTION_DELAY',['../classwrench_1_1_batch_compute_service_property.html#a855fa059970bb2736c65d29eac7f90cb',1,'wrench::BatchComputeServiceProperty::GRID_POST_EXECUTION_DELAY()'],['../classwrench_1_1_h_t_condor_compute_service_property.html#ab1c41aa817687351e395eb50eee5f6f5',1,'wrench::HTCondorComputeServiceProperty::GRID_POST_EXECUTION_DELAY()']]],
+  ['grid_5fpre_5fexecution_5fdelay_485',['GRID_PRE_EXECUTION_DELAY',['../classwrench_1_1_batch_compute_service_property.html#a4d90e181e9b4652810caf854c6ca3239',1,'wrench::BatchComputeServiceProperty::GRID_PRE_EXECUTION_DELAY()'],['../classwrench_1_1_h_t_condor_compute_service_property.html#a64e72f29f99b1f397a4ba67980ebe9ea',1,'wrench::HTCondorComputeServiceProperty::GRID_PRE_EXECUTION_DELAY()']]],
+  ['guide_486',['Guide',['../guide.html',1,'']]]
 ];
