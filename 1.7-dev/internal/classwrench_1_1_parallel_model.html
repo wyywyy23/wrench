@@ -104,22 +104,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">wrench::ParallelModel Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A virtual class (with convenient static methods) to define parallel task performance models.  
+ <a href="classwrench_1_1_parallel_model.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_parallel_model_8h_source.html">ParallelModel.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for wrench::ParallelModel:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classwrench_1_1_parallel_model.png" usemap="#wrench::ParallelModel_map" alt=""/>
   <map id="wrench::ParallelModel_map" name="wrench::ParallelModel_map">
-<area href="classwrench_1_1_amdahl_parallel_model.html" alt="wrench::AmdahlParallelModel" shape="rect" coords="0,56,244,80"/>
-<area href="classwrench_1_1_constant_efficiency_parallel_model.html" alt="wrench::ConstantEfficiencyParallelModel" shape="rect" coords="254,56,498,80"/>
-<area href="classwrench_1_1_custom_parallel_model.html" alt="wrench::CustomParallelModel" shape="rect" coords="508,56,752,80"/>
+<area href="classwrench_1_1_amdahl_parallel_model.html" title="A class that defines an Amdahl&#39;s Law-based parallel task performance model." alt="wrench::AmdahlParallelModel" shape="rect" coords="0,56,244,80"/>
+<area href="classwrench_1_1_constant_efficiency_parallel_model.html" title="A class the implemens a constant-efficiency parallel task performance model." alt="wrench::ConstantEfficiencyParallelModel" shape="rect" coords="254,56,498,80"/>
+<area href="classwrench_1_1_custom_parallel_model.html" title="A class that defines a custom parallel task performance model." alt="wrench::CustomParallelModel" shape="rect" coords="508,56,752,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa538a5250609fac02f5c00b7bf30b07f"><td class="memItemLeft" align="right" valign="top"><a id="aa538a5250609fac02f5c00b7bf30b07f"></a>
-virtual std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getWorkPerThread</b> (double total_work, unsigned long num_threads)=0</td></tr>
+<tr class="memitem:aa538a5250609fac02f5c00b7bf30b07f"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_parallel_model.html#aa538a5250609fac02f5c00b7bf30b07f">getWorkPerThread</a> (double total_work, unsigned long num_threads)=0</td></tr>
+<tr class="memdesc:aa538a5250609fac02f5c00b7bf30b07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method the, for this parallel model, computes how much work each thread that is part of a parallel task should do.  <a href="classwrench_1_1_parallel_model.html#aa538a5250609fac02f5c00b7bf30b07f">More...</a><br /></td></tr>
 <tr class="separator:aa538a5250609fac02f5c00b7bf30b07f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -134,7 +139,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac21a98fa14693e5425a5ce5121636498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of a "Custom" parallel model.  <a href="classwrench_1_1_parallel_model.html#ac21a98fa14693e5425a5ce5121636498">More...</a><br /></td></tr>
 <tr class="separator:ac21a98fa14693e5425a5ce5121636498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A virtual class (with convenient static methods) to define parallel task performance models. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac4be2af98e027f7f7363110deddada0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac4be2af98e027f7f7363110deddada0a">&#9670;&nbsp;</a></span>AMDAHL()</h2>
 
@@ -237,6 +244,54 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a model instance </dd></dl>
+
+</div>
+</div>
+<a id="aa538a5250609fac02f5c00b7bf30b07f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa538a5250609fac02f5c00b7bf30b07f">&#9670;&nbsp;</a></span>getWorkPerThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;double&gt; wrench::ParallelModel::getWorkPerThread </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>total_work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>num_threads</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A method the, for this parallel model, computes how much work each thread that is part of a parallel task should do. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">total_work</td><td>the total amount of work (in flops) </td></tr>
+    <tr><td class="paramname">num_threads</td><td>the number of threads</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an amount of work (in flop) per thread </dd></dl>
+
+<p>Implemented in <a class="el" href="classwrench_1_1_amdahl_parallel_model.html#a454db2b9765ad14284d6a1444dea56d9">wrench::AmdahlParallelModel</a>, <a class="el" href="classwrench_1_1_constant_efficiency_parallel_model.html#ab028ffbf0fce81957b4db4c98731aa11">wrench::ConstantEfficiencyParallelModel</a>, and <a class="el" href="classwrench_1_1_custom_parallel_model.html#a8ff8aa5f85c5022ad3da839cc625d8c4">wrench::CustomParallelModel</a>.</p>
 
 </div>
 </div>
