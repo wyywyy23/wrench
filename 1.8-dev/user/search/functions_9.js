@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['launch_536',['launch',['../classwrench_1_1_simulation.html#ae9589632de9a2311ed1d7f7747478985',1,'wrench::Simulation']]]
+  ['kill_557',['kill',['../classwrench_1_1_memory_manager.html#aafb293d6f6c8fb6d422b89401e36d7e0',1,'wrench::MemoryManager']]]
 ];

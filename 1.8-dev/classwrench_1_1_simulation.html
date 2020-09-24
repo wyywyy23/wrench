@@ -139,6 +139,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8089146d03fa483914ff235f3706f73d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a8089146d03fa483914ff235f3706f73d">getLinkUsage</a> (const std::string &amp;linkname, bool record_as_time_stamp)</td></tr>
 <tr class="memdesc:a8089146d03fa483914ff235f3706f73d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the current link bandwidth usage on a link and will add <a class="el" href="classwrench_1_1_simulation_timestamp_link_usage.html" title="A simulation timestamp class for link usage.">SimulationTimestampLinkUsage</a> to simulation output if record_as_time_stamp is set to true.  <a href="classwrench_1_1_simulation.html#a8089146d03fa483914ff235f3706f73d">More...</a><br /></td></tr>
 <tr class="separator:a8089146d03fa483914ff235f3706f73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad68e3fe27fa55cbe8bed9942824ab0d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwrench_1_1_memory_manager.html">MemoryManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#ad68e3fe27fa55cbe8bed9942824ab0d9">getMemoryManagerByHost</a> (std::string hostname)</td></tr>
+<tr class="separator:ad68e3fe27fa55cbe8bed9942824ab0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff0338aa6831c6ac252cf0673fe68f44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwrench_1_1_simulation_output.html">SimulationOutput</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#aff0338aa6831c6ac252cf0673fe68f44">getOutput</a> ()</td></tr>
 <tr class="memdesc:aff0338aa6831c6ac252cf0673fe68f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the simulation output object.  <a href="classwrench_1_1_simulation.html#aff0338aa6831c6ac252cf0673fe68f44">More...</a><br /></td></tr>
 <tr class="separator:aff0338aa6831c6ac252cf0673fe68f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,6 +159,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6889f73264af113e4196ca22e511d51f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a6889f73264af113e4196ca22e511d51f">readFromDiskAndWriteToDiskConcurrently</a> (double num_bytes_to_read, double num_bytes_to_write, std::string hostname, std::string read_mount_point, std::string write_mount_point)</td></tr>
 <tr class="memdesc:a6889f73264af113e4196ca22e511d51f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper enabling timestamps for concurrent disk read/writes.  <a href="classwrench_1_1_simulation.html#a6889f73264af113e4196ca22e511d51f">More...</a><br /></td></tr>
 <tr class="separator:a6889f73264af113e4196ca22e511d51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a318fb114498cb06987c2094a96b9565a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a318fb114498cb06987c2094a96b9565a">readWithMemoryCache</a> (<a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *file, double n_bytes, std::string mountpoint)</td></tr>
+<tr class="separator:a318fb114498cb06987c2094a96b9565a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf4675a8c9c62c93bfbd3dc4a4e46556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#adf4675a8c9c62c93bfbd3dc4a4e46556">setPstate</a> (const std::string &amp;hostname, int pstate)</td></tr>
 <tr class="memdesc:adf4675a8c9c62c93bfbd3dc4a4e46556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the power state of the host.  <a href="classwrench_1_1_simulation.html#adf4675a8c9c62c93bfbd3dc4a4e46556">More...</a><br /></td></tr>
 <tr class="separator:adf4675a8c9c62c93bfbd3dc4a4e46556"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,6 +185,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc3c97ca35314f5436d4533e48eac1f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#abc3c97ca35314f5436d4533e48eac1f8">writeToDisk</a> (double num_bytes, std::string hostname, std::string mount_point)</td></tr>
 <tr class="memdesc:abc3c97ca35314f5436d4533e48eac1f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper enabling timestamps for disk writes.  <a href="classwrench_1_1_simulation.html#abc3c97ca35314f5436d4533e48eac1f8">More...</a><br /></td></tr>
 <tr class="separator:abc3c97ca35314f5436d4533e48eac1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63119b4511c7198469fdec2aaaac77c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a63119b4511c7198469fdec2aaaac77c4">writeWithMemoryCache</a> (<a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *file, double n_bytes, std::string mountpoint)</td></tr>
+<tr class="separator:a63119b4511c7198469fdec2aaaac77c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -253,6 +259,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8d3bac626795f838dd6a752d7fb57e4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#ad8d3bac626795f838dd6a752d7fb57e4">isLinkOn</a> (std::string linkname)</td></tr>
 <tr class="memdesc:ad8d3bac626795f838dd6a752d7fb57e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a link is on or not.  <a href="classwrench_1_1_simulation.html#ad8d3bac626795f838dd6a752d7fb57e4">More...</a><br /></td></tr>
 <tr class="separator:ad8d3bac626795f838dd6a752d7fb57e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a319b4e7b4023a2cd9445e57015c86efd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a319b4e7b4023a2cd9445e57015c86efd">isWriteback</a> ()</td></tr>
+<tr class="separator:a319b4e7b4023a2cd9445e57015c86efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04ced81e9eb97587a2affee4e7e210ef"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwrench_1_1_simulation.html#a04ced81e9eb97587a2affee4e7e210ef">sleep</a> (double duration)</td></tr>
 <tr class="memdesc:a04ced81e9eb97587a2affee4e7e210ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the calling process sleep for a number of (simulated) seconds.  <a href="classwrench_1_1_simulation.html#a04ced81e9eb97587a2affee4e7e210ef">More...</a><br /></td></tr>
 <tr class="separator:a04ced81e9eb97587a2affee4e7e210ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -814,7 +822,15 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the list of names of all the hosts in each cluster composing the platform. </p>
-<dl class="section return"><dt>Returns</dt><dd>a map of lists of hosts, indexed by cluster name </dd></dl>
+<p>Retrieve <a class="el" href="classwrench_1_1_memory_manager.html">MemoryManager</a> by hostname </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hostname</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd>
+<dd>
+a map of lists of hosts, indexed by cluster name </dd></dl>
 
 </div>
 </div>
@@ -1093,6 +1109,31 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="ad68e3fe27fa55cbe8bed9942824ab0d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad68e3fe27fa55cbe8bed9942824ab0d9">&#9670;&nbsp;</a></span>getMemoryManagerByHost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwrench_1_1_memory_manager.html">MemoryManager</a> * wrench::Simulation::getMemoryManagerByHost </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>hostname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Find a <a class="el" href="classwrench_1_1_memory_manager.html">MemoryManager</a> of a host with hostname </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hostname</td><td>name of the host </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classwrench_1_1_memory_manager.html">MemoryManager</a> of the host </dd></dl>
+
+</div>
+</div>
 <a id="afdf2ae84f6b3c8b51c5189199bebb52e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afdf2ae84f6b3c8b51c5189199bebb52e">&#9670;&nbsp;</a></span>getMinPowerConsumption()</h2>
 
@@ -1356,6 +1397,32 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a319b4e7b4023a2cd9445e57015c86efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a319b4e7b4023a2cd9445e57015c86efd">&#9670;&nbsp;</a></span>isWriteback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wrench::Simulation::isWriteback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if writeback mode is activated </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <a id="ae9589632de9a2311ed1d7f7747478985"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9589632de9a2311ed1d7f7747478985">&#9670;&nbsp;</a></span>launch()</h2>
 
@@ -1489,6 +1556,48 @@ template&lt;class T &gt; </div>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">invalid_argument</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a318fb114498cb06987c2094a96b9565a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a318fb114498cb06987c2094a96b9565a">&#9670;&nbsp;</a></span>readWithMemoryCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrench::Simulation::readWithMemoryCache </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>n_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>mountpoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read file locally, only available if writeback is activated. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of the file read. </td></tr>
+    <tr><td class="paramname">n_bytes</td><td>amount of read data in byte. </td></tr>
+    <tr><td class="paramname">mountpoint</td><td>mountpoint where file is located. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1977,6 +2086,48 @@ template&lt;class T &gt; </div>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">invalid_argument</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a63119b4511c7198469fdec2aaaac77c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63119b4511c7198469fdec2aaaac77c4">&#9670;&nbsp;</a></span>writeWithMemoryCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrench::Simulation::writeWithMemoryCache </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classwrench_1_1_workflow_file.html">WorkflowFile</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>n_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>mountpoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Write a file locally, only available if writeback is activated. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of the file written. </td></tr>
+    <tr><td class="paramname">n_bytes</td><td>amount of written data in byte. </td></tr>
+    <tr><td class="paramname">mountpoint</td><td>mount point where file is located. </td></tr>
   </table>
   </dd>
 </dl>
