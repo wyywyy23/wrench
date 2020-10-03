@@ -136,7 +136,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                {<a class="code" href="classwrench_1_1_batch_compute_service_property.html#adcdef408cc31ef0ed80e5daae43d5e9c">BatchComputeServiceProperty::HOST_SELECTION_ALGORITHM</a>,                    <span class="stringliteral">&quot;FIRSTFIT&quot;</span>},</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                {<a class="code" href="classwrench_1_1_batch_compute_service_property.html#a3f56c6740a8edc7189e617db1333b87b">BatchComputeServiceProperty::TASK_SELECTION_ALGORITHM</a>,                    <span class="stringliteral">&quot;maximum_flops&quot;</span>},</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                {<a class="code" href="classwrench_1_1_batch_compute_service_property.html#a4d90e181e9b4652810caf854c6ca3239">BatchComputeServiceProperty::GRID_PRE_EXECUTION_DELAY</a>,                    <span class="stringliteral">&quot;78.0&quot;</span>},</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                {<a class="code" href="classwrench_1_1_batch_compute_service_property.html#a855fa059970bb2736c65d29eac7f90cb">BatchComputeServiceProperty::GRID_POST_EXECUTION_DELAY</a>,                   <span class="stringliteral">&quot;94.0&quot;</span>},</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                {<a class="code" href="classwrench_1_1_batch_compute_service_property.html#a855fa059970bb2736c65d29eac7f90cb">BatchComputeServiceProperty::GRID_POST_EXECUTION_DELAY</a>,                   <span class="stringliteral">&quot;16.0&quot;</span>},</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#ifdef ENABLE_BATSCHED</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                {<a class="code" href="classwrench_1_1_batch_compute_service_property.html#a4e88135150aea2df7f815f7d751f03c7">BatchComputeServiceProperty::BATCH_SCHEDULING_ALGORITHM</a>,                  <span class="stringliteral">&quot;conservative_bf&quot;</span>},</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">//                {BatchComputeServiceProperty::BATCH_SCHEDULING_ALGORITHM,                  &quot;easy_bf&quot;},</span></div>
@@ -244,151 +244,153 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="comment">//Used to add appropriate overhead to grid universe jobs.</span></div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordtype">bool</span> grid_execution = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="comment">//Configuration to create randomness in measurement period initially</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> random_interval = 10;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="comment">//create alarms for standard jobs</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        std::map&lt;std::string,std::shared_ptr&lt;Alarm&gt;&gt; standard_job_alarms;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">//alarms for pilot jobs (only one pilot job alarm)</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        std::map&lt;std::string,std::shared_ptr&lt;Alarm&gt;&gt; pilot_job_alarms;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="comment">/* Resources information in BatchService */</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> total_num_of_nodes;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> num_cores_per_node;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        std::map&lt;std::string, unsigned long&gt; nodes_to_cores_map;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        std::vector&lt;double&gt; timeslots;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        std::map&lt;std::string, unsigned long&gt; available_nodes_to_cores;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        std::map&lt;unsigned long, std::string&gt; host_id_to_names;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        std::vector&lt;std::string&gt; compute_hosts;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="comment">/* End Resources information in BatchService */</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="comment">// Vector of standard job executors</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        std::set&lt;std::shared_ptr&lt;StandardJobExecutor&gt;&gt; running_standard_job_executors;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="comment">// Vector of standard job executors (which is cleared periodically)</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        std::set&lt;std::shared_ptr&lt;StandardJobExecutor&gt;&gt; finished_standard_job_executors;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="comment">// Master List of batch jobs</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        std::set&lt;std::shared_ptr&lt;BatchJob&gt;&gt;  all_jobs;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="comment">//A set of running batch jobs</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        std::set&lt;std::shared_ptr&lt;BatchJob&gt;&gt; running_jobs;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="comment">// The batch queue</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        std::deque&lt;std::shared_ptr&lt;BatchJob&gt;&gt; batch_queue;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="comment">// A set of &quot;waiting&quot; batch jobs, i.e., jobs that are waiting to be sent to</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="comment">//  the  scheduler (useful for batsched only)</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        std::set&lt;std::shared_ptr&lt;BatchJob&gt;&gt; waiting_jobs;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="comment">// Scheduler</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        std::unique_ptr&lt;BatchScheduler&gt; scheduler;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="preprocessor">#ifdef ENABLE_BATSCHED</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordtype">bool</span> grid_execution_start = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordtype">bool</span> grid_execution_end = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="comment">//Configuration to create randomness in measurement period initially</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> random_interval = 10;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="comment">//create alarms for standard jobs</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        std::map&lt;std::string,std::shared_ptr&lt;Alarm&gt;&gt; standard_job_alarms;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="comment">//alarms for pilot jobs (only one pilot job alarm)</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        std::map&lt;std::string,std::shared_ptr&lt;Alarm&gt;&gt; pilot_job_alarms;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="comment">/* Resources information in BatchService */</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> total_num_of_nodes;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> num_cores_per_node;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        std::map&lt;std::string, unsigned long&gt; nodes_to_cores_map;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        std::vector&lt;double&gt; timeslots;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        std::map&lt;std::string, unsigned long&gt; available_nodes_to_cores;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        std::map&lt;unsigned long, std::string&gt; host_id_to_names;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        std::vector&lt;std::string&gt; compute_hosts;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="comment">/* End Resources information in BatchService */</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="comment">// Vector of standard job executors</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        std::set&lt;std::shared_ptr&lt;StandardJobExecutor&gt;&gt; running_standard_job_executors;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="comment">// Vector of standard job executors (which is cleared periodically)</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        std::set&lt;std::shared_ptr&lt;StandardJobExecutor&gt;&gt; finished_standard_job_executors;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="comment">// Master List of batch jobs</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        std::set&lt;std::shared_ptr&lt;BatchJob&gt;&gt;  all_jobs;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="comment">//A set of running batch jobs</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        std::set&lt;std::shared_ptr&lt;BatchJob&gt;&gt; running_jobs;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="comment">// The batch queue</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        std::deque&lt;std::shared_ptr&lt;BatchJob&gt;&gt; batch_queue;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="comment">// A set of &quot;waiting&quot; batch jobs, i.e., jobs that are waiting to be sent to</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="comment">//  the  scheduler (useful for batsched only)</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        std::set&lt;std::shared_ptr&lt;BatchJob&gt;&gt; waiting_jobs;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="comment">// Scheduler</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        std::unique_ptr&lt;BatchScheduler&gt; scheduler;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        std::set&lt;std::string&gt; scheduling_algorithms = {<span class="stringliteral">&quot;conservative_bf&quot;</span>, <span class="stringliteral">&quot;crasher&quot;</span>, <span class="stringliteral">&quot;easy_bf&quot;</span>, <span class="stringliteral">&quot;easy_bf_fast&quot;</span>,</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                                                       <span class="stringliteral">&quot;easy_bf_plot_liquid_load_horizon&quot;</span>,</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                                                       <span class="stringliteral">&quot;energy_bf&quot;</span>, <span class="stringliteral">&quot;energy_bf_dicho&quot;</span>, <span class="stringliteral">&quot;energy_bf_idle_sleeper&quot;</span>,</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                                                       <span class="stringliteral">&quot;energy_bf_monitoring&quot;</span>,</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                                                       <span class="stringliteral">&quot;energy_bf_monitoring_inertial&quot;</span>, <span class="stringliteral">&quot;energy_bf_subpart_sleeper&quot;</span>,</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                                                       <span class="stringliteral">&quot;energy_watcher&quot;</span>, <span class="stringliteral">&quot;fcfs_fast&quot;</span>, <span class="stringliteral">&quot;fast_conservative_bf&quot;</span>,</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                                       <span class="stringliteral">&quot;filler&quot;</span>, <span class="stringliteral">&quot;killer&quot;</span>, <span class="stringliteral">&quot;killer2&quot;</span>, <span class="stringliteral">&quot;random&quot;</span>, <span class="stringliteral">&quot;rejecter&quot;</span>,</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                                                       <span class="stringliteral">&quot;sequencer&quot;</span>, <span class="stringliteral">&quot;sleeper&quot;</span>, <span class="stringliteral">&quot;submitter&quot;</span>, <span class="stringliteral">&quot;waiting_time_estimator&quot;</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        };</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        std::set&lt;std::string&gt; queue_ordering_options = {<span class="stringliteral">&quot;fcfs&quot;</span>, <span class="stringliteral">&quot;lcfs&quot;</span>, <span class="stringliteral">&quot;desc_bounded_slowdown&quot;</span>, <span class="stringliteral">&quot;desc_slowdown&quot;</span>,</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                                                        <span class="stringliteral">&quot;asc_size&quot;</span>, <span class="stringliteral">&quot;desc_size&quot;</span>, <span class="stringliteral">&quot;asc_walltime&quot;</span>, <span class="stringliteral">&quot;desc_walltime&quot;</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        };</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        std::set&lt;std::string&gt; scheduling_algorithms = {<span class="stringliteral">&quot;fcfs&quot;</span>, <span class="stringliteral">&quot;conservative_bf&quot;</span>,</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        };</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="comment">//Batch queue ordering options</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        std::set&lt;std::string&gt; queue_ordering_options = {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        };</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor">#ifdef ENABLE_BATSCHED</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        std::set&lt;std::string&gt; scheduling_algorithms = {<span class="stringliteral">&quot;conservative_bf&quot;</span>, <span class="stringliteral">&quot;crasher&quot;</span>, <span class="stringliteral">&quot;easy_bf&quot;</span>, <span class="stringliteral">&quot;easy_bf_fast&quot;</span>,</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                                                       <span class="stringliteral">&quot;easy_bf_plot_liquid_load_horizon&quot;</span>,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                                                       <span class="stringliteral">&quot;energy_bf&quot;</span>, <span class="stringliteral">&quot;energy_bf_dicho&quot;</span>, <span class="stringliteral">&quot;energy_bf_idle_sleeper&quot;</span>,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                                                       <span class="stringliteral">&quot;energy_bf_monitoring&quot;</span>,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                                       <span class="stringliteral">&quot;energy_bf_monitoring_inertial&quot;</span>, <span class="stringliteral">&quot;energy_bf_subpart_sleeper&quot;</span>,</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                                                       <span class="stringliteral">&quot;energy_watcher&quot;</span>, <span class="stringliteral">&quot;fcfs_fast&quot;</span>, <span class="stringliteral">&quot;fast_conservative_bf&quot;</span>,</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                                                       <span class="stringliteral">&quot;filler&quot;</span>, <span class="stringliteral">&quot;killer&quot;</span>, <span class="stringliteral">&quot;killer2&quot;</span>, <span class="stringliteral">&quot;random&quot;</span>, <span class="stringliteral">&quot;rejecter&quot;</span>,</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                                                       <span class="stringliteral">&quot;sequencer&quot;</span>, <span class="stringliteral">&quot;sleeper&quot;</span>, <span class="stringliteral">&quot;submitter&quot;</span>, <span class="stringliteral">&quot;waiting_time_estimator&quot;</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        };</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        std::set&lt;std::string&gt; queue_ordering_options = {<span class="stringliteral">&quot;fcfs&quot;</span>, <span class="stringliteral">&quot;lcfs&quot;</span>, <span class="stringliteral">&quot;desc_bounded_slowdown&quot;</span>, <span class="stringliteral">&quot;desc_slowdown&quot;</span>,</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                                                        <span class="stringliteral">&quot;asc_size&quot;</span>, <span class="stringliteral">&quot;desc_size&quot;</span>, <span class="stringliteral">&quot;asc_walltime&quot;</span>, <span class="stringliteral">&quot;desc_walltime&quot;</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        };</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        std::set&lt;std::string&gt; scheduling_algorithms = {<span class="stringliteral">&quot;fcfs&quot;</span>, <span class="stringliteral">&quot;conservative_bf&quot;</span>,</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        };</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="comment">//Batch queue ordering options</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        std::set&lt;std::string&gt; queue_ordering_options = {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        };</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> generateUniqueJobID();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordtype">void</span> removeJobFromRunningList(std::shared_ptr&lt;BatchJob&gt; job);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> generateUniqueJobID();</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordtype">void</span> removeJobFromBatchQueue(std::shared_ptr&lt;BatchJob&gt; job);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordtype">void</span> removeJobFromRunningList(std::shared_ptr&lt;BatchJob&gt; job);</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordtype">void</span> removeBatchJobFromJobsList(std::shared_ptr&lt;BatchJob&gt; job);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordtype">void</span> removeJobFromBatchQueue(std::shared_ptr&lt;BatchJob&gt; job);</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordtype">int</span> main() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordtype">void</span> removeBatchJobFromJobsList(std::shared_ptr&lt;BatchJob&gt; job);</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordtype">bool</span> processNextMessage();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordtype">int</span> main() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordtype">void</span> startBackgroundWorkloadProcess();</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordtype">bool</span> processNextMessage();</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordtype">void</span> processGetResourceInformation(<span class="keyword">const</span> std::string &amp;answer_mailbox);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordtype">void</span> startBackgroundWorkloadProcess();</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordtype">void</span> processStandardJobCompletion(std::shared_ptr&lt;StandardJobExecutor&gt; executor, <a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordtype">void</span> processGetResourceInformation(<span class="keyword">const</span> std::string &amp;answer_mailbox);</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordtype">void</span> processStandardJobFailure(std::shared_ptr&lt;StandardJobExecutor&gt; executor,</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                                       <a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job,</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                                       std::shared_ptr&lt;FailureCause&gt; cause);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordtype">void</span> terminateRunningStandardJob(<a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordtype">void</span> processStandardJobCompletion(std::shared_ptr&lt;StandardJobExecutor&gt; executor, <a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordtype">void</span> processStandardJobFailure(std::shared_ptr&lt;StandardJobExecutor&gt; executor,</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                                       <a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job,</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                                       std::shared_ptr&lt;FailureCause&gt; cause);</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="comment">//Terminate the batch service (this is usually for pilot jobs when they act as a batch service)</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordtype">void</span> cleanup(<span class="keywordtype">bool</span> has_returned_from_main, <span class="keywordtype">int</span> return_value) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="comment">// Terminate currently running pilot jobs</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordtype">void</span> terminateRunningPilotJobs();</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="comment">//Fail the standard jobs</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordtype">void</span> failCurrentStandardJobs();</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="comment">//Process the pilot job completion</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordtype">void</span> processPilotJobCompletion(<a class="code" href="classwrench_1_1_pilot_job.html">PilotJob</a> *job);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="comment">//Process standardjob timeout</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordtype">void</span> processStandardJobTimeout(<a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="comment">//process standard job termination request</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordtype">void</span> processStandardJobTerminationRequest(<a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job, std::string answer_mailbox);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="comment">//process pilot job termination request</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordtype">void</span> processPilotJobTerminationRequest(<a class="code" href="classwrench_1_1_pilot_job.html">PilotJob</a> *job, std::string answer_mailbox);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="comment">// process a batch job tiemout event</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordtype">void</span> processAlarmJobTimeout(std::shared_ptr&lt;BatchJob&gt;job);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="comment">//Process pilot job timeout</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordtype">void</span> processPilotJobTimeout(<a class="code" href="classwrench_1_1_pilot_job.html">PilotJob</a> *job);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="comment">//free up resources</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordtype">void</span> freeUpResources(std::map&lt;std::string, std::tuple&lt;unsigned long, double&gt;&gt; resources);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="comment">//send call back to the pilot job submitters</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordtype">void</span> sendPilotJobExpirationNotification(<a class="code" href="classwrench_1_1_pilot_job.html">PilotJob</a> *job);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="comment">//send call back to the standard job submitters</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordtype">void</span> sendStandardJobFailureNotification(<a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job, std::string job_id, std::shared_ptr&lt;FailureCause&gt; cause);</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="comment">// process a job submission</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordtype">void</span> processJobSubmission(std::shared_ptr&lt;BatchJob&gt;job, std::string answer_mailbox);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="comment">//start a job</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordtype">void</span> startJob(std::map&lt;std::string, std::tuple&lt;unsigned long, double&gt;&gt;, <a class="code" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *,</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                      std::shared_ptr&lt;BatchJob&gt;, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>);</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordtype">void</span> processExecuteJobFromBatSched(std::string bat_sched_reply);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordtype">void</span> terminateRunningStandardJob(<a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="comment">//Terminate the batch service (this is usually for pilot jobs when they act as a batch service)</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordtype">void</span> cleanup(<span class="keywordtype">bool</span> has_returned_from_main, <span class="keywordtype">int</span> return_value) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="comment">// Terminate currently running pilot jobs</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordtype">void</span> terminateRunningPilotJobs();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="comment">//Fail the standard jobs</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordtype">void</span> failCurrentStandardJobs();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="comment">//Process the pilot job completion</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordtype">void</span> processPilotJobCompletion(<a class="code" href="classwrench_1_1_pilot_job.html">PilotJob</a> *job);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="comment">//Process standard job timeout</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordtype">void</span> processStandardJobTimeout(<a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="comment">//process standard job termination request</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordtype">void</span> processStandardJobTerminationRequest(<a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job, std::string answer_mailbox);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="comment">//process pilot job termination request</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordtype">void</span> processPilotJobTerminationRequest(<a class="code" href="classwrench_1_1_pilot_job.html">PilotJob</a> *job, std::string answer_mailbox);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="comment">// process a batch job tiemout event</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordtype">void</span> processAlarmJobTimeout(std::shared_ptr&lt;BatchJob&gt;job);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="comment">//Process pilot job timeout</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordtype">void</span> processPilotJobTimeout(<a class="code" href="classwrench_1_1_pilot_job.html">PilotJob</a> *job);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="comment">//free up resources</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordtype">void</span> freeUpResources(std::map&lt;std::string, std::tuple&lt;unsigned long, double&gt;&gt; resources);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="comment">//send call back to the pilot job submitters</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordtype">void</span> sendPilotJobExpirationNotification(<a class="code" href="classwrench_1_1_pilot_job.html">PilotJob</a> *job);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="comment">//send call back to the standard job submitters</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordtype">void</span> sendStandardJobFailureNotification(<a class="code" href="classwrench_1_1_standard_job.html">StandardJob</a> *job, std::string job_id, std::shared_ptr&lt;FailureCause&gt; cause);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="comment">// process a job submission</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordtype">void</span> processJobSubmission(std::shared_ptr&lt;BatchJob&gt;job, std::string answer_mailbox);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="comment">//start a job</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordtype">void</span> startJob(std::map&lt;std::string, std::tuple&lt;unsigned long, double&gt;&gt;, <a class="code" href="classwrench_1_1_workflow_job.html">WorkflowJob</a> *,</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                      std::shared_ptr&lt;BatchJob&gt;, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    };</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor">#endif //WRENCH_BATCH_SERVICE_H</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordtype">void</span> processExecuteJobFromBatSched(std::string bat_sched_reply);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    };</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="preprocessor">#endif //WRENCH_BATCH_SERVICE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasswrench_1_1_batch_compute_service_property_html_a2072267c164d046104868ad00aaadc51"><div class="ttname"><a href="classwrench_1_1_batch_compute_service_property.html#a2072267c164d046104868ad00aaadc51">wrench::BatchComputeServiceProperty::SIMULATE_COMPUTATION_AS_SLEEP</a></div><div class="ttdeci">static const std::string SIMULATE_COMPUTATION_AS_SLEEP</div><div class="ttdoc">Simulate computation as just a sleep instead of an actual compute thread. This is for scalability rea...</div><div class="ttdef"><b>Definition:</b> BatchComputeServiceProperty.h:139</div></div>
 <div class="ttc" id="aclasswrench_1_1_compute_service_message_payload_html_a1f5b40748d7fe90fb682d735395de3af"><div class="ttname"><a href="classwrench_1_1_compute_service_message_payload.html#a1f5b40748d7fe90fb682d735395de3af">wrench::ComputeServiceMessagePayload::PILOT_JOB_EXPIRED_MESSAGE_PAYLOAD</a></div><div class="ttdeci">static const std::string PILOT_JOB_EXPIRED_MESSAGE_PAYLOAD</div><div class="ttdoc">The number of bytes in the control message sent by the daemon to state that a pilot job has expired.</div><div class="ttdef"><b>Definition:</b> ComputeServiceMessagePayload.h:44</div></div>
