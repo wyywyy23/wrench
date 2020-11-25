@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['memorymanager_1170',['MemoryManager',['../classwrench_1_1_memory_manager.html',1,'wrench']]]
+  ['memorymanager_1176',['MemoryManager',['../classwrench_1_1_memory_manager.html',1,'wrench']]]
 ];

@@ -134,7 +134,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span>WorkflowExecutionEvent;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        StandardJobFailedEvent(std::shared_ptr&lt;StandardJob&gt; standard_job,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        StandardJobFailedEvent(StandardJob *standard_job,</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                               std::shared_ptr&lt;ComputeService&gt;  compute_service,</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                               std::shared_ptr&lt;FailureCause&gt; failure_cause)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                : standard_job(standard_job),</div>
@@ -143,7 +143,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        std::shared_ptr&lt;StandardJob&gt; standard_job;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        StandardJob *standard_job;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        std::shared_ptr&lt;ComputeService&gt;  compute_service;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::shared_ptr&lt;FailureCause&gt; failure_cause;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
