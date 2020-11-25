@@ -41,7 +41,7 @@ var searchData=
   ['getinputfiles_501',['getInputFiles',['../classwrench_1_1_workflow.html#ad9af24c910d8148353d3b5296d5afb99',1,'wrench::Workflow']]],
   ['getinputof_502',['getInputOf',['../classwrench_1_1_workflow_file.html#aa264b4e60713848ed45701d1a5403b35',1,'wrench::WorkflowFile']]],
   ['getinvalidpath_503',['getInvalidPath',['../namespacewrench.html#aeae87e3103c10ecb328736daeed14426',1,'wrench']]],
-  ['getjob_504',['getJob',['../namespacewrench.html#abed78ff359baf80fc9e700725ca66f37',1,'wrench']]],
+  ['getjob_504',['getJob',['../namespacewrench.html#a72d21a4c0bc519d297bb7a8b5f76239b',1,'wrench']]],
   ['getlinkname_505',['getLinkname',['../classwrench_1_1_simulation_timestamp_link_usage.html#a2716151690b9d54fb73a49513e92e1dd',1,'wrench::SimulationTimestampLinkUsage']]],
   ['getlistofpstates_506',['getListOfPstates',['../classwrench_1_1_simulation.html#abb75fd040236995186d9ad45434fe069',1,'wrench::Simulation']]],
   ['getlocation_507',['getLocation',['../namespacewrench.html#a6844e121ab4e9ce10dcfc4a2c842bc02',1,'wrench']]],
