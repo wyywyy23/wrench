@@ -476,7 +476,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tasks</td><td>a list of tasks (which must be either READY, or children of COMPLETED tasks or of tasks also included in the list) </td></tr>
-    <tr><td class="paramname">file_locations</td><td>a map that specifies locations where files should be read/written. When unspecified, it is assumed that the <a class="el" href="classwrench_1_1_compute_service.html" title="The compute service base class.">ComputeService</a>'s scratch storage space will be used.</td></tr>
+    <tr><td class="paramname">file_locations</td><td>a map that specifies locations where files, if any, should be read/written. When empty, it is assumed that the <a class="el" href="classwrench_1_1_compute_service.html" title="The compute service base class.">ComputeService</a>'s scratch storage space will be used.</td></tr>
   </table>
   </dd>
 </dl>
@@ -538,7 +538,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tasks</td><td>a list of tasks (which must be either READY, or children of COMPLETED tasks or of tasks also included in the standard job) </td></tr>
-    <tr><td class="paramname">file_locations</td><td>a map that specifies locations where input/output files should be read/written. When unspecified, it is assumed that the <a class="el" href="classwrench_1_1_compute_service.html" title="The compute service base class.">ComputeService</a>'s scratch storage space will be used. </td></tr>
+    <tr><td class="paramname">file_locations</td><td>a map that specifies locations where input/output files, if any, should be read/written. When empty, it is assumed that the <a class="el" href="classwrench_1_1_compute_service.html" title="The compute service base class.">ComputeService</a>'s scratch storage space will be used. </td></tr>
     <tr><td class="paramname">pre_file_copies</td><td>a vector of tuples that specify which file copy operations should be completed before task executions begin. The ComputeService::SCRATCH constant can be used to mean "the scratch storage space of the ComputeService". </td></tr>
     <tr><td class="paramname">post_file_copies</td><td>a vector of tuples that specify which file copy operations should be completed after task executions end. The ComputeService::SCRATCH constant can be used to mean "the scratch storage space of the ComputeService". </td></tr>
     <tr><td class="paramname">cleanup_file_deletions</td><td>a vector of file tuples that specify file deletion operations that should be completed at the end of the job. The ComputeService::SCRATCH constant can be used to mean "the scratch storage space of the ComputeService". </td></tr>
