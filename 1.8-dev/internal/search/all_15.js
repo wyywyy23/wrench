@@ -27,9 +27,10 @@ var searchData=
   ['wrench_1007',['wrench',['../namespacewrench.html',1,'']]],
   ['write_5foutput_5fend_1008',['write_output_end',['../structwrench_1_1_workflow_task_1_1_workflow_task_execution.html#a92b2b57919e6f8ecd2f991f9a98c7b56',1,'wrench::WorkflowTask::WorkflowTaskExecution']]],
   ['write_5foutput_5fstart_1009',['write_output_start',['../structwrench_1_1_workflow_task_1_1_workflow_task_execution.html#ad0f0c1f1b720d2b8413228a8320c3837',1,'wrench::WorkflowTask::WorkflowTaskExecution']]],
-  ['writefile_1010',['writeFile',['../classwrench_1_1_storage_service.html#a81862260994bb6fd35cb78aa12164d09',1,'wrench::StorageService']]],
-  ['writefiles_1011',['writeFiles',['../classwrench_1_1_storage_service.html#a58f410f1310760abbfa001f8fae3d23c',1,'wrench::StorageService']]],
-  ['writetocache_1012',['writeToCache',['../classwrench_1_1_memory_manager.html#a0d3ab521211f798ebff30ff33d0faa90',1,'wrench::MemoryManager']]],
-  ['writetodisk_1013',['writeToDisk',['../classwrench_1_1_s4_u___simulation.html#a5780ba490a813e72061708bf83385d11',1,'wrench::S4U_Simulation::writeToDisk()'],['../classwrench_1_1_simulation.html#abc3c97ca35314f5436d4533e48eac1f8',1,'wrench::Simulation::writeToDisk()']]],
-  ['writewithmemorycache_1014',['writeWithMemoryCache',['../classwrench_1_1_simulation.html#a63119b4511c7198469fdec2aaaac77c4',1,'wrench::Simulation']]]
+  ['writebacktocache_1010',['writebackToCache',['../classwrench_1_1_memory_manager.html#ac6bbfc327d09f6e0b22d52666dd4b926',1,'wrench::MemoryManager']]],
+  ['writebackwithmemorycache_1011',['writebackWithMemoryCache',['../classwrench_1_1_simulation.html#a2f52843121c55e6341ab6bbf585288c9',1,'wrench::Simulation']]],
+  ['writefile_1012',['writeFile',['../classwrench_1_1_storage_service.html#a81862260994bb6fd35cb78aa12164d09',1,'wrench::StorageService']]],
+  ['writefiles_1013',['writeFiles',['../classwrench_1_1_storage_service.html#a58f410f1310760abbfa001f8fae3d23c',1,'wrench::StorageService']]],
+  ['writethroughwithmemorycache_1014',['writeThroughWithMemoryCache',['../classwrench_1_1_simulation.html#ade19345aed10813e50d43052de60f96a',1,'wrench::Simulation']]],
+  ['writetodisk_1015',['writeToDisk',['../classwrench_1_1_s4_u___simulation.html#a5780ba490a813e72061708bf83385d11',1,'wrench::S4U_Simulation::writeToDisk()'],['../classwrench_1_1_simulation.html#abc3c97ca35314f5436d4533e48eac1f8',1,'wrench::Simulation::writeToDisk()']]]
 ];

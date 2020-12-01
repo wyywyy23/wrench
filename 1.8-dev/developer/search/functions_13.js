@@ -7,6 +7,6 @@ var searchData=
   ['whilesending_1019',['whileSending',['../classwrench_1_1_network_error.html#a98a2da5f34bd18fc2c245b364e884b34',1,'wrench::NetworkError']]],
   ['wms_1020',['WMS',['../classwrench_1_1_w_m_s.html#aa41e564cb101a4c9bb3990754b135359',1,'wrench::WMS']]],
   ['workflow_1021',['Workflow',['../classwrench_1_1_workflow.html#a8447e0cbd59b4874bf47f8e2480a5a4d',1,'wrench::Workflow']]],
-  ['writefile_1022',['writeFile',['../classwrench_1_1_storage_service.html#a81862260994bb6fd35cb78aa12164d09',1,'wrench::StorageService']]],
-  ['writetocache_1023',['writeToCache',['../classwrench_1_1_memory_manager.html#a0d3ab521211f798ebff30ff33d0faa90',1,'wrench::MemoryManager']]]
+  ['writebacktocache_1022',['writebackToCache',['../classwrench_1_1_memory_manager.html#ac6bbfc327d09f6e0b22d52666dd4b926',1,'wrench::MemoryManager']]],
+  ['writefile_1023',['writeFile',['../classwrench_1_1_storage_service.html#a81862260994bb6fd35cb78aa12164d09',1,'wrench::StorageService']]]
 ];

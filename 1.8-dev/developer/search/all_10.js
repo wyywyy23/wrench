@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['readchunkfromcache_401',['readChunkFromCache',['../classwrench_1_1_memory_manager.html#a636bed6fc43fd37f60be7e02d56d594f',1,'wrench::MemoryManager']]],
-  ['readfile_402',['readFile',['../classwrench_1_1_storage_service.html#ad969be2879e8d0ecca8a322b112e062e',1,'wrench::StorageService']]],
-  ['readfromcache_403',['readFromCache',['../classwrench_1_1_memory_manager.html#aaa9c9da82f462ef4ac316b7a27445c4b',1,'wrench::MemoryManager']]],
-  ['readtocache_404',['readToCache',['../classwrench_1_1_memory_manager.html#a4d235745c6a0b7f1056c9c39208c0b43',1,'wrench::MemoryManager']]],
+  ['readchunkfromcache_402',['readChunkFromCache',['../classwrench_1_1_memory_manager.html#a636bed6fc43fd37f60be7e02d56d594f',1,'wrench::MemoryManager']]],
+  ['readfile_403',['readFile',['../classwrench_1_1_storage_service.html#ad969be2879e8d0ecca8a322b112e062e',1,'wrench::StorageService']]],
+  ['readtocache_404',['readToCache',['../classwrench_1_1_memory_manager.html#a01a95e8be38b5826ad183b311a4fb77c',1,'wrench::MemoryManager']]],
   ['ready_405',['READY',['../classwrench_1_1_workflow_task.html#a1184f3d7aea21e1c87a9b17e84f1f92aae983a946ee97e094f18524d6b392d2f9',1,'wrench::WorkflowTask']]],
   ['remove_5fentry_5fanswer_5fmessage_5fpayload_406',['REMOVE_ENTRY_ANSWER_MESSAGE_PAYLOAD',['../classwrench_1_1_file_registry_service_message_payload.html#a143ee2e1ad8b0861b040fa67efb17db8',1,'wrench::FileRegistryServiceMessagePayload']]],
   ['remove_5fentry_5fcompute_5fcost_407',['REMOVE_ENTRY_COMPUTE_COST',['../classwrench_1_1_file_registry_service_property.html#aa365ab3efd713b23827f22ee48626e46',1,'wrench::FileRegistryServiceProperty']]],

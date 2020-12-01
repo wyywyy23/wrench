@@ -13,6 +13,6 @@ var searchData=
   ['workflowjob_569',['WorkflowJob',['../classwrench_1_1_workflow_job.html',1,'wrench']]],
   ['workflowtask_570',['WorkflowTask',['../classwrench_1_1_workflow_task.html',1,'wrench']]],
   ['wrench_571',['wrench',['../namespacewrench.html',1,'']]],
-  ['writefile_572',['writeFile',['../classwrench_1_1_storage_service.html#a81862260994bb6fd35cb78aa12164d09',1,'wrench::StorageService']]],
-  ['writetocache_573',['writeToCache',['../classwrench_1_1_memory_manager.html#a0d3ab521211f798ebff30ff33d0faa90',1,'wrench::MemoryManager']]]
+  ['writebacktocache_572',['writebackToCache',['../classwrench_1_1_memory_manager.html#ac6bbfc327d09f6e0b22d52666dd4b926',1,'wrench::MemoryManager']]],
+  ['writefile_573',['writeFile',['../classwrench_1_1_storage_service.html#a81862260994bb6fd35cb78aa12164d09',1,'wrench::StorageService']]]
 ];
