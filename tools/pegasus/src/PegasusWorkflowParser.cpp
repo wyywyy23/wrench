@@ -60,6 +60,13 @@ namespace wrench {
             throw std::invalid_argument("Workflow::createWorkflowFromJson(): Could not find a workflow exit");
         }
 
+	try {
+	    unsigned int t = workflowJobs.at("executedAt");
+	    workflow->setSubmittedTime(t);
+	} catch (nlohmann::json::out_of_range &e) {
+	    std::cerr << "No entry executedAt. WMS defer set to 0." << std::endl;
+	}
+
         wrench::WorkflowTask *task;
 
         for (nlohmann::json::iterator it = workflowJobs.begin(); it != workflowJobs.end(); ++it) {
