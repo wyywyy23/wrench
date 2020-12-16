@@ -61,6 +61,13 @@ namespace wrench {
         }
 
 	try {
+	    std::string workflowName = j.at("name");
+	    workflow->setName(workflowName);
+	} catch (nlohmann::json::out_of_range &e) {
+	    std::cerr << "Workflow has no name." << std::endl;
+	}
+
+	try {
 	    unsigned int t = workflowJobs.at("executedAt");
 	    workflow->setSubmittedTime(t);
 	} catch (nlohmann::json::out_of_range &e) {
@@ -215,6 +222,12 @@ namespace wrench {
 
         // Get the root node
         pugi::xml_node dag = dax_tree.child("adag");
+	try {
+	    std::string workflowName = dag.attribute("name").value();
+	    workflow->setName(workflowName);
+	} catch (std::invalid_argument &e) {
+	    std::cerr << "Workflow has no name." << std::endl;
+	}
 
         // Iterate through the "job" nodes
         for (pugi::xml_node job = dag.child("job"); job; job = job.next_sibling("job")) {

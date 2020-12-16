@@ -39,6 +39,9 @@ namespace wrench {
 	void setSubmittedTime(unsigned int t) { this->submittedTime = t; }
 	unsigned int getSubmittedTime() { return this->submittedTime; }
 
+	void setName(std::string name) { this->workflowName = name; }
+	std::string getName() { return this->workflowName; }
+
         WorkflowTask *addTask(std::string, double flops,
                               unsigned long min_num_cores,
                               unsigned long max_num_cores,
@@ -122,6 +125,7 @@ namespace wrench {
 
     private:
 	unsigned int submittedTime = 0;
+	std::string workflowName = "anonymous";
 
         friend class WMS;
 
