@@ -441,6 +441,7 @@ install(DIRECTORY include/ DESTINATION include)
 
 # generate unit tests
 add_executable(unit_tests EXCLUDE_FROM_ALL ${SOURCE_FILES} ${HEADER_FILES} ${TEST_FILES})
+set(ENABLE_BATSCHED 1)
 if (ENABLE_BATSCHED)
     find_library(ZMQ_LIBRARY NAMES zmq)
     target_link_libraries(unit_tests ${GTEST_LIBRARY} wrenchpegasusworkflowparser wrench -lpthread -lm ${ZMQ_LIBRARY})

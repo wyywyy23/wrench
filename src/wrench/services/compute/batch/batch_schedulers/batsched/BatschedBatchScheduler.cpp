@@ -194,7 +194,8 @@ namespace wrench {
 
 #ifdef ENABLE_BATSCHED
 
-        std::set<std::string> supported_algorithms = {"conservative_bf", "fast_conservative_bf", "fcfs_fast"};
+        // std::set<std::string> supported_algorithms = {"conservative_bf", "fast_conservative_bf", "fcfs_fast", "fcfs"};
+	std::set<std::string> supported_algorithms = this->cs->scheduling_algorithms;
         if (supported_algorithms.find(this->cs->getPropertyValueAsString(BatchComputeServiceProperty::BATCH_SCHEDULING_ALGORITHM)) == supported_algorithms.end()) {
             throw std::runtime_error("BatschedBatchScheduler::getStartTimeEstimates(): Algorithm does not support start time estimates");
         }
