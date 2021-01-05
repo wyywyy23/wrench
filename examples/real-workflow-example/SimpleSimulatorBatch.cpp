@@ -171,6 +171,10 @@ int main(int argc, char **argv) {
     }
     std::cerr << "Simulation done!" << std::endl;
 
+    std::cerr << "Job " << workflow->getName() << "\tmakespan " << std::to_string(workflow->getCompletionDate() - workflow->getSubmittedTime()) << std::endl;
+
+    simulation.getOutput().dumpUnifiedJSON(workflow, "output/workflow_" + workflow->getName() + "_unified.json", false, true, false, false, false, false, false);
+
     /* Simulation results can be examined via simulation.output, which provides access to traces
      * of events. In the code below, we retrieve the trace of all task completion events, print how
      * many such events there are, and print some information for the first such event.

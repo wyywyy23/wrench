@@ -114,3 +114,4 @@ sonar-project.properties
 tools/wrench/wrench-dashboard
 tools/wrench/wrench-init/wrench-init
 unit_tests
+**/output
