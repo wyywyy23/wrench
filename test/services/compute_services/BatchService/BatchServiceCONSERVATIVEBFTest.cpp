@@ -896,10 +896,10 @@ void BatchServiceCONSERVATIVE_BFTest::do_SimpleCONSERVATIVE_BF_CORE_LEVEL_test()
 
     // Create and initialize a simulation
     auto simulation = new wrench::Simulation();
-    int argc = 2;
+    int argc = 1;
     auto argv = (char **) calloc(argc, sizeof(char *));
     argv[0] = strdup("batch_service_test");
-    argv[1] = strdup("--wrench-full-log");
+//    argv[1] = strdup("--wrench-full-log");
 
     ASSERT_NO_THROW(simulation->init(&argc, argv));
 
@@ -938,7 +938,7 @@ void BatchServiceCONSERVATIVE_BFTest::do_SimpleCONSERVATIVE_BF_CORE_LEVEL_test()
 /**********************************************************************/
 
 
-#define NUM_JOBS_CORE_LEVEL 300
+#define NUM_JOBS_CORE_LEVEL 100
 
 class LargeCONSERVATIVE_BF_CORE_LEVELTestWMS : public wrench::WMS {
 
@@ -1005,7 +1005,7 @@ private:
                 throw std::runtime_error("Unexpected workflow execution event: " + event->toString());
             }
 
-#if 0
+#if 1
             // Get predictions for scalability measures
             std::set<std::tuple<std::string,unsigned long,unsigned long, double>> set_of_jobs = {
                     (std::tuple<std::string, unsigned long, unsigned long, double>) {"testing_job1_" + std::to_string(i), 1, 10, 60},
