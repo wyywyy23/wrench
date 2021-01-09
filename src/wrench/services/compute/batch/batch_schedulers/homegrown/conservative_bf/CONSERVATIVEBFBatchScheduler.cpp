@@ -23,7 +23,7 @@ namespace wrench {
      * @param cs: The BatchComputeService for which this scheduler is working
      */
     CONSERVATIVEBFBatchScheduler::CONSERVATIVEBFBatchScheduler(BatchComputeService *cs) : HomegrownBatchScheduler(cs) {
-        this->schedule = std::unique_ptr<NodeAvailabilityTimeLine>(new NodeAvailabilityTimeLine(cs->total_num_of_nodes * cs->num_cores_per_node));
+        this->schedule = std::unique_ptr<NodeAvailabilityTimeLine>(new NodeAvailabilityTimeLine(cs->total_num_of_nodes));
     }
 
     /**
@@ -249,7 +249,7 @@ namespace wrench {
         }
 
         // IMPORTANT: We always give all cores to a job on a node!
-        // cores_per_node = Simulation::getHostNumCores(cs->available_nodes_to_cores.begin()->first);
+        cores_per_node = Simulation::getHostNumCores(cs->available_nodes_to_cores.begin()->first);
 
         std::map<std::string, std::tuple<unsigned long, double>> resources = {};
         std::vector<std::string> hosts_assigned = {};

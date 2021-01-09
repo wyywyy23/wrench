@@ -123,6 +123,9 @@ namespace wrench {
         /** \endcond           */
         /***********************/
 
+    protected:
+	DagOfTasks dag;
+
     private:
 	unsigned int submittedTime = 0;
 	std::string workflowName = "anonymous";
@@ -135,7 +138,7 @@ namespace wrench {
         typedef boost::adjacency_list<boost::listS, boost::vecS, boost::directedS, Vertex> DAG;
         typedef boost::graph_traits<DAG>::vertex_descriptor vertex_t;
 
-        DagOfTasks dag;
+        // DagOfTasks dag;
 
         std::map<std::string, std::unique_ptr<WorkflowTask>> tasks;
         std::map<std::string, std::unique_ptr<WorkflowFile>> files;

@@ -57,6 +57,12 @@ namespace wrench {
 
         void addOutputFile(WorkflowFile *file);
 
+	// wyy: add files without updating dependencies (for speed)
+
+	void addInputFileWithoutDependencies(WorkflowFile *file);
+
+	void addOutputFileWithoutDependencies(WorkflowFile *file);
+
         unsigned int getFailureCount();
 
 
