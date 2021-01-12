@@ -22,6 +22,7 @@
 #include "wrench/services/storage/StorageService.h"
 #include "wrench/simulation/Simulation.h"
 #include "simgrid/plugins/energy.h"
+#include "simgrid/plugins/load.h"
 #include "wrench/simgrid_S4U_util/S4U_VirtualMachine.h"
 #include "wrench/services/memory/MemoryManager.h"
 #include "wrench/workflow/WorkflowFile.h"
@@ -118,8 +119,14 @@ namespace wrench {
                 TerminalOutput::disableColor();
             } else if ((not strcmp(argv[i], "--wrench-full-log")) or (not strcmp(argv[i], "--wrench-full-logs")) or (not strcmp(argv[i], "--wrench-log-full"))) {
                 xbt_log_control_set("root.thresh:info");
-            } else if (not strcmp(argv[i], "--activate-energy")) {
+            } else if (not strcmp(argv[i], "--activate-host-energy")) {
                 sg_host_energy_plugin_init();
+            } else if (not strcmp(argv[i], "--activate-host-load")) {
+                sg_host_load_plugin_init();
+	    } else if (not strcmp(argv[i], "--activate-link-energy")) {
+		sg_link_energy_plugin_init();
+	    } else if (not strcmp(argv[i], "--activate-link-load")) {
+		sg_link_load_plugin_init();
             } else if (not strcmp(argv[i], "--help-wrench")) {
                 wrench_help_requested = true;
             } else if (not strcmp(argv[i], "--help")) {
