@@ -23,6 +23,7 @@
 #include "wrench/simulation/Simulation.h"
 #include "simgrid/plugins/energy.h"
 #include "simgrid/plugins/load.h"
+#include "simgrid/plugins/dlps.h"
 #include "wrench/simgrid_S4U_util/S4U_VirtualMachine.h"
 #include "wrench/services/memory/MemoryManager.h"
 #include "wrench/workflow/WorkflowFile.h"
@@ -127,6 +128,8 @@ namespace wrench {
 		sg_link_energy_plugin_init();
 	    } else if (not strcmp(argv[i], "--activate-link-load")) {
 		sg_link_load_plugin_init();
+	    } else if (not strcmp(argv[i], "--activate-dlps")) {
+		sg_dlps_plugin_init();
             } else if (not strcmp(argv[i], "--help-wrench")) {
                 wrench_help_requested = true;
             } else if (not strcmp(argv[i], "--help")) {
