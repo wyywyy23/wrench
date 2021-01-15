@@ -86,7 +86,8 @@ namespace wrench {
                 requested_time = time;
             }
             double requested_ram = std::get<4>(job);
-            int num_nodes = std::get<5>(job);
+            int num_cores = std::get<5>(job);
+	    int num_nodes = 1;
 
             // Create the set of tasks
             std::vector<WorkflowTask *> to_submit;
@@ -96,7 +97,7 @@ namespace wrench {
                 WorkflowTask *task = workflow->addTask(
                         this->getName() + "_job_" + std::to_string(job_count) + "_task_" + std::to_string(i),
                         task_flops,
-                        num_cores_per_node, num_cores_per_node,
+                        num_cores, num_cores,
                         requested_ram);
                 to_submit.push_back(task);
             }
@@ -113,9 +114,9 @@ namespace wrench {
 
             // Create the batch-specific argument
             std::map<std::string, std::string> batch_job_args;
-            batch_job_args["-N"] = std::to_string(num_nodes); // Number of nodes/taks
+            batch_job_args["-N"] = "1"; // Number of nodes/taks
             batch_job_args["-t"] = std::to_string(1 + requested_time / 60); // Time in minutes (note the +1)
-            batch_job_args["-c"] = std::to_string(num_cores_per_node); //number of cores per task
+            batch_job_args["-c"] = std::to_string(num_cores); //number of cores per task
             batch_job_args["-u"] = username; //number of cores per task
             batch_job_args["-color"] = "green";
 
