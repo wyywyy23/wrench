@@ -31,6 +31,10 @@ namespace wrench {
     class WorkflowTask {
 
     public:
+
+	void setStaticHost(long idx) { this->static_host = idx; } 
+        long getStaticHost() { return this->static_host; }
+
         std::string getID() const;
 
         double getFlops() const;
@@ -257,6 +261,8 @@ namespace wrench {
 
     private:
         friend class Workflow;
+
+	long static_host = -1;         // Index of static host, for workload replay
 
         std::string id;                    // Task ID
         std::string cluster_id;            // ID for clustered task

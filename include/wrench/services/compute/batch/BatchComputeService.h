@@ -131,6 +131,7 @@ namespace wrench {
         friend class FCFSBatchScheduler;
         friend class CONSERVATIVEBFBatchScheduler;
         friend class CONSERVATIVEBFBatchSchedulerCoreLevel;
+	friend class STATICBatchScheduler;
         friend class BatschedBatchScheduler;
 
         BatchComputeService(const std::string hostname,
@@ -164,7 +165,7 @@ namespace wrench {
         // terminate a pilot job
         void terminatePilotJob(std::shared_ptr<PilotJob> job) override;
 
-        std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string>> workload_trace;
+        std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>> workload_trace;
         std::shared_ptr<WorkloadTraceFileReplayer> workload_trace_replayer;
 
         bool clean_exit = false;
@@ -227,7 +228,7 @@ namespace wrench {
                                           "asc_size", "desc_size", "asc_walltime", "desc_walltime"
 };
 #else
-        std::set<std::string> scheduling_algorithms = {"fcfs", "conservative_bf", "conservative_bf_core_level"
+        std::set<std::string> scheduling_algorithms = {"fcfs", "conservative_bf", "conservative_bf_core_level", "static"
         };
 
         //Batch queue ordering options

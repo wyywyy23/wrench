@@ -27,12 +27,12 @@ namespace wrench {
      */
     class TraceFileLoader {
     public:
-        static std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string>>
+        static std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>>
            loadFromTraceFile(std::string filename, bool ignore_invalid_jobs, double desired_submit_time_of_first_job);
     private:
-        static std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string>>
+        static std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>>
         loadFromTraceFileSWF(std::string filename, bool ignore_invalid_jobs, double desired_submit_time_of_first_job);
-        static std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string>>
+        static std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>>
         loadFromTraceFileJSON(std::string filename, bool ignore_invalid_jobs, double desired_submit_time_of_first_job);
     };
 

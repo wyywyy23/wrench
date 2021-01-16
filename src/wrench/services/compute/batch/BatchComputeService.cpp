@@ -26,6 +26,7 @@
 #include "wrench/workflow/job/PilotJob.h"
 #include "services/compute/batch/workload_helper_classes/WorkloadTraceFileReplayer.h"
 #include "batch_schedulers/homegrown/fcfs/FCFSBatchScheduler.h"
+#include "batch_schedulers/homegrown/static/STATICBatchScheduler.h"
 #include "batch_schedulers/homegrown/conservative_bf/CONSERVATIVEBFBatchScheduler.h"
 #include "batch_schedulers/homegrown/conservative_bf_core_level/CONSERVATIVEBFBatchSchedulerCoreLevel.h"
 #include "batch_schedulers/batsched/BatschedBatchScheduler.h"
@@ -170,8 +171,8 @@ namespace wrench {
                 unsigned int num_nodes = std::get<5>(j);
 
                 // Capping to max number of nodes, silently
-                if (num_nodes > this->total_num_of_nodes) {
-                    std::get<5>(j) = this->total_num_of_nodes;
+                if (num_nodes > this->num_cores_per_node) {
+                    std::get<5>(j) = this->num_cores_per_node;
                 }
                 // Capping to ram, silently
                 if (requested_ram > ram_available) {
@@ -196,6 +197,8 @@ namespace wrench {
             this->scheduler = std::unique_ptr<BatchScheduler>(new CONSERVATIVEBFBatchScheduler(this));
         } else if (batch_scheduling_alg == "conservative_bf_core_level") {
             this->scheduler = std::unique_ptr<BatchScheduler>(new CONSERVATIVEBFBatchSchedulerCoreLevel(this));
+        } else if (batch_scheduling_alg == "static") {
+            this->scheduler = std::unique_ptr<BatchScheduler>(new STATICBatchScheduler(this));
         }
 #endif
 

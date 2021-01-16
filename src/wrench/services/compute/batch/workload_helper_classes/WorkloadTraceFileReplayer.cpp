@@ -30,7 +30,7 @@ namespace wrench {
                                                          std::shared_ptr<BatchComputeService> batch_service,
                                                          unsigned long num_cores_per_node,
                                                          bool use_actual_runtimes_as_requested_runtimes,
-                                                         std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string>> &workload_trace
+                                                         std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>> &workload_trace
     ) :
             WMS(nullptr, nullptr,
                 {batch_service}, {},
@@ -71,6 +71,11 @@ namespace wrench {
         unsigned long counter = 0;
         for (auto job : this->workload_trace) {
 
+	    long static_host = std::get<7>(job);
+	    if ((unsigned long) (static_host + 1) > this->batch_service->getNumHosts()) {
+		continue;
+	    }
+
             // Sleep until the submission time
             double sub_time = real_start_time + std::get<1>(job);
             double curtime = S4U_Simulation::getClock();
@@ -79,7 +84,7 @@ namespace wrench {
                 wrench::S4U_Simulation::sleep(sleeptime);
 
             // Get job information
-            std::string username = std::get<0>(job);
+            std::string username = std::get<6>(job);
             double time = std::get<2>(job);
             double requested_time = std::get<3>(job);
             if (this->use_actual_runtimes_as_requested_runtimes) {
@@ -93,12 +98,13 @@ namespace wrench {
             std::vector<WorkflowTask *> to_submit;
             for (int i = 0; i < num_nodes; i++) {
                 double time_fudge = 1; // 1 second seems to make it all work!
-                double task_flops = num_cores_per_node * (core_flop_rate * std::max<double>(0, time - time_fudge));
+                double task_flops = num_cores * (core_flop_rate * std::max<double>(0, time - time_fudge));
                 WorkflowTask *task = workflow->addTask(
                         this->getName() + "_job_" + std::to_string(job_count) + "_task_" + std::to_string(i),
                         task_flops,
                         num_cores, num_cores,
                         requested_ram);
+		task->setStaticHost(static_host);
                 to_submit.push_back(task);
             }
 

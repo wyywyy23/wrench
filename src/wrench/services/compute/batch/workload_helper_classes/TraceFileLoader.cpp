@@ -57,10 +57,11 @@ namespace wrench {
     *              - requested ram
     *              - requested number of nodes
     *              - username
+    *              - static_host
     *
     * @throw std::invalid_argument
     */
-    std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string>>
+    std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>>
     TraceFileLoader::loadFromTraceFile(std::string filename, bool ignore_invalid_jobs, double desired_submit_time_of_first_job) {
 
         std::istringstream ss(filename);
@@ -101,13 +102,14 @@ namespace wrench {
     *              - requested ram
     *              - requested number of nodes
     *              - username
+    *              - static host
     *
     * @throw std::invalid_argument
     */
-    std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string>>
+    std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>>
     TraceFileLoader::loadFromTraceFileSWF(std::string filename, bool ignore_invalid_jobs, double desired_submit_time_of_first_job) {
 
-        std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string>> trace_file_jobs = {};
+        std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>> trace_file_jobs = {};
 
         std::ifstream infile(filename);
         if (not infile.is_open()) {
@@ -133,6 +135,7 @@ namespace wrench {
                 int num_nodes = -1;
                 unsigned long userid = 0;
                 std::string username;
+		long static_host = -1;
 
                 try {
                     if (tokens.size() < 10) {
@@ -232,9 +235,15 @@ namespace wrench {
                                 break;
                             case 17: // Think time
                                 break;
+			    case 18: // wyy customized, static host for replay
+				if (sscanf(item.c_str(), "%ld", &static_host) != 1) {
+                                    throw std::invalid_argument(
+                                            "TraceFileLoader::loadFromTraceFileSWF(): Invalid static_host '" + item + "' in batch workload trace file"); 
+				}
+				break;
                             default:
                                 throw std::invalid_argument(
-                                        "TraceFileLoader::loadFromTraceFileSWF(): Unknown batch workload trace file column, maybe there are more than 18 columns?"
+                                        "TraceFileLoader::loadFromTraceFileSWF(): Unknown batch workload trace file column, maybe there are more than 19 columns?"
                                 );
                         }
                         itemnum++;
@@ -287,10 +296,10 @@ namespace wrench {
                 }
 
                 // Add the job to the list
-                std::tuple<std::string, double, double, double, double, unsigned int, std::string> job =
-                        std::tuple<std::string, double, double, double, double, unsigned int, std::string>(
+                std::tuple<std::string, double, double, double, double, unsigned int, std::string, long> job =
+                        std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>(
                                 username, sub_time, time, requested_time, requested_ram,
-                                (unsigned int) requested_num_nodes, username);
+                                (unsigned int) requested_num_nodes, username, static_host);
                 trace_file_jobs.push_back(job);
             }
         }
@@ -312,13 +321,14 @@ namespace wrench {
     *              - requested ram
     *              - requested number of nodes
     *              - username
+    *              - static_host
     *
     * @throw std::invalid_argument
     */
-    std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string>>
+    std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>>
     TraceFileLoader::loadFromTraceFileJSON(std::string filename, bool ignore_invalid_jobs, double desired_submit_time_of_first_job) {
 
-        std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string>> trace_file_jobs = {};
+        std::vector<std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>> trace_file_jobs = {};
 
         std::ifstream file;
         nlohmann::json j;
@@ -403,9 +413,9 @@ namespace wrench {
             }
 
 //      // Add the job to the list
-            std::tuple<std::string, double, double, double, double, unsigned int, std::string> job =
-                    std::tuple<std::string, double, double, double, double, unsigned int, std::string>(
-                            std::to_string(id), subtime, walltime, requested_time, 0.0, (unsigned int) res, "user");
+            std::tuple<std::string, double, double, double, double, unsigned int, std::string, long> job =
+                    std::tuple<std::string, double, double, double, double, unsigned int, std::string, long>(
+                            std::to_string(id), subtime, walltime, requested_time, 0.0, (unsigned int) res, "user", -1);
             trace_file_jobs.push_back(job);
         }
 

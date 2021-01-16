@@ -232,6 +232,8 @@ set(SOURCE_FILES
         src/wrench/services/compute/batch/batch_schedulers/homegrown/conservative_bf_core_level/CoreAvailabilityTimeLine.h
         src/wrench/services/compute/batch/batch_schedulers/homegrown/fcfs/FCFSBatchScheduler.cpp
         src/wrench/services/compute/batch/batch_schedulers/homegrown/fcfs/FCFSBatchScheduler.h
+        src/wrench/services/compute/batch/batch_schedulers/homegrown/static/STATICBatchScheduler.cpp
+        src/wrench/services/compute/batch/batch_schedulers/homegrown/static/STATICBatchScheduler.h
         src/wrench/services/compute/batch/workload_helper_classes/TraceFileLoader.cpp
         src/wrench/services/compute/batch/workload_helper_classes/WorkloadTraceFileReplayer.cpp
         src/wrench/services/compute/batch/workload_helper_classes/WorkloadTraceFileReplayerEventReceiver.cpp
