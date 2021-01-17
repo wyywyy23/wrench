@@ -97,7 +97,7 @@ namespace wrench {
             // Create the set of tasks
             std::vector<WorkflowTask *> to_submit;
             for (int i = 0; i < num_nodes; i++) {
-                double time_fudge = 1; // 1 second seems to make it all work!
+                double time_fudge = 0; // 1 second seems to make it all work!
                 double task_flops = num_cores * (core_flop_rate * std::max<double>(0, time - time_fudge));
                 WorkflowTask *task = workflow->addTask(
                         this->getName() + "_job_" + std::to_string(job_count) + "_task_" + std::to_string(i),

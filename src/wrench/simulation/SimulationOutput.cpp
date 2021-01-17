@@ -1586,6 +1586,7 @@ namespace wrench {
     void SimulationOutput::addTimestampTaskCompletion(WorkflowTask *task) {
         if (this->isEnabled<SimulationTimestampTaskCompletion>()) {
             this->addTimestamp<SimulationTimestampTaskCompletion>(new SimulationTimestampTaskCompletion(task));
+	    WRENCH_INFO("Adding timestamp for task completion: %s, %s", task->getID().c_str(), task->getWorkflow()->getName().c_str());
         }
     }
 
