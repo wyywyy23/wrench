@@ -102,6 +102,19 @@ namespace wrench {
                     }
 
                     task = workflow->addTask(name, runtime * flop_rate, num_procs, num_procs, 0.0);
+		    // task static host
+		    try {
+			std::string static_host = job.at("machine");
+			task->setStaticHost(std::stol(static_host));
+		    } catch (nlohmann::json::out_of_range &e) {
+		    }
+
+		    // task static end time
+		    try {
+			double static_end_time = job.at("endTimeInTrace");
+			task->setStaticEndTime(static_end_time);
+		    } catch (nlohmann::json::out_of_range &e) {
+		    }
 
                     // task priority
                     try {

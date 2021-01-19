@@ -35,6 +35,9 @@ namespace wrench {
 	void setStaticHost(long idx) { this->static_host = idx; } 
         long getStaticHost() { return this->static_host; }
 
+	void setStaticEndTime(double time) { this->static_end_time = time; }
+	double getStaticEndTime() { return this->static_end_time; }
+
         std::string getID() const;
 
         double getFlops() const;
@@ -263,6 +266,7 @@ namespace wrench {
         friend class Workflow;
 
 	long static_host = -1;         // Index of static host, for workload replay
+	long static_end_time = -1;     // End time specified in trace, for replay
 
         std::string id;                    // Task ID
         std::string cluster_id;            // ID for clustered task
