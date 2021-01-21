@@ -115,6 +115,11 @@ namespace wrench {
 			task->setStaticEndTime(static_end_time);
 		    } catch (nlohmann::json::out_of_range &e) {
 		    }
+		    try {
+			double static_start_time = job.at("startTimeInTrace");
+			task->setStaticStartTime(static_start_time);
+		    } catch (nlohmann::json::out_of_range &e) {
+		    }
 
                     // task priority
                     try {
@@ -157,7 +162,7 @@ namespace wrench {
                             workflow_file = workflow->getFileByID(id);
                         } catch (const std::invalid_argument &ia) {
                             // making a new file
-                            workflow_file = workflow->addFile(id, size);
+                            workflow_file = workflow->addFile(id, 0 + size * 0);
                         }
                         if (link == "input") {
                             task->addInputFile(workflow_file);
