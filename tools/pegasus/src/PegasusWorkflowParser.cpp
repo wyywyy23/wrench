@@ -162,7 +162,7 @@ namespace wrench {
                             workflow_file = workflow->getFileByID(id);
                         } catch (const std::invalid_argument &ia) {
                             // making a new file
-                            workflow_file = workflow->addFile(id, 0 + size * 0);
+                            workflow_file = workflow->addFile(id, size);
                         }
                         if (link == "input") {
                             task->addInputFile(workflow_file);
