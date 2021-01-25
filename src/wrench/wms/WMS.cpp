@@ -305,6 +305,10 @@ namespace wrench {
         this->start_time = start_time;
     }
 
+    void WMS::removeWorkflow() {
+	this->workflow = nullptr;
+    }
+
     /**
      * @brief Get the workflow that was assigned to the WMS
      *

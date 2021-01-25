@@ -44,6 +44,9 @@ namespace wrench {
 
     public:
         void addWorkflow(Workflow *workflow, double start_time = 0);
+	void removeWorkflow();
+	void setStartTime(double t) { this->start_time = t; };
+	double getStartTime() { return this->start_time; };
         Workflow *getWorkflow();
         PilotJobScheduler *getPilotJobScheduler();
         StandardJobScheduler *getStandardJobScheduler();

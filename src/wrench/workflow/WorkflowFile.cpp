@@ -37,6 +37,10 @@ namespace wrench {
         return this->size;
     }
 
+    void WorkflowFile::setSize(double size) {
+	this->size = size;
+    }
+
     /**
      * @brief Get the file id
      * @return the id

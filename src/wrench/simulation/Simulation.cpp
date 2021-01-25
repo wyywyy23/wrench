@@ -416,7 +416,7 @@ namespace wrench {
                     "A WMS should have been instantiated and passed to Simulation.setWMS()");
         }
 
-        // Check that every WMS has a workflow
+/*        // Check that every WMS has a workflow
         for (const auto &wms : this->wmses) {
             if (wms->getWorkflow() == nullptr) {
                 throw std::runtime_error(
@@ -459,7 +459,7 @@ namespace wrench {
                     }
                 }
             }
-        }
+        } */
     }
 
     /**
@@ -671,9 +671,9 @@ namespace wrench {
             throw std::invalid_argument("Simulation::stageFile(): Invalid arguments");
         }
 
-        if (this->is_running) {
-            throw std::runtime_error(" Simulation::stageFile(): Cannot stage a file once the simulation has started");
-        }
+//        if (this->is_running) {
+//            throw std::runtime_error(" Simulation::stageFile(): Cannot stage a file once the simulation has started");
+//        }
 
         // Check that a FileRegistryService has been set
         if (this->file_registry_services.empty()) {

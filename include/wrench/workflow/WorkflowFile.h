@@ -28,6 +28,7 @@ namespace wrench {
     public:
 
         double getSize();
+	void setSize(double);
 
         std::string getID();
 
