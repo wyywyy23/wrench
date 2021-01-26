@@ -27,7 +27,8 @@ namespace wrench {
      */
     Workflow *PegasusWorkflowParser::createWorkflowFromJSON(const std::string &filename, 
                                                             const std::string &reference_flop_rate,
-                                                            bool redundant_dependencies) {
+                                                            bool redundant_dependencies,
+							    long param_a, long param_b) {
 
         std::ifstream file;
         nlohmann::json j;
@@ -162,7 +163,7 @@ namespace wrench {
                             workflow_file = workflow->getFileByID(id);
                         } catch (const std::invalid_argument &ia) {
                             // making a new file
-                            workflow_file = workflow->addFile(id, size);
+                            workflow_file = workflow->addFile(id, max(0.0, param_a * size + param_b));
                         }
                         if (link == "input") {
                             task->addInputFile(workflow_file);

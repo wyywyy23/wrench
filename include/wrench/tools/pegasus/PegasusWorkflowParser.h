@@ -70,7 +70,7 @@ namespace wrench {
      * @throw std::invalid_argument
      *
      */
-        static Workflow *createWorkflowFromJSON(const std::string &filename, const std::string &reference_flop_rate, bool redundant_dependencies = false);
+        static Workflow *createWorkflowFromJSON(const std::string &filename, const std::string &reference_flop_rate, bool redundant_dependencies = false, long param_a = 1, long param_b = 0);
 
    /**
      * @brief Create an NON-abstract workflow based on a JSON file
