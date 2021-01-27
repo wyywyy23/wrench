@@ -101,4 +101,8 @@ namespace wrench {
         return (this->output_of != nullptr);
     }
 
+    void WorkflowFile::deleteFile() {
+	delete this;
+    }
+
 }

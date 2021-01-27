@@ -78,7 +78,7 @@ namespace wrench {
      */
     void Workflow::removeFile(WorkflowFile *file) {
 
-        if (file->getOutputOf() != nullptr) {
+/*        if (file->getOutputOf() != nullptr) {
             throw std::invalid_argument("Workflow::removeFile(): File " +
                                         file->getID() + " cannot be removed because it is output of task " +
                                         file->getOutputOf()->getID());
@@ -88,9 +88,10 @@ namespace wrench {
             throw std::invalid_argument("Workflow::removeFile(): File " +
                                         file->getID() + " cannot be removed because it is input to " +
                                         std::to_string(file->getInputOf().size()) + " tasks");
-        }
+        } */
 
         this->files.erase(file->getID());
+	// file->deleteFile();
     }
 
     /**
@@ -128,12 +129,17 @@ namespace wrench {
 
         // Remove the task from the master list
         tasks.erase(tasks.find(task->id));
+	// task->deleteTask();
 
         // Brute-force update of the top-level of all the children of the removed task
         for (auto const &child : children) {
             child->updateTopLevel();
         }
 
+    }
+
+    void Workflow::deleteWorkflow() {
+	delete this;
     }
 
     /**

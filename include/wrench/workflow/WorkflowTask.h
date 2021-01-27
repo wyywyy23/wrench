@@ -160,6 +160,8 @@ namespace wrench {
 
         void setColor(std::string);
 
+        void deleteTask();
+
         /***********************/
         /** \endcond           */
         /***********************/

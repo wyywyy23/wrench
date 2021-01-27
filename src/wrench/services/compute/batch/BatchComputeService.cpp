@@ -360,7 +360,7 @@ namespace wrench {
 
         // Sanity check
         if ((num_hosts == 0) or (num_cores_per_host == 0) or  (time_asked_for_in_minutes == 0)) {
-            WRENCH_INFO("Args: %d, %d, %f", num_hosts, num_cores_per_host, time_asked_for_in_minutes);
+            WRENCH_INFO("Args: %d, %d, %ld", num_hosts, num_cores_per_host, time_asked_for_in_minutes);
 	    throw std::invalid_argument("BatchComputeService::submitWorkflowJob(): service-specific arguments should have non-zero values.");
         }
 
