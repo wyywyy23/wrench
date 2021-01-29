@@ -109,6 +109,7 @@ examples/real-workflow-example/Makefile
 examples/real-workflow-example/cmake_install.cmake
 examples/real-workflow-example/wrench-example-real-workflow-batch
 examples/real-workflow-example/wrench-example-real-workflow-cloud
+examples/basic-examples/io-pagecache/wrench-example-io-pagecache-nighres
 install_manifest.txt
 sonar-project.properties
 tools/wrench/wrench-dashboard
