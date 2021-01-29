@@ -51,6 +51,8 @@ namespace wrench {
 
         void removeFile(WorkflowFile *file);
 
+	void deleteWorkflow();
+
         WorkflowTask *getTaskByID(const std::string &id);
 
         WorkflowFile *addFile(std::string, double);

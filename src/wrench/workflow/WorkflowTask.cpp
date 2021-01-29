@@ -877,4 +877,8 @@ namespace wrench {
         return this->parallel_model;
     }
 
+    void WorkflowTask::deleteTask() {
+	delete this;
+    }
+
 };

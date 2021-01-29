@@ -39,6 +39,8 @@ namespace wrench {
 
         Workflow *getWorkflow();
 
+	void deleteFile();
+
     private:
 
         friend class Workflow;
