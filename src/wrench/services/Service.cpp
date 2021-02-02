@@ -71,6 +71,10 @@ namespace wrench {
 //        WRENCH_INFO("IN SERVICE DESTRUCTOR: %s", this->getName().c_str());
     }
 
+    void Service::destroy() {
+	delete this;
+    }
+
     /**
      * @brief Constructor
      * @param hostname: the name of the host on which the service will run

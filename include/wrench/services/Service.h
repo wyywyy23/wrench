@@ -68,6 +68,8 @@ namespace wrench {
         static void clearTrackedServices();
         static void cleanupTrackedServices();
 
+	void destroy();
+
         /***********************/
         /** \endcond           */
         /***********************/

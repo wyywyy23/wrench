@@ -28,7 +28,7 @@ namespace wrench {
     Workflow *PegasusWorkflowParser::createWorkflowFromJSON(const std::string &filename, 
                                                             const std::string &reference_flop_rate,
                                                             bool redundant_dependencies,
-							    long param_a, long param_b) {
+							    long mean, long std) {
 
         std::ifstream file;
         nlohmann::json j;
@@ -74,6 +74,11 @@ namespace wrench {
 	} catch (nlohmann::json::out_of_range &e) {
 	    std::cerr << "No entry executedAt. WMS defer set to 0." << std::endl;
 	}
+
+	std::mt19937 rng;
+	std::normal_distribution<double> dist(mean, std);
+	rng.seed(workflow->getSubmittedTime());
+	double file_size = max(dist(rng), 0.0);
 
         wrench::WorkflowTask *task;
 
@@ -163,7 +168,7 @@ namespace wrench {
                             workflow_file = workflow->getFileByID(id);
                         } catch (const std::invalid_argument &ia) {
                             // making a new file
-                            workflow_file = workflow->addFile(id, max(0.0, param_a * size + param_b));
+                            workflow_file = workflow->addFile(id, file_size);
                         }
                         if (link == "input") {
                             task->addInputFile(workflow_file);
