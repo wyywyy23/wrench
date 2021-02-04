@@ -69,6 +69,7 @@ namespace wrench {
         double real_start_time = S4U_Simulation::getClock();
 
         unsigned long counter = 0;
+	std::set<long> node_pool;
         for (auto job : this->workload_trace) {
 
 	    long static_host = std::get<7>(job);
@@ -76,13 +77,20 @@ namespace wrench {
 		continue;
 	    }
 
+	    if (static_host != -1 && node_pool.find(static_host) != node_pool.end()) {
+		continue;
+	    }
+
+	    if (static_host != -1) {
+		node_pool.insert(static_host);
+	    }
+
             // Sleep until the submission time
             double sub_time = real_start_time + std::get<1>(job);
             double curtime = S4U_Simulation::getClock();
             double sleeptime = sub_time - curtime;
             if (sleeptime > 0)
-                // wrench::S4U_Simulation::sleep(sleeptime);
-                continue;
+                wrench::S4U_Simulation::sleep(sleeptime);
 
             // Get job information
             std::string username = std::get<6>(job);
