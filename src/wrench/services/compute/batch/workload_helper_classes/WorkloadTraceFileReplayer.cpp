@@ -81,7 +81,8 @@ namespace wrench {
             double curtime = S4U_Simulation::getClock();
             double sleeptime = sub_time - curtime;
             if (sleeptime > 0)
-                wrench::S4U_Simulation::sleep(sleeptime);
+                // wrench::S4U_Simulation::sleep(sleeptime);
+                continue;
 
             // Get job information
             std::string username = std::get<6>(job);
@@ -128,12 +129,13 @@ namespace wrench {
             batch_job_args["-color"] = "green";
 
             // Submit this job to the batch service
-            WRENCH_INFO("#%lu: Submitting a [-N:%s, -t:%s, -c:%s, -u:%s] job",
+            WRENCH_INFO("#%lu: Submitting a [-N:%s, -t:%s, -c:%s, -u:%s] job with static host %ld",
                         counter++,
                         batch_job_args["-N"].c_str(),
                         batch_job_args["-t"].c_str(),
                         batch_job_args["-c"].c_str(),
-                        batch_job_args["-u"].c_str());
+                        batch_job_args["-u"].c_str(),
+			static_host);
             try {
                 job_manager->submitJob(standard_job, this->batch_service, batch_job_args);
             } catch (WorkflowExecutionException &e) {
