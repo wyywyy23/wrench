@@ -21,6 +21,7 @@
 #include "wrench/workflow/parallel_model/ConstantEfficiencyParallelModel.h"
 #include "wrench/workflow/parallel_model/CustomParallelModel.h"
 
+#define BOOST_ALLOW_DEPRECATED_HEADERS
 #include <boost/graph/adjacency_list.hpp>
 
 namespace wrench {
