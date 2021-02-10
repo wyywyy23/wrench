@@ -10,6 +10,7 @@
 #ifndef WRENCH_DAGOFTASKS_H
 #define WRENCH_DAGOFTASKS_H
 
+#define BOOST_ALLOW_DEPRECATED_HEADERS
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/breadth_first_search.hpp>
 #include <iostream>

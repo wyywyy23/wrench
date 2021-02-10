@@ -44,7 +44,7 @@ namespace wrench {
         this->max_num_cores_per_node = max_num_cores_per_node;
 
         // this->integer_sequence;
-        for (long i = 0; i < this->max_num_nodes; i++) {
+        for (unsigned long i = 0; i < this->max_num_nodes; i++) {
             this->integer_sequence.insert(this->integer_sequence.end(), i);
         }
     }
@@ -91,7 +91,7 @@ namespace wrench {
         std::cerr << "------ SCHEDULE -----\n";
         for (auto &availability_timeslot : this->availability_timeslots) {
             std::cerr << availability_timeslot.first <<  "(";
-            for (long i = 0; i < this->max_num_nodes; i++) {
+            for (unsigned long i = 0; i < this->max_num_nodes; i++) {
                 std::cerr << availability_timeslot.second.core_utilization[i] << " ";
             }
             std::cerr << ") | ";
@@ -145,7 +145,7 @@ namespace wrench {
 //            std::cerr << "LOOKING AT A TIME SLOT " <<  availability_timeslot.first << "\n";
 //            std::cerr << " RIGHT NOW POSSIBLE NODES: " << possible_node_indices.size() << "\n";
             // Remove infeasible hosts
-            for (long i = 0; i < this->max_num_nodes; i++) {
+            for (unsigned long i = 0; i < this->max_num_nodes; i++) {
 //                std::cerr << "  - " << availability_timeslot.second.core_utilization[i]  << "\n";
                 if (availability_timeslot.second.core_utilization[i]  + num_cores_per_node > this->max_num_cores_per_node) {
                     possible_node_indices.erase(i);
