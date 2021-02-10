@@ -117,7 +117,7 @@ namespace wrench {
         /** @brief The time (in seconds) after which a service that doesn't send back a reply (control) message causes
          *  a NetworkTimeOut exception. (default: 30 second; if <0 never timeout)
          */
-        double network_timeout = 30.0;
+        double network_timeout = -1.0;
 
         /**
          * @brief Method to retrieve the shared_ptr to a service
