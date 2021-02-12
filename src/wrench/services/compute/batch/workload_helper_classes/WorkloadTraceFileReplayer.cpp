@@ -133,7 +133,7 @@ namespace wrench {
             batch_job_args["-N"] = "1"; // Number of nodes/taks
             batch_job_args["-t"] = std::to_string(1 + requested_time / 60); // Time in minutes (note the +1)
             batch_job_args["-c"] = std::to_string(num_cores); //number of cores per task
-            batch_job_args["-u"] = username; //number of cores per task
+            batch_job_args["-u"] = username; // username
             batch_job_args["-color"] = "green";
 
             // Submit this job to the batch service
