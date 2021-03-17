@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
     if (ends_with(workflow_file, "dax")) {
         workflow = wrench::PegasusWorkflowParser::createWorkflowFromDAX(workflow_file, "1000Gf");
     } else if (ends_with(workflow_file,"json")) {
-        workflow = wrench::PegasusWorkflowParser::createWorkflowFromJSON(workflow_file, "1000Gf");
+        workflow = wrench::PegasusWorkflowParser::createWorkflowFromJSON(workflow_file, "1000Gf", 1.0);
     } else {
         std::cerr << "Workflow file name must end with '.dax' or '.json'" << std::endl;
         exit(1);

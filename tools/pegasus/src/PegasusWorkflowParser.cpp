@@ -27,6 +27,7 @@ namespace wrench {
      */
     Workflow *PegasusWorkflowParser::createWorkflowFromJSON(const std::string &filename, 
                                                             const std::string &reference_flop_rate,
+const double load_factor,
                                                             bool redundant_dependencies) {
 
         std::ifstream file;
@@ -105,7 +106,11 @@ namespace wrench {
 		    // task static host
 		    try {
 			std::string static_host = job.at("machine");
-			task->setStaticHost(std::stol(static_host));
+			long static_host_scaled = std::stol(static_host);
+			if (static_host_scaled != -1) {
+			    static_host_scaled *= load_factor;
+			}
+			task->setStaticHost(static_host_scaled);
 		    } catch (nlohmann::json::out_of_range &e) {
 		    }
 
