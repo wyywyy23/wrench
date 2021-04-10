@@ -45,6 +45,7 @@ namespace wrench {
         std::string getID() const;
 
         double getFlops() const;
+        void setFlops(double flops) { this->flops = flops; }
 
         unsigned long getMinNumCores() const;
 
