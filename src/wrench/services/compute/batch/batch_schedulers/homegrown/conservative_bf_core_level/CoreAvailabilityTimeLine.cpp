@@ -91,11 +91,7 @@ namespace wrench {
         std::cerr << "------ SCHEDULE -----\n";
         for (auto &availability_timeslot : this->availability_timeslots) {
             std::cerr << availability_timeslot.first <<  "(";
-<<<<<<< HEAD
             for (unsigned long i = 0; i < this->max_num_nodes; i++) {
-=======
-            for (unsigned int i=0; i < this->max_num_nodes; i++) {
->>>>>>> upstream/master
                 std::cerr << availability_timeslot.second.core_utilization[i] << " ";
             }
             std::cerr << ") | ";
