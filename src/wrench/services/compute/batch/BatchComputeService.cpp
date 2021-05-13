@@ -1673,6 +1673,7 @@ namespace wrench {
             if (std::dynamic_pointer_cast<StandardJob>(workflow_job) == job) {
                 batch_job = j;
                 is_running = true;
+                break;
             }
         }
 
@@ -1685,6 +1686,7 @@ namespace wrench {
                 if (std::dynamic_pointer_cast<StandardJob>(workflow_job) == job) {
                     batch_pending_it = it1;
                     is_pending = true;
+                    break;
                 }
             }
         }
@@ -1698,6 +1700,7 @@ namespace wrench {
                 if (std::dynamic_pointer_cast<StandardJob>(workflow_job) == job) {
                     batch_job = j;
                     is_waiting = true;
+                    break;
                 }
             }
         }
@@ -1727,7 +1730,7 @@ namespace wrench {
             this->removeBatchJobFromJobsList(batch_job);
         }
         if (is_pending) {
-            this->scheduler->processJobTermination(batch_job);
+            this->scheduler->processJobTermination(*batch_pending_it);
             auto to_free = *batch_pending_it;
             this->batch_queue.erase(batch_pending_it);
             this->removeBatchJobFromJobsList(to_free);
