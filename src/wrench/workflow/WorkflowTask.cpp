@@ -670,6 +670,10 @@ namespace wrench {
         return input;
     }
 
+    int WorkflowTask::getInputFileNum() {
+	return this->input_files.size();
+    }
+
     /**
      * @brief Get the list of output WorkflowFile objects for the task
      * @return a list of workflow files

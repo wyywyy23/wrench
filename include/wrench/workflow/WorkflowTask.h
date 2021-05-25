@@ -123,6 +123,7 @@ namespace wrench {
         unsigned long getBytesWritten() const;
 
         std::vector<WorkflowFile *> getInputFiles();
+	int getInputFileNum();
 
         std::vector<WorkflowFile *> getOutputFiles();
 
